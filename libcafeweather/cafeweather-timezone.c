@@ -31,16 +31,16 @@
 
 /**
  * SECTION:cafeweather-timezone
- * @Title: MateWeatherTimezone
+ * @Title: CafeWeatherTimezone
  *
  * A timezone.
  *
  * There are no public methods for creating timezones; they can only
  * be created by calling cafeweather_location_new_world() to parse
- * Locations.xml, and then calling various #MateWeatherLocation methods
+ * Locations.xml, and then calling various #CafeWeatherLocation methods
  * to extract relevant timezones from the location hierarchy.
  */
-struct _MateWeatherTimezone {
+struct _CafeWeatherTimezone {
     char *id, *name;
     int offset, dst_offset;
     gboolean has_dst;
@@ -149,10 +149,10 @@ parse_tzdata (const char *tzname, time_t start, time_t end,
     return TRUE;
 }
 
-static MateWeatherTimezone *
-parse_timezone (MateWeatherParser *parser)
+static CafeWeatherTimezone *
+parse_timezone (CafeWeatherParser *parser)
 {
-    MateWeatherTimezone *zone = NULL;
+    CafeWeatherTimezone *zone = NULL;
     char *id = NULL, *name = NULL;
     int offset = 0, dst_offset = 0;
     gboolean has_dst = FALSE;
@@ -187,7 +187,7 @@ parse_timezone (MateWeatherParser *parser)
 
     if (parse_tzdata (id, parser->year_start, parser->year_end,
 		      &offset, &has_dst, &dst_offset)) {
-	zone = g_slice_new0 (MateWeatherTimezone);
+	zone = g_slice_new0 (CafeWeatherTimezone);
 	zone->ref_count = 1;
 	zone->id = g_strdup (id);
 	zone->name = g_strdup (name);
@@ -203,11 +203,11 @@ parse_timezone (MateWeatherParser *parser)
     return zone;
 }
 
-MateWeatherTimezone **
-cafeweather_timezones_parse_xml (MateWeatherParser *parser)
+CafeWeatherTimezone **
+cafeweather_timezones_parse_xml (CafeWeatherParser *parser)
 {
     GPtrArray *zones;
-    MateWeatherTimezone *zone;
+    CafeWeatherTimezone *zone;
     const char *tagname;
     int tagtype, i;
 
@@ -238,7 +238,7 @@ cafeweather_timezones_parse_xml (MateWeatherParser *parser)
 	goto error_out;
 
     g_ptr_array_add (zones, NULL);
-    return (MateWeatherTimezone **)g_ptr_array_free (zones, FALSE);
+    return (CafeWeatherTimezone **)g_ptr_array_free (zones, FALSE);
 
 error_out:
     for (i = 0; i < zones->len; i++)
@@ -249,14 +249,14 @@ error_out:
 
 /**
  * cafeweather_timezone_ref:
- * @zone: a #MateWeatherTimezone
+ * @zone: a #CafeWeatherTimezone
  *
  * Adds 1 to @zone's reference count.
  *
  * Return value: @zone
  **/
-MateWeatherTimezone *
-cafeweather_timezone_ref (MateWeatherTimezone *zone)
+CafeWeatherTimezone *
+cafeweather_timezone_ref (CafeWeatherTimezone *zone)
 {
     g_return_val_if_fail (zone != NULL, NULL);
 
@@ -266,19 +266,19 @@ cafeweather_timezone_ref (MateWeatherTimezone *zone)
 
 /**
  * cafeweather_timezone_unref:
- * @zone: a #MateWeatherTimezone
+ * @zone: a #CafeWeatherTimezone
  *
  * Subtracts 1 from @zone's reference count and frees it if it reaches 0.
  **/
 void
-cafeweather_timezone_unref (MateWeatherTimezone *zone)
+cafeweather_timezone_unref (CafeWeatherTimezone *zone)
 {
     g_return_if_fail (zone != NULL);
 
     if (!--zone->ref_count) {
 	g_free (zone->id);
 	g_free (zone->name);
-	g_slice_free (MateWeatherTimezone, zone);
+	g_slice_free (CafeWeatherTimezone, zone);
     }
 }
 
@@ -289,7 +289,7 @@ cafeweather_timezone_get_type (void)
 
     if (g_once_init_enter (&type_volatile)) {
 	GType type = g_boxed_type_register_static (
-	    g_intern_static_string ("MateWeatherTimezone"),
+	    g_intern_static_string ("CafeWeatherTimezone"),
 	    (GBoxedCopyFunc) cafeweather_timezone_ref,
 	    (GBoxedFreeFunc) cafeweather_timezone_unref);
 	g_once_init_leave (&type_volatile, type);
@@ -302,14 +302,14 @@ cafeweather_timezone_get_type (void)
  *
  * Gets the UTC timezone.
  *
- * Return value: a #MateWeatherTimezone for UTC, or %NULL on error.
+ * Return value: a #CafeWeatherTimezone for UTC, or %NULL on error.
  **/
-MateWeatherTimezone *
+CafeWeatherTimezone *
 cafeweather_timezone_get_utc (void)
 {
-    MateWeatherTimezone *zone = NULL;
+    CafeWeatherTimezone *zone = NULL;
 
-    zone = g_slice_new0 (MateWeatherTimezone);
+    zone = g_slice_new0 (CafeWeatherTimezone);
     zone->ref_count = 1;
     zone->id = g_strdup ("GMT");
     zone->name = g_strdup (_("Greenwich Mean Time"));
@@ -322,7 +322,7 @@ cafeweather_timezone_get_utc (void)
 
 /**
  * cafeweather_timezone_get_name:
- * @zone: a #MateWeatherTimezone
+ * @zone: a #CafeWeatherTimezone
  *
  * Gets @zone's name; a translated, user-presentable string.
  *
@@ -334,7 +334,7 @@ cafeweather_timezone_get_utc (void)
  * Return value: @zone's name
  **/
 const char *
-cafeweather_timezone_get_name (MateWeatherTimezone *zone)
+cafeweather_timezone_get_name (CafeWeatherTimezone *zone)
 {
     g_return_val_if_fail (zone != NULL, NULL);
     return zone->name;
@@ -342,14 +342,14 @@ cafeweather_timezone_get_name (MateWeatherTimezone *zone)
 
 /**
  * cafeweather_timezone_get_tzid:
- * @zone: a #MateWeatherTimezone
+ * @zone: a #CafeWeatherTimezone
  *
  * Gets @zone's tzdata identifier, eg "America/New_York".
  *
  * Return value: @zone's tzid
  **/
 const char *
-cafeweather_timezone_get_tzid (MateWeatherTimezone *zone)
+cafeweather_timezone_get_tzid (CafeWeatherTimezone *zone)
 {
     g_return_val_if_fail (zone != NULL, NULL);
     return zone->id;
@@ -357,7 +357,7 @@ cafeweather_timezone_get_tzid (MateWeatherTimezone *zone)
 
 /**
  * cafeweather_timezone_get_offset:
- * @zone: a #MateWeatherTimezone
+ * @zone: a #CafeWeatherTimezone
  *
  * Gets @zone's standard offset from UTC, in minutes. Eg, a value of
  * %120 would indicate "GMT+2".
@@ -365,7 +365,7 @@ cafeweather_timezone_get_tzid (MateWeatherTimezone *zone)
  * Return value: @zone's standard offset, in minutes
  **/
 int
-cafeweather_timezone_get_offset (MateWeatherTimezone *zone)
+cafeweather_timezone_get_offset (CafeWeatherTimezone *zone)
 {
     g_return_val_if_fail (zone != NULL, 0);
     return zone->offset;
@@ -373,14 +373,14 @@ cafeweather_timezone_get_offset (MateWeatherTimezone *zone)
 
 /**
  * cafeweather_timezone_has_dst:
- * @zone: a #MateWeatherTimezone
+ * @zone: a #CafeWeatherTimezone
  *
  * Checks if @zone observes daylight/summer time for part of the year.
  *
  * Return value: %TRUE if @zone observes daylight/summer time.
  **/
 gboolean
-cafeweather_timezone_has_dst (MateWeatherTimezone *zone)
+cafeweather_timezone_has_dst (CafeWeatherTimezone *zone)
 {
     g_return_val_if_fail (zone != NULL, FALSE);
     return zone->has_dst;
@@ -388,7 +388,7 @@ cafeweather_timezone_has_dst (MateWeatherTimezone *zone)
 
 /**
  * cafeweather_timezone_get_dst_offset:
- * @zone: a #MateWeatherTimezone
+ * @zone: a #CafeWeatherTimezone
  *
  * Gets @zone's daylight/summer time offset from UTC, in minutes. Eg,
  * a value of %120 would indicate "GMT+2". This is only meaningful if
@@ -397,7 +397,7 @@ cafeweather_timezone_has_dst (MateWeatherTimezone *zone)
  * Return value: @zone's daylight/summer time offset, in minutes
  **/
 int
-cafeweather_timezone_get_dst_offset (MateWeatherTimezone *zone)
+cafeweather_timezone_get_dst_offset (CafeWeatherTimezone *zone)
 {
     g_return_val_if_fail (zone != NULL, 0);
     g_return_val_if_fail (zone->has_dst, 0);

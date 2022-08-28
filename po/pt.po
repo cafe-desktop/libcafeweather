@@ -10,7 +10,7 @@
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
 # fc2d9c36d73e741383fbbf46a4aac49f_013445b, 2020
 # Luis Filipe Teixeira <lufilte@gmail.com>, 2020
-# Pedro Mateus <pedro@linuxgamecast.com>, 2020
+# Pedro Cafeus <pedro@linuxgamecast.com>, 2020
 # Manuela Silva <manuelarodsilva@gmail.com>, 2020
 # 
 msgid ""

@@ -29,15 +29,15 @@ typedef struct {
     const char * const *locales;
     gboolean use_regions;
     time_t year_start, year_end;
-} MateWeatherParser;
+} CafeWeatherParser;
 
-MateWeatherParser *cafeweather_parser_new                 (gboolean        use_regions);
-void            cafeweather_parser_free                (MateWeatherParser *parser);
+CafeWeatherParser *cafeweather_parser_new                 (gboolean        use_regions);
+void            cafeweather_parser_free                (CafeWeatherParser *parser);
 
-char           *cafeweather_parser_get_value           (MateWeatherParser *parser);
-char           *cafeweather_parser_get_localized_value (MateWeatherParser *parser);
+char           *cafeweather_parser_get_value           (CafeWeatherParser *parser);
+char           *cafeweather_parser_get_localized_value (CafeWeatherParser *parser);
 
 /* from cafeweather-timezone.c */
-MateWeatherTimezone **cafeweather_timezones_parse_xml (MateWeatherParser *parser);
+CafeWeatherTimezone **cafeweather_timezones_parse_xml (CafeWeatherParser *parser);
 
 #endif

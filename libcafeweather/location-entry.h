@@ -25,36 +25,36 @@
 #include <libcafeweather/cafeweather-location.h>
 
 #define CAFEWEATHER_TYPE_LOCATION_ENTRY            (cafeweather_location_entry_get_type ())
-#define CAFEWEATHER_LOCATION_ENTRY(object)         (G_TYPE_CHECK_INSTANCE_CAST ((object), CAFEWEATHER_TYPE_LOCATION_ENTRY, MateWeatherLocationEntry))
-#define CAFEWEATHER_LOCATION_ENTRY_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), CAFEWEATHER_TYPE_LOCATION_ENTRY, MateWeatherLocationEntryClass))
+#define CAFEWEATHER_LOCATION_ENTRY(object)         (G_TYPE_CHECK_INSTANCE_CAST ((object), CAFEWEATHER_TYPE_LOCATION_ENTRY, CafeWeatherLocationEntry))
+#define CAFEWEATHER_LOCATION_ENTRY_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), CAFEWEATHER_TYPE_LOCATION_ENTRY, CafeWeatherLocationEntryClass))
 #define CAFEWEATHER_IS_LOCATION_ENTRY(object)      (G_TYPE_CHECK_INSTANCE_TYPE ((object), CAFEWEATHER_TYPE_LOCATION_ENTRY))
 #define CAFEWEATHER_IS_LOCATION_ENTRY_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), CAFEWEATHER_TYPE_LOCATION_ENTRY))
-#define CAFEWEATHER_LOCATION_ENTRY_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), CAFEWEATHER_TYPE_LOCATION_ENTRY, MateWeatherLocationEntryClass))
+#define CAFEWEATHER_LOCATION_ENTRY_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), CAFEWEATHER_TYPE_LOCATION_ENTRY, CafeWeatherLocationEntryClass))
 
 typedef struct {
     GtkEntry parent;
 
     /*< private >*/
-    MateWeatherLocation *location, *top;
+    CafeWeatherLocation *location, *top;
     guint custom_text : 1;
-} MateWeatherLocationEntry;
+} CafeWeatherLocationEntry;
 
 typedef struct {
     GtkEntryClass parent_class;
 
-} MateWeatherLocationEntryClass;
+} CafeWeatherLocationEntryClass;
 
 GType             cafeweather_location_entry_get_type     (void);
 
-GtkWidget        *cafeweather_location_entry_new          (MateWeatherLocation      *top);
+GtkWidget        *cafeweather_location_entry_new          (CafeWeatherLocation      *top);
 
-void              cafeweather_location_entry_set_location (MateWeatherLocationEntry *entry,
-							MateWeatherLocation      *loc);
-MateWeatherLocation *cafeweather_location_entry_get_location (MateWeatherLocationEntry *entry);
+void              cafeweather_location_entry_set_location (CafeWeatherLocationEntry *entry,
+							CafeWeatherLocation      *loc);
+CafeWeatherLocation *cafeweather_location_entry_get_location (CafeWeatherLocationEntry *entry);
 
-gboolean          cafeweather_location_entry_has_custom_text (MateWeatherLocationEntry *entry);
+gboolean          cafeweather_location_entry_has_custom_text (CafeWeatherLocationEntry *entry);
 
-gboolean          cafeweather_location_entry_set_city     (MateWeatherLocationEntry *entry,
+gboolean          cafeweather_location_entry_set_city     (CafeWeatherLocationEntry *entry,
 							const char            *city_name,
 							const char            *code);
 

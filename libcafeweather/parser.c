@@ -33,7 +33,7 @@
 
 /**
  * cafeweather_parser_get_value:
- * @parser: a #MateWeatherParser
+ * @parser: a #CafeWeatherParser
  *
  * Gets the text of the element whose start tag @parser is pointing to.
  * Leaves @parser pointing at the next node after the element's end tag.
@@ -42,7 +42,7 @@
  * string, or %NULL if the node is empty.
  **/
 char *
-cafeweather_parser_get_value (MateWeatherParser *parser)
+cafeweather_parser_get_value (CafeWeatherParser *parser)
 {
     char *value;
 
@@ -75,7 +75,7 @@ cafeweather_parser_get_value (MateWeatherParser *parser)
 
 /**
  * cafeweather_parser_get_localized_value:
- * @parser: a #MateWeatherParser
+ * @parser: a #CafeWeatherParser
  *
  * Looks at the name of the element @parser is currently pointing to, and
  * returns the content of either that node, or a following node with
@@ -87,7 +87,7 @@ cafeweather_parser_get_value (MateWeatherParser *parser)
  * libxml-allocated string, or %NULL if the node is empty.
  **/
 char *
-cafeweather_parser_get_localized_value (MateWeatherParser *parser)
+cafeweather_parser_get_localized_value (CafeWeatherParser *parser)
 {
     const char *this_language;
     int best_match = INT_MAX;
@@ -153,10 +153,10 @@ cafeweather_parser_get_localized_value (MateWeatherParser *parser)
     return name;
 }
 
-MateWeatherParser *
+CafeWeatherParser *
 cafeweather_parser_new (gboolean use_regions)
 {
-    MateWeatherParser *parser;
+    CafeWeatherParser *parser;
     int zlib_support;
     int i, keep_going;
     char *filename;
@@ -164,7 +164,7 @@ cafeweather_parser_new (gboolean use_regions)
     time_t now;
     struct tm tm;
 
-    parser = g_slice_new0 (MateWeatherParser);
+    parser = g_slice_new0 (CafeWeatherParser);
     parser->use_regions = use_regions;
     parser->locales = g_get_language_names ();
 
@@ -255,9 +255,9 @@ error_out:
 }
 
 void
-cafeweather_parser_free (MateWeatherParser *parser)
+cafeweather_parser_free (CafeWeatherParser *parser)
 {
     if (parser->xml)
 	xmlFreeTextReader (parser->xml);
-    g_slice_free (MateWeatherParser, parser);
+    g_slice_free (CafeWeatherParser, parser);
 }

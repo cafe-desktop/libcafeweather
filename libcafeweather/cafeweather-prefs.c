@@ -34,7 +34,7 @@
  */
 
 void
-cafeweather_prefs_load (MateWeatherPrefs *prefs, GSettings *settings)
+cafeweather_prefs_load (CafeWeatherPrefs *prefs, GSettings *settings)
 {
     g_return_if_fail (prefs != NULL);
     g_return_if_fail (settings != NULL);

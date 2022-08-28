@@ -41,7 +41,7 @@ libcafeweather_la_CPPFLAGS = \
 	$(LIBXML_CFLAGS)		\
 	$(LIBSOUP_CFLAGS)		\
 	$(GIO_CFLAGS)			\
-	-DG_LOG_DOMAIN=\"MateWeather\"	\
+	-DG_LOG_DOMAIN=\"CafeWeather\"	\
 	-DCAFELOCALEDIR=\""$(datadir)/locale"\" \
 	-DCAFEWEATHER_XML_LOCATION_DIR=\""$(pkgdatadir)"\"
 
