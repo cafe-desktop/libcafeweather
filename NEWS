@@ -6,7 +6,7 @@
   * Revert "avoid deprecated soup_session_async_new"
   * Locations: America/Godthab was renamed to America/Nuuk
   * build: silent build warnings for distcheck
-  * build: use default MATE_COMPILE_WARNINGS level
+  * build: use default CAFE_COMPILE_WARNINGS level
 
 ### libcafeweather 1.24.0
 

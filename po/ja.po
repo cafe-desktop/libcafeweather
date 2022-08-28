@@ -1,5 +1,5 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) YEAR MATE Desktop Environment team
+# Copyright (C) YEAR CAFE Desktop Environment team
 # This file is distributed under the same license as the libcafeweather package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
@@ -345,7 +345,7 @@ msgstr "都市の天気"
 
 #: libcafeweather/org.cafe.weather.gschema.xml.in:149
 msgid "The city that cafeweather displays information for."
-msgstr "お天気 MATE で情報を表示する都市です。"
+msgstr "お天気 CAFE で情報を表示する都市です。"
 
 #. TRANSLATORS: Change this to the coordinates of your default
 #. location that corresponds to the DEFAULT_LOCATION and DEFAULT_CODE

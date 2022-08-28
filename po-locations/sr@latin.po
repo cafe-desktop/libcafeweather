@@ -1,12 +1,12 @@
-# Libraries to allow MATE Desktop to display weather information
-# Copyright (C) 2019 The MATE Team
+# Libraries to allow CAFE Desktop to display weather information
+# Copyright (C) 2019 The CAFE Team
 # This file is distributed under the same license as the libcafeweather package.
 # Maintainer: Danilo Šegan <danilo@gnome.org>
 # Reviewed on 2005-08-02 by: Igor Nestorović <igor@prevod.org>
 # Reviewed on 2006-05-27 by: Filip Miletić <filmil@gmail.com>: Dutch place names
 msgid ""
 msgstr ""
-"Project-Id-Version: MATE Desktop Environment\n"
+"Project-Id-Version: CAFE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-17 10:35+0200\n"
 "PO-Revision-Date: 2009-09-04 22:56+0200\n"

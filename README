@@ -9,5 +9,5 @@ should feel free to use libcafeweather as users can always recompile against
 a new version.  
 
 To use libcafeweather in your code, you need to define the 
-MATEWEATHER_I_KNOW_THIS_IS_UNSTABLE preprecessor symbol, e.g. by adding
--DMATEWEATHER_I_KNOW_THIS_IS_UNSTABLE to your CFLAGS.
+CAFEWEATHER_I_KNOW_THIS_IS_UNSTABLE preprecessor symbol, e.g. by adding
+-DCAFEWEATHER_I_KNOW_THIS_IS_UNSTABLE to your CFLAGS.

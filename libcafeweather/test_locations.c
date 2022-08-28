@@ -1,5 +1,5 @@
 
-#define MATEWEATHER_I_KNOW_THIS_IS_UNSTABLE
+#define CAFEWEATHER_I_KNOW_THIS_IS_UNSTABLE
 #include <gtk/gtk.h>
 #include "location-entry.h"
 #include "timezone-menu.h"
@@ -13,7 +13,7 @@ deleted (GtkWidget *widget, GdkEvent *event, gpointer data)
 static void
 location_changed (GObject *object, GParamSpec *param, gpointer tzmenu)
 {
-    MateWeatherLocationEntry *entry = MATEWEATHER_LOCATION_ENTRY (object);
+    MateWeatherLocationEntry *entry = CAFEWEATHER_LOCATION_ENTRY (object);
     MateWeatherLocation *loc;
     MateWeatherTimezone *zone;
 

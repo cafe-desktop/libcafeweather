@@ -20,7 +20,7 @@
 #define __WEATHER_H_
 
 
-#ifndef MATEWEATHER_I_KNOW_THIS_IS_UNSTABLE
+#ifndef CAFEWEATHER_I_KNOW_THIS_IS_UNSTABLE
 #error "libcafeweather should only be used if you understand that it's subject to change, and is not supported as a fixed API/ABI or as part of the platform"
 #endif
 

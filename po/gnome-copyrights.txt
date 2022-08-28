@@ -139,7 +139,7 @@
 
 ========== br.po ==========
 # Breton translation for the libcafeweather.
-# Copyright (C) 2009 The MATE Foundation
+# Copyright (C) 2009 The CAFE Foundation
 # This file is distributed under the same license as the libcafeweather package.
 # Denis <denisarnuad@yahoo.fr>, 2009.
 #
@@ -235,7 +235,7 @@
 # Rhys Jones <rhys@sucs.org>, 2005.
 # Iestyn Pryce <dylunio@gmail.com, 2009.
 #
-# rhysj: Wedi diweddaru a gwirio hwn erbyn MATE 2.12.
+# rhysj: Wedi diweddaru a gwirio hwn erbyn CAFE 2.12.
 # rhysj: Ac hefyd 2.14 a 2.16.
 #
 
@@ -322,7 +322,7 @@
 # simos: 1074 messages, 26Mar2001, unfuzzied 1 (beargsgppl).
 # simos: 1077 messages, 4Jun2001, (micumple).
 # simos: 1092 messages, 2Aug2001, (conbea).
-# simos: 487 messages, 14May2002, (MATE2 update, UTF-8 encoding.).
+# simos: 487 messages, 14May2002, (CAFE2 update, UTF-8 encoding.).
 # kostas: 818 messages, 25Oct2002, completed translation.
 # simos: 818 messages, 25Oct2002, review of translation.
 # kostas:740 messages, 06Jan2003, updated translation.
@@ -358,7 +358,7 @@
 
 ========== en_CA.po ==========
 # English/Canada translation of cafe-applets.
-# Copyright (C) 2004-2006 Adam Weinberger and the MATE Foundation
+# Copyright (C) 2004-2006 Adam Weinberger and the CAFE Foundation
 # This file is distributed under the same licence as the cafe-applets package.
 # Adam Weinberger <adamw@gnome.org>, 2004, 2005, 2006.
 #
@@ -697,11 +697,11 @@
 
 
 ========== et.po ==========
-# MATE ilcafeate teegi eesti keele tõlge.
+# CAFE ilcafeate teegi eesti keele tõlge.
 # Estonian translation of libcafeweather.
 #
 # Copyright (C) 1999, 2001, 2002, 2005, 2006 Free Software Foundation, Inc.
-# Copyright (C) 2007, 2008 The MATE Project
+# Copyright (C) 2007, 2008 The CAFE Project
 # This file is distributed under the same license as the cafe-applets package.
 #
 # Lauris Kaplinski <lauris@ariman.ee>, 1999.
@@ -1017,7 +1017,7 @@
 
 
 ========== mg.po ==========
-# MALAGASY TRANSLATION OF MATE-APPLETS.
+# MALAGASY TRANSLATION OF CAFE-APPLETS.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 # Thierry Randrianiriana <randrianiriana@gmail.com>, 2006.
@@ -1455,7 +1455,7 @@
 
 ========== vi.po ==========
 # Vietnamese translation for libcafeweather.
-# Copyright © 2009 MATE i18n Project for Vietnamese.
+# Copyright © 2009 CAFE i18n Project for Vietnamese.
 # This file is distributed under the same license as the libcafeweather package.
 # T.M.Thanh <tmthanh@yahoo.com>, 2002-2003.
 # Nguyễn Thái Ngọc Duy <pclouds@vnlinux.org>, 2002-2004.
@@ -1510,11 +1510,11 @@
 ========== zh_HK.po ==========
 # Chinese (Hong Kong) translation of libgwether.
 # Copyright (C) 1999, 2000, 01, 02, 03, 04, 05, 06, 07 Free Software Foundation, Inc.
-# MATE 1.x:
+# CAFE 1.x:
 # Yuan-Chung Cheng <platin@linux.org.tw>, 1999.
 # Jing-Jong Shyue <shyue@sonoma.com.tw>, 2000,
 # Abel Cheung <abel@oaka.org>, 2001-2002.
-# MATE 2.x:
+# CAFE 2.x:
 # Abel Cheung <abel@oaka.org>, 2002-2004.
 # Woodman Tuen <wmtuen@gmail.com>, 2005-07
 #
@@ -1526,11 +1526,11 @@
 ========== zh_TW.po ==========
 # Chinese (Taiwan) translation of libgwether.
 # Copyright (C) 1999, 2000, 01, 02, 03, 04, 05, 06, 07 Free Software Foundation, Inc.
-# MATE 1.x:
+# CAFE 1.x:
 # Yuan-Chung Cheng <platin@linux.org.tw>, 1999.
 # Jing-Jong Shyue <shyue@sonoma.com.tw>, 2000,
 # Abel Cheung <abel@oaka.org>, 2001-2002.
-# MATE 2.x:
+# CAFE 2.x:
 # Abel Cheung <abel@oaka.org>, 2002-2004.
 # Woodman Tuen <wmtuen@gmail.com>, 2005-07
 #

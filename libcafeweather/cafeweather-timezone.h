@@ -18,10 +18,10 @@
  * <http://www.gnu.org/licenses/>.
  */
 
-#ifndef __MATEWEATHER_TIMEZONE_H__
-#define __MATEWEATHER_TIMEZONE_H__
+#ifndef __CAFEWEATHER_TIMEZONE_H__
+#define __CAFEWEATHER_TIMEZONE_H__
 
-#ifndef MATEWEATHER_I_KNOW_THIS_IS_UNSTABLE
+#ifndef CAFEWEATHER_I_KNOW_THIS_IS_UNSTABLE
 #error "libcafeweather should only be used if you understand that it's subject to change, and is not supported as a fixed API/ABI or as part of the platform"
 #endif
 
@@ -34,7 +34,7 @@ extern "C" {
 typedef struct _MateWeatherTimezone MateWeatherTimezone;
 
 GType cafeweather_timezone_get_type (void);
-#define MATEWEATHER_TYPE_TIMEZONE (cafeweather_timezone_get_type ())
+#define CAFEWEATHER_TYPE_TIMEZONE (cafeweather_timezone_get_type ())
 
 const char       *cafeweather_timezone_get_name       (MateWeatherTimezone *zone);
 const char       *cafeweather_timezone_get_tzid       (MateWeatherTimezone *zone);
@@ -51,4 +51,4 @@ MateWeatherTimezone *cafeweather_timezone_get_utc        (void);
 }
 #endif
 
-#endif /* __MATEWEATHER_TIMEZONE_H__ */
+#endif /* __CAFEWEATHER_TIMEZONE_H__ */

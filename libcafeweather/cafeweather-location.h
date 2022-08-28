@@ -18,10 +18,10 @@
  * <http://www.gnu.org/licenses/>.
  */
 
-#ifndef __MATEWEATHER_LOCATIONS_H__
-#define __MATEWEATHER_LOCATIONS_H__
+#ifndef __CAFEWEATHER_LOCATIONS_H__
+#define __CAFEWEATHER_LOCATIONS_H__
 
-#ifndef MATEWEATHER_I_KNOW_THIS_IS_UNSTABLE
+#ifndef CAFEWEATHER_I_KNOW_THIS_IS_UNSTABLE
 #error "libcafeweather should only be used if you understand that it's subject to change, and is not supported as a fixed API/ABI or as part of the platform"
 #endif
 
@@ -36,19 +36,19 @@ extern "C" {
 typedef struct _MateWeatherLocation MateWeatherLocation;
 
 typedef enum { /*< underscore_name=cafeweather_location_level >*/
-    MATEWEATHER_LOCATION_WORLD,
-    MATEWEATHER_LOCATION_REGION,
-    MATEWEATHER_LOCATION_COUNTRY,
+    CAFEWEATHER_LOCATION_WORLD,
+    CAFEWEATHER_LOCATION_REGION,
+    CAFEWEATHER_LOCATION_COUNTRY,
     /* ADM1 = first-order administrative division = state/province, etc */
-    MATEWEATHER_LOCATION_ADM1,
+    CAFEWEATHER_LOCATION_ADM1,
     /* ADM2 = second-order division = county, etc */
-    MATEWEATHER_LOCATION_ADM2,
-    MATEWEATHER_LOCATION_CITY,
-    MATEWEATHER_LOCATION_WEATHER_STATION
+    CAFEWEATHER_LOCATION_ADM2,
+    CAFEWEATHER_LOCATION_CITY,
+    CAFEWEATHER_LOCATION_WEATHER_STATION
 } MateWeatherLocationLevel;
 
 GType cafeweather_location_get_type (void);
-#define MATEWEATHER_TYPE_LOCATION (cafeweather_location_get_type ())
+#define CAFEWEATHER_TYPE_LOCATION (cafeweather_location_get_type ())
 
 MateWeatherLocation      *cafeweather_location_new_world      (gboolean           use_regions);
 MateWeatherLocation      *cafeweather_location_ref            (MateWeatherLocation  *loc);
@@ -86,4 +86,4 @@ WeatherInfo           *cafeweather_location_get_weather    (MateWeatherLocation 
 }
 #endif
 
-#endif /* __MATEWEATHER_LOCATIONS_H__ */
+#endif /* __CAFEWEATHER_LOCATIONS_H__ */
