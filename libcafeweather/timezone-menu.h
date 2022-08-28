@@ -18,18 +18,18 @@
  * <http://www.gnu.org/licenses/>.
  */
 
-#ifndef MATEWEATHER_TIMEZONE_MENU_H
-#define MATEWEATHER_TIMEZONE_MENU_H 1
+#ifndef CAFEWEATHER_TIMEZONE_MENU_H
+#define CAFEWEATHER_TIMEZONE_MENU_H 1
 
 #include <gtk/gtk.h>
 #include <libcafeweather/cafeweather-location.h>
 
-#define MATEWEATHER_TYPE_TIMEZONE_MENU            (cafeweather_timezone_menu_get_type ())
-#define MATEWEATHER_TIMEZONE_MENU(object)         (G_TYPE_CHECK_INSTANCE_CAST ((object), MATEWEATHER_TYPE_TIMEZONE_MENU, MateWeatherTimezoneMenu))
-#define MATEWEATHER_TIMEZONE_MENU_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), MATEWEATHER_TYPE_TIMEZONE_MENU, MateWeatherTimezoneMenuClass))
-#define MATEWEATHER_IS_TIMEZONE_MENU(object)      (G_TYPE_CHECK_INSTANCE_TYPE ((object), MATEWEATHER_TYPE_TIMEZONE_MENU))
-#define MATEWEATHER_IS_TIMEZONE_MENU_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), MATEWEATHER_TYPE_TIMEZONE_MENU))
-#define MATEWEATHER_TIMEZONE_MENU_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), MATEWEATHER_TYPE_TIMEZONE_MENU, MateWeatherTimezoneMenuClass))
+#define CAFEWEATHER_TYPE_TIMEZONE_MENU            (cafeweather_timezone_menu_get_type ())
+#define CAFEWEATHER_TIMEZONE_MENU(object)         (G_TYPE_CHECK_INSTANCE_CAST ((object), CAFEWEATHER_TYPE_TIMEZONE_MENU, MateWeatherTimezoneMenu))
+#define CAFEWEATHER_TIMEZONE_MENU_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), CAFEWEATHER_TYPE_TIMEZONE_MENU, MateWeatherTimezoneMenuClass))
+#define CAFEWEATHER_IS_TIMEZONE_MENU(object)      (G_TYPE_CHECK_INSTANCE_TYPE ((object), CAFEWEATHER_TYPE_TIMEZONE_MENU))
+#define CAFEWEATHER_IS_TIMEZONE_MENU_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), CAFEWEATHER_TYPE_TIMEZONE_MENU))
+#define CAFEWEATHER_TIMEZONE_MENU_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), CAFEWEATHER_TYPE_TIMEZONE_MENU, MateWeatherTimezoneMenuClass))
 
 typedef struct {
     GtkComboBox parent;

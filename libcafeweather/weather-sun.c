@@ -32,7 +32,7 @@
 #include <time.h>
 #include <glib.h>
 
-#define MATEWEATHER_I_KNOW_THIS_IS_UNSTABLE
+#define CAFEWEATHER_I_KNOW_THIS_IS_UNSTABLE
 #include "weather-priv.h"
 
 #define ECCENTRICITY(d)         (0.01671123 - (d)/36525.*0.00004392)

@@ -1,5 +1,5 @@
-# Libraries to allow MATE Desktop to display weather information
-# Copyright (C) 2019 The MATE Team
+# Libraries to allow CAFE Desktop to display weather information
+# Copyright (C) 2019 The CAFE Team
 # This file is distributed under the same license as the libcafeweather package.
 # Copyright (C) 2004, 2005, 2006 Miloslav Trmac <mitr@volny.cz>.
 # Copyright (C) 2008 Pavel Šefránek <ps@pjoul.cz>.
@@ -17,7 +17,7 @@
 # Marek Černocký <marek@manet.cz>, 2010.
 msgid ""
 msgstr ""
-"Project-Id-Version: MATE Desktop Environment\n"
+"Project-Id-Version: CAFE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-17 10:35+0200\n"
 "PO-Revision-Date: 2010-03-05 17:28+0100\n"

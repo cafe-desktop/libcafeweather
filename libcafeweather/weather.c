@@ -36,7 +36,7 @@
 
 #include <gdk-pixbuf/gdk-pixbuf.h>
 
-#define MATEWEATHER_I_KNOW_THIS_IS_UNSTABLE
+#define CAFEWEATHER_I_KNOW_THIS_IS_UNSTABLE
 #include "weather.h"
 #include "weather-priv.h"
 
@@ -56,7 +56,7 @@ cafeweather_gettext_init (void)
     static gsize cafeweather_gettext_initialized = FALSE;
 
     if (G_UNLIKELY (g_once_init_enter (&cafeweather_gettext_initialized))) {
-        bindtextdomain (GETTEXT_PACKAGE, MATELOCALEDIR);
+        bindtextdomain (GETTEXT_PACKAGE, CAFELOCALEDIR);
 #ifdef HAVE_BIND_TEXTDOMAIN_CODESET
         bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
 #endif

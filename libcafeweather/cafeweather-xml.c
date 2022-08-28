@@ -28,7 +28,7 @@
 #include <gtk/gtk.h>
 #include <libxml/xmlreader.h>
 
-#define MATEWEATHER_I_KNOW_THIS_IS_UNSTABLE
+#define CAFEWEATHER_I_KNOW_THIS_IS_UNSTABLE
 #include "cafeweather-xml.h"
 #include "weather-priv.h"
 
@@ -52,56 +52,56 @@ cafeweather_xml_parse_node (MateWeatherLocation *gloc,
     children = cafeweather_location_get_children (gloc);
     level = cafeweather_location_get_level (gloc);
 
-    if (!children[0] && level < MATEWEATHER_LOCATION_WEATHER_STATION) {
+    if (!children[0] && level < CAFEWEATHER_LOCATION_WEATHER_STATION) {
 	cafeweather_location_free_children (gloc, children);
 	return TRUE;
     }
 
     switch (cafeweather_location_get_level (gloc)) {
-    case MATEWEATHER_LOCATION_WORLD:
-    case MATEWEATHER_LOCATION_ADM2:
+    case CAFEWEATHER_LOCATION_WORLD:
+    case CAFEWEATHER_LOCATION_ADM2:
 	self = parent;
 	break;
 
-    case MATEWEATHER_LOCATION_REGION:
-    case MATEWEATHER_LOCATION_COUNTRY:
-    case MATEWEATHER_LOCATION_ADM1:
+    case CAFEWEATHER_LOCATION_REGION:
+    case CAFEWEATHER_LOCATION_COUNTRY:
+    case CAFEWEATHER_LOCATION_ADM1:
 	/* Create a row with a name but no WeatherLocation */
 	gtk_tree_store_append (store, &iter, parent);
 	gtk_tree_store_set (store, &iter,
-			    MATEWEATHER_XML_COL_LOC, name,
+			    CAFEWEATHER_XML_COL_LOC, name,
 			    -1);
 	break;
 
-    case MATEWEATHER_LOCATION_CITY:
+    case CAFEWEATHER_LOCATION_CITY:
 	/* If multiple children, treat this like a
 	 * region/country/adm1. If a single child, merge with that
 	 * location.
 	 */
 	gtk_tree_store_append (store, &iter, parent);
 	gtk_tree_store_set (store, &iter,
-			    MATEWEATHER_XML_COL_LOC, name,
+			    CAFEWEATHER_XML_COL_LOC, name,
 			    -1);
 	if (children[0] && !children[1]) {
 	    wloc = cafeweather_location_to_weather_location (children[0], name);
 	    gtk_tree_store_set (store, &iter,
-				MATEWEATHER_XML_COL_POINTER, wloc,
+				CAFEWEATHER_XML_COL_POINTER, wloc,
 				-1);
 	}
 	break;
 
-    case MATEWEATHER_LOCATION_WEATHER_STATION:
+    case CAFEWEATHER_LOCATION_WEATHER_STATION:
 	gtk_tree_store_append (store, &iter, parent);
 	gtk_tree_store_set (store, &iter,
-			    MATEWEATHER_XML_COL_LOC, name,
+			    CAFEWEATHER_XML_COL_LOC, name,
 			    -1);
 
 	parent_loc = cafeweather_location_get_parent (gloc);
-	if (parent_loc && cafeweather_location_get_level (parent_loc) == MATEWEATHER_LOCATION_CITY)
+	if (parent_loc && cafeweather_location_get_level (parent_loc) == CAFEWEATHER_LOCATION_CITY)
 	    name = cafeweather_location_get_name (parent_loc);
 	wloc = cafeweather_location_to_weather_location (gloc, name);
 	gtk_tree_store_set (store, &iter,
-			    MATEWEATHER_XML_COL_POINTER, wloc,
+			    CAFEWEATHER_XML_COL_POINTER, wloc,
 			    -1);
 	break;
     }
@@ -145,13 +145,13 @@ free_locations (GtkTreeModel *model, GtkTreePath *path, GtkTreeIter *iter, gpoin
 	WeatherLocation *loc = NULL;
 
 	gtk_tree_model_get (model, iter,
-			    MATEWEATHER_XML_COL_POINTER, &loc,
+			    CAFEWEATHER_XML_COL_POINTER, &loc,
 			    -1);
 
 	if (loc) {
 		weather_location_free (loc);
 		gtk_tree_store_set ((GtkTreeStore *)model, iter,
-			    MATEWEATHER_XML_COL_POINTER, NULL,
+			    CAFEWEATHER_XML_COL_POINTER, NULL,
 			    -1);
 	}
 

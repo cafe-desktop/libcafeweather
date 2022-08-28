@@ -18,20 +18,20 @@
  * <http://www.gnu.org/licenses/>.
  */
 
-#ifndef __MATEWEATHER_XML_H__
-#define __MATEWEATHER_XML_H__
+#ifndef __CAFEWEATHER_XML_H__
+#define __CAFEWEATHER_XML_H__
 
 #include <gtk/gtk.h>
 #include <libcafeweather/weather.h>
 
 enum
 {
-    MATEWEATHER_XML_COL_LOC = 0,
-    MATEWEATHER_XML_COL_POINTER,
-    MATEWEATHER_XML_NUM_COLUMNS
+    CAFEWEATHER_XML_COL_LOC = 0,
+    CAFEWEATHER_XML_COL_POINTER,
+    CAFEWEATHER_XML_NUM_COLUMNS
 };
 
 GtkTreeModel *cafeweather_xml_load_locations (void);
 void          cafeweather_xml_free_locations (GtkTreeModel *locations);
 
-#endif /* __MATEWEATHER_XML_H__ */
+#endif /* __CAFEWEATHER_XML_H__ */

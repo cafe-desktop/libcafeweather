@@ -24,7 +24,7 @@
 
 #include <string.h>
 
-#define MATEWEATHER_I_KNOW_THIS_IS_UNSTABLE
+#define CAFEWEATHER_I_KNOW_THIS_IS_UNSTABLE
 #include "cafeweather-timezone.h"
 #include "parser.h"
 #include "weather-priv.h"

@@ -27,7 +27,7 @@
 #include <locale.h>
 #include <libxml/xmlreader.h>
 
-#define MATEWEATHER_I_KNOW_THIS_IS_UNSTABLE
+#define CAFEWEATHER_I_KNOW_THIS_IS_UNSTABLE
 #include "cafeweather-location.h"
 #include "cafeweather-timezone.h"
 #include "parser.h"
@@ -58,23 +58,23 @@ struct _MateWeatherLocation {
 
 /**
  * MateWeatherLocationLevel:
- * @MATEWEATHER_LOCATION_WORLD: A location representing the entire world.
- * @MATEWEATHER_LOCATION_REGION: A location representing a continent or
+ * @CAFEWEATHER_LOCATION_WORLD: A location representing the entire world.
+ * @CAFEWEATHER_LOCATION_REGION: A location representing a continent or
  * other top-level region.
- * @MATEWEATHER_LOCATION_COUNTRY: A location representing a "country" (or
+ * @CAFEWEATHER_LOCATION_COUNTRY: A location representing a "country" (or
  * other geographic unit that has an ISO-3166 country code)
- * @MATEWEATHER_LOCATION_ADM1: A location representing a "first-level
+ * @CAFEWEATHER_LOCATION_ADM1: A location representing a "first-level
  * administrative division"; ie, a state, province, or similar
  * division.
- * @MATEWEATHER_LOCATION_ADM2: A location representing a subdivision of a
- * %MATEWEATHER_LOCATION_ADM1 location. (Not currently used.)
- * @MATEWEATHER_LOCATION_CITY: A location representing a city
- * @MATEWEATHER_LOCATION_WEATHER_STATION: A location representing a
+ * @CAFEWEATHER_LOCATION_ADM2: A location representing a subdivision of a
+ * %CAFEWEATHER_LOCATION_ADM1 location. (Not currently used.)
+ * @CAFEWEATHER_LOCATION_CITY: A location representing a city
+ * @CAFEWEATHER_LOCATION_WEATHER_STATION: A location representing a
  * weather station.
  *
  * The size/scope of a particular #MateWeatherLocation.
  *
- * Locations form a hierarchy, with a %MATEWEATHER_LOCATION_WORLD
+ * Locations form a hierarchy, with a %CAFEWEATHER_LOCATION_WORLD
  * location at the top, divided into regions or countries, and so on.
  * Countries may or may not be divided into "adm1"s, and "adm1"s may
  * or may not be divided into "adm2"s. A city will have at least one,
@@ -232,7 +232,7 @@ location_new_from_xml (MateWeatherParser *parser, MateWeatherLocationLevel level
 	    xmlFree (value);
 
 	} else if (!strcmp (tagname, "region")) {
-	    child = location_new_from_xml (parser, MATEWEATHER_LOCATION_REGION, loc);
+	    child = location_new_from_xml (parser, CAFEWEATHER_LOCATION_REGION, loc);
 	    if (!child)
 		goto error_out;
 	    if (parser->use_regions)
@@ -245,22 +245,22 @@ location_new_from_xml (MateWeatherParser *parser, MateWeatherLocationLevel level
 		cafeweather_location_unref (child);
 	    }
 	} else if (!strcmp (tagname, "country")) {
-	    child = location_new_from_xml (parser, MATEWEATHER_LOCATION_COUNTRY, loc);
+	    child = location_new_from_xml (parser, CAFEWEATHER_LOCATION_COUNTRY, loc);
 	    if (!child)
 		goto error_out;
 	    g_ptr_array_add (children, child);
 	} else if (!strcmp (tagname, "state")) {
-	    child = location_new_from_xml (parser, MATEWEATHER_LOCATION_ADM1, loc);
+	    child = location_new_from_xml (parser, CAFEWEATHER_LOCATION_ADM1, loc);
 	    if (!child)
 		goto error_out;
 	    g_ptr_array_add (children, child);
 	} else if (!strcmp (tagname, "city")) {
-	    child = location_new_from_xml (parser, MATEWEATHER_LOCATION_CITY, loc);
+	    child = location_new_from_xml (parser, CAFEWEATHER_LOCATION_CITY, loc);
 	    if (!child)
 		goto error_out;
 	    g_ptr_array_add (children, child);
 	} else if (!strcmp (tagname, "location")) {
-	    child = location_new_from_xml (parser, MATEWEATHER_LOCATION_WEATHER_STATION, loc);
+	    child = location_new_from_xml (parser, CAFEWEATHER_LOCATION_WEATHER_STATION, loc);
 	    if (!child)
 		goto error_out;
 	    g_ptr_array_add (children, child);
@@ -279,7 +279,7 @@ location_new_from_xml (MateWeatherParser *parser, MateWeatherLocationLevel level
 	goto error_out;
 
     if (children->len) {
-	if (level == MATEWEATHER_LOCATION_CITY)
+	if (level == CAFEWEATHER_LOCATION_CITY)
 	    g_ptr_array_sort_with_data (children, sort_locations_by_distance, loc);
 	else
 	    g_ptr_array_sort (children, sort_locations_by_name);
@@ -304,19 +304,19 @@ error_out:
  * cafeweather_location_new_world:
  * @use_regions: whether or not to divide the world into regions
  *
- * Creates a new #MateWeatherLocation of type %MATEWEATHER_LOCATION_WORLD,
+ * Creates a new #MateWeatherLocation of type %CAFEWEATHER_LOCATION_WORLD,
  * representing a hierarchy containing all of the locations from
  * Locations.xml.
  *
  * If @use_regions is %TRUE, the immediate children of the returned
- * location will be %MATEWEATHER_LOCATION_REGION nodes, representing the
+ * location will be %CAFEWEATHER_LOCATION_REGION nodes, representing the
  * top-level "regions" of Locations.xml (the continents and a few
  * other divisions), and the country-level nodes will be the children
  * of the regions. If @use_regions is %FALSE, the regions will be
  * skipped, and the children of the returned location will be the
- * %MATEWEATHER_LOCATION_COUNTRY nodes.
+ * %CAFEWEATHER_LOCATION_COUNTRY nodes.
  *
- * Return value: (allow-none): a %MATEWEATHER_LOCATION_WORLD location, or
+ * Return value: (allow-none): a %CAFEWEATHER_LOCATION_WORLD location, or
  * %NULL if Locations.xml could not be found or could not be parsed.
  **/
 MateWeatherLocation *
@@ -329,7 +329,7 @@ cafeweather_location_new_world (gboolean use_regions)
     if (!parser)
 	return NULL;
 
-    world = location_new_from_xml (parser, MATEWEATHER_LOCATION_WORLD, NULL);
+    world = location_new_from_xml (parser, CAFEWEATHER_LOCATION_WORLD, NULL);
 
     cafeweather_parser_free (parser);
     return world;
@@ -415,7 +415,7 @@ cafeweather_location_get_type (void)
  *
  * Gets @loc's name, localized into the current language.
  *
- * Note that %MATEWEATHER_LOCATION_WEATHER_STATION nodes are not
+ * Note that %CAFEWEATHER_LOCATION_WEATHER_STATION nodes are not
  * localized, and so the name returned for those nodes will always be
  * in English, and should therefore not be displayed to the user.
  * (FIXME: should we just not return a name?)
@@ -451,15 +451,15 @@ cafeweather_location_get_sort_name (MateWeatherLocation *loc)
  * cafeweather_location_get_level:
  * @loc: a #MateWeatherLocation
  *
- * Gets @loc's level, from %MATEWEATHER_LOCATION_WORLD, to
- * %MATEWEATHER_LOCATION_WEATHER_STATION.
+ * Gets @loc's level, from %CAFEWEATHER_LOCATION_WORLD, to
+ * %CAFEWEATHER_LOCATION_WEATHER_STATION.
  *
  * Return value: @loc's level
  **/
 MateWeatherLocationLevel
 cafeweather_location_get_level (MateWeatherLocation *loc)
 {
-    g_return_val_if_fail (loc != NULL, MATEWEATHER_LOCATION_WORLD);
+    g_return_val_if_fail (loc != NULL, CAFEWEATHER_LOCATION_WORLD);
     return loc->level;
 }
 
@@ -470,7 +470,7 @@ cafeweather_location_get_level (MateWeatherLocation *loc)
  * Gets @loc's parent location.
  *
  * Return value: (transfer none) (allow-none): @loc's parent, or %NULL
- * if @loc is a %MATEWEATHER_LOCATION_WORLD node.
+ * if @loc is a %CAFEWEATHER_LOCATION_WORLD node.
  **/
 MateWeatherLocation *
 cafeweather_location_get_parent (MateWeatherLocation *loc)
@@ -651,7 +651,7 @@ add_timezones (MateWeatherLocation *loc, GPtrArray *zones)
 	for (i = 0; loc->zones[i]; i++)
 	    g_ptr_array_add (zones, cafeweather_timezone_ref (loc->zones[i]));
     }
-    if (loc->level < MATEWEATHER_LOCATION_COUNTRY && loc->children) {
+    if (loc->level < CAFEWEATHER_LOCATION_COUNTRY && loc->children) {
 	for (i = 0; loc->children[i]; i++)
 	    add_timezones (loc->children[i], zones);
     }
@@ -708,7 +708,7 @@ cafeweather_location_free_timezones (MateWeatherLocation  *loc,
  * @loc: a #MateWeatherLocation
  *
  * Gets the METAR station code associated with a
- * %MATEWEATHER_LOCATION_WEATHER_STATION location.
+ * %CAFEWEATHER_LOCATION_WEATHER_STATION location.
  *
  * Return value: (allow-none): @loc's METAR station code, or %NULL
  **/
@@ -723,9 +723,9 @@ cafeweather_location_get_code (MateWeatherLocation *loc)
  * cafeweather_location_get_city_name:
  * @loc: a #MateWeatherLocation
  *
- * For a %MATEWEATHER_LOCATION_CITY location, this is equivalent to
+ * For a %CAFEWEATHER_LOCATION_CITY location, this is equivalent to
  * cafeweather_location_get_name(). For a
- * %MATEWEATHER_LOCATION_WEATHER_STATION location, it is equivalent to
+ * %CAFEWEATHER_LOCATION_WEATHER_STATION location, it is equivalent to
  * calling cafeweather_location_get_name() on the location's parent. For
  * other locations it will return %NULL.
  *
@@ -736,11 +736,11 @@ cafeweather_location_get_city_name (MateWeatherLocation *loc)
 {
     g_return_val_if_fail (loc != NULL, NULL);
 
-    if (loc->level == MATEWEATHER_LOCATION_CITY)
+    if (loc->level == CAFEWEATHER_LOCATION_CITY)
 	return g_strdup (loc->name);
-    else if (loc->level == MATEWEATHER_LOCATION_WEATHER_STATION &&
+    else if (loc->level == CAFEWEATHER_LOCATION_WEATHER_STATION &&
 	     loc->parent &&
-	     loc->parent->level == MATEWEATHER_LOCATION_CITY)
+	     loc->parent->level == CAFEWEATHER_LOCATION_CITY)
 	return g_strdup (loc->parent->name);
     else
 	return NULL;
@@ -760,7 +760,7 @@ cafeweather_location_to_weather_location (MateWeatherLocation *gloc,
     if (!name)
 	name = cafeweather_location_get_name (gloc);
 
-    if (gloc->level == MATEWEATHER_LOCATION_CITY && gloc->children)
+    if (gloc->level == CAFEWEATHER_LOCATION_CITY && gloc->children)
 	l = gloc->children[0];
     else
 	l = gloc;

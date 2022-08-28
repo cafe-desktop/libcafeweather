@@ -20,7 +20,7 @@
 #include <config.h>
 #endif
 
-#define MATEWEATHER_I_KNOW_THIS_IS_UNSTABLE
+#define CAFEWEATHER_I_KNOW_THIS_IS_UNSTABLE
 #include "weather.h"
 #include "weather-priv.h"
 

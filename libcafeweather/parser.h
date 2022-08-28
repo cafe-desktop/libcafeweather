@@ -18,8 +18,8 @@
  * <http://www.gnu.org/licenses/>.
  */
 
-#ifndef MATEWEATHER_PARSER_H
-#define MATEWEATHER_PARSER_H 1
+#ifndef CAFEWEATHER_PARSER_H
+#define CAFEWEATHER_PARSER_H 1
 
 #include <libxml/xmlreader.h>
 #include "cafeweather-timezone.h"

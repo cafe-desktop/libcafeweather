@@ -22,7 +22,7 @@
 #include <config.h>
 #endif
 
-#define MATEWEATHER_I_KNOW_THIS_IS_UNSTABLE
+#define CAFEWEATHER_I_KNOW_THIS_IS_UNSTABLE
 #include "weather-priv.h"
 
 #include "parser.h"
@@ -174,7 +174,7 @@ cafeweather_parser_new (gboolean use_regions)
     filename = NULL;
     for (i = 0; parser->locales[i] != NULL; i++) {
 	filename = g_strdup_printf ("%s/Locations.%s.xml",
-				    MATEWEATHER_XML_LOCATION_DIR,
+				    CAFEWEATHER_XML_LOCATION_DIR,
 				    parser->locales[i]);
 
 	if (g_file_test (filename, G_FILE_TEST_IS_REGULAR))
@@ -187,7 +187,7 @@ cafeweather_parser_new (gboolean use_regions)
             continue;
 
 	filename = g_strdup_printf ("%s/Locations.%s.xml.gz",
-				    MATEWEATHER_XML_LOCATION_DIR,
+				    CAFEWEATHER_XML_LOCATION_DIR,
 				    parser->locales[i]);
 
 	if (g_file_test (filename, G_FILE_TEST_IS_REGULAR))
@@ -201,11 +201,11 @@ cafeweather_parser_new (gboolean use_regions)
      * the english names (depending on the configure flags).
      */
     if (!filename)
-	filename = g_build_filename (MATEWEATHER_XML_LOCATION_DIR, "Locations.xml", NULL);
+	filename = g_build_filename (CAFEWEATHER_XML_LOCATION_DIR, "Locations.xml", NULL);
 
     if (!g_file_test (filename, G_FILE_TEST_IS_REGULAR) && zlib_support) {
         g_free (filename);
-	filename = g_build_filename (MATEWEATHER_XML_LOCATION_DIR, "Locations.xml.gz", NULL);
+	filename = g_build_filename (CAFEWEATHER_XML_LOCATION_DIR, "Locations.xml.gz", NULL);
     }
 
     /* Open the xml file containing the different locations */

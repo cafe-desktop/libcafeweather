@@ -16,11 +16,11 @@
  * <http://www.gnu.org/licenses/>.
  */
 
-#ifndef __MATEWEATHER_PREFS_H_
-#define __MATEWEATHER_PREFS_H_
+#ifndef __CAFEWEATHER_PREFS_H_
+#define __CAFEWEATHER_PREFS_H_
 
 
-#ifndef MATEWEATHER_I_KNOW_THIS_IS_UNSTABLE
+#ifndef CAFEWEATHER_I_KNOW_THIS_IS_UNSTABLE
 #error "libcafeweather should only be used if you understand that it's subject to change, and is not supported as a fixed API/ABI or as part of the platform"
 #endif
 
@@ -60,4 +60,4 @@ const char *  cafeweather_prefs_get_speed_display_name    (SpeedUnit speed);
 const char *  cafeweather_prefs_get_pressure_display_name  (PressureUnit pressure);
 const char *  cafeweather_prefs_get_distance_display_name  (DistanceUnit distance);
 
-#endif /* __MATEWEATHER_PREFS_H_ */
+#endif /* __CAFEWEATHER_PREFS_H_ */
