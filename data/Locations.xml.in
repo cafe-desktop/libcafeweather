@@ -20601,13 +20601,13 @@
       <iso-code>UA</iso-code>
       <fips-code>UP</fips-code>
       <timezones>
-        <timezone id="Europe/Kiev">
+        <timezone id="Europe/Kyiv">
           <obsoletes>Europe/Simferopol</obsoletes>
           <obsoletes>Europe/Uzhgorod</obsoletes>
           <obsoletes>Europe/Zaporozhye</obsoletes>
         </timezone>
       </timezones>
-      <tz-hint>Europe/Kiev</tz-hint>
+      <tz-hint>Europe/Kyiv</tz-hint>
       <city>
         <!-- A city in Ukraine -->
         <name>Boryspil'</name>
