@@ -7,6 +7,7 @@ requires:
     # Useful URL: https://salsa.debian.org/debian-cafe-team/libcafeweather
     - aptitude
     - autoconf
+    - autoconf-archive
     - autopoint
     - clang
     - clang-tools
