@@ -359,7 +359,7 @@ msgstr "Şehir için hata durumu"
 
 #: libcafeweather/org.cafe.weather.gschema.xml.in:149
 msgid "The city that cafeweather displays information for."
-msgstr "Mateweather'in bilgisini gösterdiği şehir."
+msgstr "Cafeweather'in bilgisini gösterdiği şehir."
 
 #. TRANSLATORS: Change this to the coordinates of your default
 #. location that corresponds to the DEFAULT_LOCATION and DEFAULT_CODE

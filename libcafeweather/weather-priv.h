@@ -38,7 +38,7 @@ const char *cafeweather_dpgettext (const char *context, const char *str) G_GNUC_
 
 #define WEATHER_LOCATION_CODE_LEN 4
 
-WeatherLocation *cafeweather_location_to_weather_location (MateWeatherLocation *gloc,
+WeatherLocation *cafeweather_location_to_weather_location (CafeWeatherLocation *gloc,
 							const char *name);
 
 /*

@@ -31,21 +31,21 @@
 extern "C" {
 #endif
 
-typedef struct _MateWeatherTimezone MateWeatherTimezone;
+typedef struct _CafeWeatherTimezone CafeWeatherTimezone;
 
 GType cafeweather_timezone_get_type (void);
 #define CAFEWEATHER_TYPE_TIMEZONE (cafeweather_timezone_get_type ())
 
-const char       *cafeweather_timezone_get_name       (MateWeatherTimezone *zone);
-const char       *cafeweather_timezone_get_tzid       (MateWeatherTimezone *zone);
-int               cafeweather_timezone_get_offset     (MateWeatherTimezone *zone);
-gboolean          cafeweather_timezone_has_dst        (MateWeatherTimezone *zone);
-int               cafeweather_timezone_get_dst_offset (MateWeatherTimezone *zone);
+const char       *cafeweather_timezone_get_name       (CafeWeatherTimezone *zone);
+const char       *cafeweather_timezone_get_tzid       (CafeWeatherTimezone *zone);
+int               cafeweather_timezone_get_offset     (CafeWeatherTimezone *zone);
+gboolean          cafeweather_timezone_has_dst        (CafeWeatherTimezone *zone);
+int               cafeweather_timezone_get_dst_offset (CafeWeatherTimezone *zone);
 
-MateWeatherTimezone *cafeweather_timezone_ref            (MateWeatherTimezone *zone);
-void              cafeweather_timezone_unref          (MateWeatherTimezone *zone);
+CafeWeatherTimezone *cafeweather_timezone_ref            (CafeWeatherTimezone *zone);
+void              cafeweather_timezone_unref          (CafeWeatherTimezone *zone);
 
-MateWeatherTimezone *cafeweather_timezone_get_utc        (void);
+CafeWeatherTimezone *cafeweather_timezone_get_utc        (void);
 
 #ifdef __cplusplus
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <locatingRules>
-  <locatingRule name="MateWeather" pattern="*.xml">
+  <locatingRule name="CafeWeather" pattern="*.xml">
     <documentRule localName="cafeweather" target="locations.its"/>
   </locatingRule>
 </locatingRules>

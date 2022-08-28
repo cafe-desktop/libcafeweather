@@ -1,7 +1,7 @@
 <SECTION>
 <FILE>timezone-menu</FILE>
-<TITLE>MateWeatherTimezoneMenu</TITLE>
-MateWeatherTimezoneMenu
+<TITLE>CafeWeatherTimezoneMenu</TITLE>
+CafeWeatherTimezoneMenu
 cafeweather_timezone_menu_new
 cafeweather_timezone_menu_set_tzid
 cafeweather_timezone_menu_get_tzid
@@ -17,8 +17,8 @@ CAFEWEATHER_TIMEZONE_MENU_GET_CLASS
 
 <SECTION>
 <FILE>location-entry</FILE>
-<TITLE>MateWeatherLocationEntry</TITLE>
-MateWeatherLocationEntry
+<TITLE>CafeWeatherLocationEntry</TITLE>
+CafeWeatherLocationEntry
 cafeweather_location_entry_new
 cafeweather_location_entry_set_location
 cafeweather_location_entry_get_location
@@ -35,7 +35,7 @@ CAFEWEATHER_LOCATION_ENTRY_GET_CLASS
 
 <SECTION>
 <FILE>cafeweather-timezone</FILE>
-MateWeatherTimezone
+CafeWeatherTimezone
 cafeweather_timezone_get_name
 cafeweather_timezone_get_tzid
 cafeweather_timezone_get_offset
@@ -59,7 +59,7 @@ GSETTINGS_TEMP_UNIT
 GSETTINGS_SPEED_UNIT
 GSETTINGS_PRESSURE_UNIT
 GSETTINGS_DISTANCE_UNIT
-MateWeatherPrefs
+CafeWeatherPrefs
 cafeweather_prefs_load
 cafeweather_prefs_get_temp_display_name
 cafeweather_prefs_get_speed_display_name
@@ -69,8 +69,8 @@ cafeweather_prefs_get_distance_display_name
 
 <SECTION>
 <FILE>cafeweather-location</FILE>
-MateWeatherLocation
-MateWeatherLocationLevel
+CafeWeatherLocation
+CafeWeatherLocationLevel
 cafeweather_location_new_world
 cafeweather_location_ref
 cafeweather_location_unref

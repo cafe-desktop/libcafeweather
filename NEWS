@@ -70,7 +70,7 @@
 
   * Fix Novosibirsk timezone
   * Add Ceiba in Puerto Rico
-  * doc: drop ancient MateConf references and some other stuff
+  * doc: drop ancient CafeConf references and some other stuff
   * remove ancient NEWS.GNOME
   * Update cities of Kazakhstan.
   * actually check the $GIO_REQUIRED variable's value

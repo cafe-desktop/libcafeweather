@@ -25,30 +25,30 @@
 #include <libcafeweather/cafeweather-location.h>
 
 #define CAFEWEATHER_TYPE_TIMEZONE_MENU            (cafeweather_timezone_menu_get_type ())
-#define CAFEWEATHER_TIMEZONE_MENU(object)         (G_TYPE_CHECK_INSTANCE_CAST ((object), CAFEWEATHER_TYPE_TIMEZONE_MENU, MateWeatherTimezoneMenu))
-#define CAFEWEATHER_TIMEZONE_MENU_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), CAFEWEATHER_TYPE_TIMEZONE_MENU, MateWeatherTimezoneMenuClass))
+#define CAFEWEATHER_TIMEZONE_MENU(object)         (G_TYPE_CHECK_INSTANCE_CAST ((object), CAFEWEATHER_TYPE_TIMEZONE_MENU, CafeWeatherTimezoneMenu))
+#define CAFEWEATHER_TIMEZONE_MENU_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), CAFEWEATHER_TYPE_TIMEZONE_MENU, CafeWeatherTimezoneMenuClass))
 #define CAFEWEATHER_IS_TIMEZONE_MENU(object)      (G_TYPE_CHECK_INSTANCE_TYPE ((object), CAFEWEATHER_TYPE_TIMEZONE_MENU))
 #define CAFEWEATHER_IS_TIMEZONE_MENU_CLASS(klass) (G_TYPE_CHECK_CLASS_TYPE ((klass), CAFEWEATHER_TYPE_TIMEZONE_MENU))
-#define CAFEWEATHER_TIMEZONE_MENU_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), CAFEWEATHER_TYPE_TIMEZONE_MENU, MateWeatherTimezoneMenuClass))
+#define CAFEWEATHER_TIMEZONE_MENU_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), CAFEWEATHER_TYPE_TIMEZONE_MENU, CafeWeatherTimezoneMenuClass))
 
 typedef struct {
     GtkComboBox parent;
 
     /*< private >*/
-    MateWeatherTimezone *zone;
-} MateWeatherTimezoneMenu;
+    CafeWeatherTimezone *zone;
+} CafeWeatherTimezoneMenu;
 
 typedef struct {
     GtkComboBoxClass parent_class;
 
-} MateWeatherTimezoneMenuClass;
+} CafeWeatherTimezoneMenuClass;
 
 GType       cafeweather_timezone_menu_get_type         (void);
 
-GtkWidget  *cafeweather_timezone_menu_new              (MateWeatherLocation     *top);
+GtkWidget  *cafeweather_timezone_menu_new              (CafeWeatherLocation     *top);
 
-void        cafeweather_timezone_menu_set_tzid         (MateWeatherTimezoneMenu *menu,
+void        cafeweather_timezone_menu_set_tzid         (CafeWeatherTimezoneMenu *menu,
 						     const char           *tzid);
-const char *cafeweather_timezone_menu_get_tzid         (MateWeatherTimezoneMenu *menu);
+const char *cafeweather_timezone_menu_get_tzid         (CafeWeatherTimezoneMenu *menu);
 
 #endif

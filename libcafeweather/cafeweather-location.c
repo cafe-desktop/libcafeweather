@@ -35,29 +35,29 @@
 
 /**
  * SECTION:cafeweather-location
- * @Title: MateWeatherLocation
+ * @Title: CafeWeatherLocation
  *
- * A #MateWeatherLocation represents a "location" of some type known to
+ * A #CafeWeatherLocation represents a "location" of some type known to
  * libcafeweather; anything from a single weather station to the entire
- * world. See #MateWeatherLocationLevel for information about how the
+ * world. See #CafeWeatherLocationLevel for information about how the
  * hierarchy of locations works.
  */
 
-struct _MateWeatherLocation {
+struct _CafeWeatherLocation {
     char *name, *sort_name;
-    MateWeatherLocation *parent, **children;
-    MateWeatherLocationLevel level;
+    CafeWeatherLocation *parent, **children;
+    CafeWeatherLocationLevel level;
     char *country_code, *tz_hint;
     char *station_code, *forecast_zone, *radar;
     double latitude, longitude;
     gboolean latlon_valid;
-    MateWeatherTimezone **zones;
+    CafeWeatherTimezone **zones;
 
     int ref_count;
 };
 
 /**
- * MateWeatherLocationLevel:
+ * CafeWeatherLocationLevel:
  * @CAFEWEATHER_LOCATION_WORLD: A location representing the entire world.
  * @CAFEWEATHER_LOCATION_REGION: A location representing a continent or
  * other top-level region.
@@ -72,7 +72,7 @@ struct _MateWeatherLocation {
  * @CAFEWEATHER_LOCATION_WEATHER_STATION: A location representing a
  * weather station.
  *
- * The size/scope of a particular #MateWeatherLocation.
+ * The size/scope of a particular #CafeWeatherLocation.
  *
  * Locations form a hierarchy, with a %CAFEWEATHER_LOCATION_WORLD
  * location at the top, divided into regions or countries, and so on.
@@ -85,8 +85,8 @@ struct _MateWeatherLocation {
 static int
 sort_locations_by_name (gconstpointer a, gconstpointer b)
 {
-    MateWeatherLocation *loc_a = *(MateWeatherLocation **)a;
-    MateWeatherLocation *loc_b = *(MateWeatherLocation **)b;
+    CafeWeatherLocation *loc_a = *(CafeWeatherLocation **)a;
+    CafeWeatherLocation *loc_b = *(CafeWeatherLocation **)b;
 
     return g_utf8_collate (loc_a->sort_name, loc_b->sort_name);
 }
@@ -94,9 +94,9 @@ sort_locations_by_name (gconstpointer a, gconstpointer b)
 static int
 sort_locations_by_distance (gconstpointer a, gconstpointer b, gpointer user_data)
 {
-    MateWeatherLocation *loc_a = *(MateWeatherLocation **)a;
-    MateWeatherLocation *loc_b = *(MateWeatherLocation **)b;
-    MateWeatherLocation *city = (MateWeatherLocation *)user_data;
+    CafeWeatherLocation *loc_a = *(CafeWeatherLocation **)a;
+    CafeWeatherLocation *loc_b = *(CafeWeatherLocation **)b;
+    CafeWeatherLocation *city = (CafeWeatherLocation *)user_data;
     double dist_a, dist_b;
 
     dist_a = cafeweather_location_get_distance (loc_a, city);
@@ -156,17 +156,17 @@ unparse_coordinates (double latitude, double longitude)
 			    lon_d, lon_m, lon_s, lon_dir);
 }
 
-static MateWeatherLocation *
-location_new_from_xml (MateWeatherParser *parser, MateWeatherLocationLevel level,
-		       MateWeatherLocation *parent)
+static CafeWeatherLocation *
+location_new_from_xml (CafeWeatherParser *parser, CafeWeatherLocationLevel level,
+		       CafeWeatherLocation *parent)
 {
-    MateWeatherLocation *loc, *child;
+    CafeWeatherLocation *loc, *child;
     GPtrArray *children = NULL;
     const char *tagname;
     char *value, *normalized;
     int tagtype, i;
 
-    loc = g_slice_new0 (MateWeatherLocation);
+    loc = g_slice_new0 (CafeWeatherLocation);
     loc->parent = parent;
     loc->level = level;
     loc->ref_count = 1;
@@ -285,7 +285,7 @@ location_new_from_xml (MateWeatherParser *parser, MateWeatherLocationLevel level
 	    g_ptr_array_sort (children, sort_locations_by_name);
 
 	g_ptr_array_add (children, NULL);
-	loc->children = (MateWeatherLocation **)g_ptr_array_free (children, FALSE);
+	loc->children = (CafeWeatherLocation **)g_ptr_array_free (children, FALSE);
     } else
 	g_ptr_array_free (children, TRUE);
 
@@ -304,7 +304,7 @@ error_out:
  * cafeweather_location_new_world:
  * @use_regions: whether or not to divide the world into regions
  *
- * Creates a new #MateWeatherLocation of type %CAFEWEATHER_LOCATION_WORLD,
+ * Creates a new #CafeWeatherLocation of type %CAFEWEATHER_LOCATION_WORLD,
  * representing a hierarchy containing all of the locations from
  * Locations.xml.
  *
@@ -319,11 +319,11 @@ error_out:
  * Return value: (allow-none): a %CAFEWEATHER_LOCATION_WORLD location, or
  * %NULL if Locations.xml could not be found or could not be parsed.
  **/
-MateWeatherLocation *
+CafeWeatherLocation *
 cafeweather_location_new_world (gboolean use_regions)
 {
-    MateWeatherParser *parser;
-    MateWeatherLocation *world;
+    CafeWeatherParser *parser;
+    CafeWeatherLocation *world;
 
     parser = cafeweather_parser_new (use_regions);
     if (!parser)
@@ -337,14 +337,14 @@ cafeweather_location_new_world (gboolean use_regions)
 
 /**
  * cafeweather_location_ref:
- * @loc: a #MateWeatherLocation
+ * @loc: a #CafeWeatherLocation
  *
  * Adds 1 to @loc's reference count.
  *
  * Return value: @loc
  **/
-MateWeatherLocation *
-cafeweather_location_ref (MateWeatherLocation *loc)
+CafeWeatherLocation *
+cafeweather_location_ref (CafeWeatherLocation *loc)
 {
     g_return_val_if_fail (loc != NULL, NULL);
 
@@ -354,13 +354,13 @@ cafeweather_location_ref (MateWeatherLocation *loc)
 
 /**
  * cafeweather_location_unref:
- * @loc: a #MateWeatherLocation
+ * @loc: a #CafeWeatherLocation
  *
  * Subtracts 1 from @loc's reference count, and frees it if the
  * reference count reaches 0.
  **/
 void
-cafeweather_location_unref (MateWeatherLocation *loc)
+cafeweather_location_unref (CafeWeatherLocation *loc)
 {
     int i;
 
@@ -391,7 +391,7 @@ cafeweather_location_unref (MateWeatherLocation *loc)
 	g_free (loc->zones);
     }
 
-    g_slice_free (MateWeatherLocation, loc);
+    g_slice_free (CafeWeatherLocation, loc);
 }
 
 GType
@@ -401,7 +401,7 @@ cafeweather_location_get_type (void)
 
     if (g_once_init_enter (&type_volatile)) {
 	GType type = g_boxed_type_register_static (
-	    g_intern_static_string ("MateWeatherLocation"),
+	    g_intern_static_string ("CafeWeatherLocation"),
 	    (GBoxedCopyFunc) cafeweather_location_ref,
 	    (GBoxedFreeFunc) cafeweather_location_unref);
 	g_once_init_leave (&type_volatile, type);
@@ -411,7 +411,7 @@ cafeweather_location_get_type (void)
 
 /**
  * cafeweather_location_get_name:
- * @loc: a #MateWeatherLocation
+ * @loc: a #CafeWeatherLocation
  *
  * Gets @loc's name, localized into the current language.
  *
@@ -423,7 +423,7 @@ cafeweather_location_get_type (void)
  * Return value: @loc's name
  **/
 const char *
-cafeweather_location_get_name (MateWeatherLocation *loc)
+cafeweather_location_get_name (CafeWeatherLocation *loc)
 {
     g_return_val_if_fail (loc != NULL, NULL);
     return loc->name;
@@ -431,7 +431,7 @@ cafeweather_location_get_name (MateWeatherLocation *loc)
 
 /**
  * cafeweather_location_get_sort_name:
- * @loc: a #MateWeatherLocation
+ * @loc: a #CafeWeatherLocation
  *
  * Gets @loc's "sort name", which is the name after having
  * g_utf8_normalize() (with %G_NORMALIZE_ALL) and g_utf8_casefold()
@@ -441,7 +441,7 @@ cafeweather_location_get_name (MateWeatherLocation *loc)
  * Return value: @loc's sort name
  **/
 const char *
-cafeweather_location_get_sort_name (MateWeatherLocation *loc)
+cafeweather_location_get_sort_name (CafeWeatherLocation *loc)
 {
     g_return_val_if_fail (loc != NULL, NULL);
     return loc->sort_name;
@@ -449,15 +449,15 @@ cafeweather_location_get_sort_name (MateWeatherLocation *loc)
 
 /**
  * cafeweather_location_get_level:
- * @loc: a #MateWeatherLocation
+ * @loc: a #CafeWeatherLocation
  *
  * Gets @loc's level, from %CAFEWEATHER_LOCATION_WORLD, to
  * %CAFEWEATHER_LOCATION_WEATHER_STATION.
  *
  * Return value: @loc's level
  **/
-MateWeatherLocationLevel
-cafeweather_location_get_level (MateWeatherLocation *loc)
+CafeWeatherLocationLevel
+cafeweather_location_get_level (CafeWeatherLocation *loc)
 {
     g_return_val_if_fail (loc != NULL, CAFEWEATHER_LOCATION_WORLD);
     return loc->level;
@@ -465,15 +465,15 @@ cafeweather_location_get_level (MateWeatherLocation *loc)
 
 /**
  * cafeweather_location_get_parent:
- * @loc: a #MateWeatherLocation
+ * @loc: a #CafeWeatherLocation
  *
  * Gets @loc's parent location.
  *
  * Return value: (transfer none) (allow-none): @loc's parent, or %NULL
  * if @loc is a %CAFEWEATHER_LOCATION_WORLD node.
  **/
-MateWeatherLocation *
-cafeweather_location_get_parent (MateWeatherLocation *loc)
+CafeWeatherLocation *
+cafeweather_location_get_parent (CafeWeatherLocation *loc)
 {
     g_return_val_if_fail (loc != NULL, NULL);
     return loc->parent;
@@ -481,7 +481,7 @@ cafeweather_location_get_parent (MateWeatherLocation *loc)
 
 /**
  * cafeweather_location_get_children:
- * @loc: a #MateWeatherLocation
+ * @loc: a #CafeWeatherLocation
  *
  * Gets an array of @loc's children; this is owned by @loc and will
  * not remain valid if @loc is freed.
@@ -489,10 +489,10 @@ cafeweather_location_get_parent (MateWeatherLocation *loc)
  * Return value: (transfer none) (array zero-terminated=1): @loc's
  * children. (May be empty, but will not be %NULL.)
  **/
-MateWeatherLocation **
-cafeweather_location_get_children (MateWeatherLocation *loc)
+CafeWeatherLocation **
+cafeweather_location_get_children (CafeWeatherLocation *loc)
 {
-    static MateWeatherLocation *no_children = NULL;
+    static CafeWeatherLocation *no_children = NULL;
 
     g_return_val_if_fail (loc != NULL, NULL);
 
@@ -505,7 +505,7 @@ cafeweather_location_get_children (MateWeatherLocation *loc)
 
 /**
  * cafeweather_location_free_children:
- * @loc: a #MateWeatherLocation
+ * @loc: a #CafeWeatherLocation
  * @children: an array of @loc's children
  *
  * This is a no-op. Do not use it.
@@ -513,22 +513,22 @@ cafeweather_location_get_children (MateWeatherLocation *loc)
  * Deprecated: This is a no-op.
  **/
 void
-cafeweather_location_free_children (MateWeatherLocation  *loc,
-				 MateWeatherLocation **children)
+cafeweather_location_free_children (CafeWeatherLocation  *loc,
+				 CafeWeatherLocation **children)
 {
     ;
 }
 
 /**
  * cafeweather_location_has_coords:
- * @loc: a #MateWeatherLocation
+ * @loc: a #CafeWeatherLocation
  *
  * Checks if @loc has valid latitude and longitude.
  *
  * Return value: %TRUE if @loc has valid latitude and longitude.
  **/
 gboolean
-cafeweather_location_has_coords (MateWeatherLocation *loc)
+cafeweather_location_has_coords (CafeWeatherLocation *loc)
 {
     g_return_val_if_fail (loc != NULL, FALSE);
     return loc->latlon_valid;
@@ -536,7 +536,7 @@ cafeweather_location_has_coords (MateWeatherLocation *loc)
 
 /**
  * cafeweather_location_get_coords:
- * @loc: a #MateWeatherLocation
+ * @loc: a #CafeWeatherLocation
  * @latitude: (out): on return will contain @loc's latitude
  * @longitude: (out): on return will contain @loc's longitude
  *
@@ -544,7 +544,7 @@ cafeweather_location_has_coords (MateWeatherLocation *loc)
  * cafeweather_location_has_coords() before calling this.
  **/
 void
-cafeweather_location_get_coords (MateWeatherLocation *loc,
+cafeweather_location_get_coords (CafeWeatherLocation *loc,
 			      double *latitude, double *longitude)
 {
     //g_return_if_fail (loc->latlon_valid);
@@ -558,15 +558,15 @@ cafeweather_location_get_coords (MateWeatherLocation *loc,
 
 /**
  * cafeweather_location_get_distance:
- * @loc: a #MateWeatherLocation
- * @loc2: a second #MateWeatherLocation
+ * @loc: a #CafeWeatherLocation
+ * @loc2: a second #CafeWeatherLocation
  *
  * Determines the distance in kilometers between @loc and @loc2.
  *
  * Return value: the distance between @loc and @loc2.
  **/
 double
-cafeweather_location_get_distance (MateWeatherLocation *loc, MateWeatherLocation *loc2)
+cafeweather_location_get_distance (CafeWeatherLocation *loc, CafeWeatherLocation *loc2)
 {
     /* average radius of the earth in km */
     static const double radius = 6372.795;
@@ -583,7 +583,7 @@ cafeweather_location_get_distance (MateWeatherLocation *loc, MateWeatherLocation
 
 /**
  * cafeweather_location_get_country:
- * @loc: a #MateWeatherLocation
+ * @loc: a #CafeWeatherLocation
  *
  * Gets the ISO 3166 country code of @loc (or %NULL if @loc is a
  * region- or world-level location)
@@ -592,7 +592,7 @@ cafeweather_location_get_distance (MateWeatherLocation *loc, MateWeatherLocation
  * is a region- or world-level location)
  **/
 const char *
-cafeweather_location_get_country (MateWeatherLocation *loc)
+cafeweather_location_get_country (CafeWeatherLocation *loc)
 {
     g_return_val_if_fail (loc != NULL, NULL);
 
@@ -603,7 +603,7 @@ cafeweather_location_get_country (MateWeatherLocation *loc)
 
 /**
  * cafeweather_location_get_timezone:
- * @loc: a #MateWeatherLocation
+ * @loc: a #CafeWeatherLocation
  *
  * Gets the timezone associated with @loc, if known.
  *
@@ -613,8 +613,8 @@ cafeweather_location_get_country (MateWeatherLocation *loc)
  * Return value: (transfer none) (allow-none): @loc's timezone, or
  * %NULL
  **/
-MateWeatherTimezone *
-cafeweather_location_get_timezone (MateWeatherLocation *loc)
+CafeWeatherTimezone *
+cafeweather_location_get_timezone (CafeWeatherLocation *loc)
 {
     const char *tz_hint;
     int i;
@@ -643,7 +643,7 @@ cafeweather_location_get_timezone (MateWeatherLocation *loc)
 }
 
 static void
-add_timezones (MateWeatherLocation *loc, GPtrArray *zones)
+add_timezones (CafeWeatherLocation *loc, GPtrArray *zones)
 {
     int i;
 
@@ -659,7 +659,7 @@ add_timezones (MateWeatherLocation *loc, GPtrArray *zones)
 
 /**
  * cafeweather_location_get_timezones:
- * @loc: a #MateWeatherLocation
+ * @loc: a #CafeWeatherLocation
  *
  * Gets an array of all timezones associated with any location under
  * @loc. You can use cafeweather_location_free_timezones() to free this
@@ -668,8 +668,8 @@ add_timezones (MateWeatherLocation *loc, GPtrArray *zones)
  * Return value: (transfer full) (array zero-terminated=1): an array
  * of timezones. May be empty but will not be %NULL.
  **/
-MateWeatherTimezone **
-cafeweather_location_get_timezones (MateWeatherLocation *loc)
+CafeWeatherTimezone **
+cafeweather_location_get_timezones (CafeWeatherLocation *loc)
 {
     GPtrArray *zones;
 
@@ -678,20 +678,20 @@ cafeweather_location_get_timezones (MateWeatherLocation *loc)
     zones = g_ptr_array_new ();
     add_timezones (loc, zones);
     g_ptr_array_add (zones, NULL);
-    return (MateWeatherTimezone **)g_ptr_array_free (zones, FALSE);
+    return (CafeWeatherTimezone **)g_ptr_array_free (zones, FALSE);
 }
 
 /**
  * cafeweather_location_free_timezones:
- * @loc: a #MateWeatherLocation
+ * @loc: a #CafeWeatherLocation
  * @zones: an array returned from cafeweather_location_get_timezones()
  *
  * Frees the array of timezones returned by
  * cafeweather_location_get_timezones().
  **/
 void
-cafeweather_location_free_timezones (MateWeatherLocation  *loc,
-				  MateWeatherTimezone **zones)
+cafeweather_location_free_timezones (CafeWeatherLocation  *loc,
+				  CafeWeatherTimezone **zones)
 {
     int i;
 
@@ -705,7 +705,7 @@ cafeweather_location_free_timezones (MateWeatherLocation  *loc,
 
 /**
  * cafeweather_location_get_code:
- * @loc: a #MateWeatherLocation
+ * @loc: a #CafeWeatherLocation
  *
  * Gets the METAR station code associated with a
  * %CAFEWEATHER_LOCATION_WEATHER_STATION location.
@@ -713,7 +713,7 @@ cafeweather_location_free_timezones (MateWeatherLocation  *loc,
  * Return value: (allow-none): @loc's METAR station code, or %NULL
  **/
 const char *
-cafeweather_location_get_code (MateWeatherLocation *loc)
+cafeweather_location_get_code (CafeWeatherLocation *loc)
 {
     g_return_val_if_fail (loc != NULL, NULL);
     return loc->station_code;
@@ -721,7 +721,7 @@ cafeweather_location_get_code (MateWeatherLocation *loc)
 
 /**
  * cafeweather_location_get_city_name:
- * @loc: a #MateWeatherLocation
+ * @loc: a #CafeWeatherLocation
  *
  * For a %CAFEWEATHER_LOCATION_CITY location, this is equivalent to
  * cafeweather_location_get_name(). For a
@@ -732,7 +732,7 @@ cafeweather_location_get_code (MateWeatherLocation *loc)
  * Return value: (allow-none) @loc's city name, or %NULL
  **/
 char *
-cafeweather_location_get_city_name (MateWeatherLocation *loc)
+cafeweather_location_get_city_name (CafeWeatherLocation *loc)
 {
     g_return_val_if_fail (loc != NULL, NULL);
 
@@ -747,11 +747,11 @@ cafeweather_location_get_city_name (MateWeatherLocation *loc)
 }
 
 WeatherLocation *
-cafeweather_location_to_weather_location (MateWeatherLocation *gloc,
+cafeweather_location_to_weather_location (CafeWeatherLocation *gloc,
 				       const char *name)
 {
     const char *code = NULL, *zone = NULL, *radar = NULL, *tz_hint = NULL;
-    MateWeatherLocation *l;
+    CafeWeatherLocation *l;
     WeatherLocation *wloc;
     char *coords;
 
@@ -791,7 +791,7 @@ cafeweather_location_to_weather_location (MateWeatherLocation *gloc,
 
 /**
  * cafeweather_location_get_weather:
- * @loc: a %MateWeatherLocation
+ * @loc: a %CafeWeatherLocation
  *
  * Creates a #WeatherInfo corresponding to @loc; you can use
  * weather_info_update() to fill it in.
@@ -800,7 +800,7 @@ cafeweather_location_to_weather_location (MateWeatherLocation *gloc,
  * @loc.
  **/
 WeatherInfo *
-cafeweather_location_get_weather (MateWeatherLocation *loc)
+cafeweather_location_get_weather (CafeWeatherLocation *loc)
 {
     WeatherLocation *wloc;
     WeatherInfo *info;

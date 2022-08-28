@@ -38,12 +38,12 @@
  */
 
 static gboolean
-cafeweather_xml_parse_node (MateWeatherLocation *gloc,
+cafeweather_xml_parse_node (CafeWeatherLocation *gloc,
 			 GtkTreeStore *store, GtkTreeIter *parent)
 {
     GtkTreeIter iter, *self = &iter;
-    MateWeatherLocation **children, *parent_loc;
-    MateWeatherLocationLevel level;
+    CafeWeatherLocation **children, *parent_loc;
+    CafeWeatherLocationLevel level;
     WeatherLocation *wloc;
     const char *name;
     int i;
@@ -120,7 +120,7 @@ cafeweather_xml_parse_node (MateWeatherLocation *gloc,
 GtkTreeModel *
 cafeweather_xml_load_locations (void)
 {
-    MateWeatherLocation *world;
+    CafeWeatherLocation *world;
     GtkTreeStore *store;
 
     world = cafeweather_location_new_world (TRUE);

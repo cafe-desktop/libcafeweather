@@ -859,7 +859,7 @@
 # Gabor Sari <saga dot cafe dot hu>, 2003.
 # Laszlo Dvornik <dvornik dot cafe dot hu>, 2004.
 # Gabor Kelemen <kelemeng at cafe dot hu>, 2004, 2005, 2006, 2007, 2008, 2009.
-# Mate ORY <orycafe at gmail d0t com>, 2006.
+# Cafe ORY <orycafe at gmail d0t com>, 2006.
 
 
 
@@ -1335,7 +1335,7 @@
 # Nejc Novak <nejc.novak@guest.arnes.si>, 2002.
 # Andraz Tori <andraz.tori1@guest.arnes.si>, 2003.
 # Matic Žgur <mr.zgur@gmail.com>, 2006.
-# Matej Urbančič <cafeju@svn.gnome.org>, 2008 - 2009.
+# Cafej Urbančič <cafeju@svn.gnome.org>, 2008 - 2009.
 #
 
 
@@ -1468,7 +1468,7 @@
 ========== wa.po ==========
 # Traduction into the walloon language.
 #
-# Si vos voloz donner on côp di spale pol ratournaedje di Mate (ou des
+# Si vos voloz donner on côp di spale pol ratournaedje di Cafe (ou des
 # ôtes libes programes) sicrijhoz mu a l' adresse emile
 # <srtxg@chanae.alphanet.ch>; nos avons co bråmint di l' ovraedje a fé.
 #

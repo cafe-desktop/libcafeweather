@@ -34,9 +34,9 @@
 #define GSETTINGS_PRESSURE_UNIT "pressure-unit"
 #define GSETTINGS_DISTANCE_UNIT "distance-unit"
 
-typedef struct _MateWeatherPrefs MateWeatherPrefs;
+typedef struct _CafeWeatherPrefs CafeWeatherPrefs;
 
-struct _MateWeatherPrefs {
+struct _CafeWeatherPrefs {
     WeatherLocation *location;
     gboolean show_notifications;
     gint update_interval;  /* in seconds */
@@ -52,7 +52,7 @@ struct _MateWeatherPrefs {
     DistanceUnit distance_unit;
 };
 
-void		cafeweather_prefs_load			(MateWeatherPrefs *prefs,
+void		cafeweather_prefs_load			(CafeWeatherPrefs *prefs,
                                              GSettings *settings);
 
 const char *  cafeweather_prefs_get_temp_display_name    (TempUnit temp);

@@ -33,7 +33,7 @@
 extern "C" {
 #endif
 
-typedef struct _MateWeatherLocation MateWeatherLocation;
+typedef struct _CafeWeatherLocation CafeWeatherLocation;
 
 typedef enum { /*< underscore_name=cafeweather_location_level >*/
     CAFEWEATHER_LOCATION_WORLD,
@@ -45,42 +45,42 @@ typedef enum { /*< underscore_name=cafeweather_location_level >*/
     CAFEWEATHER_LOCATION_ADM2,
     CAFEWEATHER_LOCATION_CITY,
     CAFEWEATHER_LOCATION_WEATHER_STATION
-} MateWeatherLocationLevel;
+} CafeWeatherLocationLevel;
 
 GType cafeweather_location_get_type (void);
 #define CAFEWEATHER_TYPE_LOCATION (cafeweather_location_get_type ())
 
-MateWeatherLocation      *cafeweather_location_new_world      (gboolean           use_regions);
-MateWeatherLocation      *cafeweather_location_ref            (MateWeatherLocation  *loc);
-void                   cafeweather_location_unref          (MateWeatherLocation  *loc);
+CafeWeatherLocation      *cafeweather_location_new_world      (gboolean           use_regions);
+CafeWeatherLocation      *cafeweather_location_ref            (CafeWeatherLocation  *loc);
+void                   cafeweather_location_unref          (CafeWeatherLocation  *loc);
 
-const char            *cafeweather_location_get_name       (MateWeatherLocation  *loc);
-const char            *cafeweather_location_get_sort_name  (MateWeatherLocation  *loc);
-MateWeatherLocationLevel  cafeweather_location_get_level      (MateWeatherLocation  *loc);
-MateWeatherLocation      *cafeweather_location_get_parent     (MateWeatherLocation  *loc);
+const char            *cafeweather_location_get_name       (CafeWeatherLocation  *loc);
+const char            *cafeweather_location_get_sort_name  (CafeWeatherLocation  *loc);
+CafeWeatherLocationLevel  cafeweather_location_get_level      (CafeWeatherLocation  *loc);
+CafeWeatherLocation      *cafeweather_location_get_parent     (CafeWeatherLocation  *loc);
 
-MateWeatherLocation     **cafeweather_location_get_children   (MateWeatherLocation  *loc);
-void                   cafeweather_location_free_children  (MateWeatherLocation  *loc,
-							 MateWeatherLocation **children);
+CafeWeatherLocation     **cafeweather_location_get_children   (CafeWeatherLocation  *loc);
+void                   cafeweather_location_free_children  (CafeWeatherLocation  *loc,
+							 CafeWeatherLocation **children);
 
-gboolean               cafeweather_location_has_coords     (MateWeatherLocation  *loc);
-void                   cafeweather_location_get_coords     (MateWeatherLocation  *loc,
+gboolean               cafeweather_location_has_coords     (CafeWeatherLocation  *loc);
+void                   cafeweather_location_get_coords     (CafeWeatherLocation  *loc,
 							 double            *latitude,
 							 double            *longitude);
-double                 cafeweather_location_get_distance   (MateWeatherLocation  *loc,
-							 MateWeatherLocation  *loc2);
+double                 cafeweather_location_get_distance   (CafeWeatherLocation  *loc,
+							 CafeWeatherLocation  *loc2);
 
-const char            *cafeweather_location_get_country    (MateWeatherLocation  *loc);
+const char            *cafeweather_location_get_country    (CafeWeatherLocation  *loc);
 
-MateWeatherTimezone      *cafeweather_location_get_timezone   (MateWeatherLocation  *loc);
-MateWeatherTimezone     **cafeweather_location_get_timezones  (MateWeatherLocation  *loc);
-void                   cafeweather_location_free_timezones (MateWeatherLocation  *loc,
-							 MateWeatherTimezone **zones);
+CafeWeatherTimezone      *cafeweather_location_get_timezone   (CafeWeatherLocation  *loc);
+CafeWeatherTimezone     **cafeweather_location_get_timezones  (CafeWeatherLocation  *loc);
+void                   cafeweather_location_free_timezones (CafeWeatherLocation  *loc,
+							 CafeWeatherTimezone **zones);
 
-const char            *cafeweather_location_get_code       (MateWeatherLocation  *loc);
-char                  *cafeweather_location_get_city_name  (MateWeatherLocation  *loc);
+const char            *cafeweather_location_get_code       (CafeWeatherLocation  *loc);
+char                  *cafeweather_location_get_city_name  (CafeWeatherLocation  *loc);
 
-WeatherInfo           *cafeweather_location_get_weather    (MateWeatherLocation  *loc);
+WeatherInfo           *cafeweather_location_get_weather    (CafeWeatherLocation  *loc);
 
 #ifdef __cplusplus
 }

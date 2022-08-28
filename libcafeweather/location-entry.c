@@ -29,13 +29,13 @@
 
 /**
  * SECTION:location-entry
- * @Title: MateWeatherLocationEntry
+ * @Title: CafeWeatherLocationEntry
  *
  * A subclass of #GtkEntry that provides autocompletion on
- * #MateWeatherLocation<!-- -->s
+ * #CafeWeatherLocation<!-- -->s
  */
 
-G_DEFINE_TYPE (MateWeatherLocationEntry, cafeweather_location_entry, GTK_TYPE_ENTRY)
+G_DEFINE_TYPE (CafeWeatherLocationEntry, cafeweather_location_entry, GTK_TYPE_ENTRY)
 
 enum {
     PROP_0,
@@ -46,8 +46,8 @@ enum {
     LAST_PROP
 };
 
-static void cafeweather_location_entry_build_model (MateWeatherLocationEntry *entry,
-						 MateWeatherLocation *top);
+static void cafeweather_location_entry_build_model (CafeWeatherLocationEntry *entry,
+						 CafeWeatherLocation *top);
 static void set_property (GObject *object, guint prop_id,
 			  const GValue *value, GParamSpec *pspec);
 static void get_property (GObject *object, guint prop_id,
@@ -68,10 +68,10 @@ static gboolean match_selected (GtkEntryCompletion *completion,
 				GtkTreeModel       *model,
 				GtkTreeIter        *iter,
 				gpointer            entry);
-static void     entry_changed (MateWeatherLocationEntry *entry);
+static void     entry_changed (CafeWeatherLocationEntry *entry);
 
 static void
-cafeweather_location_entry_init (MateWeatherLocationEntry *entry)
+cafeweather_location_entry_init (CafeWeatherLocationEntry *entry)
 {
     GtkEntryCompletion *completion;
 
@@ -95,7 +95,7 @@ cafeweather_location_entry_init (MateWeatherLocationEntry *entry)
 static void
 finalize (GObject *object)
 {
-    MateWeatherLocationEntry *entry = CAFEWEATHER_LOCATION_ENTRY (object);
+    CafeWeatherLocationEntry *entry = CAFEWEATHER_LOCATION_ENTRY (object);
 
     if (entry->location)
 	cafeweather_location_unref (entry->location);
@@ -106,7 +106,7 @@ finalize (GObject *object)
 }
 
 static void
-cafeweather_location_entry_class_init (MateWeatherLocationEntryClass *location_entry_class)
+cafeweather_location_entry_class_init (CafeWeatherLocationEntryClass *location_entry_class)
 {
     GObjectClass *object_class = G_OBJECT_CLASS (location_entry_class);
 
@@ -119,13 +119,13 @@ cafeweather_location_entry_class_init (MateWeatherLocationEntryClass *location_e
 	object_class, PROP_TOP,
 	g_param_spec_pointer ("top",
 			      "Top Location",
-			      "The MateWeatherLocation whose children will be used to fill in the entry",
+			      "The CafeWeatherLocation whose children will be used to fill in the entry",
 			      G_PARAM_WRITABLE | G_PARAM_CONSTRUCT_ONLY));
     g_object_class_install_property (
 	object_class, PROP_LOCATION,
 	g_param_spec_pointer ("location",
 			      "Location",
-			      "The selected MateWeatherLocation",
+			      "The selected CafeWeatherLocation",
 			      G_PARAM_READWRITE));
 }
 
@@ -152,7 +152,7 @@ static void
 get_property (GObject *object, guint prop_id,
 	      GValue *value, GParamSpec *pspec)
 {
-    MateWeatherLocationEntry *entry = CAFEWEATHER_LOCATION_ENTRY (object);
+    CafeWeatherLocationEntry *entry = CAFEWEATHER_LOCATION_ENTRY (object);
 
     switch (prop_id) {
     case PROP_LOCATION:
@@ -165,17 +165,17 @@ get_property (GObject *object, guint prop_id,
 }
 
 static void
-entry_changed (MateWeatherLocationEntry *entry)
+entry_changed (CafeWeatherLocationEntry *entry)
 {
     entry->custom_text = TRUE;
 }
 
 static void
-set_location_internal (MateWeatherLocationEntry *entry,
+set_location_internal (CafeWeatherLocationEntry *entry,
 		       GtkTreeModel          *model,
 		       GtkTreeIter           *iter)
 {
-    MateWeatherLocation *loc;
+    CafeWeatherLocation *loc;
     char *name;
 
     if (entry->location)
@@ -202,21 +202,21 @@ set_location_internal (MateWeatherLocationEntry *entry,
 
 /**
  * cafeweather_location_entry_set_location:
- * @entry: a #MateWeatherLocationEntry
- * @loc: (allow-none): a #MateWeatherLocation in @entry, or %NULL to
+ * @entry: a #CafeWeatherLocationEntry
+ * @loc: (allow-none): a #CafeWeatherLocation in @entry, or %NULL to
  * clear @entry
  *
  * Sets @entry's location to @loc, and updates the text of the
  * entry accordingly.
  **/
 void
-cafeweather_location_entry_set_location (MateWeatherLocationEntry *entry,
-				      MateWeatherLocation      *loc)
+cafeweather_location_entry_set_location (CafeWeatherLocationEntry *entry,
+				      CafeWeatherLocation      *loc)
 {
     GtkEntryCompletion *completion;
     GtkTreeModel *model;
     GtkTreeIter iter;
-    MateWeatherLocation *cmploc;
+    CafeWeatherLocation *cmploc;
 
     g_return_if_fail (CAFEWEATHER_IS_LOCATION_ENTRY (entry));
 
@@ -239,7 +239,7 @@ cafeweather_location_entry_set_location (MateWeatherLocationEntry *entry,
 
 /**
  * cafeweather_location_entry_get_location:
- * @entry: a #MateWeatherLocationEntry
+ * @entry: a #CafeWeatherLocationEntry
  *
  * Gets the location that was set by a previous call to
  * cafeweather_location_entry_set_location() or was selected by the user.
@@ -248,8 +248,8 @@ cafeweather_location_entry_set_location (MateWeatherLocationEntry *entry,
  * (which you must unref when you are done with it), or %NULL if no
  * location is selected.
  **/
-MateWeatherLocation *
-cafeweather_location_entry_get_location (MateWeatherLocationEntry *entry)
+CafeWeatherLocation *
+cafeweather_location_entry_get_location (CafeWeatherLocationEntry *entry)
 {
     g_return_val_if_fail (CAFEWEATHER_IS_LOCATION_ENTRY (entry), NULL);
 
@@ -261,7 +261,7 @@ cafeweather_location_entry_get_location (MateWeatherLocationEntry *entry)
 
 /**
  * cafeweather_location_entry_has_custom_text:
- * @entry: a #MateWeatherLocationEntry
+ * @entry: a #CafeWeatherLocationEntry
  *
  * Checks whether or not @entry's text has been modified by the user.
  * Note that this does not mean that no location is associated with @entry.
@@ -271,7 +271,7 @@ cafeweather_location_entry_get_location (MateWeatherLocationEntry *entry)
  * it's set to the default text of a location.
  **/
 gboolean
-cafeweather_location_entry_has_custom_text (MateWeatherLocationEntry *entry)
+cafeweather_location_entry_has_custom_text (CafeWeatherLocationEntry *entry)
 {
     g_return_val_if_fail (CAFEWEATHER_IS_LOCATION_ENTRY (entry), FALSE);
 
@@ -280,7 +280,7 @@ cafeweather_location_entry_has_custom_text (MateWeatherLocationEntry *entry)
 
 /**
  * cafeweather_location_entry_set_city:
- * @entry: a #MateWeatherLocationEntry
+ * @entry: a #CafeWeatherLocationEntry
  * @city_name: (allow-none): the city name, or %NULL
  * @code: the METAR station code
  *
@@ -292,14 +292,14 @@ cafeweather_location_entry_has_custom_text (MateWeatherLocationEntry *entry)
  * %FALSE otherwise.
  **/
 gboolean
-cafeweather_location_entry_set_city (MateWeatherLocationEntry *entry,
+cafeweather_location_entry_set_city (CafeWeatherLocationEntry *entry,
 				  const char            *city_name,
 				  const char            *code)
 {
     GtkEntryCompletion *completion;
     GtkTreeModel *model;
     GtkTreeIter iter;
-    MateWeatherLocation *cmploc;
+    CafeWeatherLocation *cmploc;
     const char *cmpcode;
     char *cmpname;
 
@@ -338,11 +338,11 @@ cafeweather_location_entry_set_city (MateWeatherLocationEntry *entry,
 }
 
 static void
-fill_location_entry_model (GtkTreeStore *store, MateWeatherLocation *loc,
+fill_location_entry_model (GtkTreeStore *store, CafeWeatherLocation *loc,
 			   const char *parent_display_name,
 			   const char *parent_compare_name)
 {
-    MateWeatherLocation **children;
+    CafeWeatherLocation **children;
     char *display_name, *compare_name;
     GtkTreeIter iter;
     int i;
@@ -462,8 +462,8 @@ fill_location_entry_model (GtkTreeStore *store, MateWeatherLocation *loc,
 }
 
 static void
-cafeweather_location_entry_build_model (MateWeatherLocationEntry *entry,
-				     MateWeatherLocation *top)
+cafeweather_location_entry_build_model (CafeWeatherLocationEntry *entry,
+				     CafeWeatherLocation *top)
 {
     GtkTreeStore *store = NULL;
 
@@ -520,7 +520,7 @@ matcher (GtkEntryCompletion *completion, const char *key,
 	 GtkTreeIter *iter, gpointer user_data)
 {
     char *name, *name_mem;
-    MateWeatherLocation *loc;
+    CafeWeatherLocation *loc;
     gboolean is_first_word = TRUE, match;
     int len;
 
@@ -576,16 +576,16 @@ match_selected (GtkEntryCompletion *completion,
  * cafeweather_location_entry_new:
  * @top: the top-level location for the entry.
  *
- * Creates a new #MateWeatherLocationEntry.
+ * Creates a new #CafeWeatherLocationEntry.
  *
  * @top will normally be a location returned from
  * cafeweather_location_new_world(), but you can create an entry that
  * only accepts a smaller set of locations if you want.
  *
- * Return value: the new #MateWeatherLocationEntry
+ * Return value: the new #CafeWeatherLocationEntry
  **/
 GtkWidget *
-cafeweather_location_entry_new (MateWeatherLocation *top)
+cafeweather_location_entry_new (CafeWeatherLocation *top)
 {
     return g_object_new (CAFEWEATHER_TYPE_LOCATION_ENTRY,
 			 "top", top,

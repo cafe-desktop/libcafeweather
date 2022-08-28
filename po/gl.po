@@ -349,7 +349,7 @@ msgstr "Previsión meteorolóxica para unha cidade"
 
 #: libcafeweather/org.cafe.weather.gschema.xml.in:149
 msgid "The city that cafeweather displays information for."
-msgstr "A cidade para a cal o Mateweather amosa a información."
+msgstr "A cidade para a cal o Cafeweather amosa a información."
 
 #. TRANSLATORS: Change this to the coordinates of your default
 #. location that corresponds to the DEFAULT_LOCATION and DEFAULT_CODE

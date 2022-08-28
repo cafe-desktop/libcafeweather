@@ -13,9 +13,9 @@ deleted (GtkWidget *widget, GdkEvent *event, gpointer data)
 static void
 location_changed (GObject *object, GParamSpec *param, gpointer tzmenu)
 {
-    MateWeatherLocationEntry *entry = CAFEWEATHER_LOCATION_ENTRY (object);
-    MateWeatherLocation *loc;
-    MateWeatherTimezone *zone;
+    CafeWeatherLocationEntry *entry = CAFEWEATHER_LOCATION_ENTRY (object);
+    CafeWeatherLocation *loc;
+    CafeWeatherTimezone *zone;
 
     loc = cafeweather_location_entry_get_location (entry);
     g_return_if_fail (loc != NULL);
@@ -32,7 +32,7 @@ location_changed (GObject *object, GParamSpec *param, gpointer tzmenu)
 int
 main (int argc, char **argv)
 {
-    MateWeatherLocation *loc;
+    CafeWeatherLocation *loc;
     GtkWidget *window, *vbox, *entry;
     GtkWidget *combo;
     gtk_init (&argc, &argv);
