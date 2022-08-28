@@ -21,11 +21,11 @@ requires:
     - libxml2-dev
     - libxml2-utils
     - make
-    - cafe-common
     - tzdata
 
 before_scripts:
   - ./html-cppcheck
+  - ./install-from-git https://github.com/cafe-desktop/cafe-common master
 
 build_scripts:
   - ./before-build
