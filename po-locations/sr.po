@@ -1,6 +1,6 @@
 # Libraries to allow MATE Desktop to display weather information
 # Copyright (C) 2019 The MATE Team
-# This file is distributed under the same license as the libmateweather package.
+# This file is distributed under the same license as the libcafeweather package.
 # Maintainer: Данило Шеган <danilo@gnome.org>
 # Reviewed on 2005-08-02 by: Игор Несторовић <igor@prevod.org>
 # Reviewed on 2006-05-27 by: Филип Милетић <filmil@gmail.com>: Dutch place names

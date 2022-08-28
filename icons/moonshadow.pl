@@ -59,7 +59,7 @@ use File::Basename;
 # value will vary from 0.125 at the darkest to 0 for brightest
 #
 # Note that the file "*-night-180.svg" file is not generated.  The routine
-# in libmateweather that returns icon names knows to not append '-180' to the
+# in libcafeweather that returns icon names knows to not append '-180' to the
 # return value.
 
 GetOptions("center=s"=>\$center,

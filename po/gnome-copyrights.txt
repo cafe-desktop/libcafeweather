@@ -1,7 +1,7 @@
 ========== af.po ==========
-# Afrikaans translation of mateweather.
+# Afrikaans translation of cafeweather.
 # Copyright (C) 2010 contributors
-# This file is distributed under the same license as the mateweather package.
+# This file is distributed under the same license as the cafeweather package.
 # Hermien Bos <hermienbos@gmail.com>, 2010.
 # F Wolff <friedel@translate.org.za>, 2010.
 
@@ -11,7 +11,7 @@
 ========== am.po ==========
 # Translations into the Amharic Language.
 # Copyright (C) 2002 Free Software Foundation, Inc.
-# This file is distributed under the same license as the mate-applets package.
+# This file is distributed under the same license as the cafe-applets package.
 # Ge'ez Frontier Foundation <locales@geez.org>, 2002.
 #
 #
@@ -20,9 +20,9 @@
 
 
 ========== ar.po ==========
-# translation of libmateweather.HEAD.po to Arabic
-# translation of mate-applets.HEAD.ar.po to
-# translation of mate-applets.po to
+# translation of libcafeweather.HEAD.po to Arabic
+# translation of cafe-applets.HEAD.ar.po to
+# translation of cafe-applets.po to
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) 2004 THE PACKAGE'S COPYRIGHT HOLDER
 # Sayed Jaffer Al-Mosawi <mosawi@arabeyes.org>, 2002.
@@ -48,9 +48,9 @@
 
 
 ========== ast.po ==========
-# Asturian translation for libmateweather.
-# Copyright (C) 2010 libmateweather's COPYRIGHT HOLDER
-# This file is distributed under the same license as the libmateweather package.
+# Asturian translation for libcafeweather.
+# Copyright (C) 2010 libcafeweather's COPYRIGHT HOLDER
+# This file is distributed under the same license as the libcafeweather package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 #
 
@@ -58,8 +58,8 @@
 
 
 ========== az.po ==========
-# translation of mate-applets.HEAD.po to Azerbaijani
-# translation of mate-applets.HEAD.az.po to Azerbaijani Turkish
+# translation of cafe-applets.HEAD.po to Azerbaijani
+# translation of cafe-applets.HEAD.az.po to Azerbaijani Turkish
 # Copyright (C) 2000,2003, 2004 Free Software Foundation, Inc.
 # Vasif Ismailoglu <azerb_linux@hotmail.com>, 2001.
 # Mətin Əmirov <metin@karegen.com>, 2003, 2004.
@@ -69,7 +69,7 @@
 
 
 ========== be.po ==========
-# Беларускі пераклад libmateweather.
+# Беларускі пераклад libcafeweather.
 # SOME DESCRIPTIVE TITLE
 # Copyright (C) 2002, 2003, 2004 Free Software Foundation, Inc.
 # Vital Khilko <dojlid@mova.org>, 2002, 2003.
@@ -82,9 +82,9 @@
 
 
 ========== be@latin.po ==========
-# Biełaruski pierakład mate-applets.
-# Copyright (C) 2007 THE mate-applets COPYRIGHT HOLDER
-# This file is distributed under the same license as the mate-applets package.
+# Biełaruski pierakład cafe-applets.
+# Copyright (C) 2007 THE cafe-applets COPYRIGHT HOLDER
+# This file is distributed under the same license as the cafe-applets package.
 # Alaksandar Navicki & Łacinka.org 2007 <zolak@lacinka.org>
 #
 
@@ -92,7 +92,7 @@
 
 
 ========== bg.po ==========
-# This is the Bulgarian translation of libmateweather po-file.
+# This is the Bulgarian translation of libcafeweather po-file.
 # Copyright (C) 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009 Free Software Foundation, Inc.
 # Alexander Shopov <ash@contact.bg>, 2002, 2004, 2005, 2007, 2008, 2009.
 # Yanko Kaneti <yaneti@declera.com>, 2003.
@@ -106,8 +106,8 @@
 
 
 ========== bn.po ==========
-# Bengali translation of libmateweather
-# This file is distributed under the same license as the mate-applets package.
+# Bengali translation of libcafeweather
+# This file is distributed under the same license as the cafe-applets package.
 # Copyright (C) 2003, 2006, 2007 Free Software Foundation, Inc.
 #
 # Sayamindu Dasgupta <unmadindu@Softhome.net>, 2003.
@@ -123,8 +123,8 @@
 
 ========== bn_IN.po ==========
 # translation of bn_IN.po to Bengali INDIA
-# Bengali India translation of mate-applets
-# This file is distributed under the same license as the mate-applets package.
+# Bengali India translation of cafe-applets
+# This file is distributed under the same license as the cafe-applets package.
 # Copyright (C) 2003, 2006, 2007, 2008, 2009 Free Software Foundation, Inc.
 #
 # Sayamindu Dasgupta <unmadindu@Softhome.net>, 2003.
@@ -138,9 +138,9 @@
 
 
 ========== br.po ==========
-# Breton translation for the libmateweather.
+# Breton translation for the libcafeweather.
 # Copyright (C) 2009 The MATE Foundation
-# This file is distributed under the same license as the libmateweather package.
+# This file is distributed under the same license as the libcafeweather package.
 # Denis <denisarnuad@yahoo.fr>, 2009.
 #
 #
@@ -149,12 +149,12 @@
 
 
 ========== bs.po ==========
-# translation of mate-applets.HEAD.bs.po to Bosnian
-# translation of mate-applets.HEAD.bs.po to
-# translation of mate-applets.HEAD.bs.po to
-# translation of mate-applets.HEAD.bs.po to
-# translation of mate-applets.HEAD.bs.po to
-# translation of mate-applets.HEAD.po to Bosnian
+# translation of cafe-applets.HEAD.bs.po to Bosnian
+# translation of cafe-applets.HEAD.bs.po to
+# translation of cafe-applets.HEAD.bs.po to
+# translation of cafe-applets.HEAD.bs.po to
+# translation of cafe-applets.HEAD.bs.po to
+# translation of cafe-applets.HEAD.po to Bosnian
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
 # Kenan Hadžiavdić <kenanh@gmail.com>, 2004.
@@ -164,9 +164,9 @@
 
 
 ========== ca.po ==========
-# Catalan translation of libmateweather.
+# Catalan translation of libcafeweather.
 # Copyright © 1999-2008 The Free Software Foundation, Inc.
-# This file is copyrighted under the same license as the mate-applets package.
+# This file is copyrighted under the same license as the cafe-applets package.
 # Ivan Vilata i Balaguer <ivan@selidor.net>, 1999, 2000.
 # Softcatalà <info@softcatala.org>, 2000.
 # Jordi Mallach <jordi@sindominio.net>, 2002, 2003, 2004, 2005.
@@ -179,9 +179,9 @@
 
 
 ========== ca@valencia.po ==========
-# Catalan translation of libmateweather.
+# Catalan translation of libcafeweather.
 # Copyright © 1999-2008 The Free Software Foundation, Inc.
-# This file is copyrighted under the same license as the mate-applets package.
+# This file is copyrighted under the same license as the cafe-applets package.
 # Ivan Vilata i Balaguer <ivan@selidor.net>, 1999, 2000.
 # Softcatalà <info@softcatala.org>, 2000.
 # Jordi Mallach <jordi@sindominio.net>, 2002, 2003, 2004, 2005.
@@ -194,7 +194,7 @@
 
 
 ========== crh.po ==========
-# QIRIMTATARCA libmateweather
+# QIRIMTATARCA libcafeweather
 # Copyright (C) 1998-2010 Free Software Foundation, Inc.
 #
 # Reşat SABIQ <tilde.birlik@gmail.com>, 2010.
@@ -203,11 +203,11 @@
 
 
 ========== cs.po ==========
-# Czech translation of libmateweather.
-# Copyright (C) 1999, 2003, 2006, 2007, 2008, 2009 the author(s) of libmateweather.
+# Czech translation of libcafeweather.
+# Copyright (C) 1999, 2003, 2006, 2007, 2008, 2009 the author(s) of libcafeweather.
 # Copyright (C) 2003, 2004, 2005, 2006 Miloslav Trmac <mitr@volny.cz>.
 # Copyright (C) 2008 Pavel Šefránek <ps@pjoul.cz>.
-# This file is distributed under the same license as the libmateweather package.
+# This file is distributed under the same license as the libcafeweather package.
 # David Sauer <davids@penguin.cz> (David Šauer), 1999.
 # GIS <gis@academy.cas.cz>, 1999.
 # George Lebl <jirka@5z.com>, 2000, 2001.
@@ -224,8 +224,8 @@
 
 
 ========== cy.po ==========
-# translation of mate-applets.HEAD.cy.po to Cymraeg
-# mate-applets yn Gymraeg.
+# translation of cafe-applets.HEAD.cy.po to Cymraeg
+# cafe-applets yn Gymraeg.
 # Copyright (C) 2003, 2004 Free Software Foundation, Inc.
 # Largely Chris and Dafydd H.
 # Also lots of stuff merged from Kyfieithu later on. Owain?
@@ -243,15 +243,15 @@
 
 
 ========== da.po ==========
-# Danish translation of mate-applets.
+# Danish translation of cafe-applets.
 # Copyright (C) 1998, 2001-08 Free Software Foundation, Inc.
-# This file is distributed under the same license as the mate-applets package.
+# This file is distributed under the same license as the cafe-applets package.
 # Kenneth Christiansen <kenneth@ripen.dk>, 1998-2000.
 # Birger Langkjer <birger.langkjer@image.dk>, 2000.
 # Keld Simonsen <keld@dkuug.dk>, 2000.
 # Ole Laursen <olau@hardworking.dk>, 2001-2005.
 # Martin Willemoes Hansen <mwh@sysrq.dk>, 2004-2005.
-# David Nielsen <mateuser@gmail.com>, 2006
+# David Nielsen <cafeuser@gmail.com>, 2006
 # Peter Bach <bach.peter@gmail.com>, 2007.
 # Kenneth Nielsen <k.nielsen81@gmail.com>, 2008.
 #
@@ -270,15 +270,15 @@
 
 
 ========== de.po ==========
-# German libmateweather translation
+# German libcafeweather translation
 # Copyright (C) 1999-2004 Free Software Foundation, Inc.
 # Carsten Schaar <nhadcasc@fs-maphy.uni-hannover.de>, 1998.
 # Matthias Warkus <mawa@iname.com>, 1999, 2000.
 # Karl Eichwalder <ke@suse.de>, 2000.
 # Benedikt Roth <Benedikt.Roth@gmx.net>, 2000.
-# Christian Neumair <chris@mate-de.org>, 2002-2004.
+# Christian Neumair <chris@cafe-de.org>, 2002-2004.
 # Hendrik Richter <hendrikr@gnome.org>, 2004, 2005, 2006, 2007, 2009.
-# Hendrik Brandt <heb@mate-de.org>, 2004-2005.
+# Hendrik Brandt <heb@cafe-de.org>, 2004-2005.
 # Jochen Skulj <jochen@jochenskulj.de>, 2006.
 # Andre Klapper <ak-47@gmx.net>, 2008.
 # Christian Kirbach <Christian.Kirbach@googlemail.com>, 2009.
@@ -289,7 +289,7 @@
 
 
 ========== dz.po ==========
-# Dzongkha translation of mate-applets.
+# Dzongkha translation of cafe-applets.
 # Copyright @ 2006 Free Software Foundation, Inc.
 # Mindu Dorji
 #
@@ -298,8 +298,8 @@
 
 
 ========== el.po ==========
-# translation of libmateweather.HEAD.po to Greek
-# Greek translation for mate-applets
+# translation of libcafeweather.HEAD.po to Greek
+# Greek translation for cafe-applets
 # Copyright (C) 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009 Free Software Foundation, Inc.
 #
 # Half of translation by Spiros, Simos/Sarantis other half.
@@ -349,7 +349,7 @@
 ========== en@shaw.po ==========
 # Shavian translation..
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the libmateweather package.
+# This file is distributed under the same license as the libcafeweather package.
 # Thomas Thurman <tthurman@gnome.org>, 2009.
 #
 
@@ -357,9 +357,9 @@
 
 
 ========== en_CA.po ==========
-# English/Canada translation of mate-applets.
+# English/Canada translation of cafe-applets.
 # Copyright (C) 2004-2006 Adam Weinberger and the MATE Foundation
-# This file is distributed under the same licence as the mate-applets package.
+# This file is distributed under the same licence as the cafe-applets package.
 # Adam Weinberger <adamw@gnome.org>, 2004, 2005, 2006.
 #
 #
@@ -368,7 +368,7 @@
 
 
 ========== en_GB.po ==========
-# English (British) translation of libmateweather
+# English (British) translation of libcafeweather
 # Copyright (C) 1999-2000 Free Software Foundation, Inc.
 # Robert Brady <robert@susu.org.uk>, 2000.
 # Gareth Owen <gowen72@yahoo.com>, David Lodge <dave@cirt.net>, 2004.
@@ -378,9 +378,9 @@
 
 
 ========== eo.po ==========
-# Esperanto translation for libmateweather
+# Esperanto translation for libcafeweather
 # Copyright (c) 2010 Rosetta Contributors and Canonical Ltd 2010
-# This file is distributed under the same license as the libmateweather package.
+# This file is distributed under the same license as the libcafeweather package.
 # Hendrik LÖNNGREN, 2009.
 # Kristjan SCHMIDT <kristjan.schmidt@googlemail.com>, 2010.
 #
@@ -389,13 +389,13 @@
 
 
 ========== es.po ==========
-# translation of libmateweather.HEAD.po to Español
+# translation of libcafeweather.HEAD.po to Español
 # Copyright © 1998,2002,2003, 2006, 2007, 2008 Free Software Foundation, Inc.
-# This file is distributed under the same license as the mate-applets package.
+# This file is distributed under the same license as the cafe-applets package.
 # Pablo Saratxaga <srtxg@chanae.alphanet.ch> 1999.
 # Marco César Gloria <mgloria@campus.gda.itesm.mx> 2000.
 # Mauricio Araya P. <mauricio@eazel.com> 2001.
-# Carlos Perelló Marín <carlos@mate-db.org> 2001.
+# Carlos Perelló Marín <carlos@cafe-db.org> 2001.
 # Pablo Gonzalo del Campo <pablodc@bigfoot.com> 2002-2003.
 #
 # Miguel de Icaza,computo,622-4680 <miguel@metropolis.nuclecu.unam.mx> 1998.
@@ -409,11 +409,11 @@
 ========== es_AR.po ==========
 # translation of es_AR.po to Spanish
 # Copyright © 1998,2002,2003, 2006 Free Software Foundation, Inc.
-# This file is distributed under the same license as the mate-applets package.
+# This file is distributed under the same license as the cafe-applets package.
 # Pablo Saratxaga <srtxg@chanae.alphanet.ch> 1999.
 # Marco César Gloria <mgloria@campus.gda.itesm.mx> 2000.
 # Mauricio Araya P. <mauricio@eazel.com> 2001.
-# Carlos Perelló Marín <carlos@mate-db.org> 2001.
+# Carlos Perelló Marín <carlos@cafe-db.org> 2001.
 # Pablo Gonzalo del Campo <pablodc@bigfoot.com> 2002-2003.
 #
 # Miguel de Icaza,computo,622-4680 <miguel@metropolis.nuclecu.unam.mx> 1998.
@@ -426,11 +426,11 @@
 ========== es_CL.po ==========
 # translation of es_CL.po to Spanish
 # Copyright © 1998,2002,2003, 2006 Free Software Foundation, Inc.
-# This file is distributed under the same license as the mate-applets package.
+# This file is distributed under the same license as the cafe-applets package.
 # Pablo Saratxaga <srtxg@chanae.alphanet.ch> 1999.
 # Marco César Gloria <mgloria@campus.gda.itesm.mx> 2000.
 # Mauricio Araya P. <mauricio@eazel.com> 2001.
-# Carlos Perelló Marín <carlos@mate-db.org> 2001.
+# Carlos Perelló Marín <carlos@cafe-db.org> 2001.
 # Pablo Gonzalo del Campo <pablodc@bigfoot.com> 2002-2003.
 #
 # Miguel de Icaza,computo,622-4680 <miguel@metropolis.nuclecu.unam.mx> 1998.
@@ -443,11 +443,11 @@
 ========== es_CO.po ==========
 # translation of es_CO.po to Spanish
 # Copyright © 1998,2002,2003, 2006 Free Software Foundation, Inc.
-# This file is distributed under the same license as the mate-applets package.
+# This file is distributed under the same license as the cafe-applets package.
 # Pablo Saratxaga <srtxg@chanae.alphanet.ch> 1999.
 # Marco César Gloria <mgloria@campus.gda.itesm.mx> 2000.
 # Mauricio Araya P. <mauricio@eazel.com> 2001.
-# Carlos Perelló Marín <carlos@mate-db.org> 2001.
+# Carlos Perelló Marín <carlos@cafe-db.org> 2001.
 # Pablo Gonzalo del Campo <pablodc@bigfoot.com> 2002-2003.
 #
 # Miguel de Icaza,computo,622-4680 <miguel@metropolis.nuclecu.unam.mx> 1998.
@@ -460,11 +460,11 @@
 ========== es_CR.po ==========
 # translation of es_CR.po to Spanish
 # Copyright © 1998,2002,2003, 2006 Free Software Foundation, Inc.
-# This file is distributed under the same license as the mate-applets package.
+# This file is distributed under the same license as the cafe-applets package.
 # Pablo Saratxaga <srtxg@chanae.alphanet.ch> 1999.
 # Marco César Gloria <mgloria@campus.gda.itesm.mx> 2000.
 # Mauricio Araya P. <mauricio@eazel.com> 2001.
-# Carlos Perelló Marín <carlos@mate-db.org> 2001.
+# Carlos Perelló Marín <carlos@cafe-db.org> 2001.
 # Pablo Gonzalo del Campo <pablodc@bigfoot.com> 2002-2003.
 #
 # Miguel de Icaza,computo,622-4680 <miguel@metropolis.nuclecu.unam.mx> 1998.
@@ -477,11 +477,11 @@
 ========== es_DO.po ==========
 # translation of es_DO.po to Spanish
 # Copyright © 1998,2002,2003, 2006 Free Software Foundation, Inc.
-# This file is distributed under the same license as the mate-applets package.
+# This file is distributed under the same license as the cafe-applets package.
 # Pablo Saratxaga <srtxg@chanae.alphanet.ch> 1999.
 # Marco César Gloria <mgloria@campus.gda.itesm.mx> 2000.
 # Mauricio Araya P. <mauricio@eazel.com> 2001.
-# Carlos Perelló Marín <carlos@mate-db.org> 2001.
+# Carlos Perelló Marín <carlos@cafe-db.org> 2001.
 # Pablo Gonzalo del Campo <pablodc@bigfoot.com> 2002-2003.
 #
 # Miguel de Icaza,computo,622-4680 <miguel@metropolis.nuclecu.unam.mx> 1998.
@@ -494,11 +494,11 @@
 ========== es_EC.po ==========
 # translation of es_EC.po to Spanish
 # Copyright © 1998,2002,2003, 2006 Free Software Foundation, Inc.
-# This file is distributed under the same license as the mate-applets package.
+# This file is distributed under the same license as the cafe-applets package.
 # Pablo Saratxaga <srtxg@chanae.alphanet.ch> 1999.
 # Marco César Gloria <mgloria@campus.gda.itesm.mx> 2000.
 # Mauricio Araya P. <mauricio@eazel.com> 2001.
-# Carlos Perelló Marín <carlos@mate-db.org> 2001.
+# Carlos Perelló Marín <carlos@cafe-db.org> 2001.
 # Pablo Gonzalo del Campo <pablodc@bigfoot.com> 2002-2003.
 #
 # Miguel de Icaza,computo,622-4680 <miguel@metropolis.nuclecu.unam.mx> 1998.
@@ -509,13 +509,13 @@
 
 
 ========== es_ES.po ==========
-# translation of libmateweather.HEAD.po to Español
+# translation of libcafeweather.HEAD.po to Español
 # Copyright © 1998,2002,2003, 2006, 2007, 2008 Free Software Foundation, Inc.
-# This file is distributed under the same license as the mate-applets package.
+# This file is distributed under the same license as the cafe-applets package.
 # Pablo Saratxaga <srtxg@chanae.alphanet.ch> 1999.
 # Marco César Gloria <mgloria@campus.gda.itesm.mx> 2000.
 # Mauricio Araya P. <mauricio@eazel.com> 2001.
-# Carlos Perelló Marín <carlos@mate-db.org> 2001.
+# Carlos Perelló Marín <carlos@cafe-db.org> 2001.
 # Pablo Gonzalo del Campo <pablodc@bigfoot.com> 2002-2003.
 #
 # Miguel de Icaza,computo,622-4680 <miguel@metropolis.nuclecu.unam.mx> 1998.
@@ -529,11 +529,11 @@
 ========== es_GT.po ==========
 # translation of es_GT.po to Spanish
 # Copyright © 1998,2002,2003, 2006 Free Software Foundation, Inc.
-# This file is distributed under the same license as the mate-applets package.
+# This file is distributed under the same license as the cafe-applets package.
 # Pablo Saratxaga <srtxg@chanae.alphanet.ch> 1999.
 # Marco César Gloria <mgloria@campus.gda.itesm.mx> 2000.
 # Mauricio Araya P. <mauricio@eazel.com> 2001.
-# Carlos Perelló Marín <carlos@mate-db.org> 2001.
+# Carlos Perelló Marín <carlos@cafe-db.org> 2001.
 # Pablo Gonzalo del Campo <pablodc@bigfoot.com> 2002-2003.
 #
 # Miguel de Icaza,computo,622-4680 <miguel@metropolis.nuclecu.unam.mx> 1998.
@@ -546,11 +546,11 @@
 ========== es_HN.po ==========
 # translation of es_HN.po to Spanish
 # Copyright © 1998,2002,2003, 2006 Free Software Foundation, Inc.
-# This file is distributed under the same license as the mate-applets package.
+# This file is distributed under the same license as the cafe-applets package.
 # Pablo Saratxaga <srtxg@chanae.alphanet.ch> 1999.
 # Marco César Gloria <mgloria@campus.gda.itesm.mx> 2000.
 # Mauricio Araya P. <mauricio@eazel.com> 2001.
-# Carlos Perelló Marín <carlos@mate-db.org> 2001.
+# Carlos Perelló Marín <carlos@cafe-db.org> 2001.
 # Pablo Gonzalo del Campo <pablodc@bigfoot.com> 2002-2003.
 #
 # Miguel de Icaza,computo,622-4680 <miguel@metropolis.nuclecu.unam.mx> 1998.
@@ -563,11 +563,11 @@
 ========== es_MX.po ==========
 # translation of es_MX.po to Spanish
 # Copyright © 1998,2002,2003, 2006 Free Software Foundation, Inc.
-# This file is distributed under the same license as the mate-applets package.
+# This file is distributed under the same license as the cafe-applets package.
 # Pablo Saratxaga <srtxg@chanae.alphanet.ch> 1999.
 # Marco César Gloria <mgloria@campus.gda.itesm.mx> 2000.
 # Mauricio Araya P. <mauricio@eazel.com> 2001.
-# Carlos Perelló Marín <carlos@mate-db.org> 2001.
+# Carlos Perelló Marín <carlos@cafe-db.org> 2001.
 # Pablo Gonzalo del Campo <pablodc@bigfoot.com> 2002-2003.
 #
 # Miguel de Icaza,computo,622-4680 <miguel@metropolis.nuclecu.unam.mx> 1998.
@@ -580,11 +580,11 @@
 ========== es_NI.po ==========
 # translation of es_NI.po to Spanish
 # Copyright © 1998,2002,2003, 2006 Free Software Foundation, Inc.
-# This file is distributed under the same license as the mate-applets package.
+# This file is distributed under the same license as the cafe-applets package.
 # Pablo Saratxaga <srtxg@chanae.alphanet.ch> 1999.
 # Marco César Gloria <mgloria@campus.gda.itesm.mx> 2000.
 # Mauricio Araya P. <mauricio@eazel.com> 2001.
-# Carlos Perelló Marín <carlos@mate-db.org> 2001.
+# Carlos Perelló Marín <carlos@cafe-db.org> 2001.
 # Pablo Gonzalo del Campo <pablodc@bigfoot.com> 2002-2003.
 #
 # Miguel de Icaza,computo,622-4680 <miguel@metropolis.nuclecu.unam.mx> 1998.
@@ -597,11 +597,11 @@
 ========== es_PA.po ==========
 # translation of es_PA.po to Spanish
 # Copyright © 1998,2002,2003, 2006 Free Software Foundation, Inc.
-# This file is distributed under the same license as the mate-applets package.
+# This file is distributed under the same license as the cafe-applets package.
 # Pablo Saratxaga <srtxg@chanae.alphanet.ch> 1999.
 # Marco César Gloria <mgloria@campus.gda.itesm.mx> 2000.
 # Mauricio Araya P. <mauricio@eazel.com> 2001.
-# Carlos Perelló Marín <carlos@mate-db.org> 2001.
+# Carlos Perelló Marín <carlos@cafe-db.org> 2001.
 # Pablo Gonzalo del Campo <pablodc@bigfoot.com> 2002-2003.
 #
 # Miguel de Icaza,computo,622-4680 <miguel@metropolis.nuclecu.unam.mx> 1998.
@@ -614,11 +614,11 @@
 ========== es_PE.po ==========
 # translation of es_PE.po to Spanish
 # Copyright © 1998,2002,2003, 2006 Free Software Foundation, Inc.
-# This file is distributed under the same license as the mate-applets package.
+# This file is distributed under the same license as the cafe-applets package.
 # Pablo Saratxaga <srtxg@chanae.alphanet.ch> 1999.
 # Marco César Gloria <mgloria@campus.gda.itesm.mx> 2000.
 # Mauricio Araya P. <mauricio@eazel.com> 2001.
-# Carlos Perelló Marín <carlos@mate-db.org> 2001.
+# Carlos Perelló Marín <carlos@cafe-db.org> 2001.
 # Pablo Gonzalo del Campo <pablodc@bigfoot.com> 2002-2003.
 #
 # Miguel de Icaza,computo,622-4680 <miguel@metropolis.nuclecu.unam.mx> 1998.
@@ -631,11 +631,11 @@
 ========== es_PR.po ==========
 # translation of es_PR.po to Spanish
 # Copyright © 1998,2002,2003, 2006 Free Software Foundation, Inc.
-# This file is distributed under the same license as the mate-applets package.
+# This file is distributed under the same license as the cafe-applets package.
 # Pablo Saratxaga <srtxg@chanae.alphanet.ch> 1999.
 # Marco César Gloria <mgloria@campus.gda.itesm.mx> 2000.
 # Mauricio Araya P. <mauricio@eazel.com> 2001.
-# Carlos Perelló Marín <carlos@mate-db.org> 2001.
+# Carlos Perelló Marín <carlos@cafe-db.org> 2001.
 # Pablo Gonzalo del Campo <pablodc@bigfoot.com> 2002-2003.
 #
 # Miguel de Icaza,computo,622-4680 <miguel@metropolis.nuclecu.unam.mx> 1998.
@@ -648,11 +648,11 @@
 ========== es_SV.po ==========
 # translation of es_SV.po to Spanish
 # Copyright © 1998,2002,2003, 2006 Free Software Foundation, Inc.
-# This file is distributed under the same license as the mate-applets package.
+# This file is distributed under the same license as the cafe-applets package.
 # Pablo Saratxaga <srtxg@chanae.alphanet.ch> 1999.
 # Marco César Gloria <mgloria@campus.gda.itesm.mx> 2000.
 # Mauricio Araya P. <mauricio@eazel.com> 2001.
-# Carlos Perelló Marín <carlos@mate-db.org> 2001.
+# Carlos Perelló Marín <carlos@cafe-db.org> 2001.
 # Pablo Gonzalo del Campo <pablodc@bigfoot.com> 2002-2003.
 #
 # Miguel de Icaza,computo,622-4680 <miguel@metropolis.nuclecu.unam.mx> 1998.
@@ -665,11 +665,11 @@
 ========== es_UY.po ==========
 # translation of es_UY.po to Spanish
 # Copyright © 1998,2002,2003, 2006 Free Software Foundation, Inc.
-# This file is distributed under the same license as the mate-applets package.
+# This file is distributed under the same license as the cafe-applets package.
 # Pablo Saratxaga <srtxg@chanae.alphanet.ch> 1999.
 # Marco César Gloria <mgloria@campus.gda.itesm.mx> 2000.
 # Mauricio Araya P. <mauricio@eazel.com> 2001.
-# Carlos Perelló Marín <carlos@mate-db.org> 2001.
+# Carlos Perelló Marín <carlos@cafe-db.org> 2001.
 # Pablo Gonzalo del Campo <pablodc@bigfoot.com> 2002-2003.
 #
 # Miguel de Icaza,computo,622-4680 <miguel@metropolis.nuclecu.unam.mx> 1998.
@@ -682,11 +682,11 @@
 ========== es_VE.po ==========
 # translation of es_VE.po to Spanish
 # Copyright © 1998,2002,2003, 2006 Free Software Foundation, Inc.
-# This file is distributed under the same license as the mate-applets package.
+# This file is distributed under the same license as the cafe-applets package.
 # Pablo Saratxaga <srtxg@chanae.alphanet.ch> 1999.
 # Marco César Gloria <mgloria@campus.gda.itesm.mx> 2000.
 # Mauricio Araya P. <mauricio@eazel.com> 2001.
-# Carlos Perelló Marín <carlos@mate-db.org> 2001.
+# Carlos Perelló Marín <carlos@cafe-db.org> 2001.
 # Pablo Gonzalo del Campo <pablodc@bigfoot.com> 2002-2003.
 #
 # Miguel de Icaza,computo,622-4680 <miguel@metropolis.nuclecu.unam.mx> 1998.
@@ -697,12 +697,12 @@
 
 
 ========== et.po ==========
-# MATE ilmateate teegi eesti keele tõlge.
-# Estonian translation of libmateweather.
+# MATE ilcafeate teegi eesti keele tõlge.
+# Estonian translation of libcafeweather.
 #
 # Copyright (C) 1999, 2001, 2002, 2005, 2006 Free Software Foundation, Inc.
 # Copyright (C) 2007, 2008 The MATE Project
-# This file is distributed under the same license as the mate-applets package.
+# This file is distributed under the same license as the cafe-applets package.
 #
 # Lauris Kaplinski <lauris@ariman.ee>, 1999.
 # Ilmar Kerm <ikerm@hot.ee>, 2001, 2002.
@@ -726,9 +726,9 @@
 
 
 ========== fa.po ==========
-# Persian translation of mate-applets.
+# Persian translation of cafe-applets.
 # Copyright (C) 2003, 2005, 2006 Sharif FarsiWeb, Inc.
-# This file is distributed under the same license as the mate-applets package.
+# This file is distributed under the same license as the cafe-applets package.
 # Roozbeh Pournader <roozbeh@farsiweb.info>, 2003, 2005, 2006.
 # Meelad Zakaria <meelad@farsiweb.info>, 2005.
 # Elnaz Sarbar <elnaz@farsiweb.info>, 2005, 2006.
@@ -739,8 +739,8 @@
 
 
 ========== fi.po ==========
-# fi.po -- Finnish messages for mate-applets
-# Suomennos: http://mate-fi.sourceforge.net/
+# fi.po -- Finnish messages for cafe-applets
+# Suomennos: http://cafe-fi.sourceforge.net/
 # Copyright (C) 1998-2004 Free Software Foundation, Inc.
 # Tuomas Lukka, 1998.
 # Ville Hautamäki <villeh@photon.joensuu.fi>, 1998.
@@ -755,9 +755,9 @@
 
 
 ========== fr.po ==========
-# French translation of mate-applets.
+# French translation of cafe-applets.
 # Copyright (C) 1998-2009 Free Software Foundation, Inc.
-# This file is distributed under the same license as the mate-applets package.
+# This file is distributed under the same license as the cafe-applets package.
 #
 # Vincent Renardias <vincent@ldsol.com>, 1998-2000.
 # Fabrice Bellet <Fabrice.Bellet@creatis.insa-lyon.fr>, 2000.
@@ -777,9 +777,9 @@
 
 
 ========== ga.po ==========
-# Irish translations for libmateweather package.
+# Irish translations for libcafeweather package.
 # Copyright (C) 1998-2009 Free Software Foundation, Inc.
-# This file is distributed under the same license as the libmateweather package.
+# This file is distributed under the same license as the libcafeweather package.
 # Alastair McKinstry <mckinstry@computer.org>, 1998.
 # Paul Duffy <dubhthach@frink.nuigalway.ie>, 2003.
 # Seán de Búrca <leftmostcat@gmail.com>, 2007-2009.
@@ -789,8 +789,8 @@
 
 
 ========== gl.po ==========
-# translation of libmateweather-master-po-gl-57986.po to Galician
-# Galician translation of libmateweather
+# translation of libcafeweather-master-po-gl-57986.po to Galician
+# Galician translation of libcafeweather
 # Copyright (C) 1999-2002 Jesús Bravo Álvarez
 #
 # Proxecto Trasno - Adaptación do software libre á lingua galega:  Se desexas
@@ -810,7 +810,7 @@
 
 
 ========== gu.po ==========
-# translation of libmateweather.master.gu.po to Gujarati
+# translation of libcafeweather.master.gu.po to Gujarati
 # Ankit Patel <ankit644@yahoo.com>, 2005, 2006.
 # Ankit Patel <ankit@redhat.com>, 2005, 2007, 2008, 2009.
 # Sweta Kothari <swkothar@redhat.com>, 2009.
@@ -819,8 +819,8 @@
 
 
 ========== he.po ==========
-# translation of mate-applets.HEAD.he.po to Hebrew
-# translation of mate-applets.mate-2-0.po to Hebrew
+# translation of cafe-applets.HEAD.he.po to Hebrew
+# translation of cafe-applets.cafe-2-0.po to Hebrew
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) 2005 THE PACKAGE'S COPYRIGHT HOLDER
 # Gil 'Dolfin' Osher <dolfin@rpg.org.il>, 2002,2003
@@ -830,7 +830,7 @@
 
 
 ========== hi.po ==========
-# translation of libmateweather.master.po to Hindi
+# translation of libcafeweather.master.po to Hindi
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
@@ -841,31 +841,31 @@
 
 
 ========== hr.po ==========
-# Translation of mate-applets to Croatiann
+# Translation of cafe-applets to Croatiann
 # Copyright (C) Croatiann team
-# Translators: Automatski Prijevod <>,Denis Lackovic <delacko@fly.srk.fer.hr>,Mato Kutlić <mate@iskraemeco.hr>,pr pr <delacko@192.168.0.1>,Robert Sedak <robert.sedak@sk.tel.hr>,
+# Translators: Automatski Prijevod <>,Denis Lackovic <delacko@fly.srk.fer.hr>,Mato Kutlić <cafe@iskraemeco.hr>,pr pr <delacko@192.168.0.1>,Robert Sedak <robert.sedak@sk.tel.hr>,
 
 
 
 
 ========== hu.po ==========
-# Hungarian translation of libmateweather
+# Hungarian translation of libcafeweather
 # Copyright (C) 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009 Free Software Foundation, Inc.
-# This file is distributed under the same license as the libmateweather package.
+# This file is distributed under the same license as the libcafeweather package.
 #
-# Szabolcs Ban <shooby dot mate dot hu>, 1999, 2000, 2001, 2002, 2003.
-# Emese Kovacs <emese dot mate dot hu>, 2000, 2001, 2002.
-# Andras Timar <timar dot mate dot hu>, 2001, 2002, 2003.
-# Gabor Sari <saga dot mate dot hu>, 2003.
-# Laszlo Dvornik <dvornik dot mate dot hu>, 2004.
-# Gabor Kelemen <kelemeng at mate dot hu>, 2004, 2005, 2006, 2007, 2008, 2009.
-# Mate ORY <orymate at gmail d0t com>, 2006.
+# Szabolcs Ban <shooby dot cafe dot hu>, 1999, 2000, 2001, 2002, 2003.
+# Emese Kovacs <emese dot cafe dot hu>, 2000, 2001, 2002.
+# Andras Timar <timar dot cafe dot hu>, 2001, 2002, 2003.
+# Gabor Sari <saga dot cafe dot hu>, 2003.
+# Laszlo Dvornik <dvornik dot cafe dot hu>, 2004.
+# Gabor Kelemen <kelemeng at cafe dot hu>, 2004, 2005, 2006, 2007, 2008, 2009.
+# Mate ORY <orycafe at gmail d0t com>, 2006.
 
 
 
 
 ========== hy.po ==========
-# translation of mate-applets.HEAD.po to armenian
+# translation of cafe-applets.HEAD.po to armenian
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER, 2005.
 #
@@ -874,9 +874,9 @@
 
 
 ========== id.po ==========
-# Indonesian translation of mate-applets.
-# Copyright (C) 2004 THE mate-applets'S COPYRIGHT HOLDER
-# This file is distributed under the same license as the mate-applets package.
+# Indonesian translation of cafe-applets.
+# Copyright (C) 2004 THE cafe-applets'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the cafe-applets package.
 # ahmad riza h nst <ari@160c.afraid.org>, 2004.
 #
 #
@@ -885,10 +885,10 @@
 
 
 ========== is.po ==========
-# translation of libmateweather.locations.master.is.po to Icelandic
-# Icelandic translation for libmateweather.
-# Copyright (C) 2009 libmateweather's COPYRIGHT HOLDER
-# This file is distributed under the same license as the libmateweather package.
+# translation of libcafeweather.locations.master.is.po to Icelandic
+# Icelandic translation for libcafeweather.
+# Copyright (C) 2009 libcafeweather's COPYRIGHT HOLDER
+# This file is distributed under the same license as the libcafeweather package.
 #
 # Sveinn í Felli <sveinki@nett.is>, 2009.
 
@@ -896,10 +896,10 @@
 
 
 ========== it.po ==========
-# Italian localization for libmateweather.
-# Derived from mate-applets translation.
+# Italian localization for libcafeweather.
+# Derived from cafe-applets translation.
 # Copyright (C) 1999-2009 Free Software Foundation, Inc.
-# This file is distributed under the same license as the libmateweather package.
+# This file is distributed under the same license as the libcafeweather package.
 # Luca Ferretti <elle.uca@libero.it>, 2008.
 #
 # Milo Casagrande <milo@ubuntu.com>, 2009, 2009.
@@ -908,7 +908,7 @@
 
 
 ========== ja.po ==========
-# libmateweather ja.po.
+# libcafeweather ja.po.
 # Copyright (C) 1998-2009 Free Software Foundation, Inc.
 # Yukihiro Nakai <Nakai@abricot.co.jp>, 1998,2000.
 # Yasuyuki Furukawa <yasu@on.cs.keio.ac.jp>, 1999.
@@ -917,7 +917,7 @@
 # Shingo Akagaki <dora@kondara.org>, 2000.
 # Takayuki KUSANO <AE5T-KSN@asahi-net.or.jp>, 2000-2002, 2009.
 # Akira TAGOH <tagoh@gnome.gr.jp>, 2001.
-# Sun G11n <mate_int_l10n@ireland.sun.com>, 2002.
+# Sun G11n <cafe_int_l10n@ireland.sun.com>, 2002.
 # KAMAGASAKO Masatoshi <emerald@gnome.gr.jp>, 2003.
 # Takeshi AIHANA <takeshi.aihana@gmail.com>, 2003-2009.
 # Satoru SATOH <ss@gnome.gr.jp>, 2006.
@@ -927,7 +927,7 @@
 
 
 ========== ka.po ==========
-# translation of mate-applets.HEAD.po to Georgian
+# translation of cafe-applets.HEAD.po to Georgian
 # Copyright (C) 2006 THE PACKAGE'S COPYRIGHT HOLDER
 # Alina Kirakosyan <alinakirakosyan@gmail.com>
 #
@@ -937,7 +937,7 @@
 
 
 ========== kn.po ==========
-# translation of libmateweather.master.kn.po to Kannada
+# translation of libcafeweather.master.kn.po to Kannada
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
@@ -948,7 +948,7 @@
 
 
 ========== ko.po ==========
-# ko.po -- Korean messages for libmateweather
+# ko.po -- Korean messages for libcafeweather
 #
 # update by Young-Ho, Cha <ganadist@chollian.net>, 2001
 # update by ChiDeok, Hwang <hwang@mizi.co.kr>, 2001
@@ -970,8 +970,8 @@
 
 
 ========== ky.po ==========
-# mate-applets Kirghiz translation.
-# This file is distributed under the same license as the mate-applets package.
+# cafe-applets Kirghiz translation.
+# This file is distributed under the same license as the cafe-applets package.
 # Timur Jamakeev <ztimur@gmail.com>, 2005.
 #
 
@@ -980,7 +980,7 @@
 
 ========== lt.po ==========
 # translation of lt.po to Lithuanian
-# Lithuanian translation of mate-applets.
+# Lithuanian translation of cafe-applets.
 # Copyright (C) 2000-2008 Free Software Foundation, Inc.
 #
 #
@@ -995,7 +995,7 @@
 
 ========== lv.po ==========
 # translation of lv.po to Latvian
-# mate-applets for Latvian.
+# cafe-applets for Latvian.
 # Copyright (C) 2002, 2006 Free Software Foundation, Inc.
 #
 # Artis Trops <hornet@navigator.lv>, 2002.
@@ -1007,7 +1007,7 @@
 
 
 ========== mai.po ==========
-# translation of libmateweather.master.po to Maithili
+# translation of libcafeweather.master.po to Maithili
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
 #
@@ -1028,7 +1028,7 @@
 
 ========== mk.po ==========
 # translation of mk.po to Macedonian
-# translation of mate-applets.HEAD.mk.po to
+# translation of cafe-applets.HEAD.mk.po to
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) 2005 THE PACKAGE'S COPYRIGHT HOLDER.
 #
@@ -1046,9 +1046,9 @@
 
 
 ========== ml.po ==========
-# translation of libmateweather.master.ml.po to
-# This file is distributed under the same license as the libmateweather package.
-# Copyright (C) 2003-2009 libmateweather'S COPYRIGHT HOLDER.
+# translation of libcafeweather.master.ml.po to
+# This file is distributed under the same license as the libcafeweather package.
+# Copyright (C) 2003-2009 libcafeweather'S COPYRIGHT HOLDER.
 # vps <mvpsuresh@yahoo.com>, 2003.
 # Ani Peter <apeter@redhat.com>, 2006.
 # Hari Vishnu <harivishnu@gmail.com>, 2007.
@@ -1061,9 +1061,9 @@
 
 
 ========== mn.po ==========
-# translation of mate-applets.mate-2-4.po to Mongolian
-# translation of mate-applets.mate-2-4.mn.po to Mongolian
-# translation of mate-applets.HEAD.mn.po to mongolian
+# translation of cafe-applets.cafe-2-4.po to Mongolian
+# translation of cafe-applets.cafe-2-4.mn.po to Mongolian
+# translation of cafe-applets.HEAD.mn.po to mongolian
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
 # Sanlig Badral <badral@chinggis.com>, 2003.
@@ -1096,7 +1096,7 @@
 
 
 ========== nb.po ==========
-# Norwegian translation of mate-applets (bokmål dialect).
+# Norwegian translation of cafe-applets (bokmål dialect).
 # Copyright (C) 1998-2004, 2005 Free Software Foundation, Inc.
 # Kjartan Maraas <kmaraas@gnome.org>, 1998-2010.
 # Terance Edward Sola <terance@lyse.net>, 2005.
@@ -1106,16 +1106,16 @@
 
 
 ========== nds.po ==========
-# Low German translation for libmateweather.
-# Copyright (C) 2009 libmateweather's COPYRIGHT HOLDER
-# This file is distributed under the same license as the libmateweather package.
+# Low German translation for libcafeweather.
+# Copyright (C) 2009 libcafeweather's COPYRIGHT HOLDER
+# This file is distributed under the same license as the libcafeweather package.
 # Carsten Schaar <nhadcasc@fs-maphy.uni-hannover.de>, 1998.
 # Matthias Warkus <mawa@iname.com>, 1999, 2000.
 # Karl Eichwalder <ke@suse.de>, 2000.
 # Benedikt Roth <Benedikt.Roth@gmx.net>, 2000.
-# Christian Neumair <chris@mate-de.org>, 2002-2004.
+# Christian Neumair <chris@cafe-de.org>, 2002-2004.
 # Hendrik Richter <hendrikr@gnome.org>, 2004, 2005, 2006, 2007, 2009.
-# Hendrik Brandt <heb@mate-de.org>, 2004-2005.
+# Hendrik Brandt <heb@cafe-de.org>, 2004-2005.
 # Jochen Skulj <jochen@jochenskulj.de>, 2006.
 # Andre Klapper <ak-47@gmx.net>, 2008.
 # Christian Kirbach <Christian.Kirbach@googlemail.com>, 2009.
@@ -1127,10 +1127,10 @@
 
 
 ========== ne.po ==========
-# translation of mate-applets.mate-2-14.ne.po to Nepali
-# translation of mate-applets.mate-2-10.ne.po to Nepali
-# translation of mate-applets.mate-2-10.po to Nepali
-# translation of mate-applets.HEAD.po to Nepali
+# translation of cafe-applets.cafe-2-14.ne.po to Nepali
+# translation of cafe-applets.cafe-2-10.ne.po to Nepali
+# translation of cafe-applets.cafe-2-10.po to Nepali
+# translation of cafe-applets.HEAD.po to Nepali
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
 # Kapil Timilsina <lipak21@gmail.com>, 2005.
@@ -1147,9 +1147,9 @@
 
 
 ========== nl.po ==========
-# Dutch translation for libmateweather
+# Dutch translation for libcafeweather
 #
-# This file is distributed under the same license as the libmateweather package.
+# This file is distributed under the same license as the libcafeweather package.
 #
 # Vincent van Adrighem <V.vanAdrighem@dirck.mine.nu>, 2003
 # Tino Meinen <a.t.meinen@chello.nl>, 2003, 2004, 2006, 2007
@@ -1161,7 +1161,7 @@
 
 ========== nn.po ==========
 # translation of nn.po to Norwegian Nynorsk
-# Norwegian (nynorsk) translation of mate-applets
+# Norwegian (nynorsk) translation of cafe-applets
 # Copyright (C) 2001 Roy-Magne Mo
 #
 #
@@ -1176,9 +1176,9 @@
 
 ========== oc.po ==========
 # translation of oc.po to Occitan
-# Occitan translation of mate-applets.
+# Occitan translation of cafe-applets.
 # Copyright (C) 2007 Free Software Foundation, Inc.
-# This file is distributed under the same license as the mate-applets package.
+# This file is distributed under the same license as the cafe-applets package.
 #
 # Yannig MARCHEGAY (Kokoyaya) <yannig@marchegay>
 #
@@ -1188,7 +1188,7 @@
 
 
 ========== or.po ==========
-# translation of libmateweather.master.or.po to Oriya
+# translation of libcafeweather.master.or.po to Oriya
 # This file is distributed under the same license as the PACKAGE package.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER.
 #
@@ -1200,9 +1200,9 @@
 
 
 ========== pa.po ==========
-# translation of mate-applets.HEAD.po to Punjabi
-# This file is distributed under the same license as the mate-applets.hi package.
-# Copyright (C) 2004 THE mate-applets'S COPYRIGHT HOLDER
+# translation of cafe-applets.HEAD.po to Punjabi
+# This file is distributed under the same license as the cafe-applets.hi package.
+# Copyright (C) 2004 THE cafe-applets'S COPYRIGHT HOLDER
 #
 #
 # Amanpreet Singh Alam <amanliunx@netscapet.net>, 2004.
@@ -1230,9 +1230,9 @@
 
 
 ========== pt.po ==========
-# libmateweather' Portuguese translation.
-# Copyright © 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009 libmateweather
-# This file is distributed under the same license as the libmateweather package.
+# libcafeweather' Portuguese translation.
+# Copyright © 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009 libcafeweather
+# This file is distributed under the same license as the libcafeweather package.
 # Duarte Loreto <happyguy_pt@hotmail.com>, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009.
 #
 
@@ -1241,7 +1241,7 @@
 
 ========== pt_BR.po ==========
 # Copyright (C) 2000-2009 Free Software Foundation, Inc.
-# This file is distributed under the same license as the mate-applets package.
+# This file is distributed under the same license as the cafe-applets package.
 # Gustavo Maciel Dias Vieira <gustavo@sagui.org>, 2000-2001.
 # Alexandre Folle de Menezes <afmenez@terra.com.br>, 2003.
 # Gustavo Noronha Silva <kov@debian.org>, 2003.
@@ -1260,10 +1260,10 @@
 
 
 ========== ro.po ==========
-# Romanian translation of mate-applets locations.
+# Romanian translation of cafe-applets locations.
 # Copyright (C) Free Software Foundation
-# This file is distributed under the same licence as mate-applets
-# Mișu Moldovan <dumol@mate.ro>, 2004.
+# This file is distributed under the same licence as cafe-applets
+# Mișu Moldovan <dumol@cafe.ro>, 2004.
 # Dan Damian <dand@ubuntu.ro>, 2005-2007.
 # Lucian Adrian Grijincu <lucian.grijincu@gmail.com>, 2010.
 
@@ -1272,7 +1272,7 @@
 
 ========== ru.po ==========
 # translation of ru.po to Russian
-# translation of libmateweather to Russian
+# translation of libcafeweather to Russian
 # Copyright (C) 1998-2004, 2005, 2006, 2007, 2009 Free Software Foundation, Inc.
 #
 # Alexandre Prokhudine, 2002.
@@ -1289,9 +1289,9 @@
 
 
 ========== rw.po ==========
-# translation of mate-applets to Kinyarwanda.
+# translation of cafe-applets to Kinyarwanda.
 # Copyright (C) 2005 Free Software Foundation, Inc.
-# This file is distributed under the same license as the mate-applets package.
+# This file is distributed under the same license as the cafe-applets package.
 # Steve Murphy <murf@e-tools.com>, 2005
 # Steve performed initial rough translation from compendium built from translations provided by the following translators:
 # Philibert Ndandali  <ndandali@yahoo.fr>, 2005.
@@ -1318,9 +1318,9 @@
 
 
 ========== sk.po ==========
-# Slovak translation for libmateweather.
+# Slovak translation for libcafeweather.
 # Copyright (C) 2000, 2001, 2002, 2003, 2004, 2005, 2009 Free Software Foundation, Inc.
-# This file is distributed under the same license as the libmateweather package.
+# This file is distributed under the same license as the libcafeweather package.
 # Stanislav Višňovský <visnovsky@nenya.ms.mff.cuni.cz>, 2000, 2001, 2002, 2003, 2004.
 # Marcel Telka <marcel@telka.sk>, 2005, 2009.
 #
@@ -1335,17 +1335,17 @@
 # Nejc Novak <nejc.novak@guest.arnes.si>, 2002.
 # Andraz Tori <andraz.tori1@guest.arnes.si>, 2003.
 # Matic Žgur <mr.zgur@gmail.com>, 2006.
-# Matej Urbančič <mateju@svn.gnome.org>, 2008 - 2009.
+# Matej Urbančič <cafeju@svn.gnome.org>, 2008 - 2009.
 #
 
 
 
 
 ========== sq.po ==========
-# Përkthimi i libmateweather në shqip.
-# Derivuar nga përkthimi në shqip i mate-applets.
+# Përkthimi i libcafeweather në shqip.
+# Derivuar nga përkthimi në shqip i cafe-applets.
 # Copyright (C) 2003-2006, 2008 Free Software Foundation, Inc.
-# This file is distributed under the same license as the libmateweather package.
+# This file is distributed under the same license as the libcafeweather package.
 # Elian Myftiu <elian@alblinux.net>, 2003-2006.
 # Laurent Dhima <laurenti@alblinux.net>, 2008.
 
@@ -1353,10 +1353,10 @@
 
 
 ========== sr.po ==========
-# Serbian translation of mate-applets
+# Serbian translation of cafe-applets
 # Courtesy of Prevod.org team (http://prevod.org/) -- 2003, 2004, 2005, 2006.
 #
-# This file is distributed under the same license as the mate-applets package.
+# This file is distributed under the same license as the cafe-applets package.
 #
 # Maintainer: Данило Шеган <danilo@gnome.org>
 # Reviewed on 2005-09-03 by: Игор Несторовић <igor@prevod.org>
@@ -1366,10 +1366,10 @@
 
 
 ========== sr@latin.po ==========
-# Serbian translation of mate-applets
+# Serbian translation of cafe-applets
 # Courtesy of Prevod.org team (http://prevod.org/) -- 2003, 2004, 2005, 2006.
 #
-# This file is distributed under the same license as the mate-applets package.
+# This file is distributed under the same license as the cafe-applets package.
 #
 # Maintainer: Danilo Šegan <danilo@gnome.org>
 # Reviewed on 2005-09-03 by: Igor Nestorović <igor@prevod.org>
@@ -1379,7 +1379,7 @@
 
 
 ========== sv.po ==========
-# Swedish messages for mate-applets.
+# Swedish messages for cafe-applets.
 # Copyright (C) 1998-2009 Free Software Foundation, Inc.
 # Martin Wahlen <mva@sbbs.se>, 1998.
 # Andreas Hyden <a.hyden@cyberpoint.se>, 2000.
@@ -1392,9 +1392,9 @@
 
 
 ========== ta.po ==========
-# translation of libmateweather.master.ta.po to Tamil
+# translation of libcafeweather.master.ta.po to Tamil
 # translation of ta.po to
-# Translation of mate-applets.
+# Translation of cafe-applets.
 # Copyright (C) 2002, 2004, 2006, 2007, 2008, 2009 Free Software Foundation, Inc.
 #
 # B Muthukumar <kulirnila@yahoo.com>, 2002.
@@ -1409,10 +1409,10 @@
 
 
 ========== te.po ==========
-# translation of libmateweather.master.te.po to Telugu
-# Telugu translation of mate-applets
+# translation of libcafeweather.master.te.po to Telugu
+# Telugu translation of cafe-applets
 # Copyright (C) 2005 Free Software Foundation, Andhra Pradesh.
-# This file is distributed under the same license as the mate-applets package.
+# This file is distributed under the same license as the cafe-applets package.
 #
 #
 # Prajasakti Localisation Team <localisation@prajasakti.com>, 2005.
@@ -1422,9 +1422,9 @@
 
 
 ========== th.po ==========
-# Thai translation for mate-applets.
+# Thai translation for cafe-applets.
 # Copyright (C) 2004-2009 Free Software Foundation, Inc.
-# This file is distributed under the same license as the mate-applets package.
+# This file is distributed under the same license as the cafe-applets package.
 # Paisa Seeluangsawat <paisa@users.sf.net>, 2004.
 # Theppitak Karoonboonyanan <thep@linux.thai.net>, 2004-2009.
 #
@@ -1433,7 +1433,7 @@
 
 
 ========== tr.po ==========
-# translation of libmateweather to Turkish
+# translation of libcafeweather to Turkish
 # Copyright (C) 2002, 2004, 2005, 2008 Free Software Foundation, Inc.
 #
 # Sinan Imamoglu <sinan@myrealbox.com>, 2003.
@@ -1444,7 +1444,7 @@
 
 
 ========== uk.po ==========
-# Ukrainian translation of mate-applets.
+# Ukrainian translation of cafe-applets.
 # Copyright (C) 2000 Free Software Foundation, Inc.
 # Yuri Syrota <rasta@renome.rovno.ua>, 2000
 # Maxim Dziumanenko <dziumanenko@gmail.com>, 2004-2010
@@ -1454,9 +1454,9 @@
 
 
 ========== vi.po ==========
-# Vietnamese translation for libmateweather.
+# Vietnamese translation for libcafeweather.
 # Copyright © 2009 MATE i18n Project for Vietnamese.
-# This file is distributed under the same license as the libmateweather package.
+# This file is distributed under the same license as the libcafeweather package.
 # T.M.Thanh <tmthanh@yahoo.com>, 2002-2003.
 # Nguyễn Thái Ngọc Duy <pclouds@vnlinux.org>, 2002-2004.
 # Clytie Siddall <clytie@riverland.net.au>, 2005-2009.
@@ -1480,9 +1480,9 @@
 
 
 ========== xh.po ==========
-# Xhosa translation of mate-applets
+# Xhosa translation of cafe-applets
 # Copyright (C) 2005 Canonical Ltd.
-# This file is distributed under the same license as the mate-applets package.
+# This file is distributed under the same license as the cafe-applets package.
 # Translation by Canonical Ltd <translations@canonical.com> with thanks to
 # Translation World CC in South Africa, 2005.
 #
@@ -1491,9 +1491,9 @@
 
 
 ========== zh_CN.po ==========
-# translation of libmateweather to zh_CN
+# translation of libcafeweather to zh_CN
 # Copyright (C) 2002, 2003, 2009 Free Software Foundation, Inc.
-# This file is distributed under the same license as the libmateweather package.
+# This file is distributed under the same license as the libcafeweather package.
 # Wang Li <charles@linux.net.cn>, 2002.
 # Wu XiaoGuang <woohsiaokuang@yahoo.com.cn>, 2002.
 # Xiong Jiang <jxiong@offtopic.org>, 2003.

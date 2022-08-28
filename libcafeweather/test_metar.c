@@ -29,7 +29,7 @@ main (int argc, char **argv)
     int len;
     WeatherInfo info;
 
-    context = g_option_context_new ("- test libmateweather metar parser");
+    context = g_option_context_new ("- test libcafeweather metar parser");
     g_option_context_add_main_entries (context, entries, NULL);
     g_option_context_parse (context, &argc, &argv, &error);
 

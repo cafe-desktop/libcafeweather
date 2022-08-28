@@ -6,24 +6,24 @@
 ]>
 <book id="index">
   <bookinfo>
-    <title>libmateweather Reference Manual</title>
+    <title>libcafeweather Reference Manual</title>
     <releaseinfo>
-      for libmateweather]
+      for libcafeweather]
       <!-- MATE has no online gtkdocs! uncomment and update below when it does-->
       <!--The latest version of this documentation can be found on-line at
-      <ulink role="online-location" url="http://[SERVER]/libmateweather/index.html">http://[SERVER]/libmateweather/</ulink>.-->
+      <ulink role="online-location" url="http://[SERVER]/libcafeweather/index.html">http://[SERVER]/libcafeweather/</ulink>.-->
     </releaseinfo>
   </bookinfo>
 
   <chapter>
-    <title>libmateweather Reference Manual</title>
-    <xi:include href="xml/mateweather-location.xml"/>
+    <title>libcafeweather Reference Manual</title>
+    <xi:include href="xml/cafeweather-location.xml"/>
     <xi:include href="xml/location-entry.xml"/>
-    <xi:include href="xml/mateweather-timezone.xml"/>
+    <xi:include href="xml/cafeweather-timezone.xml"/>
     <xi:include href="xml/timezone-menu.xml"/>
     <xi:include href="xml/weather.xml"/>
-    <xi:include href="xml/mateweather-xml.xml"/>
-    <xi:include href="xml/mateweather-prefs.xml"/>
+    <xi:include href="xml/cafeweather-xml.xml"/>
+    <xi:include href="xml/cafeweather-prefs.xml"/>
   </chapter>
 
   <chapter id="object-tree">

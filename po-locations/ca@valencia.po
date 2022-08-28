@@ -1,6 +1,6 @@
 # Libraries to allow MATE Desktop to display weather information
 # Copyright (C) 2019 The MATE Team
-# This file is distributed under the same license as the libmateweather package.
+# This file is distributed under the same license as the libcafeweather package.
 # Jordi Mallach <jordi@sindominio.net>, 2004, 2005, 2006.
 # Joan Duran <jodufi@gmail.com>, 2008, 2010.
 msgid ""
@@ -10,7 +10,7 @@ msgstr ""
 "POT-Creation-Date: 2019-09-17 10:35+0200\n"
 "PO-Revision-Date: 2010-04-02 18:42+0200\n"
 "Last-Translator: Joan Duran <jodufi@gmail.com>\n"
-"Language-Team: Catalan <tradmate@softcatala.org>\n"
+"Language-Team: Catalan <tradcafe@softcatala.org>\n"
 "Language: ca@valencia\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"

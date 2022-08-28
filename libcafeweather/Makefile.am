@@ -1,4 +1,4 @@
-lib_LTLIBRARIES = libmateweather.la
+lib_LTLIBRARIES = libcafeweather.la
 
 noinst_PROGRAMS = test_metar test_locations test_sun_moon
 
@@ -9,34 +9,34 @@ AM_CPPFLAGS = 			\
 
 AM_CFLAGS = $(WARN_CFLAGS)
 
-mateweather_old_headers = \
-	weather.h mateweather-prefs.h mateweather-xml.h
-mateweather_new_headers = \
-	mateweather-location.h location-entry.h \
-	mateweather-timezone.h timezone-menu.h
-libmateweatherincdir = $(includedir)/libmateweather
-libmateweatherinc_HEADERS = \
-	$(mateweather_old_headers)		\
-	$(mateweather_new_headers)		\
-	mateweather-enum-types.h
+cafeweather_old_headers = \
+	weather.h cafeweather-prefs.h cafeweather-xml.h
+cafeweather_new_headers = \
+	cafeweather-location.h location-entry.h \
+	cafeweather-timezone.h timezone-menu.h
+libcafeweatherincdir = $(includedir)/libcafeweather
+libcafeweatherinc_HEADERS = \
+	$(cafeweather_old_headers)		\
+	$(cafeweather_new_headers)		\
+	cafeweather-enum-types.h
 
 noinst_HEADERS = weather-priv.h
 
-libmateweather_la_SOURCES = \
+libcafeweather_la_SOURCES = \
 	weather.c weather.h weather-priv.h \
 	weather-metar.c weather-iwin.c weather-met.c \
 	weather-bom.c weather-wx.c \
 	weather-sun.c weather-moon.c \
-	mateweather-enum-types.c \
-	mateweather-prefs.c mateweather-prefs.h \
-	mateweather-xml.c mateweather-xml.h \
-	mateweather-location.c mateweather-location.h \
-	mateweather-timezone.c mateweather-timezone.h \
+	cafeweather-enum-types.c \
+	cafeweather-prefs.c cafeweather-prefs.h \
+	cafeweather-xml.c cafeweather-xml.h \
+	cafeweather-location.c cafeweather-location.h \
+	cafeweather-timezone.c cafeweather-timezone.h \
 	location-entry.c location-entry.h \
 	timezone-menu.c timezone-menu.h \
 	parser.c parser.h
 
-libmateweather_la_CPPFLAGS = \
+libcafeweather_la_CPPFLAGS = \
 	$(AM_CPPFLAGS)			\
 	$(LIBXML_CFLAGS)		\
 	$(LIBSOUP_CFLAGS)		\
@@ -45,7 +45,7 @@ libmateweather_la_CPPFLAGS = \
 	-DMATELOCALEDIR=\""$(datadir)/locale"\" \
 	-DMATEWEATHER_XML_LOCATION_DIR=\""$(pkgdatadir)"\"
 
-libmateweather_la_LIBADD = \
+libcafeweather_la_LIBADD = \
 	-lm		\
 	$(GTK_LIBS)	\
 	$(LIBXML_LIBS)	\
@@ -53,43 +53,43 @@ libmateweather_la_LIBADD = \
 	$(GIO_LIBS) \
 	$(REGEX_LIBS)
 
-libmateweather_la_LDFLAGS = \
+libcafeweather_la_LDFLAGS = \
 	-version-info $(LT_VERSION) -no-undefined
 
 test_metar_SOURCES = test_metar.c
 test_metar_CPPFLAGS = $(AM_CPPFLAGS) $(LIBSOUP_CFLAGS)
-test_metar_LDADD = libmateweather.la $(GTK_LIBS)
+test_metar_LDADD = libcafeweather.la $(GTK_LIBS)
 
 test_locations_SOURCES = test_locations.c
-test_locations_LDADD = libmateweather.la $(GTK_LIBS)
+test_locations_LDADD = libcafeweather.la $(GTK_LIBS)
 
 test_sun_moon_SOURCES = test_sun_moon.c
 test_sun_moon_CPPFLAGS = $(AM_CPPFLAGS) $(LIBSOUP_CFLAGS)
-test_sun_moon_LDADD = libmateweather.la $(GTK_LIBS) $(LIBM)
+test_sun_moon_LDADD = libcafeweather.la $(GTK_LIBS) $(LIBM)
 
-mateweather-enum-types.h: $(mateweather_new_headers)
-	$(AM_V_GEN)( cd $(srcdir) && $(GLIB_MKENUMS) --template mateweather-enum-types.h.tmpl \
-		$(mateweather_new_headers) ) > mateweather-enum-types.h.tmp \
-	&& mv mateweather-enum-types.h.tmp mateweather-enum-types.h \
-	|| rm -f mateweather-enum-type.h.tmp
+cafeweather-enum-types.h: $(cafeweather_new_headers)
+	$(AM_V_GEN)( cd $(srcdir) && $(GLIB_MKENUMS) --template cafeweather-enum-types.h.tmpl \
+		$(cafeweather_new_headers) ) > cafeweather-enum-types.h.tmp \
+	&& mv cafeweather-enum-types.h.tmp cafeweather-enum-types.h \
+	|| rm -f cafeweather-enum-type.h.tmp
 
-mateweather-enum-types.c: $(libmateweatherinclude_HEADERS)
-	$(AM_V_GEN)( cd $(srcdir) && $(GLIB_MKENUMS) --template mateweather-enum-types.c.tmpl \
-		$(mateweather_new_headers) ) > mateweather-enum-types.c.tmp \
-	&& mv mateweather-enum-types.c.tmp mateweather-enum-types.c \
-	|| rm -f mateweather-enum-type.c.tmp
+cafeweather-enum-types.c: $(libcafeweatherinclude_HEADERS)
+	$(AM_V_GEN)( cd $(srcdir) && $(GLIB_MKENUMS) --template cafeweather-enum-types.c.tmpl \
+		$(cafeweather_new_headers) ) > cafeweather-enum-types.c.tmp \
+	&& mv cafeweather-enum-types.c.tmp cafeweather-enum-types.c \
+	|| rm -f cafeweather-enum-type.c.tmp
 
 
-BUILT_SOURCES = mateweather-enum-types.c mateweather-enum-types.h
+BUILT_SOURCES = cafeweather-enum-types.c cafeweather-enum-types.h
 
 pkgconfigdir = $(libdir)/pkgconfig
-pkgconfig_DATA = mateweather.pc
+pkgconfig_DATA = cafeweather.pc
 
-gsettingsschema_in_files = org.mate.weather.gschema.xml.in
+gsettingsschema_in_files = org.cafe.weather.gschema.xml.in
 gsettings_SCHEMAS = $(gsettingsschema_in_files:.xml.in=.xml)
 @GSETTINGS_RULES@
 
-EXTRA_DIST = mateweather.pc.in mateweather-uninstalled.pc.in $(gsettingsschema_in_files)
+EXTRA_DIST = cafeweather.pc.in cafeweather-uninstalled.pc.in $(gsettingsschema_in_files)
 
 CLEANFILES = $(noinst_PROGRAMS) $(BUILT_SOURCES) $(gsettings_SCHEMAS) *.gschema.valid
 

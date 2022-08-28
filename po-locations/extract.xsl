@@ -22,7 +22,7 @@
 char *s = NC_("<xsl:call-template name="escape"><xsl:with-param name="string" select="@msgctxt"/></xsl:call-template>", "<xsl:call-template name="escape"><xsl:with-param name="string" select="."/></xsl:call-template>");</xsl:when><xsl:otherwise>
 char *s = N_("<xsl:call-template name="escape"><xsl:with-param name="string" select="."/></xsl:call-template>");</xsl:otherwise></xsl:choose></xsl:template>
 
-  <xsl:template match="mateweather">
+  <xsl:template match="cafeweather">
       <!-- region names -->
       <xsl:for-each select="//region/name">
 	<xsl:sort select="."/>

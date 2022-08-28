@@ -35,7 +35,7 @@
  * #MateWeatherLocation<!-- -->s
  */
 
-G_DEFINE_TYPE (MateWeatherLocationEntry, mateweather_location_entry, GTK_TYPE_ENTRY)
+G_DEFINE_TYPE (MateWeatherLocationEntry, cafeweather_location_entry, GTK_TYPE_ENTRY)
 
 enum {
     PROP_0,
@@ -46,7 +46,7 @@ enum {
     LAST_PROP
 };
 
-static void mateweather_location_entry_build_model (MateWeatherLocationEntry *entry,
+static void cafeweather_location_entry_build_model (MateWeatherLocationEntry *entry,
 						 MateWeatherLocation *top);
 static void set_property (GObject *object, guint prop_id,
 			  const GValue *value, GParamSpec *pspec);
@@ -71,7 +71,7 @@ static gboolean match_selected (GtkEntryCompletion *completion,
 static void     entry_changed (MateWeatherLocationEntry *entry);
 
 static void
-mateweather_location_entry_init (MateWeatherLocationEntry *entry)
+cafeweather_location_entry_init (MateWeatherLocationEntry *entry)
 {
     GtkEntryCompletion *completion;
 
@@ -98,15 +98,15 @@ finalize (GObject *object)
     MateWeatherLocationEntry *entry = MATEWEATHER_LOCATION_ENTRY (object);
 
     if (entry->location)
-	mateweather_location_unref (entry->location);
+	cafeweather_location_unref (entry->location);
     if (entry->top)
-	mateweather_location_unref (entry->top);
+	cafeweather_location_unref (entry->top);
 
-    G_OBJECT_CLASS (mateweather_location_entry_parent_class)->finalize (object);
+    G_OBJECT_CLASS (cafeweather_location_entry_parent_class)->finalize (object);
 }
 
 static void
-mateweather_location_entry_class_init (MateWeatherLocationEntryClass *location_entry_class)
+cafeweather_location_entry_class_init (MateWeatherLocationEntryClass *location_entry_class)
 {
     GObjectClass *object_class = G_OBJECT_CLASS (location_entry_class);
 
@@ -135,11 +135,11 @@ set_property (GObject *object, guint prop_id,
 {
     switch (prop_id) {
     case PROP_TOP:
-	mateweather_location_entry_build_model (MATEWEATHER_LOCATION_ENTRY (object),
+	cafeweather_location_entry_build_model (MATEWEATHER_LOCATION_ENTRY (object),
 					     g_value_get_pointer (value));
 	break;
     case PROP_LOCATION:
-	mateweather_location_entry_set_location (MATEWEATHER_LOCATION_ENTRY (object),
+	cafeweather_location_entry_set_location (MATEWEATHER_LOCATION_ENTRY (object),
 					      g_value_get_pointer (value));
 	break;
     default:
@@ -179,14 +179,14 @@ set_location_internal (MateWeatherLocationEntry *entry,
     char *name;
 
     if (entry->location)
-	mateweather_location_unref (entry->location);
+	cafeweather_location_unref (entry->location);
 
     if (iter) {
 	gtk_tree_model_get (model, iter,
 			    MATEWEATHER_LOCATION_ENTRY_COL_DISPLAY_NAME, &name,
 			    MATEWEATHER_LOCATION_ENTRY_COL_LOCATION, &loc,
 			    -1);
-	entry->location = mateweather_location_ref (loc);
+	entry->location = cafeweather_location_ref (loc);
 	gtk_entry_set_text (GTK_ENTRY (entry), name);
 	entry->custom_text = FALSE;
 	g_free (name);
@@ -201,7 +201,7 @@ set_location_internal (MateWeatherLocationEntry *entry,
 }
 
 /**
- * mateweather_location_entry_set_location:
+ * cafeweather_location_entry_set_location:
  * @entry: a #MateWeatherLocationEntry
  * @loc: (allow-none): a #MateWeatherLocation in @entry, or %NULL to
  * clear @entry
@@ -210,7 +210,7 @@ set_location_internal (MateWeatherLocationEntry *entry,
  * entry accordingly.
  **/
 void
-mateweather_location_entry_set_location (MateWeatherLocationEntry *entry,
+cafeweather_location_entry_set_location (MateWeatherLocationEntry *entry,
 				      MateWeatherLocation      *loc)
 {
     GtkEntryCompletion *completion;
@@ -238,40 +238,40 @@ mateweather_location_entry_set_location (MateWeatherLocationEntry *entry,
 }
 
 /**
- * mateweather_location_entry_get_location:
+ * cafeweather_location_entry_get_location:
  * @entry: a #MateWeatherLocationEntry
  *
  * Gets the location that was set by a previous call to
- * mateweather_location_entry_set_location() or was selected by the user.
+ * cafeweather_location_entry_set_location() or was selected by the user.
  *
  * Return value: (transfer full) (allow-none): the selected location
  * (which you must unref when you are done with it), or %NULL if no
  * location is selected.
  **/
 MateWeatherLocation *
-mateweather_location_entry_get_location (MateWeatherLocationEntry *entry)
+cafeweather_location_entry_get_location (MateWeatherLocationEntry *entry)
 {
     g_return_val_if_fail (MATEWEATHER_IS_LOCATION_ENTRY (entry), NULL);
 
     if (entry->location)
-	return mateweather_location_ref (entry->location);
+	return cafeweather_location_ref (entry->location);
     else
 	return NULL;
 }
 
 /**
- * mateweather_location_entry_has_custom_text:
+ * cafeweather_location_entry_has_custom_text:
  * @entry: a #MateWeatherLocationEntry
  *
  * Checks whether or not @entry's text has been modified by the user.
  * Note that this does not mean that no location is associated with @entry.
- * mateweather_location_entry_get_location() should be used for this.
+ * cafeweather_location_entry_get_location() should be used for this.
  *
  * Return value: %TRUE if @entry's text was modified by the user, or %FALSE if
  * it's set to the default text of a location.
  **/
 gboolean
-mateweather_location_entry_has_custom_text (MateWeatherLocationEntry *entry)
+cafeweather_location_entry_has_custom_text (MateWeatherLocationEntry *entry)
 {
     g_return_val_if_fail (MATEWEATHER_IS_LOCATION_ENTRY (entry), FALSE);
 
@@ -279,7 +279,7 @@ mateweather_location_entry_has_custom_text (MateWeatherLocationEntry *entry)
 }
 
 /**
- * mateweather_location_entry_set_city:
+ * cafeweather_location_entry_set_city:
  * @entry: a #MateWeatherLocationEntry
  * @city_name: (allow-none): the city name, or %NULL
  * @code: the METAR station code
@@ -292,7 +292,7 @@ mateweather_location_entry_has_custom_text (MateWeatherLocationEntry *entry)
  * %FALSE otherwise.
  **/
 gboolean
-mateweather_location_entry_set_city (MateWeatherLocationEntry *entry,
+cafeweather_location_entry_set_city (MateWeatherLocationEntry *entry,
 				  const char            *city_name,
 				  const char            *code)
 {
@@ -315,12 +315,12 @@ mateweather_location_entry_set_city (MateWeatherLocationEntry *entry,
 			    MATEWEATHER_LOCATION_ENTRY_COL_LOCATION, &cmploc,
 			    -1);
 
-	cmpcode = mateweather_location_get_code (cmploc);
+	cmpcode = cafeweather_location_get_code (cmploc);
 	if (!cmpcode || strcmp (cmpcode, code) != 0)
 	    continue;
 
 	if (city_name) {
-	    cmpname = mateweather_location_get_city_name (cmploc);
+	    cmpname = cafeweather_location_get_city_name (cmploc);
 	    if (!cmpname || strcmp (cmpname, city_name) != 0) {
 		g_free (cmpname);
 		continue;
@@ -347,9 +347,9 @@ fill_location_entry_model (GtkTreeStore *store, MateWeatherLocation *loc,
     GtkTreeIter iter;
     int i;
 
-    children = mateweather_location_get_children (loc);
+    children = cafeweather_location_get_children (loc);
 
-    switch (mateweather_location_get_level (loc)) {
+    switch (cafeweather_location_get_level (loc)) {
     case MATEWEATHER_LOCATION_WORLD:
     case MATEWEATHER_LOCATION_REGION:
     case MATEWEATHER_LOCATION_ADM2:
@@ -367,15 +367,15 @@ fill_location_entry_model (GtkTreeStore *store, MateWeatherLocation *loc,
 	/* Recurse, initializing the names to the country name */
 	for (i = 0; children[i]; i++) {
 	    fill_location_entry_model (store, children[i],
-				       mateweather_location_get_name (loc),
-				       mateweather_location_get_sort_name (loc));
+				       cafeweather_location_get_name (loc),
+				       cafeweather_location_get_sort_name (loc));
 	}
 	break;
 
     case MATEWEATHER_LOCATION_ADM1:
 	/* Recurse, adding the ADM1 name to the country name */
-	display_name = g_strdup_printf ("%s, %s", mateweather_location_get_name (loc), parent_display_name);
-	compare_name = g_strdup_printf ("%s, %s", mateweather_location_get_sort_name (loc), parent_compare_name);
+	display_name = g_strdup_printf ("%s, %s", cafeweather_location_get_name (loc), parent_display_name);
+	compare_name = g_strdup_printf ("%s, %s", cafeweather_location_get_sort_name (loc), parent_compare_name);
 
 	for (i = 0; children[i]; i++) {
 	    fill_location_entry_model (store, children[i],
@@ -393,12 +393,12 @@ fill_location_entry_model (GtkTreeStore *store, MateWeatherLocation *loc,
 	     */
 	    for (i = 0; children[i]; i++) {
 		display_name = g_strdup_printf ("%s (%s), %s",
-						mateweather_location_get_name (loc),
-						mateweather_location_get_name (children[i]),
+						cafeweather_location_get_name (loc),
+						cafeweather_location_get_name (children[i]),
 						parent_display_name);
 		compare_name = g_strdup_printf ("%s (%s), %s",
-						mateweather_location_get_sort_name (loc),
-						mateweather_location_get_sort_name (children[i]),
+						cafeweather_location_get_sort_name (loc),
+						cafeweather_location_get_sort_name (children[i]),
 						parent_compare_name);
 
 		gtk_tree_store_append (store, &iter, NULL);
@@ -417,10 +417,10 @@ fill_location_entry_model (GtkTreeStore *store, MateWeatherLocation *loc,
 	     * location-with-no-city case below.
 	     */
 	    display_name = g_strdup_printf ("%s, %s",
-					    mateweather_location_get_name (loc),
+					    cafeweather_location_get_name (loc),
 					    parent_display_name);
 	    compare_name = g_strdup_printf ("%s, %s",
-					    mateweather_location_get_sort_name (loc),
+					    cafeweather_location_get_sort_name (loc),
 					    parent_compare_name);
 
 	    gtk_tree_store_append (store, &iter, NULL);
@@ -440,10 +440,10 @@ fill_location_entry_model (GtkTreeStore *store, MateWeatherLocation *loc,
 	 * child <location>.
 	 */
 	display_name = g_strdup_printf ("%s, %s",
-					mateweather_location_get_name (loc),
+					cafeweather_location_get_name (loc),
 					parent_display_name);
 	compare_name = g_strdup_printf ("%s, %s",
-					mateweather_location_get_sort_name (loc),
+					cafeweather_location_get_sort_name (loc),
 					parent_compare_name);
 
 	gtk_tree_store_append (store, &iter, NULL);
@@ -458,17 +458,17 @@ fill_location_entry_model (GtkTreeStore *store, MateWeatherLocation *loc,
 	break;
     }
 
-    mateweather_location_free_children (loc, children);
+    cafeweather_location_free_children (loc, children);
 }
 
 static void
-mateweather_location_entry_build_model (MateWeatherLocationEntry *entry,
+cafeweather_location_entry_build_model (MateWeatherLocationEntry *entry,
 				     MateWeatherLocation *top)
 {
     GtkTreeStore *store = NULL;
 
     g_return_if_fail (MATEWEATHER_IS_LOCATION_ENTRY (entry));
-    entry->top = mateweather_location_ref (top);
+    entry->top = cafeweather_location_ref (top);
 
     store = gtk_tree_store_new (4, G_TYPE_STRING, G_TYPE_POINTER, G_TYPE_STRING, G_TYPE_STRING);
     fill_location_entry_model (store, top, NULL, NULL);
@@ -573,19 +573,19 @@ match_selected (GtkEntryCompletion *completion,
 }
 
 /**
- * mateweather_location_entry_new:
+ * cafeweather_location_entry_new:
  * @top: the top-level location for the entry.
  *
  * Creates a new #MateWeatherLocationEntry.
  *
  * @top will normally be a location returned from
- * mateweather_location_new_world(), but you can create an entry that
+ * cafeweather_location_new_world(), but you can create an entry that
  * only accepts a smaller set of locations if you want.
  *
  * Return value: the new #MateWeatherLocationEntry
  **/
 GtkWidget *
-mateweather_location_entry_new (MateWeatherLocation *top)
+cafeweather_location_entry_new (MateWeatherLocation *top)
 {
     return g_object_new (MATEWEATHER_TYPE_LOCATION_ENTRY,
 			 "top", top,

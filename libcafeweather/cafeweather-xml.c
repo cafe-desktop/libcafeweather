@@ -1,5 +1,5 @@
 /* -*- Mode: C; tab-width: 8; indent-tabs-mode: t; c-basic-offset: 4 -*- */
-/* mateweather-xml.c - Locations.xml parsing code
+/* cafeweather-xml.c - Locations.xml parsing code
  *
  * Copyright (C) 2005 Ryan Lortie, 2004 Gareth Owen
  *
@@ -29,16 +29,16 @@
 #include <libxml/xmlreader.h>
 
 #define MATEWEATHER_I_KNOW_THIS_IS_UNSTABLE
-#include "mateweather-xml.h"
+#include "cafeweather-xml.h"
 #include "weather-priv.h"
 
 /**
- * SECTION:mateweather-xml
- * @Title: mateweather-xml
+ * SECTION:cafeweather-xml
+ * @Title: cafeweather-xml
  */
 
 static gboolean
-mateweather_xml_parse_node (MateWeatherLocation *gloc,
+cafeweather_xml_parse_node (MateWeatherLocation *gloc,
 			 GtkTreeStore *store, GtkTreeIter *parent)
 {
     GtkTreeIter iter, *self = &iter;
@@ -48,16 +48,16 @@ mateweather_xml_parse_node (MateWeatherLocation *gloc,
     const char *name;
     int i;
 
-    name = mateweather_location_get_name (gloc);
-    children = mateweather_location_get_children (gloc);
-    level = mateweather_location_get_level (gloc);
+    name = cafeweather_location_get_name (gloc);
+    children = cafeweather_location_get_children (gloc);
+    level = cafeweather_location_get_level (gloc);
 
     if (!children[0] && level < MATEWEATHER_LOCATION_WEATHER_STATION) {
-	mateweather_location_free_children (gloc, children);
+	cafeweather_location_free_children (gloc, children);
 	return TRUE;
     }
 
-    switch (mateweather_location_get_level (gloc)) {
+    switch (cafeweather_location_get_level (gloc)) {
     case MATEWEATHER_LOCATION_WORLD:
     case MATEWEATHER_LOCATION_ADM2:
 	self = parent;
@@ -83,7 +83,7 @@ mateweather_xml_parse_node (MateWeatherLocation *gloc,
 			    MATEWEATHER_XML_COL_LOC, name,
 			    -1);
 	if (children[0] && !children[1]) {
-	    wloc = mateweather_location_to_weather_location (children[0], name);
+	    wloc = cafeweather_location_to_weather_location (children[0], name);
 	    gtk_tree_store_set (store, &iter,
 				MATEWEATHER_XML_COL_POINTER, wloc,
 				-1);
@@ -96,10 +96,10 @@ mateweather_xml_parse_node (MateWeatherLocation *gloc,
 			    MATEWEATHER_XML_COL_LOC, name,
 			    -1);
 
-	parent_loc = mateweather_location_get_parent (gloc);
-	if (parent_loc && mateweather_location_get_level (parent_loc) == MATEWEATHER_LOCATION_CITY)
-	    name = mateweather_location_get_name (parent_loc);
-	wloc = mateweather_location_to_weather_location (gloc, name);
+	parent_loc = cafeweather_location_get_parent (gloc);
+	if (parent_loc && cafeweather_location_get_level (parent_loc) == MATEWEATHER_LOCATION_CITY)
+	    name = cafeweather_location_get_name (parent_loc);
+	wloc = cafeweather_location_to_weather_location (gloc, name);
 	gtk_tree_store_set (store, &iter,
 			    MATEWEATHER_XML_COL_POINTER, wloc,
 			    -1);
@@ -107,34 +107,34 @@ mateweather_xml_parse_node (MateWeatherLocation *gloc,
     }
 
     for (i = 0; children[i]; i++) {
-	if (!mateweather_xml_parse_node (children[i], store, self)) {
-	    mateweather_location_free_children (gloc, children);
+	if (!cafeweather_xml_parse_node (children[i], store, self)) {
+	    cafeweather_location_free_children (gloc, children);
 	    return FALSE;
 	}
     }
 
-    mateweather_location_free_children (gloc, children);
+    cafeweather_location_free_children (gloc, children);
     return TRUE;
 }
 
 GtkTreeModel *
-mateweather_xml_load_locations (void)
+cafeweather_xml_load_locations (void)
 {
     MateWeatherLocation *world;
     GtkTreeStore *store;
 
-    world = mateweather_location_new_world (TRUE);
+    world = cafeweather_location_new_world (TRUE);
     if (!world)
 	return NULL;
 
     store = gtk_tree_store_new (2, G_TYPE_STRING, G_TYPE_POINTER);
 
-    if (!mateweather_xml_parse_node (world, store, NULL)) {
-	mateweather_xml_free_locations ((GtkTreeModel *)store);
+    if (!cafeweather_xml_parse_node (world, store, NULL)) {
+	cafeweather_xml_free_locations ((GtkTreeModel *)store);
 	store = NULL;
     }
 
-    mateweather_location_unref (world);
+    cafeweather_location_unref (world);
 
     return (GtkTreeModel *)store;
 }
@@ -158,10 +158,10 @@ free_locations (GtkTreeModel *model, GtkTreePath *path, GtkTreeIter *iter, gpoin
 	return FALSE;
 }
 
-/* Frees model returned from @mateweather_xml_load_locations. It contains allocated
+/* Frees model returned from @cafeweather_xml_load_locations. It contains allocated
    WeatherLocation-s, thus this takes care of the freeing of that memory. */
 void
-mateweather_xml_free_locations (GtkTreeModel *locations)
+cafeweather_xml_free_locations (GtkTreeModel *locations)
 {
 	if (locations && GTK_IS_TREE_STORE (locations)) {
 		gtk_tree_model_foreach (locations, free_locations, NULL);

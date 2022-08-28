@@ -35,7 +35,7 @@
  * A #GtkComboBox subclass for choosing a #MateWeatherTimezone
  */
 
-G_DEFINE_TYPE (MateWeatherTimezoneMenu, mateweather_timezone_menu, GTK_TYPE_COMBO_BOX)
+G_DEFINE_TYPE (MateWeatherTimezoneMenu, cafeweather_timezone_menu, GTK_TYPE_COMBO_BOX)
 
 enum {
     PROP_0,
@@ -53,14 +53,14 @@ static void get_property (GObject *object, guint prop_id,
 
 static void changed      (GtkComboBox *combo);
 
-static GtkTreeModel *mateweather_timezone_model_new (MateWeatherLocation *top);
+static GtkTreeModel *cafeweather_timezone_model_new (MateWeatherLocation *top);
 static gboolean row_separator_func (GtkTreeModel *model, GtkTreeIter *iter,
 				    gpointer data);
 static void is_sensitive (GtkCellLayout *cell_layout, GtkCellRenderer *cell,
 			  GtkTreeModel *tree_model, GtkTreeIter *iter, gpointer data);
 
 static void
-mateweather_timezone_menu_init (MateWeatherTimezoneMenu *menu)
+cafeweather_timezone_menu_init (MateWeatherTimezoneMenu *menu)
 {
     GtkCellRenderer *renderer;
 
@@ -82,13 +82,13 @@ finalize (GObject *object)
     MateWeatherTimezoneMenu *menu = MATEWEATHER_TIMEZONE_MENU (object);
 
     if (menu->zone)
-	mateweather_timezone_unref (menu->zone);
+	cafeweather_timezone_unref (menu->zone);
 
-    G_OBJECT_CLASS (mateweather_timezone_menu_parent_class)->finalize (object);
+    G_OBJECT_CLASS (cafeweather_timezone_menu_parent_class)->finalize (object);
 }
 
 static void
-mateweather_timezone_menu_class_init (MateWeatherTimezoneMenuClass *timezone_menu_class)
+cafeweather_timezone_menu_class_init (MateWeatherTimezoneMenuClass *timezone_menu_class)
 {
     GObjectClass *object_class = G_OBJECT_CLASS (timezone_menu_class);
     GtkComboBoxClass *combo_class = GTK_COMBO_BOX_CLASS (timezone_menu_class);
@@ -123,14 +123,14 @@ set_property (GObject *object, guint prop_id,
 
     switch (prop_id) {
     case PROP_TOP:
-	model = mateweather_timezone_model_new (g_value_get_pointer (value));
+	model = cafeweather_timezone_model_new (g_value_get_pointer (value));
 	gtk_combo_box_set_model (GTK_COMBO_BOX (object), model);
 	g_object_unref (model);
 	gtk_combo_box_set_active (GTK_COMBO_BOX (object), 0);
 	break;
 
     case PROP_TZID:
-	mateweather_timezone_menu_set_tzid (MATEWEATHER_TIMEZONE_MENU (object),
+	cafeweather_timezone_menu_set_tzid (MATEWEATHER_TIMEZONE_MENU (object),
 					 g_value_get_string (value));
 	break;
     default:
@@ -147,7 +147,7 @@ get_property (GObject *object, guint prop_id,
 
     switch (prop_id) {
     case PROP_TZID:
-	g_value_set_string (value, mateweather_timezone_menu_get_tzid (menu));
+	g_value_set_string (value, cafeweather_timezone_menu_get_tzid (menu));
 	break;
     default:
 	G_OBJECT_WARN_INVALID_PROPERTY_ID (object, prop_id, pspec);
@@ -167,7 +167,7 @@ changed (GtkComboBox *combo)
     GtkTreeIter iter;
 
     if (menu->zone)
-	mateweather_timezone_unref (menu->zone);
+	cafeweather_timezone_unref (menu->zone);
 
     gtk_combo_box_get_active_iter (combo, &iter);
     gtk_tree_model_get (gtk_combo_box_get_model (combo), &iter,
@@ -175,7 +175,7 @@ changed (GtkComboBox *combo)
 			-1);
 
     if (menu->zone)
-	mateweather_timezone_ref (menu->zone);
+	cafeweather_timezone_ref (menu->zone);
 
     g_object_notify (G_OBJECT (combo), "tzid");
 }
@@ -202,10 +202,10 @@ get_offset (MateWeatherTimezone *zone)
     GString *desc;
 
     desc = g_string_new (NULL);
-    append_offset (desc, mateweather_timezone_get_offset (zone));
-    if (mateweather_timezone_has_dst (zone)) {
+    append_offset (desc, cafeweather_timezone_get_offset (zone));
+    if (cafeweather_timezone_has_dst (zone)) {
 	g_string_append (desc, " / ");
-	append_offset (desc, mateweather_timezone_get_dst_offset (zone));
+	append_offset (desc, cafeweather_timezone_get_dst_offset (zone));
     }
     return g_string_free (desc, FALSE);
 }
@@ -218,12 +218,12 @@ insert_location (GtkTreeStore *store, MateWeatherTimezone *zone, const char *loc
 
     offset = get_offset (zone);
     name = g_strdup_printf ("%s <small>(%s)</small>",
-                            loc_name ? loc_name : mateweather_timezone_get_name (zone),
+                            loc_name ? loc_name : cafeweather_timezone_get_name (zone),
                             offset);
     gtk_tree_store_append (store, &iter, parent);
     gtk_tree_store_set (store, &iter,
                         MATEWEATHER_TIMEZONE_MENU_NAME, name,
-                        MATEWEATHER_TIMEZONE_MENU_ZONE, mateweather_timezone_ref (zone),
+                        MATEWEATHER_TIMEZONE_MENU_ZONE, cafeweather_timezone_ref (zone),
                         -1);
     g_free (name);
     g_free (offset);
@@ -234,37 +234,37 @@ insert_locations (GtkTreeStore *store, MateWeatherLocation *loc)
 {
     int i;
 
-    if (mateweather_location_get_level (loc) < MATEWEATHER_LOCATION_COUNTRY) {
+    if (cafeweather_location_get_level (loc) < MATEWEATHER_LOCATION_COUNTRY) {
 	MateWeatherLocation **children;
 
-	children = mateweather_location_get_children (loc);
+	children = cafeweather_location_get_children (loc);
 	for (i = 0; children[i]; i++)
 	    insert_locations (store, children[i]);
-	mateweather_location_free_children (loc, children);
+	cafeweather_location_free_children (loc, children);
     } else {
 	MateWeatherTimezone **zones;
 	GtkTreeIter iter;
 
-	zones = mateweather_location_get_timezones (loc);
+	zones = cafeweather_location_get_timezones (loc);
 	if (zones[1]) {
 	    gtk_tree_store_append (store, &iter, NULL);
 	    gtk_tree_store_set (store, &iter,
-				MATEWEATHER_TIMEZONE_MENU_NAME, mateweather_location_get_name (loc),
+				MATEWEATHER_TIMEZONE_MENU_NAME, cafeweather_location_get_name (loc),
 				-1);
 
 	    for (i = 0; zones[i]; i++) {
                 insert_location (store, zones[i], NULL, &iter);
 	    }
 	} else if (zones[0]) {
-            insert_location (store, zones[0], mateweather_location_get_name (loc), NULL);
+            insert_location (store, zones[0], cafeweather_location_get_name (loc), NULL);
 	}
 
-	mateweather_location_free_timezones (loc, zones);
+	cafeweather_location_free_timezones (loc, zones);
     }
 }
 
 static GtkTreeModel *
-mateweather_timezone_model_new (MateWeatherLocation *top)
+cafeweather_timezone_model_new (MateWeatherLocation *top)
 {
     GtkTreeStore *store;
     GtkTreeModel *model;
@@ -283,10 +283,10 @@ mateweather_timezone_model_new (MateWeatherLocation *top)
 			MATEWEATHER_TIMEZONE_MENU_ZONE, NULL,
 			-1);
 
-    utc = mateweather_timezone_get_utc ();
+    utc = cafeweather_timezone_get_utc ();
     if (utc) {
         insert_location (store, utc, NULL, NULL);
-        mateweather_timezone_unref (utc);
+        cafeweather_timezone_unref (utc);
     }
 
     gtk_tree_store_append (store, &iter, NULL);
@@ -324,19 +324,19 @@ is_sensitive (GtkCellLayout *cell_layout, GtkCellRenderer *cell,
 }
 
 /**
- * mateweather_timezone_menu_new:
+ * cafeweather_timezone_menu_new:
  * @top: the top-level location for the menu.
  *
  * Creates a new #MateWeatherTimezoneMenu.
  *
  * @top will normally be a location returned from
- * mateweather_location_new_world(), but you can create a menu that
+ * cafeweather_location_new_world(), but you can create a menu that
  * contains the timezones from a smaller set of locations if you want.
  *
  * Return value: the new #MateWeatherTimezoneMenu
  **/
 GtkWidget *
-mateweather_timezone_menu_new (MateWeatherLocation *top)
+cafeweather_timezone_menu_new (MateWeatherLocation *top)
 {
     return g_object_new (MATEWEATHER_TYPE_TIMEZONE_MENU,
 			 "top", top,
@@ -361,7 +361,7 @@ check_tzid (GtkTreeModel *model, GtkTreePath *path,
     if (!zone)
 	return FALSE;
 
-    if (!strcmp (mateweather_timezone_get_tzid (zone), tzd->tzid)) {
+    if (!strcmp (cafeweather_timezone_get_tzid (zone), tzd->tzid)) {
 	gtk_combo_box_set_active_iter (tzd->combo, iter);
 	return TRUE;
     } else
@@ -369,7 +369,7 @@ check_tzid (GtkTreeModel *model, GtkTreePath *path,
 }
 
 /**
- * mateweather_timezone_menu_set_tzid:
+ * cafeweather_timezone_menu_set_tzid:
  * @menu: a #MateWeatherTimezoneMenu
  * @tzid: (allow-none): a tzdata id (eg, "America/New_York")
  *
@@ -377,7 +377,7 @@ check_tzid (GtkTreeModel *model, GtkTreePath *path,
  * "Unknown".
  **/
 void
-mateweather_timezone_menu_set_tzid (MateWeatherTimezoneMenu *menu,
+cafeweather_timezone_menu_set_tzid (MateWeatherTimezoneMenu *menu,
 				 const char           *tzid)
 {
     SetTimezoneData tzd;
@@ -396,7 +396,7 @@ mateweather_timezone_menu_set_tzid (MateWeatherTimezoneMenu *menu,
 }
 
 /**
- * mateweather_timezone_menu_get_tzid:
+ * cafeweather_timezone_menu_get_tzid:
  * @menu: a #MateWeatherTimezoneMenu
  *
  * Gets @menu's timezone id.
@@ -405,12 +405,12 @@ mateweather_timezone_menu_set_tzid (MateWeatherTimezoneMenu *menu,
  * is selected.
  **/
 const char *
-mateweather_timezone_menu_get_tzid (MateWeatherTimezoneMenu *menu)
+cafeweather_timezone_menu_get_tzid (MateWeatherTimezoneMenu *menu)
 {
     g_return_val_if_fail (MATEWEATHER_IS_TIMEZONE_MENU (menu), NULL);
 
     if (!menu->zone)
 	return NULL;
-    return mateweather_timezone_get_tzid (menu->zone);
+    return cafeweather_timezone_get_tzid (menu->zone);
 }
 

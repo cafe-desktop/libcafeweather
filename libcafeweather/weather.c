@@ -51,31 +51,31 @@ static void _weather_internal_check (void);
 
 
 static inline void
-mateweather_gettext_init (void)
+cafeweather_gettext_init (void)
 {
-    static gsize mateweather_gettext_initialized = FALSE;
+    static gsize cafeweather_gettext_initialized = FALSE;
 
-    if (G_UNLIKELY (g_once_init_enter (&mateweather_gettext_initialized))) {
+    if (G_UNLIKELY (g_once_init_enter (&cafeweather_gettext_initialized))) {
         bindtextdomain (GETTEXT_PACKAGE, MATELOCALEDIR);
 #ifdef HAVE_BIND_TEXTDOMAIN_CODESET
         bind_textdomain_codeset (GETTEXT_PACKAGE, "UTF-8");
 #endif
-        g_once_init_leave (&mateweather_gettext_initialized, TRUE);
+        g_once_init_leave (&cafeweather_gettext_initialized, TRUE);
     }
 }
 
 const char *
-mateweather_gettext (const char *str)
+cafeweather_gettext (const char *str)
 {
-    mateweather_gettext_init ();
+    cafeweather_gettext_init ();
     return dgettext (GETTEXT_PACKAGE, str);
 }
 
 const char *
-mateweather_dpgettext (const char *context,
+cafeweather_dpgettext (const char *context,
                     const char *str)
 {
-    mateweather_gettext_init ();
+    cafeweather_gettext_init ();
     return g_dpgettext2 (GETTEXT_PACKAGE, context, str);
 }
 
@@ -1629,7 +1629,7 @@ weather_info_get_value_visibility (WeatherInfo *info, DistanceUnit unit, gdouble
  * weather_info_get_upcoming_moonphases:
  * @info:   WeatherInfo containing the time_t of interest
  * @phases: An array of four time_t values that will hold the returned values.
- *    The values are estimates of the time of the next new, quarter, full and
+ *    The values are esticafes of the time of the next new, quarter, full and
  *    three-quarter moons.
  *
  * Returns: gboolean indicating success or failure

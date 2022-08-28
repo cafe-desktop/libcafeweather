@@ -115,7 +115,7 @@ met_reprocess (char *x, int len)
 
 /*
  * Parse the metoffice forecast info.
- * For mate 3.0 we want to just embed an HTML matecomponent component and
+ * For cafe 3.0 we want to just embed an HTML cafecomponent component and
  * be done with this ;)
  */
 

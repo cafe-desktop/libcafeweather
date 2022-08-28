@@ -4,7 +4,7 @@
 AUTOMAKE_OPTIONS = 1.6
 
 # The name of the module, e.g. 'glib'.
-DOC_MODULE=libmateweather
+DOC_MODULE=libcafeweather
 
 # Uncomment for versioned docs and specify the version of the module, e.g. '2'.
 #DOC_MODULE_VERSION=2
@@ -16,7 +16,7 @@ DOC_MAIN_SGML_FILE=$(DOC_MODULE)-docs.sgml
 # gtk-doc will search all .c & .h files beneath here for inline comments
 # documenting the functions and macros.
 # e.g. DOC_SOURCE_DIR=../../../gtk
-DOC_SOURCE_DIR=../libmateweather
+DOC_SOURCE_DIR=../libcafeweather
 
 # Extra options to pass to gtkdoc-scangobj. Not normally needed.
 SCANGOBJ_OPTIONS=
@@ -43,12 +43,12 @@ FIXXREF_OPTIONS=
 # Used for dependencies. The docs will be rebuilt if any of these change.
 # e.g. HFILE_GLOB=$(top_srcdir)/gtk/*.h
 # e.g. CFILE_GLOB=$(top_srcdir)/gtk/*.c
-HFILE_GLOB=$(top_srcdir)/libmateweather/*.h
-CFILE_GLOB=$(top_srcdir)/libmateweather/*.c
+HFILE_GLOB=$(top_srcdir)/libcafeweather/*.h
+CFILE_GLOB=$(top_srcdir)/libcafeweather/*.c
 
 # Header files to ignore when scanning.
 # e.g. IGNORE_HFILES=gtkdebug.h gtkintl.h
-IGNORE_HFILES=mateweather-enum-types.h parser.h weather-priv.h
+IGNORE_HFILES=cafeweather-enum-types.h parser.h weather-priv.h
 
 # Images to copy into HTML directory.
 # e.g. HTML_IMAGES=$(top_srcdir)/gtk/stock-icons/stock_about_24.png
@@ -69,7 +69,7 @@ expand_content_files=
 # e.g. GTKDOC_CFLAGS=-I$(top_srcdir) -I$(top_builddir) $(GTK_DEBUG_FLAGS)
 # e.g. GTKDOC_LIBS=$(top_builddir)/gtk/$(gtktargetlib)
 GTKDOC_CFLAGS = -I$(top_srcdir) $(GTK_CFLAGS) $(LIBXML_CFLAGS) $(LIBSOUP_CFLAGS) -DMATEWEATHER_I_KNOW_THIS_IS_UNSTABLE
-GTKDOC_LIBS = $(top_builddir)/libmateweather/libmateweather.la $(GTK_LIBS) $(LIBXML_LIBS) $(LIBSOUP_LIBS)
+GTKDOC_LIBS = $(top_builddir)/libcafeweather/libcafeweather.la $(GTK_LIBS) $(LIBXML_LIBS) $(LIBSOUP_LIBS)
 
 # This includes the standard gtk-doc make rules, copied by gtkdocize.
 include $(top_srcdir)/gtk-doc.make

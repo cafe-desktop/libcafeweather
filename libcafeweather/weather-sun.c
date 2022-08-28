@@ -1,5 +1,5 @@
 /* -*- Mode: C; tab-width: 8; indent-tabs-mode: t; c-basic-offset: 4 -*- */
-/* weather-sun.c - Astronomy calculations for mateweather
+/* weather-sun.c - Astronomy calculations for cafeweather
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
@@ -48,14 +48,14 @@ sunEclipLongitude(time_t t)
     gdouble ndays, meanAnom, eccenAnom, delta, e, longitude;
 
     /*
-     * Start with an estimate based on a fixed daily rate
+     * Start with an esticafe based on a fixed daily rate
      */
     ndays = EPOCH_TO_J2000(t) / 86400.;
     meanAnom = DEGREES_TO_RADIANS(MEAN_ECLIPTIC_LONGITUDE(ndays)
 				  - PERIGEE_LONGITUDE(ndays));
 
     /*
-     * Approximate solution of Kepler's equation:
+     * Approxicafe solution of Kepler's equation:
      * Find E which satisfies  E - e sin(E) = M (mean anomaly)
      */
     eccenAnom = meanAnom;
@@ -174,7 +174,7 @@ calc_sun2 (WeatherInfo *info, time_t t)
     gdouble tt, t00;
     gdouble x, u, dt;
 
-    /* Approximate preceding local midnight at observer's longitude */
+    /* Approxicafe preceding local midnight at observer's longitude */
     obsLat = info->location->latitude;
     obsLon = info->location->longitude;
     gm_midn = t - (t % 86400);

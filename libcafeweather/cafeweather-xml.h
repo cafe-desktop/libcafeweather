@@ -1,5 +1,5 @@
 /* -*- Mode: C; tab-width: 8; indent-tabs-mode: t; c-basic-offset: 4 -*- */
-/* mateweather-xml.h
+/* cafeweather-xml.h
  *
  * Copyright (C) 2004 Gareth Owen
  *
@@ -22,7 +22,7 @@
 #define __MATEWEATHER_XML_H__
 
 #include <gtk/gtk.h>
-#include <libmateweather/weather.h>
+#include <libcafeweather/weather.h>
 
 enum
 {
@@ -31,7 +31,7 @@ enum
     MATEWEATHER_XML_NUM_COLUMNS
 };
 
-GtkTreeModel *mateweather_xml_load_locations (void);
-void          mateweather_xml_free_locations (GtkTreeModel *locations);
+GtkTreeModel *cafeweather_xml_load_locations (void);
+void          cafeweather_xml_free_locations (GtkTreeModel *locations);
 
 #endif /* __MATEWEATHER_XML_H__ */

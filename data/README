@@ -1,6 +1,6 @@
 The format of Locations.xml[.in] is something like this:
 
-<mateweather format="1.0">
+<cafeweather format="1.0">
   <region>
     <_name>North America</_name>
     <country>

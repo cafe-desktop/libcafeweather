@@ -17,16 +17,16 @@ location_changed (GObject *object, GParamSpec *param, gpointer tzmenu)
     MateWeatherLocation *loc;
     MateWeatherTimezone *zone;
 
-    loc = mateweather_location_entry_get_location (entry);
+    loc = cafeweather_location_entry_get_location (entry);
     g_return_if_fail (loc != NULL);
-    zone = mateweather_location_get_timezone (loc);
+    zone = cafeweather_location_get_timezone (loc);
     if (zone)
-	mateweather_timezone_menu_set_tzid (tzmenu, mateweather_timezone_get_tzid (zone));
+	cafeweather_timezone_menu_set_tzid (tzmenu, cafeweather_timezone_get_tzid (zone));
     else
-	mateweather_timezone_menu_set_tzid (tzmenu, NULL);
+	cafeweather_timezone_menu_set_tzid (tzmenu, NULL);
     if (zone)
-	mateweather_timezone_unref (zone);
-    mateweather_location_unref (loc);
+	cafeweather_timezone_unref (zone);
+    cafeweather_location_unref (loc);
 }
 
 int
@@ -46,13 +46,13 @@ main (int argc, char **argv)
     vbox = gtk_box_new (GTK_ORIENTATION_VERTICAL, 8);
     gtk_container_add (GTK_CONTAINER (window), vbox);
 
-    loc = mateweather_location_new_world (FALSE);
-    entry = mateweather_location_entry_new (loc);
+    loc = cafeweather_location_new_world (FALSE);
+    entry = cafeweather_location_entry_new (loc);
     gtk_widget_set_size_request (entry, 400, -1);
     gtk_box_pack_start (GTK_BOX (vbox), entry, FALSE, TRUE, 0);
 
-    combo = mateweather_timezone_menu_new (loc);
-    mateweather_location_unref (loc);
+    combo = cafeweather_timezone_menu_new (loc);
+    cafeweather_location_unref (loc);
     gtk_box_pack_start (GTK_BOX (vbox), combo, FALSE, TRUE, 0);
 
     g_signal_connect (entry, "notify::location",
