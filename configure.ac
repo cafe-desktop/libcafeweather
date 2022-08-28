@@ -1,4 +1,4 @@
-AC_INIT([libmateweather], [1.24.1], [https://mate-desktop.org])
+AC_INIT([libcafeweather], [1.24.1], [https://cafe-desktop.org])
 AC_PREREQ(2.59)
 
 AC_CONFIG_HEADERS([config.h])
@@ -80,7 +80,7 @@ dnl gettext
 AM_GNU_GETTEXT_VERSION([0.19.8])
 AM_GNU_GETTEXT([external])
 
-GETTEXT_PACKAGE=libmateweather
+GETTEXT_PACKAGE=libcafeweather
 AC_SUBST(GETTEXT_PACKAGE)
 AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE", [Gettext Package])
 
@@ -172,10 +172,10 @@ Makefile
 doc/Makefile
 po/Makefile.in
 po-locations/Makefile
-libmateweather/Makefile
-libmateweather/mateweather.pc
-libmateweather/mateweather-uninstalled.pc
-libmateweather/org.mate.weather.gschema.xml
+libcafeweather/Makefile
+libcafeweather/cafeweather.pc
+libcafeweather/cafeweather-uninstalled.pc
+libcafeweather/org.cafe.weather.gschema.xml
 data/Makefile
 icons/Makefile
 ])
@@ -190,7 +190,7 @@ dnl ***************************************************************************
 dnl *** Display Summary                                                     ***
 dnl ***************************************************************************
 echo "
-libmateweather-$VERSION configure summary:
+libcafeweather-$VERSION configure summary:
 
 	Prefix:				${prefix}
 	Source code location:		${srcdir}

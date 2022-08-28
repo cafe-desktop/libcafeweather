@@ -1,6 +1,6 @@
 # Libraries to allow MATE Desktop to display weather information
 # Copyright (C) 2019 The MATE Team
-# This file is distributed under the same license as the libmateweather package.
+# This file is distributed under the same license as the libcafeweather package.
 # Konstantine Sichinava <ksichinava@gmail.com>, 2006.
 # Vladimer Sichinava <alinux@siena.linux.it>, 2006.
 # Alexander Didebulidze <didebuli@in.tum.de>, 2006.
@@ -11,7 +11,7 @@ msgstr ""
 "POT-Creation-Date: 2019-09-17 10:35+0200\n"
 "PO-Revision-Date: 2006-03-17 22:57+0100\n"
 "Last-Translator: Alexander Didebulidze <didebuli@in.tum.de>\n"
-"Language-Team: Georgian <mate@inet.ge>\n"
+"Language-Team: Georgian <cafe@inet.ge>\n"
 "Language: ka\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"

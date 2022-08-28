@@ -1,5 +1,5 @@
 /* -*- Mode: C; tab-width: 8; indent-tabs-mode: t; c-basic-offset: 4 -*- */
-/* mateweather-prefs.h - Preference handling functions
+/* cafeweather-prefs.h - Preference handling functions
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
@@ -21,11 +21,11 @@
 
 
 #ifndef MATEWEATHER_I_KNOW_THIS_IS_UNSTABLE
-#error "libmateweather should only be used if you understand that it's subject to change, and is not supported as a fixed API/ABI or as part of the platform"
+#error "libcafeweather should only be used if you understand that it's subject to change, and is not supported as a fixed API/ABI or as part of the platform"
 #endif
 
 
-#include <libmateweather/weather.h>
+#include <libcafeweather/weather.h>
 #include <gio/gio.h>
 
 /* gsettings keys */
@@ -52,12 +52,12 @@ struct _MateWeatherPrefs {
     DistanceUnit distance_unit;
 };
 
-void		mateweather_prefs_load			(MateWeatherPrefs *prefs,
+void		cafeweather_prefs_load			(MateWeatherPrefs *prefs,
                                              GSettings *settings);
 
-const char *  mateweather_prefs_get_temp_display_name    (TempUnit temp);
-const char *  mateweather_prefs_get_speed_display_name    (SpeedUnit speed);
-const char *  mateweather_prefs_get_pressure_display_name  (PressureUnit pressure);
-const char *  mateweather_prefs_get_distance_display_name  (DistanceUnit distance);
+const char *  cafeweather_prefs_get_temp_display_name    (TempUnit temp);
+const char *  cafeweather_prefs_get_speed_display_name    (SpeedUnit speed);
+const char *  cafeweather_prefs_get_pressure_display_name  (PressureUnit pressure);
+const char *  cafeweather_prefs_get_distance_display_name  (DistanceUnit distance);
 
 #endif /* __MATEWEATHER_PREFS_H_ */

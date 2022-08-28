@@ -22,7 +22,7 @@
 #define MATEWEATHER_PARSER_H 1
 
 #include <libxml/xmlreader.h>
-#include "mateweather-timezone.h"
+#include "cafeweather-timezone.h"
 
 typedef struct {
     xmlTextReaderPtr xml;
@@ -31,13 +31,13 @@ typedef struct {
     time_t year_start, year_end;
 } MateWeatherParser;
 
-MateWeatherParser *mateweather_parser_new                 (gboolean        use_regions);
-void            mateweather_parser_free                (MateWeatherParser *parser);
+MateWeatherParser *cafeweather_parser_new                 (gboolean        use_regions);
+void            cafeweather_parser_free                (MateWeatherParser *parser);
 
-char           *mateweather_parser_get_value           (MateWeatherParser *parser);
-char           *mateweather_parser_get_localized_value (MateWeatherParser *parser);
+char           *cafeweather_parser_get_value           (MateWeatherParser *parser);
+char           *cafeweather_parser_get_localized_value (MateWeatherParser *parser);
 
-/* from mateweather-timezone.c */
-MateWeatherTimezone **mateweather_timezones_parse_xml (MateWeatherParser *parser);
+/* from cafeweather-timezone.c */
+MateWeatherTimezone **cafeweather_timezones_parse_xml (MateWeatherParser *parser);
 
 #endif

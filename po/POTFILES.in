@@ -1,11 +1,11 @@
 # List of source files containing translatable strings.
 # Please keep this file sorted alphabetically.
 #
-libmateweather/mateweather-prefs.c
-libmateweather/mateweather-timezone.c
-libmateweather/org.mate.weather.gschema.xml.in
-libmateweather/timezone-menu.c
-libmateweather/weather-iwin.c
-libmateweather/weather-metar.c
-libmateweather/weather-wx.c
-libmateweather/weather.c
+libcafeweather/cafeweather-prefs.c
+libcafeweather/cafeweather-timezone.c
+libcafeweather/org.cafe.weather.gschema.xml.in
+libcafeweather/timezone-menu.c
+libcafeweather/weather-iwin.c
+libcafeweather/weather-metar.c
+libcafeweather/weather-wx.c
+libcafeweather/weather.c

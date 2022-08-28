@@ -27,18 +27,18 @@
 #include <libsoup/soup.h>
 
 #include "weather.h"
-#include "mateweather-location.h"
+#include "cafeweather-location.h"
 
-const char *mateweather_gettext (const char *str) G_GNUC_FORMAT (1);
-const char *mateweather_dpgettext (const char *context, const char *str) G_GNUC_FORMAT (2);
-#define _(str) (mateweather_gettext (str))
-#define C_(context, str) (mateweather_dpgettext (context, str))
+const char *cafeweather_gettext (const char *str) G_GNUC_FORMAT (1);
+const char *cafeweather_dpgettext (const char *context, const char *str) G_GNUC_FORMAT (2);
+#define _(str) (cafeweather_gettext (str))
+#define C_(context, str) (cafeweather_dpgettext (context, str))
 #define N_(str) (str)
 
 
 #define WEATHER_LOCATION_CODE_LEN 4
 
-WeatherLocation *mateweather_location_to_weather_location (MateWeatherLocation *gloc,
+WeatherLocation *cafeweather_location_to_weather_location (MateWeatherLocation *gloc,
 							const char *name);
 
 /*

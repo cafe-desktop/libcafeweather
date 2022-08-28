@@ -21,7 +21,7 @@ entries sorted as follows:
 	  each country
 
 All of the region and country names are immediately visible when
-adding a new location in the mateweather-applet, and all of the country
+adding a new location in the cafeweather-applet, and all of the country
 and timezone names are immediately visible when setting the timezone
 of a location in the clock applet. Thus, every translation will likely
 want to have all of those strings translated.

@@ -1,5 +1,5 @@
 /* -*- Mode: C; tab-width: 8; indent-tabs-mode: t; c-basic-offset: 4 -*- */
-/* weather-moon.c - Lunar calculations for mateweather
+/* weather-moon.c - Lunar calculations for cafeweather
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
@@ -142,7 +142,7 @@ calc_moon (WeatherInfo *info)
  * calc_moon_phases:
  * @info:   WeatherInfo containing the time_t of interest
  * @phases: An array of four time_t values that will hold the returned values.
- *    The values are estimates of the time of the next new, quarter, full and
+ *    The values are esticafes of the time of the next new, quarter, full and
  *    three-quarter moons.
  *
  * Returns: gboolean indicating success or failure
@@ -170,7 +170,7 @@ calc_moon_phases (WeatherInfo *info, time_t *phases)
 	temp.moonphase = info->moonphase;
 
 	/*
-	 * First estimate on how far the moon needs to advance
+	 * First esticafe on how far the moon needs to advance
 	 * to get to the required phase
 	 */
 	advance = (idx * 90.) - info->moonphase;

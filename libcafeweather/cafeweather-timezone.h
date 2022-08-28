@@ -1,5 +1,5 @@
 /* -*- Mode: C; tab-width: 8; indent-tabs-mode: t; c-basic-offset: 4 -*- */
-/* mateweather-timezone.c - Timezone handling
+/* cafeweather-timezone.c - Timezone handling
  *
  * Copyright 2008, Red Hat, Inc.
  *
@@ -22,7 +22,7 @@
 #define __MATEWEATHER_TIMEZONE_H__
 
 #ifndef MATEWEATHER_I_KNOW_THIS_IS_UNSTABLE
-#error "libmateweather should only be used if you understand that it's subject to change, and is not supported as a fixed API/ABI or as part of the platform"
+#error "libcafeweather should only be used if you understand that it's subject to change, and is not supported as a fixed API/ABI or as part of the platform"
 #endif
 
 #include <glib-object.h>
@@ -33,19 +33,19 @@ extern "C" {
 
 typedef struct _MateWeatherTimezone MateWeatherTimezone;
 
-GType mateweather_timezone_get_type (void);
-#define MATEWEATHER_TYPE_TIMEZONE (mateweather_timezone_get_type ())
+GType cafeweather_timezone_get_type (void);
+#define MATEWEATHER_TYPE_TIMEZONE (cafeweather_timezone_get_type ())
 
-const char       *mateweather_timezone_get_name       (MateWeatherTimezone *zone);
-const char       *mateweather_timezone_get_tzid       (MateWeatherTimezone *zone);
-int               mateweather_timezone_get_offset     (MateWeatherTimezone *zone);
-gboolean          mateweather_timezone_has_dst        (MateWeatherTimezone *zone);
-int               mateweather_timezone_get_dst_offset (MateWeatherTimezone *zone);
+const char       *cafeweather_timezone_get_name       (MateWeatherTimezone *zone);
+const char       *cafeweather_timezone_get_tzid       (MateWeatherTimezone *zone);
+int               cafeweather_timezone_get_offset     (MateWeatherTimezone *zone);
+gboolean          cafeweather_timezone_has_dst        (MateWeatherTimezone *zone);
+int               cafeweather_timezone_get_dst_offset (MateWeatherTimezone *zone);
 
-MateWeatherTimezone *mateweather_timezone_ref            (MateWeatherTimezone *zone);
-void              mateweather_timezone_unref          (MateWeatherTimezone *zone);
+MateWeatherTimezone *cafeweather_timezone_ref            (MateWeatherTimezone *zone);
+void              cafeweather_timezone_unref          (MateWeatherTimezone *zone);
 
-MateWeatherTimezone *mateweather_timezone_get_utc        (void);
+MateWeatherTimezone *cafeweather_timezone_get_utc        (void);
 
 #ifdef __cplusplus
 }

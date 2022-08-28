@@ -1,5 +1,5 @@
 /* -*- Mode: C; tab-width: 8; indent-tabs-mode: t; c-basic-offset: 4 -*- */
-/* mateweather-prefs.c - Preference handling functions
+/* cafeweather-prefs.c - Preference handling functions
  *
  * This program is free software; you can redistribute it and/or
  * modify it under the terms of the GNU General Public License as
@@ -25,16 +25,16 @@
 #endif
 
 #define MATEWEATHER_I_KNOW_THIS_IS_UNSTABLE
-#include "mateweather-prefs.h"
+#include "cafeweather-prefs.h"
 #include "weather-priv.h"
 
 /**
- * SECTION:mateweather-prefs
- * @Title: mateweather-prefs
+ * SECTION:cafeweather-prefs
+ * @Title: cafeweather-prefs
  */
 
 void
-mateweather_prefs_load (MateWeatherPrefs *prefs, GSettings *settings)
+cafeweather_prefs_load (MateWeatherPrefs *prefs, GSettings *settings)
 {
     g_return_if_fail (prefs != NULL);
     g_return_if_fail (settings != NULL);
@@ -86,7 +86,7 @@ mateweather_prefs_load (MateWeatherPrefs *prefs, GSettings *settings)
 }
 
 const char *
-mateweather_prefs_get_temp_display_name (TempUnit temp)
+cafeweather_prefs_get_temp_display_name (TempUnit temp)
 {
     switch (temp) {
         case TEMP_UNIT_DEFAULT:
@@ -106,7 +106,7 @@ mateweather_prefs_get_temp_display_name (TempUnit temp)
 }
 
 const char *
-mateweather_prefs_get_speed_display_name (SpeedUnit speed)
+cafeweather_prefs_get_speed_display_name (SpeedUnit speed)
 {
     switch (speed) {
         case SPEED_UNIT_DEFAULT:
@@ -132,7 +132,7 @@ mateweather_prefs_get_speed_display_name (SpeedUnit speed)
 }
 
 const char *
-mateweather_prefs_get_pressure_display_name (PressureUnit pressure)
+cafeweather_prefs_get_pressure_display_name (PressureUnit pressure)
 {
     switch (pressure) {
         case PRESSURE_UNIT_DEFAULT:
@@ -161,7 +161,7 @@ mateweather_prefs_get_pressure_display_name (PressureUnit pressure)
 }
 
 const char *
-mateweather_prefs_get_distance_display_name (DistanceUnit distance)
+cafeweather_prefs_get_distance_display_name (DistanceUnit distance)
 {
     switch (distance) {
         case DISTANCE_UNIT_DEFAULT:

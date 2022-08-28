@@ -22,9 +22,9 @@
 #define MATEWEATHER_LOCATION_ENTRY_H 1
 
 #include <gtk/gtk.h>
-#include <libmateweather/mateweather-location.h>
+#include <libcafeweather/cafeweather-location.h>
 
-#define MATEWEATHER_TYPE_LOCATION_ENTRY            (mateweather_location_entry_get_type ())
+#define MATEWEATHER_TYPE_LOCATION_ENTRY            (cafeweather_location_entry_get_type ())
 #define MATEWEATHER_LOCATION_ENTRY(object)         (G_TYPE_CHECK_INSTANCE_CAST ((object), MATEWEATHER_TYPE_LOCATION_ENTRY, MateWeatherLocationEntry))
 #define MATEWEATHER_LOCATION_ENTRY_CLASS(klass)    (G_TYPE_CHECK_CLASS_CAST ((klass), MATEWEATHER_TYPE_LOCATION_ENTRY, MateWeatherLocationEntryClass))
 #define MATEWEATHER_IS_LOCATION_ENTRY(object)      (G_TYPE_CHECK_INSTANCE_TYPE ((object), MATEWEATHER_TYPE_LOCATION_ENTRY))
@@ -44,17 +44,17 @@ typedef struct {
 
 } MateWeatherLocationEntryClass;
 
-GType             mateweather_location_entry_get_type     (void);
+GType             cafeweather_location_entry_get_type     (void);
 
-GtkWidget        *mateweather_location_entry_new          (MateWeatherLocation      *top);
+GtkWidget        *cafeweather_location_entry_new          (MateWeatherLocation      *top);
 
-void              mateweather_location_entry_set_location (MateWeatherLocationEntry *entry,
+void              cafeweather_location_entry_set_location (MateWeatherLocationEntry *entry,
 							MateWeatherLocation      *loc);
-MateWeatherLocation *mateweather_location_entry_get_location (MateWeatherLocationEntry *entry);
+MateWeatherLocation *cafeweather_location_entry_get_location (MateWeatherLocationEntry *entry);
 
-gboolean          mateweather_location_entry_has_custom_text (MateWeatherLocationEntry *entry);
+gboolean          cafeweather_location_entry_has_custom_text (MateWeatherLocationEntry *entry);
 
-gboolean          mateweather_location_entry_set_city     (MateWeatherLocationEntry *entry,
+gboolean          cafeweather_location_entry_set_city     (MateWeatherLocationEntry *entry,
 							const char            *city_name,
 							const char            *code);
 

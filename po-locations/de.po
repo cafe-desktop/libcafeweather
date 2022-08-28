@@ -1,7 +1,7 @@
 # Libraries to allow MATE Desktop to display weather information
 # Copyright (C) 2019 The MATE Team
-# This file is distributed under the same license as the libmateweather package.
-# Hendrik Brandt <heb@mate-de.org>, 2004-2005.
+# This file is distributed under the same license as the libcafeweather package.
+# Hendrik Brandt <heb@cafe-de.org>, 2004-2005.
 # Frank Arnold <frank@scirocco-5v-turbo.de>, 2005.
 # Hendrik Richter <hendrikr@gnome.org>, 2005, 2006.
 # Andre Klapper <ak-47@gmx.net>, 2008.
@@ -16,7 +16,7 @@ msgstr ""
 "POT-Creation-Date: 2019-09-17 10:35+0200\n"
 "PO-Revision-Date: 2010-02-23 17:48+0100\n"
 "Last-Translator: Mario Blättermann <mariobl@gnome.org>\n"
-"Language-Team: Deutsch <mate-de@gnome.org>\n"
+"Language-Team: Deutsch <cafe-de@gnome.org>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"

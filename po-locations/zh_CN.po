@@ -1,6 +1,6 @@
 # Libraries to allow MATE Desktop to display weather information
 # Copyright (C) 2019 The MATE Team
-# This file is distributed under the same license as the libmateweather package.
+# This file is distributed under the same license as the libcafeweather package.
 # Funda Wang <fundawang@linux.net.cn>, 2004, 2005.
 # Mada <mada@geekbone.org>, 2004.
 # Aron Xu <happyaron.xu@gmail.com>, 2009.

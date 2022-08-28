@@ -1,5 +1,5 @@
-<!ELEMENT mateweather (region+) >
-<!ATTLIST mateweather
+<!ELEMENT cafeweather (region+) >
+<!ATTLIST cafeweather
   format CDATA #FIXED '1.0' >
 
 <!ENTITY % name '(_name|name+)' >

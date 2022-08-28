@@ -1,9 +1,9 @@
 [main]
 host = https://www.transifex.com
  
-[MATE.1-24--libmateweather]
+[MATE.1-24--libcafeweather]
 file_filter = po/<lang>.po
-source_file = libmateweather.pot
+source_file = libcafeweather.pot
 source_lang = en
 type = PO
 minimum_perc = 2

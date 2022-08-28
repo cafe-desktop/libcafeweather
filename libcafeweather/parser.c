@@ -32,7 +32,7 @@
 #include <libxml/xmlreader.h>
 
 /**
- * mateweather_parser_get_value:
+ * cafeweather_parser_get_value:
  * @parser: a #MateWeatherParser
  *
  * Gets the text of the element whose start tag @parser is pointing to.
@@ -42,7 +42,7 @@
  * string, or %NULL if the node is empty.
  **/
 char *
-mateweather_parser_get_value (MateWeatherParser *parser)
+cafeweather_parser_get_value (MateWeatherParser *parser)
 {
     char *value;
 
@@ -74,7 +74,7 @@ mateweather_parser_get_value (MateWeatherParser *parser)
 }
 
 /**
- * mateweather_parser_get_localized_value:
+ * cafeweather_parser_get_localized_value:
  * @parser: a #MateWeatherParser
  *
  * Looks at the name of the element @parser is currently pointing to, and
@@ -87,7 +87,7 @@ mateweather_parser_get_value (MateWeatherParser *parser)
  * libxml-allocated string, or %NULL if the node is empty.
  **/
 char *
-mateweather_parser_get_localized_value (MateWeatherParser *parser)
+cafeweather_parser_get_localized_value (MateWeatherParser *parser)
 {
     const char *this_language;
     int best_match = INT_MAX;
@@ -154,7 +154,7 @@ mateweather_parser_get_localized_value (MateWeatherParser *parser)
 }
 
 MateWeatherParser *
-mateweather_parser_new (gboolean use_regions)
+cafeweather_parser_new (gboolean use_regions)
 {
     MateWeatherParser *parser;
     int zlib_support;
@@ -224,7 +224,7 @@ mateweather_parser_new (gboolean use_regions)
 
     /* check the name and format */
     tagname = (char *) xmlTextReaderName (parser->xml);
-    keep_going = tagname && !strcmp (tagname, "mateweather");
+    keep_going = tagname && !strcmp (tagname, "cafeweather");
     xmlFree (tagname);
 
     if (!keep_going)
@@ -250,12 +250,12 @@ mateweather_parser_new (gboolean use_regions)
     return parser;
 
 error_out:
-    mateweather_parser_free (parser);
+    cafeweather_parser_free (parser);
     return NULL;
 }
 
 void
-mateweather_parser_free (MateWeatherParser *parser)
+cafeweather_parser_free (MateWeatherParser *parser)
 {
     if (parser->xml)
 	xmlFreeTextReader (parser->xml);

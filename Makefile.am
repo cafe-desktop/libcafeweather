@@ -1,4 +1,4 @@
-SUBDIRS = po po-locations libmateweather doc data icons
+SUBDIRS = po po-locations libcafeweather doc data icons
 
 ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
 

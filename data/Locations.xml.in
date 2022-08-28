@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE mateweather SYSTEM "locations.dtd">
-<mateweather format="1.0">
+<!DOCTYPE cafeweather SYSTEM "locations.dtd">
+<cafeweather format="1.0">
   <region>
     <name>Africa</name>
     <country>
@@ -23515,7 +23515,7 @@
           <name>Cardston</name>
           <coordinates>49.200000 -113.316667</coordinates>
           <location>
-            <name>Cardston Automated Reporting Station</name>
+            <name>Cardston Autocafed Reporting Station</name>
             <code>CWFJ</code>
             <coordinates>49.200000 -113.283333</coordinates>
           </location>
@@ -23555,7 +23555,7 @@
           <name>Coronation</name>
           <coordinates>52.083333 -111.450000</coordinates>
           <location>
-            <name>Coronation Automated Reporting Station</name>
+            <name>Coronation Autocafed Reporting Station</name>
             <code>CWCT</code>
             <coordinates>52.066667 -111.466667</coordinates>
           </location>
@@ -23665,7 +23665,7 @@
           <name msgctxt="City in Alberta, Canada">Jasper</name>
           <coordinates>52.883333 -118.083333</coordinates>
           <location>
-            <name>Jasper Warden Automated Reporting Station</name>
+            <name>Jasper Warden Autocafed Reporting Station</name>
             <code>CWJW</code>
             <coordinates>52.933333 -118.316667</coordinates>
           </location>
@@ -23841,7 +23841,7 @@
           <name>Agassiz</name>
           <coordinates>49.233333 -121.766667</coordinates>
           <location>
-            <name>Agassiz Automated Reporting Station</name>
+            <name>Agassiz Autocafed Reporting Station</name>
             <code>CWZA</code>
             <coordinates>49.250000 -121.766667</coordinates>
           </location>
@@ -26491,7 +26491,7 @@
           <name>Jonquière</name>
           <coordinates>48.416667 -71.250000</coordinates>
           <location>
-            <name>Jonquiere Automated Reporting Station</name>
+            <name>Jonquiere Autocafed Reporting Station</name>
             <code>CWJO</code>
             <coordinates>48.416667 -71.216667</coordinates>
           </location>
@@ -26531,7 +26531,7 @@
           <name>L'Ascension</name>
           <coordinates>48.683333 -71.666667</coordinates>
           <location>
-            <name>Mistook Automated Reporting Station</name>
+            <name>Mistook Autocafed Reporting Station</name>
             <code>CWIX</code>
             <coordinates>48.766667 -71.716667</coordinates>
           </location>
@@ -26668,7 +26668,7 @@
           <name>Montreal</name>
           <coordinates>45.466667 -73.750000</coordinates>
           <location>
-            <name>McTavish Automated Reporting Station</name>
+            <name>McTavish Autocafed Reporting Station</name>
             <code>CWTA</code>
             <coordinates>45.500000 -73.583333</coordinates>
           </location>
@@ -26882,7 +26882,7 @@
           <name>Saint-Chrysostome</name>
           <coordinates>45.100000 -73.750000</coordinates>
           <location>
-            <name>Saint Clothilde Automated Reporting Station</name>
+            <name>Saint Clothilde Autocafed Reporting Station</name>
             <code>CWIT</code>
             <coordinates>45.166667 -73.683333</coordinates>
           </location>
@@ -26902,7 +26902,7 @@
           <name>Saint-François</name>
           <coordinates>47.000000 -70.816667</coordinates>
           <location>
-            <name>Ile d'Orleans Automated Reporting Station</name>
+            <name>Ile d'Orleans Autocafed Reporting Station</name>
             <code>CWER</code>
             <coordinates>47.000000 -70.816667</coordinates>
           </location>
@@ -27363,7 +27363,7 @@
           <name>Watrous</name>
           <coordinates>51.666667 -105.466667</coordinates>
           <location>
-            <name>Watrous East Automated Reporting Station</name>
+            <name>Watrous East Autocafed Reporting Station</name>
             <code>CWIW</code>
             <coordinates>51.666667 -105.400000</coordinates>
           </location>
@@ -48184,4 +48184,4 @@
      SBCJ TRPG UGKO UGSB UGTB UOHH UOII UOOO YAMB YCIN YFRT YTEF YTNK
      YTRE YWGT YWHA YWLM 
   -->
-</mateweather>
+</cafeweather>
