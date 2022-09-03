@@ -9,7 +9,7 @@
     <title>libcafeweather Reference Manual</title>
     <releaseinfo>
       for libcafeweather]
-      <!-- CAFE has no online gtkdocs! uncomment and update below when it does-->
+      <!-- CAFE has no online ctkdocs! uncomment and update below when it does-->
       <!--The latest version of this documentation can be found on-line at
       <ulink role="online-location" url="http://[SERVER]/libcafeweather/index.html">http://[SERVER]/libcafeweather/</ulink>.-->
     </releaseinfo>

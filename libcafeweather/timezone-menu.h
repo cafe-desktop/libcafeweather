@@ -21,7 +21,7 @@
 #ifndef CAFEWEATHER_TIMEZONE_MENU_H
 #define CAFEWEATHER_TIMEZONE_MENU_H 1
 
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 #include <libcafeweather/cafeweather-location.h>
 
 #define CAFEWEATHER_TYPE_TIMEZONE_MENU            (cafeweather_timezone_menu_get_type ())

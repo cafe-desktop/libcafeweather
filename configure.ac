@@ -59,7 +59,7 @@ AC_SUBST(COMPRESS_EXT)
 CAFE_COMPILE_WARNINGS
 
 dnl -- Check for GTK+ (required) ------------------------------------------
-PKG_CHECK_MODULES(GTK, gtk+-3.0 >= $GTK_REQUIRED)
+PKG_CHECK_MODULES(GTK, ctk+-3.0 >= $GTK_REQUIRED)
 
 dnl -- Check for libxml (required) ------------------------------------------
 PKG_CHECK_MODULES(LIBXML, libxml-2.0 >= $LIBXML_REQUIRED)
@@ -88,7 +88,7 @@ dnl icon cache
 AC_ARG_ENABLE(icon-update, AC_HELP_STRING([--disable-icon-update],
 [Disable icon cache update]))
 if (test "$enable_icon_update" != no); then
-AC_PATH_PROG(UPDATE_ICON_CACHE, [gtk-update-icon-cache])
+AC_PATH_PROG(UPDATE_ICON_CACHE, [ctk-update-icon-cache])
 fi
 AM_CONDITIONAL([ICON_UPDATE], [test -n "$UPDATE_ICON_CACHE"])
 
@@ -123,9 +123,9 @@ dnl ***************************************************************************
 AC_LINK_IFELSE([AC_LANG_PROGRAM([[#include <langinfo.h>]], [[
 char c;
 c = *((unsigned char *)  nl_langinfo(_NL_MEASUREMENT_MEASUREMENT));
-]])],[gtk_ok=yes],[gtk_ok=no])
-AC_MSG_RESULT($gtk_ok)
-if test "$gtk_ok" = "yes"; then
+]])],[ctk_ok=yes],[ctk_ok=no])
+AC_MSG_RESULT($ctk_ok)
+if test "$ctk_ok" = "yes"; then
   AC_DEFINE([HAVE__NL_MEASUREMENT_MEASUREMENT], [1],
             [Define if _NL_MEASUREMENT_MEASUREMENT is available])
 fi
@@ -160,7 +160,7 @@ AC_SUBST(LIBDIR)
 AC_SUBST(GLADEDIR)
 
 ##################################################
-# Checks for gtk-doc and docbook-tools
+# Checks for ctk-doc and docbook-tools
 ##################################################
 GTK_DOC_CHECK([1.11], [--flavour no-tmpl])
 

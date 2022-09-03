@@ -64,15 +64,15 @@ cafeweather_timezone_menu_init (CafeWeatherTimezoneMenu *menu)
 {
     GtkCellRenderer *renderer;
 
-    gtk_combo_box_set_row_separator_func (GTK_COMBO_BOX (menu),
+    ctk_combo_box_set_row_separator_func (GTK_COMBO_BOX (menu),
 					  row_separator_func, NULL, NULL);
 
-    renderer = gtk_cell_renderer_text_new ();
-    gtk_cell_layout_pack_start (GTK_CELL_LAYOUT (menu), renderer, TRUE);
-    gtk_cell_layout_set_attributes (GTK_CELL_LAYOUT (menu), renderer,
+    renderer = ctk_cell_renderer_text_new ();
+    ctk_cell_layout_pack_start (GTK_CELL_LAYOUT (menu), renderer, TRUE);
+    ctk_cell_layout_set_attributes (GTK_CELL_LAYOUT (menu), renderer,
 				    "markup", 0,
 				    NULL);
-    gtk_cell_layout_set_cell_data_func (GTK_CELL_LAYOUT (menu),
+    ctk_cell_layout_set_cell_data_func (GTK_CELL_LAYOUT (menu),
 					renderer, is_sensitive, NULL, NULL);
 }
 
@@ -124,9 +124,9 @@ set_property (GObject *object, guint prop_id,
     switch (prop_id) {
     case PROP_TOP:
 	model = cafeweather_timezone_model_new (g_value_get_pointer (value));
-	gtk_combo_box_set_model (GTK_COMBO_BOX (object), model);
+	ctk_combo_box_set_model (GTK_COMBO_BOX (object), model);
 	g_object_unref (model);
-	gtk_combo_box_set_active (GTK_COMBO_BOX (object), 0);
+	ctk_combo_box_set_active (GTK_COMBO_BOX (object), 0);
 	break;
 
     case PROP_TZID:
@@ -169,8 +169,8 @@ changed (GtkComboBox *combo)
     if (menu->zone)
 	cafeweather_timezone_unref (menu->zone);
 
-    gtk_combo_box_get_active_iter (combo, &iter);
-    gtk_tree_model_get (gtk_combo_box_get_model (combo), &iter,
+    ctk_combo_box_get_active_iter (combo, &iter);
+    ctk_tree_model_get (ctk_combo_box_get_model (combo), &iter,
 			CAFEWEATHER_TIMEZONE_MENU_ZONE, &menu->zone,
 			-1);
 
@@ -220,8 +220,8 @@ insert_location (GtkTreeStore *store, CafeWeatherTimezone *zone, const char *loc
     name = g_strdup_printf ("%s <small>(%s)</small>",
                             loc_name ? loc_name : cafeweather_timezone_get_name (zone),
                             offset);
-    gtk_tree_store_append (store, &iter, parent);
-    gtk_tree_store_set (store, &iter,
+    ctk_tree_store_append (store, &iter, parent);
+    ctk_tree_store_set (store, &iter,
                         CAFEWEATHER_TIMEZONE_MENU_NAME, name,
                         CAFEWEATHER_TIMEZONE_MENU_ZONE, cafeweather_timezone_ref (zone),
                         -1);
@@ -247,8 +247,8 @@ insert_locations (GtkTreeStore *store, CafeWeatherLocation *loc)
 
 	zones = cafeweather_location_get_timezones (loc);
 	if (zones[1]) {
-	    gtk_tree_store_append (store, &iter, NULL);
-	    gtk_tree_store_set (store, &iter,
+	    ctk_tree_store_append (store, &iter, NULL);
+	    ctk_tree_store_set (store, &iter,
 				CAFEWEATHER_TIMEZONE_MENU_NAME, cafeweather_location_get_name (loc),
 				-1);
 
@@ -272,13 +272,13 @@ cafeweather_timezone_model_new (CafeWeatherLocation *top)
     char *unknown;
     CafeWeatherTimezone *utc;
 
-    store = gtk_tree_store_new (2, G_TYPE_STRING, G_TYPE_POINTER);
+    store = ctk_tree_store_new (2, G_TYPE_STRING, G_TYPE_POINTER);
     model = GTK_TREE_MODEL (store);
 
     unknown = g_markup_printf_escaped ("<i>%s</i>", C_("timezone", "Unknown"));
 
-    gtk_tree_store_append (store, &iter, NULL);
-    gtk_tree_store_set (store, &iter,
+    ctk_tree_store_append (store, &iter, NULL);
+    ctk_tree_store_set (store, &iter,
 			CAFEWEATHER_TIMEZONE_MENU_NAME, unknown,
 			CAFEWEATHER_TIMEZONE_MENU_ZONE, NULL,
 			-1);
@@ -289,7 +289,7 @@ cafeweather_timezone_model_new (CafeWeatherLocation *top)
         cafeweather_timezone_unref (utc);
     }
 
-    gtk_tree_store_append (store, &iter, NULL);
+    ctk_tree_store_append (store, &iter, NULL);
 
     g_free (unknown);
 
@@ -303,7 +303,7 @@ row_separator_func (GtkTreeModel *model, GtkTreeIter *iter, gpointer data)
 {
     char *name;
 
-    gtk_tree_model_get (model, iter,
+    ctk_tree_model_get (model, iter,
 			CAFEWEATHER_TIMEZONE_MENU_NAME, &name,
 			-1);
     if (name) {
@@ -319,7 +319,7 @@ is_sensitive (GtkCellLayout *cell_layout, GtkCellRenderer *cell,
 {
     gboolean sensitive;
 
-    sensitive = !gtk_tree_model_iter_has_child (tree_model, iter);
+    sensitive = !ctk_tree_model_iter_has_child (tree_model, iter);
     g_object_set (cell, "sensitive", sensitive, NULL);
 }
 
@@ -355,14 +355,14 @@ check_tzid (GtkTreeModel *model, GtkTreePath *path,
     SetTimezoneData *tzd = data;
     CafeWeatherTimezone *zone;
 
-    gtk_tree_model_get (model, iter,
+    ctk_tree_model_get (model, iter,
 			CAFEWEATHER_TIMEZONE_MENU_ZONE, &zone,
 			-1);
     if (!zone)
 	return FALSE;
 
     if (!strcmp (cafeweather_timezone_get_tzid (zone), tzd->tzid)) {
-	gtk_combo_box_set_active_iter (tzd->combo, iter);
+	ctk_combo_box_set_active_iter (tzd->combo, iter);
 	return TRUE;
     } else
 	return FALSE;
@@ -385,13 +385,13 @@ cafeweather_timezone_menu_set_tzid (CafeWeatherTimezoneMenu *menu,
     g_return_if_fail (CAFEWEATHER_IS_TIMEZONE_MENU (menu));
 
     if (!tzid) {
-	gtk_combo_box_set_active (GTK_COMBO_BOX (menu), 0);
+	ctk_combo_box_set_active (GTK_COMBO_BOX (menu), 0);
 	return;
     }
 
     tzd.combo = GTK_COMBO_BOX (menu);
     tzd.tzid = tzid;
-    gtk_tree_model_foreach (gtk_combo_box_get_model (tzd.combo),
+    ctk_tree_model_foreach (ctk_combo_box_get_model (tzd.combo),
 			    check_tzid, &tzd);
 }
 

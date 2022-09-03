@@ -75,16 +75,16 @@ cafeweather_location_entry_init (CafeWeatherLocationEntry *entry)
 {
     GtkEntryCompletion *completion;
 
-    completion = gtk_entry_completion_new ();
+    completion = ctk_entry_completion_new ();
 
-    gtk_entry_completion_set_popup_set_width (completion, FALSE);
-    gtk_entry_completion_set_text_column (completion, CAFEWEATHER_LOCATION_ENTRY_COL_DISPLAY_NAME);
-    gtk_entry_completion_set_match_func (completion, matcher, NULL, NULL);
+    ctk_entry_completion_set_popup_set_width (completion, FALSE);
+    ctk_entry_completion_set_text_column (completion, CAFEWEATHER_LOCATION_ENTRY_COL_DISPLAY_NAME);
+    ctk_entry_completion_set_match_func (completion, matcher, NULL, NULL);
 
     g_signal_connect (completion, "match_selected",
 		      G_CALLBACK (match_selected), entry);
 
-    gtk_entry_set_completion (GTK_ENTRY (entry), completion);
+    ctk_entry_set_completion (GTK_ENTRY (entry), completion);
     g_object_unref (completion);
 
     entry->custom_text = FALSE;
@@ -182,21 +182,21 @@ set_location_internal (CafeWeatherLocationEntry *entry,
 	cafeweather_location_unref (entry->location);
 
     if (iter) {
-	gtk_tree_model_get (model, iter,
+	ctk_tree_model_get (model, iter,
 			    CAFEWEATHER_LOCATION_ENTRY_COL_DISPLAY_NAME, &name,
 			    CAFEWEATHER_LOCATION_ENTRY_COL_LOCATION, &loc,
 			    -1);
 	entry->location = cafeweather_location_ref (loc);
-	gtk_entry_set_text (GTK_ENTRY (entry), name);
+	ctk_entry_set_text (GTK_ENTRY (entry), name);
 	entry->custom_text = FALSE;
 	g_free (name);
     } else {
 	entry->location = NULL;
-	gtk_entry_set_text (GTK_ENTRY (entry), "");
+	ctk_entry_set_text (GTK_ENTRY (entry), "");
 	entry->custom_text = TRUE;
     }
 
-    gtk_editable_select_region (GTK_EDITABLE (entry), 0, -1);
+    ctk_editable_select_region (GTK_EDITABLE (entry), 0, -1);
     g_object_notify (G_OBJECT (entry), "location");
 }
 
@@ -220,19 +220,19 @@ cafeweather_location_entry_set_location (CafeWeatherLocationEntry *entry,
 
     g_return_if_fail (CAFEWEATHER_IS_LOCATION_ENTRY (entry));
 
-    completion = gtk_entry_get_completion (GTK_ENTRY (entry));
-    model = gtk_entry_completion_get_model (completion);
+    completion = ctk_entry_get_completion (GTK_ENTRY (entry));
+    model = ctk_entry_completion_get_model (completion);
 
-    gtk_tree_model_get_iter_first (model, &iter);
+    ctk_tree_model_get_iter_first (model, &iter);
     do {
-	gtk_tree_model_get (model, &iter,
+	ctk_tree_model_get (model, &iter,
 			    CAFEWEATHER_LOCATION_ENTRY_COL_LOCATION, &cmploc,
 			    -1);
 	if (loc == cmploc) {
 	    set_location_internal (entry, model, &iter);
 	    return;
 	}
-    } while (gtk_tree_model_iter_next (model, &iter));
+    } while (ctk_tree_model_iter_next (model, &iter));
 
     set_location_internal (entry, model, NULL);
 }
@@ -306,12 +306,12 @@ cafeweather_location_entry_set_city (CafeWeatherLocationEntry *entry,
     g_return_val_if_fail (CAFEWEATHER_IS_LOCATION_ENTRY (entry), FALSE);
     g_return_val_if_fail (code != NULL, FALSE);
 
-    completion = gtk_entry_get_completion (GTK_ENTRY (entry));
-    model = gtk_entry_completion_get_model (completion);
+    completion = ctk_entry_get_completion (GTK_ENTRY (entry));
+    model = ctk_entry_completion_get_model (completion);
 
-    gtk_tree_model_get_iter_first (model, &iter);
+    ctk_tree_model_get_iter_first (model, &iter);
     do {
-	gtk_tree_model_get (model, &iter,
+	ctk_tree_model_get (model, &iter,
 			    CAFEWEATHER_LOCATION_ENTRY_COL_LOCATION, &cmploc,
 			    -1);
 
@@ -330,7 +330,7 @@ cafeweather_location_entry_set_city (CafeWeatherLocationEntry *entry,
 
 	set_location_internal (entry, model, &iter);
 	return TRUE;
-    } while (gtk_tree_model_iter_next (model, &iter));
+    } while (ctk_tree_model_iter_next (model, &iter));
 
     set_location_internal (entry, model, NULL);
 
@@ -401,8 +401,8 @@ fill_location_entry_model (GtkTreeStore *store, CafeWeatherLocation *loc,
 						cafeweather_location_get_sort_name (children[i]),
 						parent_compare_name);
 
-		gtk_tree_store_append (store, &iter, NULL);
-		gtk_tree_store_set (store, &iter,
+		ctk_tree_store_append (store, &iter, NULL);
+		ctk_tree_store_set (store, &iter,
 				    CAFEWEATHER_LOCATION_ENTRY_COL_LOCATION, children[i],
 				    CAFEWEATHER_LOCATION_ENTRY_COL_DISPLAY_NAME, display_name,
 				    CAFEWEATHER_LOCATION_ENTRY_COL_COMPARE_NAME, compare_name,
@@ -423,8 +423,8 @@ fill_location_entry_model (GtkTreeStore *store, CafeWeatherLocation *loc,
 					    cafeweather_location_get_sort_name (loc),
 					    parent_compare_name);
 
-	    gtk_tree_store_append (store, &iter, NULL);
-	    gtk_tree_store_set (store, &iter,
+	    ctk_tree_store_append (store, &iter, NULL);
+	    ctk_tree_store_set (store, &iter,
 				CAFEWEATHER_LOCATION_ENTRY_COL_LOCATION, children[0],
 				CAFEWEATHER_LOCATION_ENTRY_COL_DISPLAY_NAME, display_name,
 				CAFEWEATHER_LOCATION_ENTRY_COL_COMPARE_NAME, compare_name,
@@ -446,8 +446,8 @@ fill_location_entry_model (GtkTreeStore *store, CafeWeatherLocation *loc,
 					cafeweather_location_get_sort_name (loc),
 					parent_compare_name);
 
-	gtk_tree_store_append (store, &iter, NULL);
-	gtk_tree_store_set (store, &iter,
+	ctk_tree_store_append (store, &iter, NULL);
+	ctk_tree_store_set (store, &iter,
 			    CAFEWEATHER_LOCATION_ENTRY_COL_LOCATION, loc,
 			    CAFEWEATHER_LOCATION_ENTRY_COL_DISPLAY_NAME, display_name,
 			    CAFEWEATHER_LOCATION_ENTRY_COL_COMPARE_NAME, compare_name,
@@ -470,9 +470,9 @@ cafeweather_location_entry_build_model (CafeWeatherLocationEntry *entry,
     g_return_if_fail (CAFEWEATHER_IS_LOCATION_ENTRY (entry));
     entry->top = cafeweather_location_ref (top);
 
-    store = gtk_tree_store_new (4, G_TYPE_STRING, G_TYPE_POINTER, G_TYPE_STRING, G_TYPE_STRING);
+    store = ctk_tree_store_new (4, G_TYPE_STRING, G_TYPE_POINTER, G_TYPE_STRING, G_TYPE_STRING);
     fill_location_entry_model (store, top, NULL, NULL);
-    gtk_entry_completion_set_model (gtk_entry_get_completion (GTK_ENTRY (entry)),
+    ctk_entry_completion_set_model (ctk_entry_get_completion (GTK_ENTRY (entry)),
 				    GTK_TREE_MODEL (store));
     g_object_unref (store);
 }
@@ -524,7 +524,7 @@ matcher (GtkEntryCompletion *completion, const char *key,
     gboolean is_first_word = TRUE, match;
     int len;
 
-    gtk_tree_model_get (gtk_entry_completion_get_model (completion), iter,
+    ctk_tree_model_get (ctk_entry_completion_get_model (completion), iter,
 			CAFEWEATHER_LOCATION_ENTRY_COL_COMPARE_NAME, &name_mem,
 			CAFEWEATHER_LOCATION_ENTRY_COL_LOCATION, &loc,
 			-1);

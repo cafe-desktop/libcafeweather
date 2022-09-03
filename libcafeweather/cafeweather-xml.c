@@ -25,7 +25,7 @@
 #include <string.h>
 #include <math.h>
 #include <locale.h>
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 #include <libxml/xmlreader.h>
 
 #define CAFEWEATHER_I_KNOW_THIS_IS_UNSTABLE
@@ -67,8 +67,8 @@ cafeweather_xml_parse_node (CafeWeatherLocation *gloc,
     case CAFEWEATHER_LOCATION_COUNTRY:
     case CAFEWEATHER_LOCATION_ADM1:
 	/* Create a row with a name but no WeatherLocation */
-	gtk_tree_store_append (store, &iter, parent);
-	gtk_tree_store_set (store, &iter,
+	ctk_tree_store_append (store, &iter, parent);
+	ctk_tree_store_set (store, &iter,
 			    CAFEWEATHER_XML_COL_LOC, name,
 			    -1);
 	break;
@@ -78,21 +78,21 @@ cafeweather_xml_parse_node (CafeWeatherLocation *gloc,
 	 * region/country/adm1. If a single child, merge with that
 	 * location.
 	 */
-	gtk_tree_store_append (store, &iter, parent);
-	gtk_tree_store_set (store, &iter,
+	ctk_tree_store_append (store, &iter, parent);
+	ctk_tree_store_set (store, &iter,
 			    CAFEWEATHER_XML_COL_LOC, name,
 			    -1);
 	if (children[0] && !children[1]) {
 	    wloc = cafeweather_location_to_weather_location (children[0], name);
-	    gtk_tree_store_set (store, &iter,
+	    ctk_tree_store_set (store, &iter,
 				CAFEWEATHER_XML_COL_POINTER, wloc,
 				-1);
 	}
 	break;
 
     case CAFEWEATHER_LOCATION_WEATHER_STATION:
-	gtk_tree_store_append (store, &iter, parent);
-	gtk_tree_store_set (store, &iter,
+	ctk_tree_store_append (store, &iter, parent);
+	ctk_tree_store_set (store, &iter,
 			    CAFEWEATHER_XML_COL_LOC, name,
 			    -1);
 
@@ -100,7 +100,7 @@ cafeweather_xml_parse_node (CafeWeatherLocation *gloc,
 	if (parent_loc && cafeweather_location_get_level (parent_loc) == CAFEWEATHER_LOCATION_CITY)
 	    name = cafeweather_location_get_name (parent_loc);
 	wloc = cafeweather_location_to_weather_location (gloc, name);
-	gtk_tree_store_set (store, &iter,
+	ctk_tree_store_set (store, &iter,
 			    CAFEWEATHER_XML_COL_POINTER, wloc,
 			    -1);
 	break;
@@ -127,7 +127,7 @@ cafeweather_xml_load_locations (void)
     if (!world)
 	return NULL;
 
-    store = gtk_tree_store_new (2, G_TYPE_STRING, G_TYPE_POINTER);
+    store = ctk_tree_store_new (2, G_TYPE_STRING, G_TYPE_POINTER);
 
     if (!cafeweather_xml_parse_node (world, store, NULL)) {
 	cafeweather_xml_free_locations ((GtkTreeModel *)store);
@@ -144,13 +144,13 @@ free_locations (GtkTreeModel *model, GtkTreePath *path, GtkTreeIter *iter, gpoin
 {
 	WeatherLocation *loc = NULL;
 
-	gtk_tree_model_get (model, iter,
+	ctk_tree_model_get (model, iter,
 			    CAFEWEATHER_XML_COL_POINTER, &loc,
 			    -1);
 
 	if (loc) {
 		weather_location_free (loc);
-		gtk_tree_store_set ((GtkTreeStore *)model, iter,
+		ctk_tree_store_set ((GtkTreeStore *)model, iter,
 			    CAFEWEATHER_XML_COL_POINTER, NULL,
 			    -1);
 	}
@@ -164,7 +164,7 @@ void
 cafeweather_xml_free_locations (GtkTreeModel *locations)
 {
 	if (locations && GTK_IS_TREE_STORE (locations)) {
-		gtk_tree_model_foreach (locations, free_locations, NULL);
+		ctk_tree_model_foreach (locations, free_locations, NULL);
 		g_object_unref (locations);
 	}
 }

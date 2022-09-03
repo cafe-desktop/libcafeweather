@@ -3,7 +3,7 @@ SUBDIRS = po po-locations libcafeweather doc data icons
 ACLOCAL_AMFLAGS = -I m4 ${ACLOCAL_FLAGS}
 
 DISTCHECK_CONFIGURE_FLAGS = \
-	--enable-gtk-doc \
+	--enable-ctk-doc \
 	--disable-icon-update    \
 	--enable-compile-warnings=no \
 	CFLAGS='-Wno-deprecated-declarations'
@@ -26,8 +26,8 @@ MAINTAINERCLEANFILES = \
 	$(srcdir)/mkinstalldirs \
 	`find "$(srcdir)" -type f -name Makefile.in -print` \
 	$(srcdir)/configure \
-	$(srcdir)/gtk-doc.make \
-	$(srcdir)/m4/gtk-doc.m4 \
+	$(srcdir)/ctk-doc.make \
+	$(srcdir)/m4/ctk-doc.m4 \
 	$(srcdir)/m4/intltool.m4
 
 # Build ChangeLog from GIT  history
