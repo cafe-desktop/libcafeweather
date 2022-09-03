@@ -45,7 +45,7 @@
 
   * Translations update
   * building: bump required glib version to 2.50.0
-  * building: bump required gtk+ version to 3.22
+  * building: bump required ctk+ version to 3.22
   * Revert "Fix soup_session_async_new () deprecation warning"
   * Revert "remove warning on unused bsun by actually testing value"
   * Revert "Start reducing weather spam by creating intial cut of weather_info_equal ()
@@ -81,7 +81,7 @@
   * NEWS: use consistent, project wide, markdown-like formatting
     to make generating release announcements easier
   * Move to GTK+3 (require GTK+ >= 3.14), drop GTK+2 code and
-    --with-gtk build option
+    --with-ctk build option
   * Drop Python bindings and --enable-python build option (won't
     work with GTK+3)
   * Locations: add Dunedin, New Zealand

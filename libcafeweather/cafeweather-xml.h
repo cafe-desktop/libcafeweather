@@ -21,7 +21,7 @@
 #ifndef __CAFEWEATHER_XML_H__
 #define __CAFEWEATHER_XML_H__
 
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 #include <libcafeweather/weather.h>
 
 enum

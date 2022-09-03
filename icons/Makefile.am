@@ -459,7 +459,7 @@ noinst_DATA = \
 	32x32_status_weather-few-clouds-night-350.svg \
 	moonshadow.pl
 
-gtk_update_icon_cache = gtk-update-icon-cache -f -t
+ctk_update_icon_cache = ctk-update-icon-cache -f -t
 
 install-data-local: install-icons
 uninstall-local: uninstall-icons
@@ -486,10 +486,10 @@ uninstall-icons:
 update-icon-cache:
 	@-if test -z "$(DESTDIR)" && test -n $(ICON_UPDATE); then \
 		echo "Updating Gtk icon cache."; \
-		$(gtk_update_icon_cache) $(DESTDIR)$(datadir)/$(subdir)/cafe; \
+		$(ctk_update_icon_cache) $(DESTDIR)$(datadir)/$(subdir)/cafe; \
 	else \
 		echo "*** Icon cache not updated.  After (un)install, run this:"; \
-		echo "***   $(gtk_update_icon_cache) $(DESTDIR)$(datadir)/icons/cafe"; \
+		echo "***   $(ctk_update_icon_cache) $(DESTDIR)$(datadir)/icons/cafe"; \
 	fi
 
 EXTRA_DIST = \

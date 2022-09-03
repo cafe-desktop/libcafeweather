@@ -21,7 +21,7 @@
 #ifndef CAFEWEATHER_LOCATION_ENTRY_H
 #define CAFEWEATHER_LOCATION_ENTRY_H 1
 
-#include <gtk/gtk.h>
+#include <ctk/ctk.h>
 #include <libcafeweather/cafeweather-location.h>
 
 #define CAFEWEATHER_TYPE_LOCATION_ENTRY            (cafeweather_location_entry_get_type ())
