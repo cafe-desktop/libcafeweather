@@ -32,20 +32,20 @@
 #define CAFEWEATHER_TIMEZONE_MENU_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), CAFEWEATHER_TYPE_TIMEZONE_MENU, CafeWeatherTimezoneMenuClass))
 
 typedef struct {
-    GtkComboBox parent;
+    CtkComboBox parent;
 
     /*< private >*/
     CafeWeatherTimezone *zone;
 } CafeWeatherTimezoneMenu;
 
 typedef struct {
-    GtkComboBoxClass parent_class;
+    CtkComboBoxClass parent_class;
 
 } CafeWeatherTimezoneMenuClass;
 
 GType       cafeweather_timezone_menu_get_type         (void);
 
-GtkWidget  *cafeweather_timezone_menu_new              (CafeWeatherLocation     *top);
+CtkWidget  *cafeweather_timezone_menu_new              (CafeWeatherLocation     *top);
 
 void        cafeweather_timezone_menu_set_tzid         (CafeWeatherTimezoneMenu *menu,
 						     const char           *tzid);

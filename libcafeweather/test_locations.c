@@ -5,7 +5,7 @@
 #include "timezone-menu.h"
 
 static void
-deleted (GtkWidget *widget, GdkEvent *event, gpointer data)
+deleted (CtkWidget *widget, GdkEvent *event, gpointer data)
 {
     ctk_main_quit ();
 }
@@ -33,8 +33,8 @@ int
 main (int argc, char **argv)
 {
     CafeWeatherLocation *loc;
-    GtkWidget *window, *vbox, *entry;
-    GtkWidget *combo;
+    CtkWidget *window, *vbox, *entry;
+    CtkWidget *combo;
     ctk_init (&argc, &argv);
 
     window = ctk_window_new (GTK_WINDOW_TOPLEVEL);

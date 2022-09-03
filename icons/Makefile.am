@@ -485,7 +485,7 @@ uninstall-icons:
 
 update-icon-cache:
 	@-if test -z "$(DESTDIR)" && test -n $(ICON_UPDATE); then \
-		echo "Updating Gtk icon cache."; \
+		echo "Updating Ctk icon cache."; \
 		$(ctk_update_icon_cache) $(DESTDIR)$(datadir)/$(subdir)/cafe; \
 	else \
 		echo "*** Icon cache not updated.  After (un)install, run this:"; \

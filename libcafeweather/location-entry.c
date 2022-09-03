@@ -31,7 +31,7 @@
  * SECTION:location-entry
  * @Title: CafeWeatherLocationEntry
  *
- * A subclass of #GtkEntry that provides autocompletion on
+ * A subclass of #CtkEntry that provides autocompletion on
  * #CafeWeatherLocation<!-- -->s
  */
 
@@ -62,18 +62,18 @@ enum
     CAFEWEATHER_LOCATION_ENTRY_NUM_COLUMNS
 };
 
-static gboolean matcher (GtkEntryCompletion *completion, const char *key,
-			 GtkTreeIter *iter, gpointer user_data);
-static gboolean match_selected (GtkEntryCompletion *completion,
-				GtkTreeModel       *model,
-				GtkTreeIter        *iter,
+static gboolean matcher (CtkEntryCompletion *completion, const char *key,
+			 CtkTreeIter *iter, gpointer user_data);
+static gboolean match_selected (CtkEntryCompletion *completion,
+				CtkTreeModel       *model,
+				CtkTreeIter        *iter,
 				gpointer            entry);
 static void     entry_changed (CafeWeatherLocationEntry *entry);
 
 static void
 cafeweather_location_entry_init (CafeWeatherLocationEntry *entry)
 {
-    GtkEntryCompletion *completion;
+    CtkEntryCompletion *completion;
 
     completion = ctk_entry_completion_new ();
 
@@ -172,8 +172,8 @@ entry_changed (CafeWeatherLocationEntry *entry)
 
 static void
 set_location_internal (CafeWeatherLocationEntry *entry,
-		       GtkTreeModel          *model,
-		       GtkTreeIter           *iter)
+		       CtkTreeModel          *model,
+		       CtkTreeIter           *iter)
 {
     CafeWeatherLocation *loc;
     char *name;
@@ -213,9 +213,9 @@ void
 cafeweather_location_entry_set_location (CafeWeatherLocationEntry *entry,
 				      CafeWeatherLocation      *loc)
 {
-    GtkEntryCompletion *completion;
-    GtkTreeModel *model;
-    GtkTreeIter iter;
+    CtkEntryCompletion *completion;
+    CtkTreeModel *model;
+    CtkTreeIter iter;
     CafeWeatherLocation *cmploc;
 
     g_return_if_fail (CAFEWEATHER_IS_LOCATION_ENTRY (entry));
@@ -296,9 +296,9 @@ cafeweather_location_entry_set_city (CafeWeatherLocationEntry *entry,
 				  const char            *city_name,
 				  const char            *code)
 {
-    GtkEntryCompletion *completion;
-    GtkTreeModel *model;
-    GtkTreeIter iter;
+    CtkEntryCompletion *completion;
+    CtkTreeModel *model;
+    CtkTreeIter iter;
     CafeWeatherLocation *cmploc;
     const char *cmpcode;
     char *cmpname;
@@ -338,13 +338,13 @@ cafeweather_location_entry_set_city (CafeWeatherLocationEntry *entry,
 }
 
 static void
-fill_location_entry_model (GtkTreeStore *store, CafeWeatherLocation *loc,
+fill_location_entry_model (CtkTreeStore *store, CafeWeatherLocation *loc,
 			   const char *parent_display_name,
 			   const char *parent_compare_name)
 {
     CafeWeatherLocation **children;
     char *display_name, *compare_name;
-    GtkTreeIter iter;
+    CtkTreeIter iter;
     int i;
 
     children = cafeweather_location_get_children (loc);
@@ -465,7 +465,7 @@ static void
 cafeweather_location_entry_build_model (CafeWeatherLocationEntry *entry,
 				     CafeWeatherLocation *top)
 {
-    GtkTreeStore *store = NULL;
+    CtkTreeStore *store = NULL;
 
     g_return_if_fail (CAFEWEATHER_IS_LOCATION_ENTRY (entry));
     entry->top = cafeweather_location_ref (top);
@@ -516,8 +516,8 @@ find_word (const char *full_name, const char *word, int word_len,
 }
 
 static gboolean
-matcher (GtkEntryCompletion *completion, const char *key,
-	 GtkTreeIter *iter, gpointer user_data)
+matcher (CtkEntryCompletion *completion, const char *key,
+	 CtkTreeIter *iter, gpointer user_data)
 {
     char *name, *name_mem;
     CafeWeatherLocation *loc;
@@ -563,9 +563,9 @@ matcher (GtkEntryCompletion *completion, const char *key,
 }
 
 static gboolean
-match_selected (GtkEntryCompletion *completion,
-		GtkTreeModel       *model,
-		GtkTreeIter        *iter,
+match_selected (CtkEntryCompletion *completion,
+		CtkTreeModel       *model,
+		CtkTreeIter        *iter,
 		gpointer            entry)
 {
     set_location_internal (entry, model, iter);
@@ -584,7 +584,7 @@ match_selected (GtkEntryCompletion *completion,
  *
  * Return value: the new #CafeWeatherLocationEntry
  **/
-GtkWidget *
+CtkWidget *
 cafeweather_location_entry_new (CafeWeatherLocation *top)
 {
     return g_object_new (CAFEWEATHER_TYPE_LOCATION_ENTRY,
