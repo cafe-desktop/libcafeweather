@@ -34,7 +34,7 @@
 #include <time.h>
 #include <unistd.h>
 
-#include <gdk-pixbuf/gdk-pixbuf.h>
+#include <cdk-pixbuf/cdk-pixbuf.h>
 
 #define CAFEWEATHER_I_KNOW_THIS_IS_UNSTABLE
 #include "weather.h"
