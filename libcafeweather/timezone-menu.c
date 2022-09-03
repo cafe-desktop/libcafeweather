@@ -35,7 +35,7 @@
  * A #CtkComboBox subclass for choosing a #CafeWeatherTimezone
  */
 
-G_DEFINE_TYPE (CafeWeatherTimezoneMenu, cafeweather_timezone_menu, GTK_TYPE_COMBO_BOX)
+G_DEFINE_TYPE (CafeWeatherTimezoneMenu, cafeweather_timezone_menu, CTK_TYPE_COMBO_BOX)
 
 enum {
     PROP_0,
@@ -64,15 +64,15 @@ cafeweather_timezone_menu_init (CafeWeatherTimezoneMenu *menu)
 {
     CtkCellRenderer *renderer;
 
-    ctk_combo_box_set_row_separator_func (GTK_COMBO_BOX (menu),
+    ctk_combo_box_set_row_separator_func (CTK_COMBO_BOX (menu),
 					  row_separator_func, NULL, NULL);
 
     renderer = ctk_cell_renderer_text_new ();
-    ctk_cell_layout_pack_start (GTK_CELL_LAYOUT (menu), renderer, TRUE);
-    ctk_cell_layout_set_attributes (GTK_CELL_LAYOUT (menu), renderer,
+    ctk_cell_layout_pack_start (CTK_CELL_LAYOUT (menu), renderer, TRUE);
+    ctk_cell_layout_set_attributes (CTK_CELL_LAYOUT (menu), renderer,
 				    "markup", 0,
 				    NULL);
-    ctk_cell_layout_set_cell_data_func (GTK_CELL_LAYOUT (menu),
+    ctk_cell_layout_set_cell_data_func (CTK_CELL_LAYOUT (menu),
 					renderer, is_sensitive, NULL, NULL);
 }
 
@@ -91,7 +91,7 @@ static void
 cafeweather_timezone_menu_class_init (CafeWeatherTimezoneMenuClass *timezone_menu_class)
 {
     GObjectClass *object_class = G_OBJECT_CLASS (timezone_menu_class);
-    CtkComboBoxClass *combo_class = GTK_COMBO_BOX_CLASS (timezone_menu_class);
+    CtkComboBoxClass *combo_class = CTK_COMBO_BOX_CLASS (timezone_menu_class);
 
     object_class->finalize = finalize;
     object_class->set_property = set_property;
@@ -124,9 +124,9 @@ set_property (GObject *object, guint prop_id,
     switch (prop_id) {
     case PROP_TOP:
 	model = cafeweather_timezone_model_new (g_value_get_pointer (value));
-	ctk_combo_box_set_model (GTK_COMBO_BOX (object), model);
+	ctk_combo_box_set_model (CTK_COMBO_BOX (object), model);
 	g_object_unref (model);
-	ctk_combo_box_set_active (GTK_COMBO_BOX (object), 0);
+	ctk_combo_box_set_active (CTK_COMBO_BOX (object), 0);
 	break;
 
     case PROP_TZID:
@@ -273,7 +273,7 @@ cafeweather_timezone_model_new (CafeWeatherLocation *top)
     CafeWeatherTimezone *utc;
 
     store = ctk_tree_store_new (2, G_TYPE_STRING, G_TYPE_POINTER);
-    model = GTK_TREE_MODEL (store);
+    model = CTK_TREE_MODEL (store);
 
     unknown = g_markup_printf_escaped ("<i>%s</i>", C_("timezone", "Unknown"));
 
@@ -385,11 +385,11 @@ cafeweather_timezone_menu_set_tzid (CafeWeatherTimezoneMenu *menu,
     g_return_if_fail (CAFEWEATHER_IS_TIMEZONE_MENU (menu));
 
     if (!tzid) {
-	ctk_combo_box_set_active (GTK_COMBO_BOX (menu), 0);
+	ctk_combo_box_set_active (CTK_COMBO_BOX (menu), 0);
 	return;
     }
 
-    tzd.combo = GTK_COMBO_BOX (menu);
+    tzd.combo = CTK_COMBO_BOX (menu);
     tzd.tzid = tzid;
     ctk_tree_model_foreach (ctk_combo_box_get_model (tzd.combo),
 			    check_tzid, &tzd);

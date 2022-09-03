@@ -163,7 +163,7 @@ free_locations (CtkTreeModel *model, CtkTreePath *path, CtkTreeIter *iter, gpoin
 void
 cafeweather_xml_free_locations (CtkTreeModel *locations)
 {
-	if (locations && GTK_IS_TREE_STORE (locations)) {
+	if (locations && CTK_IS_TREE_STORE (locations)) {
 		ctk_tree_model_foreach (locations, free_locations, NULL);
 		g_object_unref (locations);
 	}

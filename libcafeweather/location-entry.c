@@ -35,7 +35,7 @@
  * #CafeWeatherLocation<!-- -->s
  */
 
-G_DEFINE_TYPE (CafeWeatherLocationEntry, cafeweather_location_entry, GTK_TYPE_ENTRY)
+G_DEFINE_TYPE (CafeWeatherLocationEntry, cafeweather_location_entry, CTK_TYPE_ENTRY)
 
 enum {
     PROP_0,
@@ -84,7 +84,7 @@ cafeweather_location_entry_init (CafeWeatherLocationEntry *entry)
     g_signal_connect (completion, "match_selected",
 		      G_CALLBACK (match_selected), entry);
 
-    ctk_entry_set_completion (GTK_ENTRY (entry), completion);
+    ctk_entry_set_completion (CTK_ENTRY (entry), completion);
     g_object_unref (completion);
 
     entry->custom_text = FALSE;
@@ -187,16 +187,16 @@ set_location_internal (CafeWeatherLocationEntry *entry,
 			    CAFEWEATHER_LOCATION_ENTRY_COL_LOCATION, &loc,
 			    -1);
 	entry->location = cafeweather_location_ref (loc);
-	ctk_entry_set_text (GTK_ENTRY (entry), name);
+	ctk_entry_set_text (CTK_ENTRY (entry), name);
 	entry->custom_text = FALSE;
 	g_free (name);
     } else {
 	entry->location = NULL;
-	ctk_entry_set_text (GTK_ENTRY (entry), "");
+	ctk_entry_set_text (CTK_ENTRY (entry), "");
 	entry->custom_text = TRUE;
     }
 
-    ctk_editable_select_region (GTK_EDITABLE (entry), 0, -1);
+    ctk_editable_select_region (CTK_EDITABLE (entry), 0, -1);
     g_object_notify (G_OBJECT (entry), "location");
 }
 
@@ -220,7 +220,7 @@ cafeweather_location_entry_set_location (CafeWeatherLocationEntry *entry,
 
     g_return_if_fail (CAFEWEATHER_IS_LOCATION_ENTRY (entry));
 
-    completion = ctk_entry_get_completion (GTK_ENTRY (entry));
+    completion = ctk_entry_get_completion (CTK_ENTRY (entry));
     model = ctk_entry_completion_get_model (completion);
 
     ctk_tree_model_get_iter_first (model, &iter);
@@ -306,7 +306,7 @@ cafeweather_location_entry_set_city (CafeWeatherLocationEntry *entry,
     g_return_val_if_fail (CAFEWEATHER_IS_LOCATION_ENTRY (entry), FALSE);
     g_return_val_if_fail (code != NULL, FALSE);
 
-    completion = ctk_entry_get_completion (GTK_ENTRY (entry));
+    completion = ctk_entry_get_completion (CTK_ENTRY (entry));
     model = ctk_entry_completion_get_model (completion);
 
     ctk_tree_model_get_iter_first (model, &iter);
@@ -472,8 +472,8 @@ cafeweather_location_entry_build_model (CafeWeatherLocationEntry *entry,
 
     store = ctk_tree_store_new (4, G_TYPE_STRING, G_TYPE_POINTER, G_TYPE_STRING, G_TYPE_STRING);
     fill_location_entry_model (store, top, NULL, NULL);
-    ctk_entry_completion_set_model (ctk_entry_get_completion (GTK_ENTRY (entry)),
-				    GTK_TREE_MODEL (store));
+    ctk_entry_completion_set_model (ctk_entry_get_completion (CTK_ENTRY (entry)),
+				    CTK_TREE_MODEL (store));
     g_object_unref (store);
 }
 
