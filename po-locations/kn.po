@@ -6,7 +6,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: CAFE Desktop Environment\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-09-17 10:35+0200\n"
+"POT-Creation-Date: 2022-09-03 23:22+0200\n"
 "PO-Revision-Date: 2009-03-16 10:47+0530\n"
 "Last-Translator: Shankar Prasad <svenkate@redhat.com>\n"
 "Language-Team: Kannada <en@li.org>\n"
@@ -2312,6 +2312,9 @@ msgstr "ಯುನಾನ್"
 msgid "Zhejiang"
 msgstr "ಝೆಜಿಯಾಂಗ್"
 
+msgid "Tbilisi"
+msgstr ""
+
 #. A state/province/territory in Germany
 msgid "Baden-Württemberg"
 msgstr "ಬಾಡೆನ್-ವುರ್ಟನ್‍ಬರ್ಗ್"
@@ -2952,6 +2955,9 @@ msgstr "ಪಾಗೊ ಪಾಗೊ"
 #. The capital of Anguilla
 msgid "The Valley"
 msgstr "ದ ವ್ಯಾಲಿ"
+
+msgid "Amundsen-Scott South Pole Station"
+msgstr ""
 
 #. A city in Antigua and Barbuda
 msgid "Fitches Creek"
@@ -9384,6 +9390,9 @@ msgstr "ಕ್ಯೂಲಿಮೇನ್"
 msgid "Rangoon"
 msgstr "ರಂಗೂನ್"
 
+msgid "Windhoek"
+msgstr ""
+
 #. The capital of Nepal.
 #. The local name in Nepali is "काठमाडौं".
 #.
@@ -9528,6 +9537,9 @@ msgstr "ನಿಯಾಮಿಸ"
 #. A city in Niger
 msgid "Zinder"
 msgstr "ಝಿಂಡರ್"
+
+msgid "Abuja"
+msgstr ""
 
 #. A city in Lagos Nigeria
 msgid "Ikeja"
@@ -10062,6 +10074,10 @@ msgstr ""
 #. A municipality of Puerto Rico
 msgid "Carolina"
 msgstr "ಕೆರೋಲಿನಾ"
+
+#. A municipality of Puerto Rico
+msgid "Ceiba"
+msgstr ""
 
 #. A municipality of Puerto Rico
 msgid "San Juan"
@@ -11368,12 +11384,24 @@ msgid "Bangkok"
 msgstr "ಬ್ಯಾಂಕಾಕ್"
 
 #. A city in Thailand
+msgid "Buriram"
+msgstr ""
+
+#. A city in Thailand
 msgid "Chiang Mai"
 msgstr "ಚಿಯಾಂಗ್ ಮಾಯ್"
 
 #. A city in Thailand
+msgid "Chiang Rai"
+msgstr ""
+
+#. A city in Thailand
 msgid "Chon Buri"
 msgstr "ಶೋನ್ ಬುರಿ"
+
+#. A city in Thailand
+msgid "Chumphon"
+msgstr ""
 
 #. A city in Thailand
 msgid "Hat Yai"
@@ -11387,17 +11415,56 @@ msgstr "ಹುವಾ ಹಿನ್"
 msgid "Khon Kaen"
 msgstr "ಖೋನ್ ಕಇನ್"
 
+#. An island in Thailand
+msgid "Koh Samui"
+msgstr ""
+
+#. A city in Thailand
+msgid "Krabi"
+msgstr ""
+
 #. A city in Thailand
 msgid "Lampang"
 msgstr "ಲ್ಯಾಂಪಾಂಗ್"
+
+#. A city in Thailand
+msgid "Loei"
+msgstr ""
 
 #. A city in Thailand
 msgid "Mae Hong Son"
 msgstr "ಮೇಯ್ ಹಾಂಗ್ ಸಾನ್"
 
 #. A city in Thailand
+msgid "Mae Sot"
+msgstr ""
+
+#. A city in Thailand
+msgid "Nakhon Phanom"
+msgstr ""
+
+#. A city in Thailand
+msgid "Nakhon Ratchasima"
+msgstr ""
+
+msgid "Nakhon Si Thammarat"
+msgstr ""
+
+#. A city in Thailand
 msgid "Nan"
 msgstr "ನಾನ್"
+
+#. A city in Thailand
+msgid "Narathiwat"
+msgstr ""
+
+#. A city in Thailand
+msgid "Phetchabun"
+msgstr ""
+
+#. A city in Thailand
+msgid "Phitsanulok"
+msgstr ""
 
 #. A city in Thailand
 msgid "Phrae"
@@ -11414,6 +11481,14 @@ msgstr "ರಾನಾಂಗ್"
 #. A city in Thailand
 msgid "Rayong"
 msgstr "ರೆಯೋಂಗ್"
+
+#. A city in Thailand
+msgid "Roi Et"
+msgstr ""
+
+#. A city in Thailand
+msgid "Sukhothai"
+msgstr ""
 
 #. A city in Thailand
 msgid "Surat Thani"
@@ -12884,6 +12959,10 @@ msgstr "ಬಾಸ್ಕೋಬೆಲ್"
 #. A city in Massachusetts in the United States
 msgid "Boston"
 msgstr "ಬೋಸ್ಟನ್"
+
+msgctxt "City in Colorado, United States"
+msgid "Boulder"
+msgstr ""
 
 #. A city in Kentucky in the United States
 msgid "Bowling Green"
