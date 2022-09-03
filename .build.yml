@@ -18,7 +18,6 @@ requires:
     - git
     - gtk-doc-tools
     - libglib2.0-dev
-    - libctk-3-dev
     - libsoup-gnome2.4-dev
     - libsoup2.4-dev
     - libtool
@@ -29,6 +28,7 @@ requires:
 
 before_scripts:
   - ./html-cppcheck
+  - ./debrepo-install 'libctk-3-dev gir1.2-ctk-3.0 libctk-3-common libctk-3-0'
   - ./install-from-git https://github.com/cafe-desktop/cafe-common master
 
 build_scripts:
