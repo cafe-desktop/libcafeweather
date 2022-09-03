@@ -66,10 +66,10 @@ expand_content_files=
 # CFLAGS and LDFLAGS for compiling gtkdoc-scangobj with your library.
 # Only needed if you are using gtkdoc-scangobj to dynamically query widget
 # signals and properties.
-# e.g. CTKDOC_CFLAGS=-I$(top_srcdir) -I$(top_builddir) $(CTK_DEBUG_FLAGS)
-# e.g. CTKDOC_LIBS=$(top_builddir)/ctk/$(ctktargetlib)
-CTKDOC_CFLAGS = -I$(top_srcdir) $(CTK_CFLAGS) $(LIBXML_CFLAGS) $(LIBSOUP_CFLAGS) -DCAFEWEATHER_I_KNOW_THIS_IS_UNSTABLE
-CTKDOC_LIBS = $(top_builddir)/libcafeweather/libcafeweather.la $(CTK_LIBS) $(LIBXML_LIBS) $(LIBSOUP_LIBS)
+# e.g. GTKDOC_CFLAGS=-I$(top_srcdir) -I$(top_builddir) $(CTK_DEBUG_FLAGS)
+# e.g. GTKDOC_LIBS=$(top_builddir)/ctk/$(ctktargetlib)
+GTKDOC_CFLAGS = -I$(top_srcdir) $(CTK_CFLAGS) $(LIBXML_CFLAGS) $(LIBSOUP_CFLAGS) -DCAFEWEATHER_I_KNOW_THIS_IS_UNSTABLE
+GTKDOC_LIBS = $(top_builddir)/libcafeweather/libcafeweather.la $(CTK_LIBS) $(LIBXML_LIBS) $(LIBSOUP_LIBS)
 
 # This includes the standard gtk-doc make rules, copied by gtkdocize.
 include $(top_srcdir)/gtk-doc.make
@@ -84,7 +84,7 @@ EXTRA_DIST +=
 #DISTCLEANFILES +=
 
 # Comment this out if you want your docs-status tested during 'make check'
-#TESTS = $(CTKDOC_CHECK)
+#TESTS = $(GTKDOC_CHECK)
 
 
 -include $(top_srcdir)/git.mk
