@@ -27,10 +27,10 @@ if [ -n "$*" ]; then
     for po in "$@"; do
         if [ -f $po ]; then
             echo "Rebuilding $po"
-            msgmerge -U $po locations.pot
+            msgmerge -U -N $po locations.pot
         elif [ -f $po.po ]; then
             echo "Rebuilding $po.po"
-            msgmerge -U $po.po locations.pot
+            msgmerge -U -N $po.po locations.pot
         else
             echo "No such file: $po" 1>&2
             status=1
