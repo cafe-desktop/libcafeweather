@@ -55,7 +55,7 @@ sunEclipLongitude(time_t t)
 				  - PERIGEE_LONGITUDE(ndays));
 
     /*
-     * Approxicafe solution of Kepler's equation:
+     * Approximate solution of Kepler's equation:
      * Find E which satisfies  E - e sin(E) = M (mean anomaly)
      */
     eccenAnom = meanAnom;
@@ -174,7 +174,7 @@ calc_sun2 (WeatherInfo *info, time_t t)
     gdouble tt, t00;
     gdouble x, u, dt;
 
-    /* Approxicafe preceding local midnight at observer's longitude */
+    /* Approximate preceding local midnight at observer's longitude */
     obsLat = info->location->latitude;
     obsLon = info->location->longitude;
     gm_midn = t - (t % 86400);
