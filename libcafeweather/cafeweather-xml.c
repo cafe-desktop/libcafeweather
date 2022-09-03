@@ -39,9 +39,9 @@
 
 static gboolean
 cafeweather_xml_parse_node (CafeWeatherLocation *gloc,
-			 GtkTreeStore *store, GtkTreeIter *parent)
+			 CtkTreeStore *store, CtkTreeIter *parent)
 {
-    GtkTreeIter iter, *self = &iter;
+    CtkTreeIter iter, *self = &iter;
     CafeWeatherLocation **children, *parent_loc;
     CafeWeatherLocationLevel level;
     WeatherLocation *wloc;
@@ -117,11 +117,11 @@ cafeweather_xml_parse_node (CafeWeatherLocation *gloc,
     return TRUE;
 }
 
-GtkTreeModel *
+CtkTreeModel *
 cafeweather_xml_load_locations (void)
 {
     CafeWeatherLocation *world;
-    GtkTreeStore *store;
+    CtkTreeStore *store;
 
     world = cafeweather_location_new_world (TRUE);
     if (!world)
@@ -130,17 +130,17 @@ cafeweather_xml_load_locations (void)
     store = ctk_tree_store_new (2, G_TYPE_STRING, G_TYPE_POINTER);
 
     if (!cafeweather_xml_parse_node (world, store, NULL)) {
-	cafeweather_xml_free_locations ((GtkTreeModel *)store);
+	cafeweather_xml_free_locations ((CtkTreeModel *)store);
 	store = NULL;
     }
 
     cafeweather_location_unref (world);
 
-    return (GtkTreeModel *)store;
+    return (CtkTreeModel *)store;
 }
 
 static gboolean
-free_locations (GtkTreeModel *model, GtkTreePath *path, GtkTreeIter *iter, gpointer data)
+free_locations (CtkTreeModel *model, CtkTreePath *path, CtkTreeIter *iter, gpointer data)
 {
 	WeatherLocation *loc = NULL;
 
@@ -150,7 +150,7 @@ free_locations (GtkTreeModel *model, GtkTreePath *path, GtkTreeIter *iter, gpoin
 
 	if (loc) {
 		weather_location_free (loc);
-		ctk_tree_store_set ((GtkTreeStore *)model, iter,
+		ctk_tree_store_set ((CtkTreeStore *)model, iter,
 			    CAFEWEATHER_XML_COL_POINTER, NULL,
 			    -1);
 	}
@@ -161,7 +161,7 @@ free_locations (GtkTreeModel *model, GtkTreePath *path, GtkTreeIter *iter, gpoin
 /* Frees model returned from @cafeweather_xml_load_locations. It contains allocated
    WeatherLocation-s, thus this takes care of the freeing of that memory. */
 void
-cafeweather_xml_free_locations (GtkTreeModel *locations)
+cafeweather_xml_free_locations (CtkTreeModel *locations)
 {
 	if (locations && GTK_IS_TREE_STORE (locations)) {
 		ctk_tree_model_foreach (locations, free_locations, NULL);

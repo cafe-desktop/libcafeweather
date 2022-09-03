@@ -32,7 +32,7 @@
  * SECTION:timezone-menu
  * @Title: CafeWeatherTimezoneMenu
  *
- * A #GtkComboBox subclass for choosing a #CafeWeatherTimezone
+ * A #CtkComboBox subclass for choosing a #CafeWeatherTimezone
  */
 
 G_DEFINE_TYPE (CafeWeatherTimezoneMenu, cafeweather_timezone_menu, GTK_TYPE_COMBO_BOX)
@@ -51,18 +51,18 @@ static void set_property (GObject *object, guint prop_id,
 static void get_property (GObject *object, guint prop_id,
 			  GValue *value, GParamSpec *pspec);
 
-static void changed      (GtkComboBox *combo);
+static void changed      (CtkComboBox *combo);
 
-static GtkTreeModel *cafeweather_timezone_model_new (CafeWeatherLocation *top);
-static gboolean row_separator_func (GtkTreeModel *model, GtkTreeIter *iter,
+static CtkTreeModel *cafeweather_timezone_model_new (CafeWeatherLocation *top);
+static gboolean row_separator_func (CtkTreeModel *model, CtkTreeIter *iter,
 				    gpointer data);
-static void is_sensitive (GtkCellLayout *cell_layout, GtkCellRenderer *cell,
-			  GtkTreeModel *tree_model, GtkTreeIter *iter, gpointer data);
+static void is_sensitive (CtkCellLayout *cell_layout, CtkCellRenderer *cell,
+			  CtkTreeModel *tree_model, CtkTreeIter *iter, gpointer data);
 
 static void
 cafeweather_timezone_menu_init (CafeWeatherTimezoneMenu *menu)
 {
-    GtkCellRenderer *renderer;
+    CtkCellRenderer *renderer;
 
     ctk_combo_box_set_row_separator_func (GTK_COMBO_BOX (menu),
 					  row_separator_func, NULL, NULL);
@@ -91,7 +91,7 @@ static void
 cafeweather_timezone_menu_class_init (CafeWeatherTimezoneMenuClass *timezone_menu_class)
 {
     GObjectClass *object_class = G_OBJECT_CLASS (timezone_menu_class);
-    GtkComboBoxClass *combo_class = GTK_COMBO_BOX_CLASS (timezone_menu_class);
+    CtkComboBoxClass *combo_class = GTK_COMBO_BOX_CLASS (timezone_menu_class);
 
     object_class->finalize = finalize;
     object_class->set_property = set_property;
@@ -119,7 +119,7 @@ static void
 set_property (GObject *object, guint prop_id,
 	      const GValue *value, GParamSpec *pspec)
 {
-    GtkTreeModel *model;
+    CtkTreeModel *model;
 
     switch (prop_id) {
     case PROP_TOP:
@@ -161,10 +161,10 @@ enum {
 };
 
 static void
-changed (GtkComboBox *combo)
+changed (CtkComboBox *combo)
 {
     CafeWeatherTimezoneMenu *menu = CAFEWEATHER_TIMEZONE_MENU (combo);
-    GtkTreeIter iter;
+    CtkTreeIter iter;
 
     if (menu->zone)
 	cafeweather_timezone_unref (menu->zone);
@@ -211,9 +211,9 @@ get_offset (CafeWeatherTimezone *zone)
 }
 
 static void
-insert_location (GtkTreeStore *store, CafeWeatherTimezone *zone, const char *loc_name, GtkTreeIter *parent)
+insert_location (CtkTreeStore *store, CafeWeatherTimezone *zone, const char *loc_name, CtkTreeIter *parent)
 {
-    GtkTreeIter iter;
+    CtkTreeIter iter;
     char *name, *offset;
 
     offset = get_offset (zone);
@@ -230,7 +230,7 @@ insert_location (GtkTreeStore *store, CafeWeatherTimezone *zone, const char *loc
 }
 
 static void
-insert_locations (GtkTreeStore *store, CafeWeatherLocation *loc)
+insert_locations (CtkTreeStore *store, CafeWeatherLocation *loc)
 {
     int i;
 
@@ -243,7 +243,7 @@ insert_locations (GtkTreeStore *store, CafeWeatherLocation *loc)
 	cafeweather_location_free_children (loc, children);
     } else {
 	CafeWeatherTimezone **zones;
-	GtkTreeIter iter;
+	CtkTreeIter iter;
 
 	zones = cafeweather_location_get_timezones (loc);
 	if (zones[1]) {
@@ -263,12 +263,12 @@ insert_locations (GtkTreeStore *store, CafeWeatherLocation *loc)
     }
 }
 
-static GtkTreeModel *
+static CtkTreeModel *
 cafeweather_timezone_model_new (CafeWeatherLocation *top)
 {
-    GtkTreeStore *store;
-    GtkTreeModel *model;
-    GtkTreeIter iter;
+    CtkTreeStore *store;
+    CtkTreeModel *model;
+    CtkTreeIter iter;
     char *unknown;
     CafeWeatherTimezone *utc;
 
@@ -299,7 +299,7 @@ cafeweather_timezone_model_new (CafeWeatherLocation *top)
 }
 
 static gboolean
-row_separator_func (GtkTreeModel *model, GtkTreeIter *iter, gpointer data)
+row_separator_func (CtkTreeModel *model, CtkTreeIter *iter, gpointer data)
 {
     char *name;
 
@@ -314,8 +314,8 @@ row_separator_func (GtkTreeModel *model, GtkTreeIter *iter, gpointer data)
 }
 
 static void
-is_sensitive (GtkCellLayout *cell_layout, GtkCellRenderer *cell,
-	      GtkTreeModel *tree_model, GtkTreeIter *iter, gpointer data)
+is_sensitive (CtkCellLayout *cell_layout, CtkCellRenderer *cell,
+	      CtkTreeModel *tree_model, CtkTreeIter *iter, gpointer data)
 {
     gboolean sensitive;
 
@@ -335,7 +335,7 @@ is_sensitive (GtkCellLayout *cell_layout, GtkCellRenderer *cell,
  *
  * Return value: the new #CafeWeatherTimezoneMenu
  **/
-GtkWidget *
+CtkWidget *
 cafeweather_timezone_menu_new (CafeWeatherLocation *top)
 {
     return g_object_new (CAFEWEATHER_TYPE_TIMEZONE_MENU,
@@ -344,13 +344,13 @@ cafeweather_timezone_menu_new (CafeWeatherLocation *top)
 }
 
 typedef struct {
-    GtkComboBox *combo;
+    CtkComboBox *combo;
     const char  *tzid;
 } SetTimezoneData;
 
 static gboolean
-check_tzid (GtkTreeModel *model, GtkTreePath *path,
-	    GtkTreeIter *iter, gpointer data)
+check_tzid (CtkTreeModel *model, CtkTreePath *path,
+	    CtkTreeIter *iter, gpointer data)
 {
     SetTimezoneData *tzd = data;
     CafeWeatherTimezone *zone;

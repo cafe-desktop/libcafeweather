@@ -31,7 +31,7 @@ enum
     CAFEWEATHER_XML_NUM_COLUMNS
 };
 
-GtkTreeModel *cafeweather_xml_load_locations (void);
-void          cafeweather_xml_free_locations (GtkTreeModel *locations);
+CtkTreeModel *cafeweather_xml_load_locations (void);
+void          cafeweather_xml_free_locations (CtkTreeModel *locations);
 
 #endif /* __CAFEWEATHER_XML_H__ */

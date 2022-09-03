@@ -32,7 +32,7 @@
 #define CAFEWEATHER_LOCATION_ENTRY_GET_CLASS(obj)  (G_TYPE_INSTANCE_GET_CLASS ((obj), CAFEWEATHER_TYPE_LOCATION_ENTRY, CafeWeatherLocationEntryClass))
 
 typedef struct {
-    GtkEntry parent;
+    CtkEntry parent;
 
     /*< private >*/
     CafeWeatherLocation *location, *top;
@@ -40,13 +40,13 @@ typedef struct {
 } CafeWeatherLocationEntry;
 
 typedef struct {
-    GtkEntryClass parent_class;
+    CtkEntryClass parent_class;
 
 } CafeWeatherLocationEntryClass;
 
 GType             cafeweather_location_entry_get_type     (void);
 
-GtkWidget        *cafeweather_location_entry_new          (CafeWeatherLocation      *top);
+CtkWidget        *cafeweather_location_entry_new          (CafeWeatherLocation      *top);
 
 void              cafeweather_location_entry_set_location (CafeWeatherLocationEntry *entry,
 							CafeWeatherLocation      *loc);
