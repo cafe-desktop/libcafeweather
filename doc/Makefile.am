@@ -18,25 +18,25 @@ DOC_MAIN_SGML_FILE=$(DOC_MODULE)-docs.sgml
 # e.g. DOC_SOURCE_DIR=../../../ctk
 DOC_SOURCE_DIR=../libcafeweather
 
-# Extra options to pass to ctkdoc-scangobj. Not normally needed.
+# Extra options to pass to gtkdoc-scangobj. Not normally needed.
 SCANGOBJ_OPTIONS=
 
-# Extra options to supply to ctkdoc-scan
+# Extra options to supply to gtkdoc-scan
 # e.g. SCAN_OPTIONS=--deprecated-guards="CTK_DISABLE_DEPRECATED"
 SCAN_OPTIONS=--deprecated-guards="CAFEWEATHER_DISABLE_DEPRECATED"
 
-# Extra options to supply to ctkdoc-mkdb.
+# Extra options to supply to gtkdoc-mkdb.
 # e.g. MKDB_OPTIONS=--sgml-mode --output-format=xml
 MKDB_OPTIONS=--sgml-mode --output-format=xml
 
-# Extra options to supply to ctkdoc-mktmpl
+# Extra options to supply to gtkdoc-mktmpl
 # e.g. MKTMPL_OPTIONS=--only-section-tmpl
 MKTMPL_OPTIONS=
 
-# Extra options to supply to ctkdoc-mkhtml
+# Extra options to supply to gtkdoc-mkhtml
 MKHTML_OPTIONS=
 
-# Extra options to supply to ctkdoc-fixref. Not normally needed.
+# Extra options to supply to gtkdoc-fixref. Not normally needed.
 # e.g. FIXXREF_OPTIONS=--extra-dir=../cdk-pixbuf/html --extra-dir=../cdk/html
 FIXXREF_OPTIONS=
 
@@ -63,15 +63,15 @@ content_files=
 # e.g. expand_content_files=running.sgml
 expand_content_files=
 
-# CFLAGS and LDFLAGS for compiling ctkdoc-scangobj with your library.
-# Only needed if you are using ctkdoc-scangobj to dynamically query widget
+# CFLAGS and LDFLAGS for compiling gtkdoc-scangobj with your library.
+# Only needed if you are using gtkdoc-scangobj to dynamically query widget
 # signals and properties.
 # e.g. CTKDOC_CFLAGS=-I$(top_srcdir) -I$(top_builddir) $(CTK_DEBUG_FLAGS)
 # e.g. CTKDOC_LIBS=$(top_builddir)/ctk/$(ctktargetlib)
 CTKDOC_CFLAGS = -I$(top_srcdir) $(CTK_CFLAGS) $(LIBXML_CFLAGS) $(LIBSOUP_CFLAGS) -DCAFEWEATHER_I_KNOW_THIS_IS_UNSTABLE
 CTKDOC_LIBS = $(top_builddir)/libcafeweather/libcafeweather.la $(CTK_LIBS) $(LIBXML_LIBS) $(LIBSOUP_LIBS)
 
-# This includes the standard gtk-doc make rules, copied by ctkdocize.
+# This includes the standard gtk-doc make rules, copied by gtkdocize.
 include $(top_srcdir)/gtk-doc.make
 
 # Other files to distribute
