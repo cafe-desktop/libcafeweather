@@ -168,7 +168,7 @@ const gchar *		weather_info_get_sunrise	(WeatherInfo *info);
 const gchar *		weather_info_get_sunset		(WeatherInfo *info);
 const gchar *		weather_info_get_forecast	(WeatherInfo *info);
 GSList *		weather_info_get_forecast_list	(WeatherInfo *info);
-GdkPixbufAnimation *	weather_info_get_radar		(WeatherInfo *info);
+CdkPixbufAnimation *	weather_info_get_radar		(WeatherInfo *info);
 
 const gchar *		weather_info_get_temp_summary	(WeatherInfo *info);
 gchar *			weather_info_get_weather_summary(WeatherInfo *info);
