@@ -1,187 +1,184 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
 # This file is distributed under the same license as the PACKAGE package.
-# 
+#
 # Translators:
 msgid ""
 msgstr ""
 "Project-Id-Version: CAFE Desktop Environment\n"
-"Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-11-28 10:05+0100\n"
+"Report-Msgid-Bugs-To: https://cafe-desktop.org\n"
+"POT-Creation-Date: 2022-09-03 17:08+0200\n"
 "PO-Revision-Date: 2017-09-22 02:12+0000\n"
 "Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
 "Language-Team: Javanese (http://www.transifex.com/cafe/CAFE/language/jv/)\n"
+"Language: jv\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: jv\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../libcafeweather/cafeweather-prefs.c:93
-#: ../libcafeweather/cafeweather-prefs.c:113
-#: ../libcafeweather/cafeweather-prefs.c:139
-#: ../libcafeweather/cafeweather-prefs.c:168
+#: libcafeweather/cafeweather-prefs.c:93 libcafeweather/cafeweather-prefs.c:113
+#: libcafeweather/cafeweather-prefs.c:139
+#: libcafeweather/cafeweather-prefs.c:168
 msgid "Default"
 msgstr ""
 
-#. translators: Kelvin
-#: ../libcafeweather/cafeweather-prefs.c:96
+#. Translators: Kelvin
+#: libcafeweather/cafeweather-prefs.c:96
 msgid "K"
 msgstr ""
 
-#. translators: Celsius
-#: ../libcafeweather/cafeweather-prefs.c:99
+#. Translators: Celsius
+#: libcafeweather/cafeweather-prefs.c:99
 msgid "C"
 msgstr ""
 
-#. translators: Fahrenheit
-#: ../libcafeweather/cafeweather-prefs.c:102
+#. Translators: Fahrenheit
+#: libcafeweather/cafeweather-prefs.c:102
 msgid "F"
 msgstr ""
 
-#: ../libcafeweather/cafeweather-prefs.c:104
-#: ../libcafeweather/cafeweather-prefs.c:130
-#: ../libcafeweather/cafeweather-prefs.c:159
-#: ../libcafeweather/cafeweather-prefs.c:179 ../libcafeweather/weather.c:252
-#: ../libcafeweather/weather.c:269 ../libcafeweather/weather.c:341
+#: libcafeweather/cafeweather-prefs.c:104
+#: libcafeweather/cafeweather-prefs.c:130
+#: libcafeweather/cafeweather-prefs.c:159
+#: libcafeweather/cafeweather-prefs.c:179 libcafeweather/weather.c:247
+#: libcafeweather/weather.c:264 libcafeweather/weather.c:336
 msgid "Invalid"
 msgstr ""
 
-#. translators: meters per second
-#: ../libcafeweather/cafeweather-prefs.c:116
+#. Translators: meters per second
+#: libcafeweather/cafeweather-prefs.c:116
 msgid "m/s"
 msgstr ""
 
-#. translators: kilometers per hour
-#: ../libcafeweather/cafeweather-prefs.c:119
+#. Translators: kilometers per hour
+#: libcafeweather/cafeweather-prefs.c:119
 msgid "km/h"
 msgstr ""
 
-#. translators: miles per hour
-#: ../libcafeweather/cafeweather-prefs.c:122
+#. Translators: miles per hour
+#: libcafeweather/cafeweather-prefs.c:122
 msgid "mph"
 msgstr ""
 
-#. translators: knots (speed unit)
-#: ../libcafeweather/cafeweather-prefs.c:125
+#. Translators: knots (speed unit)
+#: libcafeweather/cafeweather-prefs.c:125
 msgid "knots"
 msgstr ""
 
-#. translators: wind speed
-#: ../libcafeweather/cafeweather-prefs.c:128
+#. Translators: wind speed
+#: libcafeweather/cafeweather-prefs.c:128
 msgid "Beaufort scale"
 msgstr ""
 
-#. translators: kilopascals
-#: ../libcafeweather/cafeweather-prefs.c:142
+#. Translators: kilopascals
+#: libcafeweather/cafeweather-prefs.c:142
 msgid "kPa"
 msgstr ""
 
-#. translators: hectopascals
-#: ../libcafeweather/cafeweather-prefs.c:145
+#. Translators: hectopascals
+#: libcafeweather/cafeweather-prefs.c:145
 msgid "hPa"
 msgstr ""
 
-#. translators: millibars
-#: ../libcafeweather/cafeweather-prefs.c:148
+#. Translators: millibars
+#: libcafeweather/cafeweather-prefs.c:148
 msgid "mb"
 msgstr ""
 
-#. translators: millimeters of mercury
-#: ../libcafeweather/cafeweather-prefs.c:151
+#. Translators: millimeters of mercury
+#: libcafeweather/cafeweather-prefs.c:151
 msgid "mmHg"
 msgstr ""
 
-#. translators: inches of mercury
-#: ../libcafeweather/cafeweather-prefs.c:154
+#. Translators: inches of mercury
+#: libcafeweather/cafeweather-prefs.c:154
 msgid "inHg"
 msgstr ""
 
-#. translators: atmosphere
-#: ../libcafeweather/cafeweather-prefs.c:157
+#. Translators: atmosphere
+#: libcafeweather/cafeweather-prefs.c:157
 msgid "atm"
 msgstr ""
 
-#. translators: meters
-#: ../libcafeweather/cafeweather-prefs.c:171
+#. Translators: meters
+#: libcafeweather/cafeweather-prefs.c:171
 msgid "m"
 msgstr ""
 
-#. translators: kilometers
-#: ../libcafeweather/cafeweather-prefs.c:174
+#. Translators: kilometers
+#: libcafeweather/cafeweather-prefs.c:174
 msgid "km"
 msgstr ""
 
-#. translators: miles
-#: ../libcafeweather/cafeweather-prefs.c:177
+#. Translators: miles
+#: libcafeweather/cafeweather-prefs.c:177
 msgid "mi"
 msgstr ""
 
-#: ../libcafeweather/cafeweather-timezone.c:315
+#: libcafeweather/cafeweather-timezone.c:315
 msgid "Greenwich Mean Time"
 msgstr ""
 
-#: ../libcafeweather/org.cafe.weather.gschema.xml.in.h:1
+#: libcafeweather/org.cafe.weather.gschema.xml.in:38
 msgid "Show notifications"
 msgstr ""
 
-#: ../libcafeweather/org.cafe.weather.gschema.xml.in.h:2
+#: libcafeweather/org.cafe.weather.gschema.xml.in:39
 msgid "Determines whether the applet shows a notification on each update."
 msgstr ""
 
-#: ../libcafeweather/org.cafe.weather.gschema.xml.in.h:3
+#: libcafeweather/org.cafe.weather.gschema.xml.in:43
 msgid "Update the data automatically"
 msgstr ""
 
-#: ../libcafeweather/org.cafe.weather.gschema.xml.in.h:4
+#: libcafeweather/org.cafe.weather.gschema.xml.in:44
 msgid ""
 "Determines whether the applet automatically updates its weather statistics "
 "or not."
 msgstr ""
 
-#: ../libcafeweather/org.cafe.weather.gschema.xml.in.h:5
+#: libcafeweather/org.cafe.weather.gschema.xml.in:48
 msgid "Update interval"
 msgstr ""
 
-#: ../libcafeweather/org.cafe.weather.gschema.xml.in.h:6
+#: libcafeweather/org.cafe.weather.gschema.xml.in:49
 msgid "The interval, in seconds, between automatic updates."
 msgstr ""
 
-#: ../libcafeweather/org.cafe.weather.gschema.xml.in.h:7
+#: libcafeweather/org.cafe.weather.gschema.xml.in:53
 msgid "Use metric units"
 msgstr ""
 
-#: ../libcafeweather/org.cafe.weather.gschema.xml.in.h:8
+#: libcafeweather/org.cafe.weather.gschema.xml.in:54
 msgid "Use metric units instead of english units."
 msgstr ""
 
-#. TRANSLATORS: pick a default distance unit for your locale, see key
-#. description
+#. TRANSLATORS: pick a default distance unit for your locale, see key description
 #. for valid values; values must be quoted
-#: ../libcafeweather/org.cafe.weather.gschema.xml.in.h:11
+#: libcafeweather/org.cafe.weather.gschema.xml.in:59
 msgid "'miles'"
 msgstr ""
 
-#: ../libcafeweather/org.cafe.weather.gschema.xml.in.h:12
+#: libcafeweather/org.cafe.weather.gschema.xml.in:60
 msgid "Distance unit"
 msgstr ""
 
-#: ../libcafeweather/org.cafe.weather.gschema.xml.in.h:13
+#: libcafeweather/org.cafe.weather.gschema.xml.in:61
 msgid "The unit to use for visibility. Values: 'meters', 'km' ,'miles'."
 msgstr ""
 
-#. TRANSLATORS: pick a default pressure unit for your locale, see key
-#. description
+#. TRANSLATORS: pick a default pressure unit for your locale, see key description
 #. for valid values; values must be quoted
-#: ../libcafeweather/org.cafe.weather.gschema.xml.in.h:16
+#: libcafeweather/org.cafe.weather.gschema.xml.in:66
 msgid "'inHg'"
 msgstr ""
 
-#: ../libcafeweather/org.cafe.weather.gschema.xml.in.h:17
+#: libcafeweather/org.cafe.weather.gschema.xml.in:67
 msgid "Pressure unit"
 msgstr ""
 
-#: ../libcafeweather/org.cafe.weather.gschema.xml.in.h:18
+#: libcafeweather/org.cafe.weather.gschema.xml.in:68
 msgid ""
 "The unit to use for pressure. Values: 'kPa', 'hPa', 'mb', 'mmHg', 'inHg', "
 "'atm'."
@@ -189,15 +186,15 @@ msgstr ""
 
 #. TRANSLATORS: pick a default speed unit for your locale, see key description
 #. for valid values; values must be quoted
-#: ../libcafeweather/org.cafe.weather.gschema.xml.in.h:21
+#: libcafeweather/org.cafe.weather.gschema.xml.in:73
 msgid "'knots'"
 msgstr ""
 
-#: ../libcafeweather/org.cafe.weather.gschema.xml.in.h:22
+#: libcafeweather/org.cafe.weather.gschema.xml.in:74
 msgid "Speed unit"
 msgstr ""
 
-#: ../libcafeweather/org.cafe.weather.gschema.xml.in.h:23
+#: libcafeweather/org.cafe.weather.gschema.xml.in:75
 msgid ""
 "The unit to use for wind speed. Values: 'm/s', 'km/h, 'mph', 'knots', "
 "'Beaufort scale'."
@@ -205,29 +202,29 @@ msgstr ""
 
 #. TRANSLATORS: pick a temperature unit that should be used by default in your
 #. locale, see key description for valid values; values must be quoted
-#: ../libcafeweather/org.cafe.weather.gschema.xml.in.h:26
+#: libcafeweather/org.cafe.weather.gschema.xml.in:80
 msgid "'Fahrenheit'"
 msgstr ""
 
-#: ../libcafeweather/org.cafe.weather.gschema.xml.in.h:27
+#: libcafeweather/org.cafe.weather.gschema.xml.in:81
 msgid "Temperature unit"
 msgstr ""
 
-#: ../libcafeweather/org.cafe.weather.gschema.xml.in.h:28
+#: libcafeweather/org.cafe.weather.gschema.xml.in:82
 msgid ""
 "The unit to use for temperature. Values: 'Kelvin', 'Centigrade', "
 "'Fahrenheit'."
 msgstr ""
 
-#: ../libcafeweather/org.cafe.weather.gschema.xml.in.h:29
+#: libcafeweather/org.cafe.weather.gschema.xml.in:86
 msgid "Not used anymore"
 msgstr ""
 
-#: ../libcafeweather/org.cafe.weather.gschema.xml.in.h:30
+#: libcafeweather/org.cafe.weather.gschema.xml.in:90
 msgid "Display radar map"
 msgstr ""
 
-#: ../libcafeweather/org.cafe.weather.gschema.xml.in.h:31
+#: libcafeweather/org.cafe.weather.gschema.xml.in:91
 msgid "Fetch a radar map on each update."
 msgstr ""
 
@@ -239,60 +236,58 @@ msgstr ""
 #. write it in Greek. It's important to translate this name. If you
 #. do not require a DEFAULT_LOCATION, set this to
 #. "DEFAULT_LOCATION".
-#: ../libcafeweather/org.cafe.weather.gschema.xml.in.h:40
+#: libcafeweather/org.cafe.weather.gschema.xml.in:102
+#: libcafeweather/org.cafe.weather.gschema.xml.in:147
 msgid "'DEFAULT_LOCATION'"
 msgstr ""
 
-#: ../libcafeweather/org.cafe.weather.gschema.xml.in.h:41
+#: libcafeweather/org.cafe.weather.gschema.xml.in:103
 msgid "Weather location information"
 msgstr ""
 
-#: ../libcafeweather/org.cafe.weather.gschema.xml.in.h:42
+#: libcafeweather/org.cafe.weather.gschema.xml.in:104
 msgid "Weather location information."
 msgstr ""
 
 #. TRANSLATORS: Change this to the code of your default location
 #. that corresponds to the DEFAULT_LOCATION name you put above. This
 #. is normally a four-letter (ICAO) code and can be found in
-#. https://github.com/cafe-
-#. desktop/libcafeweather/blob/master/data/Locations.xml.in.
+#. https://github.com/cafe-desktop/libcafeweather/blob/master/data/Locations.xml.in.
 #. NB. The web page is over 1.7MB in size. Pick a default location
 #. like a capital city so that it would be ok for more of your users.
 #. For example, for Greek, we use "LGAV" for the capital city, Athens.
 #. If you do not require a DEFAULT_CODE, set this to "DEFAULT_CODE".
-#: ../libcafeweather/org.cafe.weather.gschema.xml.in.h:51
+#: libcafeweather/org.cafe.weather.gschema.xml.in:115
 msgid "'DEFAULT_CODE'"
 msgstr ""
 
-#: ../libcafeweather/org.cafe.weather.gschema.xml.in.h:52
+#: libcafeweather/org.cafe.weather.gschema.xml.in:116
 msgid "Nearby city"
 msgstr ""
 
-#: ../libcafeweather/org.cafe.weather.gschema.xml.in.h:53
+#: libcafeweather/org.cafe.weather.gschema.xml.in:117
 msgid ""
-"Nearby major zone, such as a capital city, as found from "
-"https://raw.github.com/cafe-"
-"desktop/libcafeweather/master/data/Locations.xml.in"
+"Nearby major zone, such as a capital city, as found from https://raw.github."
+"com/cafe-desktop/libcafeweather/master/data/Locations.xml.in"
 msgstr ""
 
 #. TRANSLATORS: Change this to the zone of your default location
 #. that corresponds to the DEFAULT_LOCATION and DEFAULT_CODE you put
 #. above. Normally, US and Canada locations have zones while the rest
 #. do not. Check
-#. https://github.com/cafe-
-#. desktop/libcafeweather/blob/master/data/Locations.xml.in
+#. https://github.com/cafe-desktop/libcafeweather/blob/master/data/Locations.xml.in
 #. as any zone you put here must also be present in the Locations.xml
 #. file. If your default location does not have a zone, set this to
 #. "DEFAULT_ZONE".
-#: ../libcafeweather/org.cafe.weather.gschema.xml.in.h:62
+#: libcafeweather/org.cafe.weather.gschema.xml.in:128
 msgid "'DEFAULT_ZONE'"
 msgstr ""
 
-#: ../libcafeweather/org.cafe.weather.gschema.xml.in.h:63
+#: libcafeweather/org.cafe.weather.gschema.xml.in:129
 msgid "Zone location"
 msgstr ""
 
-#: ../libcafeweather/org.cafe.weather.gschema.xml.in.h:64
+#: libcafeweather/org.cafe.weather.gschema.xml.in:130
 msgid ""
 "A unique zone for the city, as found from https://raw.github.com/cafe-"
 "desktop/libcafeweather/master/data/Locations.xml.in"
@@ -302,635 +297,608 @@ msgstr ""
 #. that corresponds to the DEFAULT_LOCATION and DEFAULT_CODE you put
 #. above. Normally, US and Canada locations have radar names while the
 #. rest do not. Check
-#. https://github.com/cafe-
-#. desktop/libcafeweather/blob/master/data/Locations.xml.in
+#. https://github.com/cafe-desktop/libcafeweather/blob/master/data/Locations.xml.in
 #. as any radar you put here must also be present in the Locations.xml
 #. file. If your default location does not have a radar, set this to
 #. " " (or space).
 #. If you do not have a default location, set this to DEFAULT_RADAR.
-#: ../libcafeweather/org.cafe.weather.gschema.xml.in.h:74
+#: libcafeweather/org.cafe.weather.gschema.xml.in:142
 msgid "'DEFAULT_RADAR'"
 msgstr ""
 
-#: ../libcafeweather/org.cafe.weather.gschema.xml.in.h:75
+#: libcafeweather/org.cafe.weather.gschema.xml.in:143
 msgid "Radar location"
 msgstr ""
 
-#: ../libcafeweather/org.cafe.weather.gschema.xml.in.h:76
+#: libcafeweather/org.cafe.weather.gschema.xml.in:144
 msgid ""
 "A three-digit-long code for retrieving radar maps from weather.com, found "
-"from https://raw.github.com/cafe-"
-"desktop/libcafeweather/master/data/Locations.xml.in"
+"from https://raw.github.com/cafe-desktop/libcafeweather/master/data/"
+"Locations.xml.in"
 msgstr ""
 
-#: ../libcafeweather/org.cafe.weather.gschema.xml.in.h:77
+#: libcafeweather/org.cafe.weather.gschema.xml.in:148
 msgid "Weather for a city"
 msgstr ""
 
-#: ../libcafeweather/org.cafe.weather.gschema.xml.in.h:78
+#: libcafeweather/org.cafe.weather.gschema.xml.in:149
 msgid "The city that cafeweather displays information for."
 msgstr ""
 
 #. TRANSLATORS: Change this to the coordinates of your default
 #. location that corresponds to the DEFAULT_LOCATION and DEFAULT_CODE
 #. you put above. Check
-#. https://github.com/cafe-
-#. desktop/libcafeweather/blob/master/data/Locations.xml.in
+#. https://github.com/cafe-desktop/libcafeweather/blob/master/data/Locations.xml.in
 #. as any coordinates you put here must also be present in the
 #. Locations.xml file. If your default location does not have known
 #. coordinates, set this to " " (or space). If you do not have a
 #. default location, set this to DEFAULT_COORDINATES.
-#: ../libcafeweather/org.cafe.weather.gschema.xml.in.h:87
+#: libcafeweather/org.cafe.weather.gschema.xml.in:160
 msgid "'DEFAULT_COORDINATES'"
 msgstr ""
 
-#: ../libcafeweather/org.cafe.weather.gschema.xml.in.h:88
+#: libcafeweather/org.cafe.weather.gschema.xml.in:161
 msgid "Location coordinates"
 msgstr ""
 
-#: ../libcafeweather/org.cafe.weather.gschema.xml.in.h:89
+#: libcafeweather/org.cafe.weather.gschema.xml.in:162
 msgid ""
 "Latitude and longitude of your location expressed in DD-MM-SS[NS] DD-MM-"
 "SS[EW]."
 msgstr ""
 
-#: ../libcafeweather/org.cafe.weather.gschema.xml.in.h:90
+#: libcafeweather/org.cafe.weather.gschema.xml.in:166
 msgid "Use custom url for the radar map"
 msgstr ""
 
-#: ../libcafeweather/org.cafe.weather.gschema.xml.in.h:91
+#: libcafeweather/org.cafe.weather.gschema.xml.in:167
 msgid ""
 "If true, then retrieve a radar map from a location specified by the "
 "\"radar\" key."
 msgstr ""
 
-#: ../libcafeweather/org.cafe.weather.gschema.xml.in.h:92
+#: libcafeweather/org.cafe.weather.gschema.xml.in:171
 msgid "Url for the radar map"
 msgstr ""
 
-#: ../libcafeweather/org.cafe.weather.gschema.xml.in.h:93
+#: libcafeweather/org.cafe.weather.gschema.xml.in:172
 msgid "The custom url from where to retrieve a radar map."
 msgstr ""
 
-#: ../libcafeweather/timezone-menu.c:278
+#: libcafeweather/timezone-menu.c:278
 msgctxt "timezone"
 msgid "Unknown"
 msgstr "dingerteni"
 
 #. Translators: %d is an error code, and %s the error string
-#: ../libcafeweather/weather-metar.c:504
+#: libcafeweather/weather-metar.c:504
 #, c-format
 msgid "Failed to get METAR data: %d %s.\n"
 msgstr ""
 
-#: ../libcafeweather/weather-metar.c:548
+#: libcafeweather/weather-metar.c:548
 msgid "WeatherInfo missing location"
 msgstr ""
 
-#: ../libcafeweather/weather.c:241
+#: libcafeweather/weather.c:236
 msgid "Variable"
 msgstr ""
 
-#: ../libcafeweather/weather.c:242
+#: libcafeweather/weather.c:237
 msgid "North"
 msgstr ""
 
-#: ../libcafeweather/weather.c:242
+#: libcafeweather/weather.c:237
 msgid "North - NorthEast"
 msgstr ""
 
-#: ../libcafeweather/weather.c:242
+#: libcafeweather/weather.c:237
 msgid "Northeast"
 msgstr ""
 
-#: ../libcafeweather/weather.c:242
+#: libcafeweather/weather.c:237
 msgid "East - NorthEast"
 msgstr ""
 
-#: ../libcafeweather/weather.c:243
+#: libcafeweather/weather.c:238
 msgid "East"
 msgstr ""
 
-#: ../libcafeweather/weather.c:243
+#: libcafeweather/weather.c:238
 msgid "East - Southeast"
 msgstr ""
 
-#: ../libcafeweather/weather.c:243
+#: libcafeweather/weather.c:238
 msgid "Southeast"
 msgstr ""
 
-#: ../libcafeweather/weather.c:243
+#: libcafeweather/weather.c:238
 msgid "South - Southeast"
 msgstr ""
 
-#: ../libcafeweather/weather.c:244
+#: libcafeweather/weather.c:239
 msgid "South"
 msgstr ""
 
-#: ../libcafeweather/weather.c:244
+#: libcafeweather/weather.c:239
 msgid "South - Southwest"
 msgstr ""
 
-#: ../libcafeweather/weather.c:244
+#: libcafeweather/weather.c:239
 msgid "Southwest"
 msgstr ""
 
-#: ../libcafeweather/weather.c:244
+#: libcafeweather/weather.c:239
 msgid "West - Southwest"
 msgstr ""
 
-#: ../libcafeweather/weather.c:245
+#: libcafeweather/weather.c:240
 msgid "West"
 msgstr ""
 
-#: ../libcafeweather/weather.c:245
+#: libcafeweather/weather.c:240
 msgid "West - Northwest"
 msgstr ""
 
-#: ../libcafeweather/weather.c:245
+#: libcafeweather/weather.c:240
 msgid "Northwest"
 msgstr ""
 
-#: ../libcafeweather/weather.c:245
+#: libcafeweather/weather.c:240
 msgid "North - Northwest"
 msgstr ""
 
-#: ../libcafeweather/weather.c:258
+#: libcafeweather/weather.c:253
 msgid "Clear Sky"
 msgstr ""
 
-#: ../libcafeweather/weather.c:259
+#: libcafeweather/weather.c:254
 msgid "Broken clouds"
 msgstr ""
 
-#: ../libcafeweather/weather.c:260
+#: libcafeweather/weather.c:255
 msgid "Scattered clouds"
 msgstr ""
 
-#: ../libcafeweather/weather.c:261
+#: libcafeweather/weather.c:256
 msgid "Few clouds"
 msgstr ""
 
-#: ../libcafeweather/weather.c:262
+#: libcafeweather/weather.c:257
 msgid "Overcast"
 msgstr ""
 
-#. TRANSLATOR: If you want to know what "blowing" "shallow" "partial"
+#. Translators: If you want to know what "blowing" "shallow" "partial"
 #. * etc means, you can go to http://www.weather.com/glossary/ and
 #. * http://www.crh.noaa.gov/arx/wx.tbl.php
 #. NONE
-#: ../libcafeweather/weather.c:301 ../libcafeweather/weather.c:303
+#: libcafeweather/weather.c:296 libcafeweather/weather.c:298
 msgid "Thunderstorm"
 msgstr ""
 
-#. DRIZZLE
-#: ../libcafeweather/weather.c:302
+#: libcafeweather/weather.c:297
 msgid "Drizzle"
 msgstr ""
 
-#: ../libcafeweather/weather.c:302
+#: libcafeweather/weather.c:297
 msgid "Light drizzle"
 msgstr ""
 
-#: ../libcafeweather/weather.c:302
+#: libcafeweather/weather.c:297
 msgid "Moderate drizzle"
 msgstr ""
 
-#: ../libcafeweather/weather.c:302
+#: libcafeweather/weather.c:297
 msgid "Heavy drizzle"
 msgstr ""
 
-#: ../libcafeweather/weather.c:302
+#: libcafeweather/weather.c:297
 msgid "Freezing drizzle"
 msgstr ""
 
-#. RAIN
-#: ../libcafeweather/weather.c:303
+#: libcafeweather/weather.c:298
 msgid "Rain"
 msgstr ""
 
-#: ../libcafeweather/weather.c:303
+#: libcafeweather/weather.c:298
 msgid "Light rain"
 msgstr ""
 
-#: ../libcafeweather/weather.c:303
+#: libcafeweather/weather.c:298
 msgid "Moderate rain"
 msgstr ""
 
-#: ../libcafeweather/weather.c:303
+#: libcafeweather/weather.c:298
 msgid "Heavy rain"
 msgstr ""
 
-#: ../libcafeweather/weather.c:303
+#: libcafeweather/weather.c:298
 msgid "Rain showers"
 msgstr ""
 
-#: ../libcafeweather/weather.c:303
+#: libcafeweather/weather.c:298
 msgid "Freezing rain"
 msgstr ""
 
-#. SNOW
-#: ../libcafeweather/weather.c:304
+#: libcafeweather/weather.c:299
 msgid "Snow"
 msgstr ""
 
-#: ../libcafeweather/weather.c:304
+#: libcafeweather/weather.c:299
 msgid "Light snow"
 msgstr ""
 
-#: ../libcafeweather/weather.c:304
+#: libcafeweather/weather.c:299
 msgid "Moderate snow"
 msgstr ""
 
-#: ../libcafeweather/weather.c:304
+#: libcafeweather/weather.c:299
 msgid "Heavy snow"
 msgstr ""
 
-#: ../libcafeweather/weather.c:304
+#: libcafeweather/weather.c:299
 msgid "Snowstorm"
 msgstr ""
 
-#: ../libcafeweather/weather.c:304
+#: libcafeweather/weather.c:299
 msgid "Blowing snowfall"
 msgstr ""
 
-#: ../libcafeweather/weather.c:304
+#: libcafeweather/weather.c:299
 msgid "Snow showers"
 msgstr ""
 
-#: ../libcafeweather/weather.c:304
+#: libcafeweather/weather.c:299
 msgid "Drifting snow"
 msgstr ""
 
-#. SNOW_GRAINS
-#: ../libcafeweather/weather.c:305
+#: libcafeweather/weather.c:300
 msgid "Snow grains"
 msgstr ""
 
-#: ../libcafeweather/weather.c:305
+#: libcafeweather/weather.c:300
 msgid "Light snow grains"
 msgstr ""
 
-#: ../libcafeweather/weather.c:305
+#: libcafeweather/weather.c:300
 msgid "Moderate snow grains"
 msgstr ""
 
-#: ../libcafeweather/weather.c:305
+#: libcafeweather/weather.c:300
 msgid "Heavy snow grains"
 msgstr ""
 
-#. ICE_CRYSTALS
-#: ../libcafeweather/weather.c:306
+#: libcafeweather/weather.c:301
 msgid "Ice crystals"
 msgstr ""
 
-#. ICE_PELLETS
-#: ../libcafeweather/weather.c:307
+#: libcafeweather/weather.c:302
 msgid "Ice pellets"
 msgstr ""
 
-#: ../libcafeweather/weather.c:307
+#: libcafeweather/weather.c:302
 msgid "Few ice pellets"
 msgstr ""
 
-#: ../libcafeweather/weather.c:307
+#: libcafeweather/weather.c:302
 msgid "Moderate ice pellets"
 msgstr ""
 
-#: ../libcafeweather/weather.c:307
+#: libcafeweather/weather.c:302
 msgid "Heavy ice pellets"
 msgstr ""
 
-#: ../libcafeweather/weather.c:307
+#: libcafeweather/weather.c:302
 msgid "Ice pellet storm"
 msgstr ""
 
-#: ../libcafeweather/weather.c:307
+#: libcafeweather/weather.c:302
 msgid "Showers of ice pellets"
 msgstr ""
 
-#. HAIL
-#: ../libcafeweather/weather.c:308
+#: libcafeweather/weather.c:303
 msgid "Hail"
 msgstr ""
 
-#: ../libcafeweather/weather.c:308
+#: libcafeweather/weather.c:303
 msgid "Hailstorm"
 msgstr ""
 
-#: ../libcafeweather/weather.c:308
+#: libcafeweather/weather.c:303
 msgid "Hail showers"
 msgstr ""
 
-#. SMALL_HAIL
-#: ../libcafeweather/weather.c:309
+#: libcafeweather/weather.c:304
 msgid "Small hail"
 msgstr ""
 
-#: ../libcafeweather/weather.c:309
+#: libcafeweather/weather.c:304
 msgid "Small hailstorm"
 msgstr ""
 
-#: ../libcafeweather/weather.c:309
+#: libcafeweather/weather.c:304
 msgid "Showers of small hail"
 msgstr ""
 
-#. PRECIPITATION
-#: ../libcafeweather/weather.c:310
+#: libcafeweather/weather.c:305
 msgid "Unknown precipitation"
 msgstr ""
 
-#. MIST
-#: ../libcafeweather/weather.c:311
+#: libcafeweather/weather.c:306
 msgid "Mist"
 msgstr ""
 
-#. FOG
-#: ../libcafeweather/weather.c:312
+#: libcafeweather/weather.c:307
 msgid "Fog"
 msgstr ""
 
-#: ../libcafeweather/weather.c:312
+#: libcafeweather/weather.c:307
 msgid "Fog in the vicinity"
 msgstr ""
 
-#: ../libcafeweather/weather.c:312
+#: libcafeweather/weather.c:307
 msgid "Shallow fog"
 msgstr ""
 
-#: ../libcafeweather/weather.c:312
+#: libcafeweather/weather.c:307
 msgid "Patches of fog"
 msgstr ""
 
-#: ../libcafeweather/weather.c:312
+#: libcafeweather/weather.c:307
 msgid "Partial fog"
 msgstr ""
 
-#: ../libcafeweather/weather.c:312
+#: libcafeweather/weather.c:307
 msgid "Freezing fog"
 msgstr ""
 
-#. SMOKE
-#: ../libcafeweather/weather.c:313
+#: libcafeweather/weather.c:308
 msgid "Smoke"
 msgstr ""
 
-#. VOLCANIC_ASH
-#: ../libcafeweather/weather.c:314
+#: libcafeweather/weather.c:309
 msgid "Volcanic ash"
 msgstr ""
 
-#. SAND
-#: ../libcafeweather/weather.c:315
+#: libcafeweather/weather.c:310
 msgid "Sand"
 msgstr ""
 
-#: ../libcafeweather/weather.c:315
+#: libcafeweather/weather.c:310
 msgid "Blowing sand"
 msgstr ""
 
-#: ../libcafeweather/weather.c:315
+#: libcafeweather/weather.c:310
 msgid "Drifting sand"
 msgstr ""
 
-#. HAZE
-#: ../libcafeweather/weather.c:316
+#: libcafeweather/weather.c:311
 msgid "Haze"
 msgstr ""
 
-#. SPRAY
-#: ../libcafeweather/weather.c:317
+#: libcafeweather/weather.c:312
 msgid "Blowing sprays"
 msgstr ""
 
-#. DUST
-#: ../libcafeweather/weather.c:318
+#: libcafeweather/weather.c:313
 msgid "Dust"
 msgstr ""
 
-#: ../libcafeweather/weather.c:318
+#: libcafeweather/weather.c:313
 msgid "Blowing dust"
 msgstr ""
 
-#: ../libcafeweather/weather.c:318
+#: libcafeweather/weather.c:313
 msgid "Drifting dust"
 msgstr ""
 
-#. SQUALL
-#: ../libcafeweather/weather.c:319
+#: libcafeweather/weather.c:314
 msgid "Squall"
 msgstr ""
 
-#. SANDSTORM
-#: ../libcafeweather/weather.c:320
+#: libcafeweather/weather.c:315
 msgid "Sandstorm"
 msgstr ""
 
-#: ../libcafeweather/weather.c:320
+#: libcafeweather/weather.c:315
 msgid "Sandstorm in the vicinity"
 msgstr ""
 
-#: ../libcafeweather/weather.c:320
+#: libcafeweather/weather.c:315
 msgid "Heavy sandstorm"
 msgstr ""
 
-#. DUSTSTORM
-#: ../libcafeweather/weather.c:321
+#: libcafeweather/weather.c:316
 msgid "Duststorm"
 msgstr ""
 
-#: ../libcafeweather/weather.c:321
+#: libcafeweather/weather.c:316
 msgid "Duststorm in the vicinity"
 msgstr ""
 
-#: ../libcafeweather/weather.c:321
+#: libcafeweather/weather.c:316
 msgid "Heavy duststorm"
 msgstr ""
 
-#. FUNNEL_CLOUD
-#: ../libcafeweather/weather.c:322
+#: libcafeweather/weather.c:317
 msgid "Funnel cloud"
 msgstr ""
 
-#. TORNADO
-#: ../libcafeweather/weather.c:323
+#: libcafeweather/weather.c:318
 msgid "Tornado"
 msgstr ""
 
-#. DUST_WHIRLS
-#: ../libcafeweather/weather.c:324
+#: libcafeweather/weather.c:319
 msgid "Dust whirls"
 msgstr ""
 
-#: ../libcafeweather/weather.c:324
+#: libcafeweather/weather.c:319
 msgid "Dust whirls in the vicinity"
 msgstr ""
 
-#. TRANSLATOR: this is a format string for strftime
+#. Translators: this is a format string for strftime
 #. *             see `man 3 strftime` for more details
-#: ../libcafeweather/weather.c:718
+#.
+#: libcafeweather/weather.c:712
 msgid "%a, %b %d / %H:%M"
 msgstr ""
 
-#: ../libcafeweather/weather.c:733
+#: libcafeweather/weather.c:727
 msgid "Unknown observation time"
 msgstr ""
 
-#: ../libcafeweather/weather.c:747 ../libcafeweather/weather.c:798
-#: ../libcafeweather/weather.c:812 ../libcafeweather/weather.c:825
-#: ../libcafeweather/weather.c:838 ../libcafeweather/weather.c:851
-#: ../libcafeweather/weather.c:869 ../libcafeweather/weather.c:887
-#: ../libcafeweather/weather.c:925 ../libcafeweather/weather.c:941
-#: ../libcafeweather/weather.c:964 ../libcafeweather/weather.c:996
-#: ../libcafeweather/weather.c:1012 ../libcafeweather/weather.c:1032
+#: libcafeweather/weather.c:741 libcafeweather/weather.c:792
+#: libcafeweather/weather.c:806 libcafeweather/weather.c:819
+#: libcafeweather/weather.c:832 libcafeweather/weather.c:845
+#: libcafeweather/weather.c:863 libcafeweather/weather.c:881
+#: libcafeweather/weather.c:919 libcafeweather/weather.c:935
+#: libcafeweather/weather.c:958 libcafeweather/weather.c:990
+#: libcafeweather/weather.c:1006 libcafeweather/weather.c:1026
 msgid "Unknown"
 msgstr "dingerteni"
 
-#. TRANSLATOR: This is the temperature in degrees Fahrenheit (\302\260 is
-#. U+00B0 DEGREE SIGN)
-#: ../libcafeweather/weather.c:769
+#. Translators: This is the temperature in degrees Fahrenheit (\302\260 is U+00B0 DEGREE SIGN)
+#: libcafeweather/weather.c:763
 #, c-format
 msgid "%.1f °F"
 msgstr ""
 
-#. TRANSLATOR: This is the temperature in degrees Fahrenheit (\302\260 is
-#. U+00B0 DEGREE SIGN)
-#: ../libcafeweather/weather.c:772
+#. Translators: This is the temperature in degrees Fahrenheit (\302\260 is U+00B0 DEGREE SIGN)
+#: libcafeweather/weather.c:766
 #, c-format
 msgid "%d °F"
 msgstr ""
 
-#. TRANSLATOR: This is the temperature in degrees Celsius (\302\260 is U+00B0
-#. DEGREE SIGN)
-#: ../libcafeweather/weather.c:778
+#. Translators: This is the temperature in degrees Celsius (\302\260 is U+00B0 DEGREE SIGN)
+#: libcafeweather/weather.c:772
 #, c-format
 msgid "%.1f °C"
 msgstr ""
 
-#. TRANSLATOR: This is the temperature in degrees Celsius (\302\260 is U+00B0
-#. DEGREE SIGN)
-#: ../libcafeweather/weather.c:781
+#. Translators: This is the temperature in degrees Celsius (\302\260 is U+00B0 DEGREE SIGN)
+#: libcafeweather/weather.c:775
 #, c-format
 msgid "%d °C"
 msgstr ""
 
-#. TRANSLATOR: This is the temperature in kelvin
-#: ../libcafeweather/weather.c:787
+#. Translators: This is the temperature in kelvin
+#: libcafeweather/weather.c:781
 #, c-format
 msgid "%.1f K"
 msgstr ""
 
-#. TRANSLATOR: This is the temperature in kelvin
-#: ../libcafeweather/weather.c:790
+#. Translators: This is the temperature in kelvin
+#: libcafeweather/weather.c:784
 #, c-format
 msgid "%d K"
 msgstr ""
 
-#. TRANSLATOR: This is the humidity in percent
-#: ../libcafeweather/weather.c:872
+#. Translators: This is the humidity in percent
+#: libcafeweather/weather.c:866
 #, c-format
 msgid "%.f%%"
 msgstr ""
 
-#. TRANSLATOR: This is the wind speed in knots
-#: ../libcafeweather/weather.c:900
+#. Translators: This is the wind speed in knots
+#: libcafeweather/weather.c:894
 #, c-format
 msgid "%0.1f knots"
 msgstr ""
 
-#. TRANSLATOR: This is the wind speed in miles per hour
-#: ../libcafeweather/weather.c:904
+#. Translators: This is the wind speed in miles per hour
+#: libcafeweather/weather.c:898
 #, c-format
 msgid "%.1f mph"
 msgstr ""
 
-#. TRANSLATOR: This is the wind speed in kilometers per hour
-#: ../libcafeweather/weather.c:908
+#. Translators: This is the wind speed in kilometers per hour
+#: libcafeweather/weather.c:902
 #, c-format
 msgid "%.1f km/h"
 msgstr ""
 
-#. TRANSLATOR: This is the wind speed in meters per second
-#: ../libcafeweather/weather.c:912
+#. Translators: This is the wind speed in meters per second
+#: libcafeweather/weather.c:906
 #, c-format
 msgid "%.1f m/s"
 msgstr ""
 
-#. TRANSLATOR: This is the wind speed as a Beaufort force factor
+#. Translators: This is the wind speed as a Beaufort force factor
 #. * (commonly used in nautical wind estimation).
-#: ../libcafeweather/weather.c:918
+#.
+#: libcafeweather/weather.c:912
 #, c-format
 msgid "Beaufort force %.1f"
 msgstr ""
 
-#: ../libcafeweather/weather.c:943
+#: libcafeweather/weather.c:937
 msgid "Calm"
 msgstr ""
 
-#. TRANSLATOR: This is 'wind direction' / 'wind speed'
-#: ../libcafeweather/weather.c:947
+#. Translators: This is 'wind direction' / 'wind speed'
+#: libcafeweather/weather.c:941
 #, c-format
 msgid "%s / %s"
 msgstr ""
 
-#. TRANSLATOR: This is pressure in inches of mercury
-#: ../libcafeweather/weather.c:969
+#. Translators: This is pressure in inches of mercury
+#: libcafeweather/weather.c:963
 #, c-format
 msgid "%.2f inHg"
 msgstr ""
 
-#. TRANSLATOR: This is pressure in millimeters of mercury
-#: ../libcafeweather/weather.c:973
+#. Translators: This is pressure in millimeters of mercury
+#: libcafeweather/weather.c:967
 #, c-format
 msgid "%.1f mmHg"
 msgstr ""
 
-#. TRANSLATOR: This is pressure in kiloPascals
-#: ../libcafeweather/weather.c:977
+#. Translators: This is pressure in kiloPascals
+#: libcafeweather/weather.c:971
 #, c-format
 msgid "%.2f kPa"
 msgstr ""
 
-#. TRANSLATOR: This is pressure in hectoPascals
-#: ../libcafeweather/weather.c:981
+#. Translators: This is pressure in hectoPascals
+#: libcafeweather/weather.c:975
 #, c-format
 msgid "%.2f hPa"
 msgstr ""
 
-#. TRANSLATOR: This is pressure in millibars
-#: ../libcafeweather/weather.c:985
+#. Translators: This is pressure in millibars
+#: libcafeweather/weather.c:979
 #, c-format
 msgid "%.2f mb"
 msgstr ""
 
-#. TRANSLATOR: This is pressure in atmospheres
-#: ../libcafeweather/weather.c:989
+#. Translators: This is pressure in atmospheres
+#: libcafeweather/weather.c:983
 #, c-format
 msgid "%.3f atm"
 msgstr ""
 
-#. TRANSLATOR: This is the visibility in miles
-#: ../libcafeweather/weather.c:1017
+#. Translators: This is the visibility in miles
+#: libcafeweather/weather.c:1011
 #, c-format
 msgid "%.1f miles"
 msgstr ""
 
-#. TRANSLATOR: This is the visibility in kilometers
-#: ../libcafeweather/weather.c:1021
+#. Translators: This is the visibility in kilometers
+#: libcafeweather/weather.c:1015
 #, c-format
 msgid "%.1f km"
 msgstr ""
 
-#. TRANSLATOR: This is the visibility in meters
-#: ../libcafeweather/weather.c:1025
+#. Translators: This is the visibility in meters
+#: libcafeweather/weather.c:1019
 #, c-format
 msgid "%.0fm"
 msgstr ""
 
-#: ../libcafeweather/weather.c:1054 ../libcafeweather/weather.c:1075
+#: libcafeweather/weather.c:1048 libcafeweather/weather.c:1069
 msgid "%H:%M"
 msgstr ""
 
-#: ../libcafeweather/weather.c:1134
+#: libcafeweather/weather.c:1128
 msgid "Retrieval failed"
 msgstr ""

@@ -2,30 +2,30 @@
 # Copyright (C) YEAR CAFE Desktop Environment team
 # This file is distributed under the same license as the libcafeweather package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
 # Marko Šterman <marko.chamillionaire@gmail.com>, 2020
 # Damir Jerovšek <jierro@windowslive.com>, 2020
 # worm <thewormhole@gmail.com>, 2020
 # Helena S <ele@tutamail.com>, 2020
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: libcafeweather 1.23.0\n"
 "Report-Msgid-Bugs-To: https://cafe-desktop.org\n"
-"POT-Creation-Date: 2019-11-04 23:24+0100\n"
+"POT-Creation-Date: 2022-09-03 17:08+0200\n"
 "PO-Revision-Date: 2020-02-14 13:12+0000\n"
 "Last-Translator: Helena S <ele@tutamail.com>, 2020\n"
 "Language-Team: Slovenian (https://www.transifex.com/cafe/teams/13566/sl/)\n"
+"Language: sl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: sl\n"
-"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || n%100==4 ? 2 : 3);\n"
+"Plural-Forms: nplurals=4; plural=(n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
+"n%100==4 ? 2 : 3);\n"
 
-#: libcafeweather/cafeweather-prefs.c:93
-#: libcafeweather/cafeweather-prefs.c:113
+#: libcafeweather/cafeweather-prefs.c:93 libcafeweather/cafeweather-prefs.c:113
 #: libcafeweather/cafeweather-prefs.c:139
 #: libcafeweather/cafeweather-prefs.c:168
 msgid "Default"
@@ -164,8 +164,7 @@ msgstr "Uporabljaj metrične enote"
 msgid "Use metric units instead of english units."
 msgstr "Uporabljaj metrične enote namesto angleških."
 
-#. TRANSLATORS: pick a default distance unit for your locale, see key
-#. description
+#. TRANSLATORS: pick a default distance unit for your locale, see key description
 #. for valid values; values must be quoted
 #: libcafeweather/org.cafe.weather.gschema.xml.in:59
 msgid "'miles'"
@@ -179,8 +178,7 @@ msgstr "Enota razdalje"
 msgid "The unit to use for visibility. Values: 'meters', 'km' ,'miles'."
 msgstr "Enota za vidljivost. Vrednosti: 'metri', 'km', 'milje'."
 
-#. TRANSLATORS: pick a default pressure unit for your locale, see key
-#. description
+#. TRANSLATORS: pick a default pressure unit for your locale, see key description
 #. for valid values; values must be quoted
 #: libcafeweather/org.cafe.weather.gschema.xml.in:66
 msgid "'inHg'"
@@ -268,8 +266,7 @@ msgstr "Podatki o položaju vremena."
 #. TRANSLATORS: Change this to the code of your default location
 #. that corresponds to the DEFAULT_LOCATION name you put above. This
 #. is normally a four-letter (ICAO) code and can be found in
-#. https://github.com/cafe-
-#. desktop/libcafeweather/blob/master/data/Locations.xml.in.
+#. https://github.com/cafe-desktop/libcafeweather/blob/master/data/Locations.xml.in.
 #. NB. The web page is over 1.7MB in size. Pick a default location
 #. like a capital city so that it would be ok for more of your users.
 #. For example, for Greek, we use "LGAV" for the capital city, Athens.
@@ -284,20 +281,17 @@ msgstr "Bližnje mesto"
 
 #: libcafeweather/org.cafe.weather.gschema.xml.in:117
 msgid ""
-"Nearby major zone, such as a capital city, as found from "
-"https://raw.github.com/cafe-"
-"desktop/libcafeweather/master/data/Locations.xml.in"
+"Nearby major zone, such as a capital city, as found from https://raw.github."
+"com/cafe-desktop/libcafeweather/master/data/Locations.xml.in"
 msgstr ""
-"Bližnje večje območje, kot je glavno mesto, zapisano na "
-"https://raw.github.com/cafe-"
-"desktop/libcafeweather/master/data/Locations.xml.in"
+"Bližnje večje območje, kot je glavno mesto, zapisano na https://raw.github."
+"com/cafe-desktop/libcafeweather/master/data/Locations.xml.in"
 
 #. TRANSLATORS: Change this to the zone of your default location
 #. that corresponds to the DEFAULT_LOCATION and DEFAULT_CODE you put
 #. above. Normally, US and Canada locations have zones while the rest
 #. do not. Check
-#. https://github.com/cafe-
-#. desktop/libcafeweather/blob/master/data/Locations.xml.in
+#. https://github.com/cafe-desktop/libcafeweather/blob/master/data/Locations.xml.in
 #. as any zone you put here must also be present in the Locations.xml
 #. file. If your default location does not have a zone, set this to
 #. "DEFAULT_ZONE".
@@ -321,8 +315,7 @@ msgstr ""
 #. that corresponds to the DEFAULT_LOCATION and DEFAULT_CODE you put
 #. above. Normally, US and Canada locations have radar names while the
 #. rest do not. Check
-#. https://github.com/cafe-
-#. desktop/libcafeweather/blob/master/data/Locations.xml.in
+#. https://github.com/cafe-desktop/libcafeweather/blob/master/data/Locations.xml.in
 #. as any radar you put here must also be present in the Locations.xml
 #. file. If your default location does not have a radar, set this to
 #. " " (or space).
@@ -338,12 +331,12 @@ msgstr "Položaj radarja"
 #: libcafeweather/org.cafe.weather.gschema.xml.in:144
 msgid ""
 "A three-digit-long code for retrieving radar maps from weather.com, found "
-"from https://raw.github.com/cafe-"
-"desktop/libcafeweather/master/data/Locations.xml.in"
+"from https://raw.github.com/cafe-desktop/libcafeweather/master/data/"
+"Locations.xml.in"
 msgstr ""
 "Trištevilčna koda za pridobivanje radarskih slik s portala weather.com, kot "
-"je zapisano na https://raw.github.com/cafe-"
-"desktop/libcafeweather/master/data/Locations.xml.in"
+"je zapisano na https://raw.github.com/cafe-desktop/libcafeweather/master/"
+"data/Locations.xml.in"
 
 #: libcafeweather/org.cafe.weather.gschema.xml.in:148
 msgid "Weather for a city"
@@ -356,8 +349,7 @@ msgstr "Mesto, za katerega cafeweather prikazuje podatke."
 #. TRANSLATORS: Change this to the coordinates of your default
 #. location that corresponds to the DEFAULT_LOCATION and DEFAULT_CODE
 #. you put above. Check
-#. https://github.com/cafe-
-#. desktop/libcafeweather/blob/master/data/Locations.xml.in
+#. https://github.com/cafe-desktop/libcafeweather/blob/master/data/Locations.xml.in
 #. as any coordinates you put here must also be present in the
 #. Locations.xml file. If your default location does not have known
 #. coordinates, set this to " " (or space). If you do not have a
@@ -771,6 +763,7 @@ msgstr "Prašni vrtinci v okolici"
 
 #. Translators: this is a format string for strftime
 #. *             see `man 3 strftime` for more details
+#.
 #: libcafeweather/weather.c:712
 msgid "%a, %b %d / %H:%M"
 msgstr "%a, %g %d / %H:%M"
@@ -789,29 +782,25 @@ msgstr "Neznan čas meritve"
 msgid "Unknown"
 msgstr "Neznano"
 
-#. Translators: This is the temperature in degrees Fahrenheit (\302\260 is
-#. U+00B0 DEGREE SIGN)
+#. Translators: This is the temperature in degrees Fahrenheit (\302\260 is U+00B0 DEGREE SIGN)
 #: libcafeweather/weather.c:763
 #, c-format
 msgid "%.1f °F"
 msgstr "%.1f °F"
 
-#. Translators: This is the temperature in degrees Fahrenheit (\302\260 is
-#. U+00B0 DEGREE SIGN)
+#. Translators: This is the temperature in degrees Fahrenheit (\302\260 is U+00B0 DEGREE SIGN)
 #: libcafeweather/weather.c:766
 #, c-format
 msgid "%d °F"
 msgstr "%d °F"
 
-#. Translators: This is the temperature in degrees Celsius (\302\260 is U+00B0
-#. DEGREE SIGN)
+#. Translators: This is the temperature in degrees Celsius (\302\260 is U+00B0 DEGREE SIGN)
 #: libcafeweather/weather.c:772
 #, c-format
 msgid "%.1f °C"
 msgstr "%.1f °C"
 
-#. Translators: This is the temperature in degrees Celsius (\302\260 is U+00B0
-#. DEGREE SIGN)
+#. Translators: This is the temperature in degrees Celsius (\302\260 is U+00B0 DEGREE SIGN)
 #: libcafeweather/weather.c:775
 #, c-format
 msgid "%d °C"
@@ -861,6 +850,7 @@ msgstr "%.1f m/s"
 
 #. Translators: This is the wind speed as a Beaufort force factor
 #. * (commonly used in nautical wind estimation).
+#.
 #: libcafeweather/weather.c:912
 #, c-format
 msgid "Beaufort force %.1f"

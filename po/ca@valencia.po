@@ -2,27 +2,27 @@
 # Copyright (C) YEAR CAFE Desktop Environment team
 # This file is distributed under the same license as the libcafeweather package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Stefano Karapetsas <stefano@karapetsas.com>, 2020
 # Jose Alfredo Murcia Andrés <joamuran@gmail.com>, 2020
-# 
+#
 msgid ""
 msgstr ""
 "Project-Id-Version: libcafeweather 1.23.0\n"
 "Report-Msgid-Bugs-To: https://cafe-desktop.org\n"
-"POT-Creation-Date: 2019-11-04 23:24+0100\n"
+"POT-Creation-Date: 2022-09-03 17:08+0200\n"
 "PO-Revision-Date: 2020-02-14 13:12+0000\n"
 "Last-Translator: Jose Alfredo Murcia Andrés <joamuran@gmail.com>, 2020\n"
-"Language-Team: Catalan (Valencian) (https://www.transifex.com/cafe/teams/13566/ca@valencia/)\n"
+"Language-Team: Catalan (Valencian) (https://www.transifex.com/cafe/"
+"teams/13566/ca@valencia/)\n"
+"Language: ca@valencia\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: ca@valencia\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: libcafeweather/cafeweather-prefs.c:93
-#: libcafeweather/cafeweather-prefs.c:113
+#: libcafeweather/cafeweather-prefs.c:93 libcafeweather/cafeweather-prefs.c:113
 #: libcafeweather/cafeweather-prefs.c:139
 #: libcafeweather/cafeweather-prefs.c:168
 msgid "Default"
@@ -143,8 +143,8 @@ msgid ""
 "Determines whether the applet automatically updates its weather statistics "
 "or not."
 msgstr ""
-"Determina si la miniaplicació actualitza automàticament les estadístiques de"
-" l'oratge o no."
+"Determina si la miniaplicació actualitza automàticament les estadístiques de "
+"l'oratge o no."
 
 #: libcafeweather/org.cafe.weather.gschema.xml.in:48
 msgid "Update interval"
@@ -160,11 +160,9 @@ msgstr "Utilitza unitats del sistema mètric"
 
 #: libcafeweather/org.cafe.weather.gschema.xml.in:54
 msgid "Use metric units instead of english units."
-msgstr ""
-"Utilitza unitats del sistema mètric en comptes d'unitats anglosaxones."
+msgstr "Utilitza unitats del sistema mètric en comptes d'unitats anglosaxones."
 
-#. TRANSLATORS: pick a default distance unit for your locale, see key
-#. description
+#. TRANSLATORS: pick a default distance unit for your locale, see key description
 #. for valid values; values must be quoted
 #: libcafeweather/org.cafe.weather.gschema.xml.in:59
 msgid "'miles'"
@@ -180,8 +178,7 @@ msgstr ""
 "La unitat que s'utilitza per a la visibilitat. Valors: «metres», «km», "
 "«milles»."
 
-#. TRANSLATORS: pick a default pressure unit for your locale, see key
-#. description
+#. TRANSLATORS: pick a default pressure unit for your locale, see key description
 #. for valid values; values must be quoted
 #: libcafeweather/org.cafe.weather.gschema.xml.in:66
 msgid "'inHg'"
@@ -214,8 +211,8 @@ msgid ""
 "The unit to use for wind speed. Values: 'm/s', 'km/h, 'mph', 'knots', "
 "'Beaufort scale'."
 msgstr ""
-"La unitat que s'utilitza per a la velocitat del vent. Valors: «m/s», «km/h»,"
-" «mph», «nusos», «escala de Beaufort»."
+"La unitat que s'utilitza per a la velocitat del vent. Valors: «m/s», «km/h», "
+"«mph», «nusos», «escala de Beaufort»."
 
 #. TRANSLATORS: pick a temperature unit that should be used by default in your
 #. locale, see key description for valid values; values must be quoted
@@ -232,8 +229,8 @@ msgid ""
 "The unit to use for temperature. Values: 'Kelvin', 'Centigrade', "
 "'Fahrenheit'."
 msgstr ""
-"La unitat que s'utilitza per a la temperatura. Valors: «Kelvin», «Centígrad»"
-" o «Fahrenheit»."
+"La unitat que s'utilitza per a la temperatura. Valors: «Kelvin», «Centígrad» "
+"o «Fahrenheit»."
 
 #: libcafeweather/org.cafe.weather.gschema.xml.in:86
 msgid "Not used anymore"
@@ -271,8 +268,7 @@ msgstr "Informació de la ubicació del temps."
 #. TRANSLATORS: Change this to the code of your default location
 #. that corresponds to the DEFAULT_LOCATION name you put above. This
 #. is normally a four-letter (ICAO) code and can be found in
-#. https://github.com/cafe-
-#. desktop/libcafeweather/blob/master/data/Locations.xml.in.
+#. https://github.com/cafe-desktop/libcafeweather/blob/master/data/Locations.xml.in.
 #. NB. The web page is over 1.7MB in size. Pick a default location
 #. like a capital city so that it would be ok for more of your users.
 #. For example, for Greek, we use "LGAV" for the capital city, Athens.
@@ -287,20 +283,17 @@ msgstr "Ciutat més propera"
 
 #: libcafeweather/org.cafe.weather.gschema.xml.in:117
 msgid ""
-"Nearby major zone, such as a capital city, as found from "
-"https://raw.github.com/cafe-"
-"desktop/libcafeweather/master/data/Locations.xml.in"
+"Nearby major zone, such as a capital city, as found from https://raw.github."
+"com/cafe-desktop/libcafeweather/master/data/Locations.xml.in"
 msgstr ""
-"A prop de la zona més gran, com una capital, tal com s'indica a "
-"https://raw.github.com/cafe-"
-"desktop/libcafeweather/master/data/Locations.xml.in"
+"A prop de la zona més gran, com una capital, tal com s'indica a https://raw."
+"github.com/cafe-desktop/libcafeweather/master/data/Locations.xml.in"
 
 #. TRANSLATORS: Change this to the zone of your default location
 #. that corresponds to the DEFAULT_LOCATION and DEFAULT_CODE you put
 #. above. Normally, US and Canada locations have zones while the rest
 #. do not. Check
-#. https://github.com/cafe-
-#. desktop/libcafeweather/blob/master/data/Locations.xml.in
+#. https://github.com/cafe-desktop/libcafeweather/blob/master/data/Locations.xml.in
 #. as any zone you put here must also be present in the Locations.xml
 #. file. If your default location does not have a zone, set this to
 #. "DEFAULT_ZONE".
@@ -317,15 +310,14 @@ msgid ""
 "A unique zone for the city, as found from https://raw.github.com/cafe-"
 "desktop/libcafeweather/master/data/Locations.xml.in"
 msgstr ""
-"Una zona única per a la ciutat, tal com s'indica a https://raw.github.com"
-"/cafe-desktop/libcafeweather/master/data/Locations.xml.in"
+"Una zona única per a la ciutat, tal com s'indica a https://raw.github.com/"
+"cafe-desktop/libcafeweather/master/data/Locations.xml.in"
 
 #. TRANSLATORS: Change this to the radar of your default location
 #. that corresponds to the DEFAULT_LOCATION and DEFAULT_CODE you put
 #. above. Normally, US and Canada locations have radar names while the
 #. rest do not. Check
-#. https://github.com/cafe-
-#. desktop/libcafeweather/blob/master/data/Locations.xml.in
+#. https://github.com/cafe-desktop/libcafeweather/blob/master/data/Locations.xml.in
 #. as any radar you put here must also be present in the Locations.xml
 #. file. If your default location does not have a radar, set this to
 #. " " (or space).
@@ -341,12 +333,12 @@ msgstr "Ubicació del radar"
 #: libcafeweather/org.cafe.weather.gschema.xml.in:144
 msgid ""
 "A three-digit-long code for retrieving radar maps from weather.com, found "
-"from https://raw.github.com/cafe-"
-"desktop/libcafeweather/master/data/Locations.xml.in"
+"from https://raw.github.com/cafe-desktop/libcafeweather/master/data/"
+"Locations.xml.in"
 msgstr ""
 "Un codi de tres dígits per a recuperar els mapes de radar de weather.com, "
-"tal com s'indica a https://raw.github.com/cafe-"
-"desktop/libcafeweather/master/data/Locations.xml.in"
+"tal com s'indica a https://raw.github.com/cafe-desktop/libcafeweather/master/"
+"data/Locations.xml.in"
 
 #: libcafeweather/org.cafe.weather.gschema.xml.in:148
 msgid "Weather for a city"
@@ -359,8 +351,7 @@ msgstr "De quina ciutat mostra informació el cafeweather."
 #. TRANSLATORS: Change this to the coordinates of your default
 #. location that corresponds to the DEFAULT_LOCATION and DEFAULT_CODE
 #. you put above. Check
-#. https://github.com/cafe-
-#. desktop/libcafeweather/blob/master/data/Locations.xml.in
+#. https://github.com/cafe-desktop/libcafeweather/blob/master/data/Locations.xml.in
 #. as any coordinates you put here must also be present in the
 #. Locations.xml file. If your default location does not have known
 #. coordinates, set this to " " (or space). If you do not have a
@@ -774,6 +765,7 @@ msgstr "Remolins de pols a les rodalies"
 
 #. Translators: this is a format string for strftime
 #. *             see `man 3 strftime` for more details
+#.
 #: libcafeweather/weather.c:712
 msgid "%a, %b %d / %H:%M"
 msgstr "%A, %d de %B / %H:%M"
@@ -792,29 +784,25 @@ msgstr "Hora d'observació desconeguda"
 msgid "Unknown"
 msgstr "Desconegut"
 
-#. Translators: This is the temperature in degrees Fahrenheit (\302\260 is
-#. U+00B0 DEGREE SIGN)
+#. Translators: This is the temperature in degrees Fahrenheit (\302\260 is U+00B0 DEGREE SIGN)
 #: libcafeweather/weather.c:763
 #, c-format
 msgid "%.1f °F"
 msgstr "%.1f °F"
 
-#. Translators: This is the temperature in degrees Fahrenheit (\302\260 is
-#. U+00B0 DEGREE SIGN)
+#. Translators: This is the temperature in degrees Fahrenheit (\302\260 is U+00B0 DEGREE SIGN)
 #: libcafeweather/weather.c:766
 #, c-format
 msgid "%d °F"
 msgstr "%d °F"
 
-#. Translators: This is the temperature in degrees Celsius (\302\260 is U+00B0
-#. DEGREE SIGN)
+#. Translators: This is the temperature in degrees Celsius (\302\260 is U+00B0 DEGREE SIGN)
 #: libcafeweather/weather.c:772
 #, c-format
 msgid "%.1f °C"
 msgstr "%.1f °C"
 
-#. Translators: This is the temperature in degrees Celsius (\302\260 is U+00B0
-#. DEGREE SIGN)
+#. Translators: This is the temperature in degrees Celsius (\302\260 is U+00B0 DEGREE SIGN)
 #: libcafeweather/weather.c:775
 #, c-format
 msgid "%d °C"
@@ -864,6 +852,7 @@ msgstr "%1.f m/s"
 
 #. Translators: This is the wind speed as a Beaufort force factor
 #. * (commonly used in nautical wind estimation).
+#.
 #: libcafeweather/weather.c:912
 #, c-format
 msgid "Beaufort force %.1f"
