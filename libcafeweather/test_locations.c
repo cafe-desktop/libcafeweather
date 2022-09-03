@@ -5,7 +5,7 @@
 #include "timezone-menu.h"
 
 static void
-deleted (CtkWidget *widget, GdkEvent *event, gpointer data)
+deleted (CtkWidget *widget, CdkEvent *event, gpointer data)
 {
     ctk_main_quit ();
 }
