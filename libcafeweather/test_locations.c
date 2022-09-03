@@ -37,23 +37,23 @@ main (int argc, char **argv)
     CtkWidget *combo;
     ctk_init (&argc, &argv);
 
-    window = ctk_window_new (GTK_WINDOW_TOPLEVEL);
-    ctk_window_set_title (GTK_WINDOW (window), "location");
-    ctk_container_set_border_width (GTK_CONTAINER (window), 8);
+    window = ctk_window_new (CTK_WINDOW_TOPLEVEL);
+    ctk_window_set_title (CTK_WINDOW (window), "location");
+    ctk_container_set_border_width (CTK_CONTAINER (window), 8);
     g_signal_connect (window, "delete-event",
 		      G_CALLBACK (deleted), NULL);
 
-    vbox = ctk_box_new (GTK_ORIENTATION_VERTICAL, 8);
-    ctk_container_add (GTK_CONTAINER (window), vbox);
+    vbox = ctk_box_new (CTK_ORIENTATION_VERTICAL, 8);
+    ctk_container_add (CTK_CONTAINER (window), vbox);
 
     loc = cafeweather_location_new_world (FALSE);
     entry = cafeweather_location_entry_new (loc);
     ctk_widget_set_size_request (entry, 400, -1);
-    ctk_box_pack_start (GTK_BOX (vbox), entry, FALSE, TRUE, 0);
+    ctk_box_pack_start (CTK_BOX (vbox), entry, FALSE, TRUE, 0);
 
     combo = cafeweather_timezone_menu_new (loc);
     cafeweather_location_unref (loc);
-    ctk_box_pack_start (GTK_BOX (vbox), combo, FALSE, TRUE, 0);
+    ctk_box_pack_start (CTK_BOX (vbox), combo, FALSE, TRUE, 0);
 
     g_signal_connect (entry, "notify::location",
 		      G_CALLBACK (location_changed), combo);

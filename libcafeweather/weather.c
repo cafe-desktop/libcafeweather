@@ -1259,7 +1259,7 @@ weather_info_get_icon_name (WeatherInfo *info)
 	/*
 	 * If the moon is not full then append the angle to the icon string.
 	 * Note that an icon by this name is not required to exist:
-	 * the caller can use GTK_ICON_LOOKUP_GENERIC_FALLBACK to fall back to
+	 * the caller can use CTK_ICON_LOOKUP_GENERIC_FALLBACK to fall back to
 	 * the full moon image.
 	 */
 	if ((0 == (MOON_PHASES & 0x1)) && (MOON_PHASES/2 != phase)) {

@@ -22,7 +22,7 @@ AC_SUBST(LT_VERSION)
 AC_CANONICAL_HOST
 
 GLIB_REQUIRED=2.50.0
-GTK_REQUIRED=3.22.0
+CTK_REQUIRED=3.22.0
 LIBSOUP_REQUIRED=2.34.0
 GIO_REQUIRED=2.25.0
 LIBXML_REQUIRED=2.6.0
@@ -58,8 +58,8 @@ AC_SUBST(COMPRESS_EXT)
 
 CAFE_COMPILE_WARNINGS
 
-dnl -- Check for GTK+ (required) ------------------------------------------
-PKG_CHECK_MODULES(GTK, ctk+-3.0 >= $GTK_REQUIRED)
+dnl -- Check for CTK+ (required) ------------------------------------------
+PKG_CHECK_MODULES(CTK, ctk+-3.0 >= $CTK_REQUIRED)
 
 dnl -- Check for libxml (required) ------------------------------------------
 PKG_CHECK_MODULES(LIBXML, libxml-2.0 >= $LIBXML_REQUIRED)
@@ -162,7 +162,7 @@ AC_SUBST(GLADEDIR)
 ##################################################
 # Checks for ctk-doc and docbook-tools
 ##################################################
-GTK_DOC_CHECK([1.11], [--flavour no-tmpl])
+CTK_DOC_CHECK([1.11], [--flavour no-tmpl])
 
 dnl ***************************************************************************
 dnl *** Output Makefiles et al                                              ***

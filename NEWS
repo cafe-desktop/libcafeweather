@@ -80,10 +80,10 @@
 
   * NEWS: use consistent, project wide, markdown-like formatting
     to make generating release announcements easier
-  * Move to GTK+3 (require GTK+ >= 3.14), drop GTK+2 code and
+  * Move to CTK+3 (require CTK+ >= 3.14), drop CTK+2 code and
     --with-ctk build option
   * Drop Python bindings and --enable-python build option (won't
-    work with GTK+3)
+    work with CTK+3)
   * Locations: add Dunedin, New Zealand
   * Locations: add Yogyakarta, Indonesia
   * Locations: move Indonesia under Asia region
@@ -119,7 +119,7 @@
     is discontinued
   * Locations: correct Russian translation and tz-hint for Shymkent
   * Translations update
-  * Make distcheck use currently selected GTK+ version
+  * Make distcheck use currently selected CTK+ version
 
 ### libcafeweather 1.14.0
 
@@ -145,4 +145,4 @@
 ### libcafeweather 1.8.0
 
   * Drop libsoup-gnome dependency
-  * Add GTK3 support
+  * Add CTK3 support

@@ -3,7 +3,7 @@ lib_LTLIBRARIES = libcafeweather.la
 noinst_PROGRAMS = test_metar test_locations test_sun_moon
 
 AM_CPPFLAGS = 			\
-	$(GTK_CFLAGS)		\
+	$(CTK_CFLAGS)		\
 	-I$(top_srcdir)		\
 	-I$(srcdir)
 
@@ -47,7 +47,7 @@ libcafeweather_la_CPPFLAGS = \
 
 libcafeweather_la_LIBADD = \
 	-lm		\
-	$(GTK_LIBS)	\
+	$(CTK_LIBS)	\
 	$(LIBXML_LIBS)	\
 	$(LIBSOUP_LIBS)	\
 	$(GIO_LIBS) \
@@ -58,14 +58,14 @@ libcafeweather_la_LDFLAGS = \
 
 test_metar_SOURCES = test_metar.c
 test_metar_CPPFLAGS = $(AM_CPPFLAGS) $(LIBSOUP_CFLAGS)
-test_metar_LDADD = libcafeweather.la $(GTK_LIBS)
+test_metar_LDADD = libcafeweather.la $(CTK_LIBS)
 
 test_locations_SOURCES = test_locations.c
-test_locations_LDADD = libcafeweather.la $(GTK_LIBS)
+test_locations_LDADD = libcafeweather.la $(CTK_LIBS)
 
 test_sun_moon_SOURCES = test_sun_moon.c
 test_sun_moon_CPPFLAGS = $(AM_CPPFLAGS) $(LIBSOUP_CFLAGS)
-test_sun_moon_LDADD = libcafeweather.la $(GTK_LIBS) $(LIBM)
+test_sun_moon_LDADD = libcafeweather.la $(CTK_LIBS) $(LIBM)
 
 cafeweather-enum-types.h: $(cafeweather_new_headers)
 	$(AM_V_GEN)( cd $(srcdir) && $(GLIB_MKENUMS) --template cafeweather-enum-types.h.tmpl \
