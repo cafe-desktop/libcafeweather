@@ -13,7 +13,7 @@ DOC_MODULE=libcafeweather
 DOC_MAIN_SGML_FILE=$(DOC_MODULE)-docs.sgml
 
 # The directory containing the source code. Relative to $(srcdir).
-# ctk-doc will search all .c & .h files beneath here for inline comments
+# gtk-doc will search all .c & .h files beneath here for inline comments
 # documenting the functions and macros.
 # e.g. DOC_SOURCE_DIR=../../../ctk
 DOC_SOURCE_DIR=../libcafeweather
@@ -58,7 +58,7 @@ HTML_IMAGES=
 # e.g. content_files=running.sgml building.sgml changes-2.0.sgml
 content_files=
 
-# SGML files where ctk-doc abbrevations (#CtkWidget) are expanded
+# SGML files where gtk-doc abbrevations (#CtkWidget) are expanded
 # These files must be listed here *and* in content_files
 # e.g. expand_content_files=running.sgml
 expand_content_files=
@@ -71,8 +71,8 @@ expand_content_files=
 CTKDOC_CFLAGS = -I$(top_srcdir) $(CTK_CFLAGS) $(LIBXML_CFLAGS) $(LIBSOUP_CFLAGS) -DCAFEWEATHER_I_KNOW_THIS_IS_UNSTABLE
 CTKDOC_LIBS = $(top_builddir)/libcafeweather/libcafeweather.la $(CTK_LIBS) $(LIBXML_LIBS) $(LIBSOUP_LIBS)
 
-# This includes the standard ctk-doc make rules, copied by ctkdocize.
-include $(top_srcdir)/ctk-doc.make
+# This includes the standard gtk-doc make rules, copied by ctkdocize.
+include $(top_srcdir)/gtk-doc.make
 
 # Other files to distribute
 # e.g. EXTRA_DIST += version.xml.in

@@ -16,7 +16,7 @@ requires:
     - gcc
     - intltool
     - git
-    - ctk-doc-tools
+    - gtk-doc-tools
     - libglib2.0-dev
     - libctk-3-dev
     - libsoup-gnome2.4-dev
