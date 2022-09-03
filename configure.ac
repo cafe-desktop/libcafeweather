@@ -160,7 +160,7 @@ AC_SUBST(LIBDIR)
 AC_SUBST(GLADEDIR)
 
 ##################################################
-# Checks for ctk-doc and docbook-tools
+# Checks for gtk-doc and docbook-tools
 ##################################################
 CTK_DOC_CHECK([1.11], [--flavour no-tmpl])
 
