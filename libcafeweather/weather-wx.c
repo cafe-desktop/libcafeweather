@@ -28,7 +28,7 @@ static void
 wx_finish (SoupSession *session, SoupMessage *msg, gpointer data)
 {
     WeatherInfo *info = (WeatherInfo *)data;
-    CdkPixbufAnimation *animation;
+    GdkPixbufAnimation *animation;
 
     g_return_if_fail (info != NULL);
 
