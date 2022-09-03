@@ -1098,7 +1098,7 @@ weather_info_get_forecast_list (WeatherInfo *info)
     return info->forecast_list;
 }
 
-CdkPixbufAnimation *
+GdkPixbufAnimation *
 weather_info_get_radar (WeatherInfo *info)
 {
     g_return_val_if_fail (info != NULL, NULL);
