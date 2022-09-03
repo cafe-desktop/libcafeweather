@@ -40,8 +40,8 @@ wx_finish (SoupSession *session, SoupMessage *msg, gpointer data)
 	return;
     }
 
-    cdk_pixbuf_loader_close (info->radar_loader, NULL);
-    animation = cdk_pixbuf_loader_get_animation (info->radar_loader);
+    gdk_pixbuf_loader_close (info->radar_loader, NULL);
+    animation = gdk_pixbuf_loader_get_animation (info->radar_loader);
     if (animation != NULL) {
 	if (info->radar)
 	    g_object_unref (info->radar);
@@ -61,7 +61,7 @@ wx_got_chunk (SoupMessage *msg, SoupBuffer *chunk, gpointer data)
 
     g_return_if_fail (info != NULL);
 
-    cdk_pixbuf_loader_write (info->radar_loader, (guchar *)chunk->data,
+    gdk_pixbuf_loader_write (info->radar_loader, (guchar *)chunk->data,
 			     chunk->length, &error);
     if (error) {
 	g_print ("%s \n", error->message);
@@ -79,7 +79,7 @@ wx_start_open (WeatherInfo *info)
 
     g_return_if_fail (info != NULL);
     info->radar = NULL;
-    info->radar_loader = cdk_pixbuf_loader_new ();
+    info->radar_loader = gdk_pixbuf_loader_new ();
     loc = info->location;
     g_return_if_fail (loc != NULL);
 
