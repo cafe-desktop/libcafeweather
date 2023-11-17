@@ -24,7 +24,6 @@
 #include <time.h>
 #include <libintl.h>
 #include <math.h>
-#include <libsoup/soup.h>
 
 #include "weather.h"
 #include "cafeweather-location.h"
