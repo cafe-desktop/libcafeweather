@@ -64,9 +64,6 @@ PKG_CHECK_MODULES(CTK, ctk+-3.0 >= $CTK_REQUIRED)
 dnl -- Check for libxml (required) ------------------------------------------
 PKG_CHECK_MODULES(LIBXML, libxml-2.0 >= $LIBXML_REQUIRED)
 
-dnl -- check for libsoup (required) -----------------------------------------
-PKG_CHECK_MODULES(LIBSOUP, [libsoup-2.4 >= $LIBSOUP_REQUIRED])
-
 dnl -- check for gio (required) -----------------------------------------
 PKG_CHECK_MODULES(GIO,
 		  [gio-2.0 >= $GIO_REQUIRED])
