@@ -23,7 +23,7 @@ AC_CANONICAL_HOST
 
 GLIB_REQUIRED=2.50.0
 CTK_REQUIRED=3.22.0
-LIBSOUP_REQUIRED=2.34.0
+LIBSOUP_REQUIRED=3.4.4
 GIO_REQUIRED=2.25.0
 LIBXML_REQUIRED=2.6.0
 
@@ -65,7 +65,7 @@ dnl -- Check for libxml (required) ------------------------------------------
 PKG_CHECK_MODULES(LIBXML, libxml-2.0 >= $LIBXML_REQUIRED)
 
 dnl -- check for libsoup (required) -----------------------------------------
-PKG_CHECK_MODULES(LIBSOUP, [libsoup-2.4 >= $LIBSOUP_REQUIRED])
+PKG_CHECK_MODULES(LIBSOUP, [libsoup-3.0 >= $LIBSOUP_REQUIRED])
 
 dnl -- check for gio (required) -----------------------------------------
 PKG_CHECK_MODULES(GIO,

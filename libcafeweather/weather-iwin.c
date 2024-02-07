@@ -380,26 +380,37 @@ parseForecastXml (const char *buff, WeatherInfo *master_info)
 }
 
 static void
-iwin_finish (SoupSession *session, SoupMessage *msg, gpointer data)
+iwin_finish (GObject *object, GAsyncResult *result, gpointer data)
 {
+    SoupSession *session = SOUP_SESSION (object);
+    SoupMessage *msg = soup_session_get_async_result_message (session, result);
     WeatherInfo *info = (WeatherInfo *)data;
+    GBytes *response_body = NULL;
+    const gchar *msgdata;
 
     g_return_if_fail (info != NULL);
 
-    if (!SOUP_STATUS_IS_SUCCESSFUL (msg->status_code)) {
+    response_body = soup_session_send_and_read_finish (session, result, NULL);
+
+    if (!SOUP_STATUS_IS_SUCCESSFUL (soup_message_get_status (msg))) {
         /* forecast data is not really interesting anyway ;) */
         g_warning ("Failed to get IWIN forecast data: %d %s\n",
-                   msg->status_code, msg->reason_phrase);
+                   soup_message_get_status (msg), soup_message_get_reason_phrase (msg));
         request_done (info, FALSE);
+        g_bytes_unref (response_body);
         return;
     }
 
+    msgdata = g_bytes_get_data (response_body, NULL);
+
     if (info->forecast_type == FORECAST_LIST)
-        info->forecast_list = parseForecastXml (msg->response_body->data, info);
+        info->forecast_list = parseForecastXml (msgdata, info);
     else
-        info->forecast = formatWeatherMsg (g_strdup (msg->response_body->data));
+        info->forecast = formatWeatherMsg (g_strdup (msgdata));
 
     request_done (info, TRUE);
+
+    g_bytes_unref (response_body);
 }
 
 /* Get forecast into newly alloc'ed string */
@@ -437,7 +448,7 @@ iwin_start_open (WeatherInfo *info)
 
             msg = soup_message_new ("GET", url);
             g_free (url);
-            soup_session_queue_message (info->session, msg, iwin_finish, info);
+            soup_session_send_and_read_async (info->session, msg, G_PRIORITY_DEFAULT, NULL, iwin_finish, info);
 
             info->requests_pending++;
         }
@@ -469,7 +480,7 @@ iwin_start_open (WeatherInfo *info)
 
     msg = soup_message_new ("GET", url);
     g_free (url);
-    soup_session_queue_message (info->session, msg, iwin_finish, info);
+    soup_session_send_and_read_async (info->session, msg, G_PRIORITY_DEFAULT, NULL, iwin_finish, info);
 
     info->requests_pending++;
 }

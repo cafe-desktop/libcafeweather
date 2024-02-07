@@ -27,21 +27,31 @@
 #include "weather-priv.h"
 
 static void
-bom_finish (SoupSession *session, SoupMessage *msg, gpointer data)
+bom_finish (GObject *object, GAsyncResult *result, gpointer data)
 {
     char *p, *rp;
+    SoupSession *session = SOUP_SESSION (object);
+    SoupMessage *msg = soup_session_get_async_result_message (session, result);
     WeatherInfo *info = (WeatherInfo *)data;
+    GBytes *response_body = NULL;
+    const gchar *msgdata;
 
     g_return_if_fail (info != NULL);
 
-    if (!SOUP_STATUS_IS_SUCCESSFUL (msg->status_code)) {
+    response_body = soup_session_send_and_read_finish (session, result, NULL);
+
+    if (!SOUP_STATUS_IS_SUCCESSFUL (soup_message_get_status (msg))) {
         g_warning ("Failed to get BOM forecast data: %d %s.\n",
-		   msg->status_code, msg->reason_phrase);
+                   soup_message_get_status (msg), soup_message_get_reason_phrase (msg));
         request_done (info, FALSE);
-	return;
+        g_bytes_unref (response_body);
+        return;
     }
 
-    p = strstr (msg->response_body->data, "Forecast for the rest");
+    msgdata = g_bytes_get_data (response_body, NULL);
+
+    p = strstr (msgdata, "Forecast for the rest");
+
     if (p != NULL) {
         rp = strstr (p, "The next routine forecast will be issued");
         if (rp == NULL)
@@ -51,10 +61,12 @@ bom_finish (SoupSession *session, SoupMessage *msg, gpointer data)
     }
 
     if (info->forecast == NULL)
-        info->forecast = g_strdup (msg->response_body->data);
+        info->forecast = g_strdup (msgdata);
 
     g_print ("%s\n",  info->forecast);
     request_done (info, TRUE);
+
+    g_bytes_unref (response_body);
 }
 
 void
@@ -70,7 +82,7 @@ bom_start_open (WeatherInfo *info)
 			   loc->zone + 1);
 
     msg = soup_message_new ("GET", url);
-    soup_session_queue_message (info->session, msg, bom_finish, info);
+    soup_session_send_and_read_async (info->session, msg, G_PRIORITY_DEFAULT, NULL, bom_finish, info);
     g_free (url);
 
     info->requests_pending++;

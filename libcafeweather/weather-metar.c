@@ -486,33 +486,40 @@ metar_parse (gchar *metar, WeatherInfo *info)
 }
 
 static void
-metar_finish (SoupSession *session, SoupMessage *msg, gpointer data)
+metar_finish (GObject *object, GAsyncResult *result, gpointer data)
 {
+    SoupSession *session = SOUP_SESSION (object);
+    SoupMessage *msg = soup_session_get_async_result_message (session, result);
     WeatherInfo *info = (WeatherInfo *)data;
     WeatherLocation *loc;
     const gchar *p, *endtag;
     gchar *searchkey, *metar;
     gboolean success = FALSE;
+    GBytes *response_body = NULL;
+    const gchar *msgdata;
 
     g_return_if_fail (info != NULL);
 
-    if (!SOUP_STATUS_IS_SUCCESSFUL (msg->status_code)) {
-        if (SOUP_STATUS_IS_TRANSPORT_ERROR (msg->status_code))
-            info->network_error = TRUE;
-        else {
-            /* Translators: %d is an error code, and %s the error string */
-            g_warning (_("Failed to get METAR data: %d %s.\n"),
-                       msg->status_code, msg->reason_phrase);
-        }
+    response_body = soup_session_send_and_read_finish (session, result, NULL);
+
+    if (!SOUP_STATUS_IS_SUCCESSFUL (soup_message_get_status (msg))) {
+        /* Translators: %d is an error code, and %s the error string */
+        g_warning (_("Failed to get METAR data: %d %s.\n"),
+                   soup_message_get_status (msg), soup_message_get_reason_phrase (msg));
+
         request_done (info, FALSE);
+        g_bytes_unref (response_body);
         return;
     }
 
     loc = info->location;
 
+    msgdata = g_bytes_get_data (response_body, NULL);
+
     searchkey = g_strdup_printf ("<raw_text>%s", loc->code);
-    p = strstr (msg->response_body->data, searchkey);
+    p = strstr (msgdata, searchkey);
     g_free (searchkey);
+
     if (p) {
         p += WEATHER_LOCATION_CODE_LEN + 11;
         endtag = strstr (p, "</raw_text>");
@@ -522,7 +529,7 @@ metar_finish (SoupSession *session, SoupMessage *msg, gpointer data)
             metar = g_strdup (p);
         success = metar_parse (metar, info);
         g_free (metar);
-    } else if (!strstr (msg->response_body->data, "aviationweather.gov")) {
+    } else if (!strstr (msgdata, "aviationweather.gov")) {
         /* The response doesn't even seem to have come from NOAA...
          * most likely it is a wifi hotspot login page. Call that a
          * network error.
@@ -532,6 +539,7 @@ metar_finish (SoupSession *session, SoupMessage *msg, gpointer data)
 
     info->valid = success;
     request_done (info, TRUE);
+    g_bytes_unref (response_body);
 }
 
 /* Read current conditions and fill in info structure */
@@ -540,6 +548,7 @@ metar_start_open (WeatherInfo *info)
 {
     WeatherLocation *loc;
     SoupMessage *msg;
+    gchar *query;
 
     g_return_if_fail (info != NULL);
     info->valid = info->network_error = FALSE;
@@ -549,17 +558,21 @@ metar_start_open (WeatherInfo *info)
         return;
     }
 
-    msg = soup_form_request_new (
-        "GET", "https://www.aviationweather.gov/cgi-bin/data/dataserver.php",
-        "dataSource", "metars",
-        "requestType", "retrieve",
-        "format", "xml",
-        "hoursBeforeNow", "3",
-        "mostRecent", "true",
-        "fields", "raw_text",
-        "stationString", loc->code,
-        NULL);
-    soup_session_queue_message (info->session, msg, metar_finish, info);
+    query = soup_form_encode (
+            "dataSource", "metars",
+            "requestType", "retrieve",
+            "format", "xml",
+            "hoursBeforeNow", "3",
+            "mostRecent", "true",
+            "fields", "raw_text",
+            "stationString", loc->code,
+            NULL);
+
+    msg = soup_message_new_from_encoded_form (SOUP_METHOD_GET, "https://www.aviationweather.gov/cgi-bin/data/dataserver.php", query);
+
+    soup_session_send_and_read_async (info->session, msg, G_PRIORITY_DEFAULT, NULL, metar_finish, info);
 
     info->requests_pending++;
+
+    g_free (query);
 }

@@ -18,7 +18,7 @@ requires:
     - git
     - gtk-doc-tools
     - libglib2.0-dev
-    - libsoup2.4-dev
+    - libsoup-3.0-dev
     - libtool
     - libxml2-dev
     - libxml2-utils

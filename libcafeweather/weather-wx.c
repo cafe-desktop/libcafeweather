@@ -25,23 +25,30 @@
 #include "weather-priv.h"
 
 static void
-wx_finish (SoupSession *session, SoupMessage *msg, gpointer data)
+wx_finish (GObject *object, GAsyncResult *result, gpointer data)
 {
+    SoupSession *session = SOUP_SESSION (object);
+    SoupMessage *msg = soup_session_get_async_result_message (session, result);
     WeatherInfo *info = (WeatherInfo *)data;
     GdkPixbufAnimation *animation;
+    GBytes *response_body = NULL;
 
     g_return_if_fail (info != NULL);
 
-    if (!SOUP_STATUS_IS_SUCCESSFUL (msg->status_code)) {
-	g_warning ("Failed to get radar map image: %d %s.\n",
-		   msg->status_code, msg->reason_phrase);
-	g_object_unref (info->radar_loader);
-	request_done (info, FALSE);
-	return;
+    response_body = soup_session_send_and_read_finish (session, result, NULL);
+
+    if (!SOUP_STATUS_IS_SUCCESSFUL (soup_message_get_status (msg))) {
+        g_warning ("Failed to get radar map image: %d %s.\n",
+                   soup_message_get_status (msg), soup_message_get_reason_phrase (msg));
+        g_object_unref (info->radar_loader);
+        request_done (info, FALSE);
+        g_bytes_unref (response_body);
+        return;
     }
 
     gdk_pixbuf_loader_close (info->radar_loader, NULL);
     animation = gdk_pixbuf_loader_get_animation (info->radar_loader);
+
     if (animation != NULL) {
 	if (info->radar)
 	    g_object_unref (info->radar);
@@ -51,18 +58,22 @@ wx_finish (SoupSession *session, SoupMessage *msg, gpointer data)
     g_object_unref (info->radar_loader);
 
     request_done (info, TRUE);
+    g_bytes_unref (response_body);
 }
 
 static void
-wx_got_chunk (SoupMessage *msg, SoupBuffer *chunk, gpointer data)
+wx_got_chunk (SoupServerMessage *msg, GBytes *chunk, gpointer data)
 {
     WeatherInfo *info = (WeatherInfo *)data;
+    const gchar *msgdata;
     GError *error = NULL;
+
+    msgdata = g_bytes_get_data (chunk, NULL);
 
     g_return_if_fail (info != NULL);
 
-    gdk_pixbuf_loader_write (info->radar_loader, (guchar *)chunk->data,
-			     chunk->length, &error);
+    gdk_pixbuf_loader_write (info->radar_loader, (guchar *) msgdata,
+			     (gsize) chunk, &error);
     if (error) {
 	g_print ("%s \n", error->message);
 	g_error_free (error);
@@ -99,8 +110,7 @@ wx_start_open (WeatherInfo *info)
     }
 
     g_signal_connect (msg, "got-chunk", G_CALLBACK (wx_got_chunk), info);
-    soup_message_body_set_accumulate (msg->response_body, FALSE);
-    soup_session_queue_message (info->session, msg, wx_finish, info);
+    soup_session_send_and_read_async (info->session, msg, G_PRIORITY_DEFAULT, NULL, wx_finish, info);
     g_free (url);
 
     info->requests_pending++;
