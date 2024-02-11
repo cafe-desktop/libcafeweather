@@ -1,0 +1,4 @@
+weather-metar: dataserver url changed
+
+based in libmateweather commit:
+https://github.com/mate-desktop/libmateweather/commit/0cc07f7e5163870bcc2fb7281c28e8e39c9cbc54
