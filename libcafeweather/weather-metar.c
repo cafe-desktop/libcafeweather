@@ -573,6 +573,4 @@ metar_start_open (WeatherInfo *info)
     soup_session_send_and_read_async (info->session, msg, G_PRIORITY_DEFAULT, NULL, metar_finish, info);
 
     info->requests_pending++;
-
-    g_free (query);
 }
