@@ -1,0 +1,4 @@
+weather-metar: Fix behavior since libsoup 3.5.0
+
+This change is needed since the libsoup commit:
+https://gitlab.gnome.org/GNOME/libsoup/-/commit/7f34687a13a8d112624829387820cc4665eebf4c
