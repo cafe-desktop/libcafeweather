@@ -62,7 +62,9 @@ wx_finish (GObject *object, GAsyncResult *result, gpointer data)
 }
 
 static void
-wx_got_chunk (SoupServerMessage *msg, GBytes *chunk, gpointer data)
+wx_got_chunk (SoupServerMessage *msg G_GNUC_UNUSED,
+	      GBytes            *chunk,
+	      gpointer           data)
 {
     WeatherInfo *info = (WeatherInfo *)data;
     const gchar *msgdata;

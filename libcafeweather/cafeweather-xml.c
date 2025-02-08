@@ -140,7 +140,10 @@ cafeweather_xml_load_locations (void)
 }
 
 static gboolean
-free_locations (CtkTreeModel *model, CtkTreePath *path, CtkTreeIter *iter, gpointer data)
+free_locations (CtkTreeModel *model,
+		CtkTreePath  *path G_GNUC_UNUSED,
+		CtkTreeIter  *iter,
+		gpointer      data G_GNUC_UNUSED)
 {
 	WeatherLocation *loc = NULL;
 

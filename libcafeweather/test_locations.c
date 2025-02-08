@@ -5,13 +5,17 @@
 #include "timezone-menu.h"
 
 static void
-deleted (CtkWidget *widget, CdkEvent *event, gpointer data)
+deleted (CtkWidget *widget G_GNUC_UNUSED,
+	 CdkEvent  *event G_GNUC_UNUSED,
+	 gpointer   data G_GNUC_UNUSED)
 {
     ctk_main_quit ();
 }
 
 static void
-location_changed (GObject *object, GParamSpec *param, gpointer tzmenu)
+location_changed (GObject    *object,
+		  GParamSpec *param G_GNUC_UNUSED,
+		  gpointer    tzmenu)
 {
     CafeWeatherLocationEntry *entry = CAFEWEATHER_LOCATION_ENTRY (object);
     CafeWeatherLocation *loc;

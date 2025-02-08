@@ -513,8 +513,8 @@ cafeweather_location_get_children (CafeWeatherLocation *loc)
  * Deprecated: This is a no-op.
  **/
 void
-cafeweather_location_free_children (CafeWeatherLocation  *loc,
-				 CafeWeatherLocation **children)
+cafeweather_location_free_children (CafeWeatherLocation  *loc G_GNUC_UNUSED,
+				    CafeWeatherLocation **children G_GNUC_UNUSED)
 {
     ;
 }

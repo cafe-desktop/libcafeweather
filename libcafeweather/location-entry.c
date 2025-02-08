@@ -516,8 +516,10 @@ find_word (const char *full_name, const char *word, int word_len,
 }
 
 static gboolean
-matcher (CtkEntryCompletion *completion, const char *key,
-	 CtkTreeIter *iter, gpointer user_data)
+matcher (CtkEntryCompletion *completion,
+	 const char         *key,
+	 CtkTreeIter        *iter,
+	 gpointer            user_data G_GNUC_UNUSED)
 {
     char *name, *name_mem;
     CafeWeatherLocation *loc;
@@ -563,7 +565,7 @@ matcher (CtkEntryCompletion *completion, const char *key,
 }
 
 static gboolean
-match_selected (CtkEntryCompletion *completion,
+match_selected (CtkEntryCompletion *completion G_GNUC_UNUSED,
 		CtkTreeModel       *model,
 		CtkTreeIter        *iter,
 		gpointer            entry)

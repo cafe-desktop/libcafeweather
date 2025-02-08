@@ -299,7 +299,9 @@ cafeweather_timezone_model_new (CafeWeatherLocation *top)
 }
 
 static gboolean
-row_separator_func (CtkTreeModel *model, CtkTreeIter *iter, gpointer data)
+row_separator_func (CtkTreeModel *model,
+		    CtkTreeIter  *iter,
+		    gpointer      data G_GNUC_UNUSED)
 {
     char *name;
 
@@ -314,8 +316,11 @@ row_separator_func (CtkTreeModel *model, CtkTreeIter *iter, gpointer data)
 }
 
 static void
-is_sensitive (CtkCellLayout *cell_layout, CtkCellRenderer *cell,
-	      CtkTreeModel *tree_model, CtkTreeIter *iter, gpointer data)
+is_sensitive (CtkCellLayout   *cell_layout G_GNUC_UNUSED,
+	      CtkCellRenderer *cell,
+	      CtkTreeModel    *tree_model,
+	      CtkTreeIter     *iter,
+	      gpointer         data G_GNUC_UNUSED)
 {
     gboolean sensitive;
 
@@ -349,8 +354,10 @@ typedef struct {
 } SetTimezoneData;
 
 static gboolean
-check_tzid (CtkTreeModel *model, CtkTreePath *path,
-	    CtkTreeIter *iter, gpointer data)
+check_tzid (CtkTreeModel *model,
+	    CtkTreePath  *path G_GNUC_UNUSED,
+	    CtkTreeIter  *iter,
+	    gpointer      data)
 {
     SetTimezoneData *tzd = data;
     CafeWeatherTimezone *zone;
