@@ -11,9 +11,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: libcafeweather 1.23.0\n"
+"Project-Id-Version: libcafeweather 2.0.0\n"
 "Report-Msgid-Bugs-To: https://cafe-desktop.org\n"
-"POT-Creation-Date: 2022-09-03 17:08+0200\n"
+"POT-Creation-Date: 2025-02-10 13:07+0100\n"
 "PO-Revision-Date: 2020-02-14 13:12+0000\n"
 "Last-Translator: liushuyu011 <liushuyu011@gmail.com>, 2020\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/cafe/teams/13566/"
@@ -275,8 +275,8 @@ msgstr "临近城市"
 
 #: libcafeweather/org.cafe.weather.gschema.xml.in:117
 msgid ""
-"Nearby major zone, such as a capital city, as found from https://raw.github."
-"com/cafe-desktop/libcafeweather/master/data/Locations.xml.in"
+"Nearby major zone, such as a capital city, as found from https://"
+"raw.github.com/cafe-desktop/libcafeweather/master/data/Locations.xml.in"
 msgstr ""
 "附近的主要城市，比如一个首都或省会，可在 https://raw.github.com/cafe-desktop/"
 "libcafeweather/master/data/Locations.xml.in 中查询"
@@ -385,12 +385,12 @@ msgid "Unknown"
 msgstr "未知"
 
 #. Translators: %d is an error code, and %s the error string
-#: libcafeweather/weather-metar.c:504
+#: libcafeweather/weather-metar.c:507
 #, c-format
 msgid "Failed to get METAR data: %d %s.\n"
 msgstr "获取 METAR 数据失败：%d %s。\n"
 
-#: libcafeweather/weather-metar.c:548
+#: libcafeweather/weather-metar.c:557
 msgid "WeatherInfo missing location"
 msgstr "天气信息缺少位置"
 

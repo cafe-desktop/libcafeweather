@@ -14,9 +14,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: libcafeweather 1.23.0\n"
+"Project-Id-Version: libcafeweather 2.0.0\n"
 "Report-Msgid-Bugs-To: https://cafe-desktop.org\n"
-"POT-Creation-Date: 2022-09-03 17:08+0200\n"
+"POT-Creation-Date: 2025-02-10 13:07+0100\n"
 "PO-Revision-Date: 2020-02-14 13:12+0000\n"
 "Last-Translator: semicolon <mail@semicln.com>, 2020\n"
 "Language-Team: Japanese (https://www.transifex.com/cafe/teams/13566/ja/)\n"
@@ -278,8 +278,8 @@ msgstr "近隣都市"
 
 #: libcafeweather/org.cafe.weather.gschema.xml.in:117
 msgid ""
-"Nearby major zone, such as a capital city, as found from https://raw.github."
-"com/cafe-desktop/libcafeweather/master/data/Locations.xml.in"
+"Nearby major zone, such as a capital city, as found from https://"
+"raw.github.com/cafe-desktop/libcafeweather/master/data/Locations.xml.in"
 msgstr ""
 "首都などの、近くの有名なゾーンです。詳細は https://raw.github.com/cafe-"
 "desktop/libcafeweather/master/data/Locations.xml.in を参照してください。"
@@ -332,8 +332,8 @@ msgid ""
 "Locations.xml.in"
 msgstr ""
 "weather.com からレーダー・マップを取得するのに必要な３桁の数値です。詳細は "
-"https://raw.github.com/cafe-desktop/libcafeweather/master/data/Locations.xml."
-"in を参照して下さい。"
+"https://raw.github.com/cafe-desktop/libcafeweather/master/data/"
+"Locations.xml.in を参照して下さい。"
 
 #: libcafeweather/org.cafe.weather.gschema.xml.in:148
 msgid "Weather for a city"
@@ -390,12 +390,12 @@ msgid "Unknown"
 msgstr "不明"
 
 #. Translators: %d is an error code, and %s the error string
-#: libcafeweather/weather-metar.c:504
+#: libcafeweather/weather-metar.c:507
 #, c-format
 msgid "Failed to get METAR data: %d %s.\n"
 msgstr "METAR データの取得に失敗しました: (%d) %s\n"
 
-#: libcafeweather/weather-metar.c:548
+#: libcafeweather/weather-metar.c:557
 msgid "WeatherInfo missing location"
 msgstr "天気情報の場所が指定されていません"
 

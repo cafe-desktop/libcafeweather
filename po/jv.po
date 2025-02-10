@@ -5,9 +5,9 @@
 # Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: CAFE Desktop Environment\n"
+"Project-Id-Version: libcafeweather 2.0.0\n"
 "Report-Msgid-Bugs-To: https://cafe-desktop.org\n"
-"POT-Creation-Date: 2022-09-03 17:08+0200\n"
+"POT-Creation-Date: 2025-02-10 13:07+0100\n"
 "PO-Revision-Date: 2017-09-22 02:12+0000\n"
 "Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
 "Language-Team: Javanese (http://www.transifex.com/cafe/CAFE/language/jv/)\n"
@@ -267,8 +267,8 @@ msgstr ""
 
 #: libcafeweather/org.cafe.weather.gschema.xml.in:117
 msgid ""
-"Nearby major zone, such as a capital city, as found from https://raw.github."
-"com/cafe-desktop/libcafeweather/master/data/Locations.xml.in"
+"Nearby major zone, such as a capital city, as found from https://"
+"raw.github.com/cafe-desktop/libcafeweather/master/data/Locations.xml.in"
 msgstr ""
 
 #. TRANSLATORS: Change this to the zone of your default location
@@ -371,12 +371,12 @@ msgid "Unknown"
 msgstr "dingerteni"
 
 #. Translators: %d is an error code, and %s the error string
-#: libcafeweather/weather-metar.c:504
+#: libcafeweather/weather-metar.c:507
 #, c-format
 msgid "Failed to get METAR data: %d %s.\n"
 msgstr ""
 
-#: libcafeweather/weather-metar.c:548
+#: libcafeweather/weather-metar.c:557
 msgid "WeatherInfo missing location"
 msgstr ""
 

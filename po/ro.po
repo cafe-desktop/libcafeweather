@@ -12,9 +12,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: libcafeweather 1.23.0\n"
+"Project-Id-Version: libcafeweather 2.0.0\n"
 "Report-Msgid-Bugs-To: https://cafe-desktop.org\n"
-"POT-Creation-Date: 2022-09-03 17:08+0200\n"
+"POT-Creation-Date: 2025-02-10 13:07+0100\n"
 "PO-Revision-Date: 2020-02-14 13:12+0000\n"
 "Last-Translator: Inpresentia I., 2020\n"
 "Language-Team: Romanian (https://www.transifex.com/cafe/teams/13566/ro/)\n"
@@ -283,11 +283,11 @@ msgstr "Oraș din apropiere"
 
 #: libcafeweather/org.cafe.weather.gschema.xml.in:117
 msgid ""
-"Nearby major zone, such as a capital city, as found from https://raw.github."
-"com/cafe-desktop/libcafeweather/master/data/Locations.xml.in"
+"Nearby major zone, such as a capital city, as found from https://"
+"raw.github.com/cafe-desktop/libcafeweather/master/data/Locations.xml.in"
 msgstr ""
-"Zonă apropiată majoră, ca un oraș capitală, cum se găsește la https://raw."
-"github.com/cafe-desktop/libcafeweather/master/data/Locations.xml.in"
+"Zonă apropiată majoră, ca un oraș capitală, cum se găsește la https://"
+"raw.github.com/cafe-desktop/libcafeweather/master/data/Locations.xml.in"
 
 #. TRANSLATORS: Change this to the zone of your default location
 #. that corresponds to the DEFAULT_LOCATION and DEFAULT_CODE you put
@@ -398,12 +398,12 @@ msgid "Unknown"
 msgstr "Necunoscut"
 
 #. Translators: %d is an error code, and %s the error string
-#: libcafeweather/weather-metar.c:504
+#: libcafeweather/weather-metar.c:507
 #, c-format
 msgid "Failed to get METAR data: %d %s.\n"
 msgstr "A eșuat obținerea de date METAR: %d %s.\n"
 
-#: libcafeweather/weather-metar.c:548
+#: libcafeweather/weather-metar.c:557
 msgid "WeatherInfo missing location"
 msgstr "Locație lipsă pentru WeatherInfo"
 

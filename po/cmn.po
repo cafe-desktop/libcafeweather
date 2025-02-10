@@ -8,13 +8,13 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: libcafeweather 1.23.0\n"
+"Project-Id-Version: libcafeweather 2.0.0\n"
 "Report-Msgid-Bugs-To: https://cafe-desktop.org\n"
-"POT-Creation-Date: 2022-09-03 17:08+0200\n"
+"POT-Creation-Date: 2025-02-10 13:07+0100\n"
 "PO-Revision-Date: 2020-02-14 13:12+0000\n"
 "Last-Translator: 趙惟倫 <bluebat@member.fsf.org>, 2020\n"
-"Language-Team: Chinese (Mandarin) (https://www.transifex.com/cafe/"
-"teams/13566/cmn/)\n"
+"Language-Team: Chinese (Mandarin) (https://www.transifex.com/cafe/teams/"
+"13566/cmn/)\n"
 "Language: cmn\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -273,11 +273,11 @@ msgstr "附近城市"
 
 #: libcafeweather/org.cafe.weather.gschema.xml.in:117
 msgid ""
-"Nearby major zone, such as a capital city, as found from https://raw.github."
-"com/cafe-desktop/libcafeweather/master/data/Locations.xml.in"
+"Nearby major zone, such as a capital city, as found from https://"
+"raw.github.com/cafe-desktop/libcafeweather/master/data/Locations.xml.in"
 msgstr ""
-"從 https://raw.github.com/cafe-desktop/libcafeweather/master/data/Locations."
-"xml.in 所得到附近諸如首都的主要地區"
+"從 https://raw.github.com/cafe-desktop/libcafeweather/master/data/"
+"Locations.xml.in 所得到附近諸如首都的主要地區"
 
 #. TRANSLATORS: Change this to the zone of your default location
 #. that corresponds to the DEFAULT_LOCATION and DEFAULT_CODE you put
@@ -300,8 +300,8 @@ msgid ""
 "A unique zone for the city, as found from https://raw.github.com/cafe-"
 "desktop/libcafeweather/master/data/Locations.xml.in"
 msgstr ""
-"從 https://raw.github.com/cafe-desktop/libcafeweather/master/data/Locations."
-"xml.in 所得到該城市的時區"
+"從 https://raw.github.com/cafe-desktop/libcafeweather/master/data/"
+"Locations.xml.in 所得到該城市的時區"
 
 #. TRANSLATORS: Change this to the radar of your default location
 #. that corresponds to the DEFAULT_LOCATION and DEFAULT_CODE you put
@@ -326,9 +326,9 @@ msgid ""
 "from https://raw.github.com/cafe-desktop/libcafeweather/master/data/"
 "Locations.xml.in"
 msgstr ""
-"three-digit-long 編碼用於取回 radar 映射從天氣.com，從 https://raw.github."
-"com/cafe-desktop/libcafeweather/master/data/Locations.xml.in 所得到用於自 "
-"weather.com 擷取雷達圖的三位數字編碼"
+"three-digit-long 編碼用於取回 radar 映射從天氣.com，從 https://"
+"raw.github.com/cafe-desktop/libcafeweather/master/data/Locations.xml.in 所得"
+"到用於自 weather.com 擷取雷達圖的三位數字編碼"
 
 #: libcafeweather/org.cafe.weather.gschema.xml.in:148
 msgid "Weather for a city"
@@ -384,12 +384,12 @@ msgid "Unknown"
 msgstr "不明"
 
 #. Translators: %d is an error code, and %s the error string
-#: libcafeweather/weather-metar.c:504
+#: libcafeweather/weather-metar.c:507
 #, c-format
 msgid "Failed to get METAR data: %d %s.\n"
 msgstr "無法獲取 METAR 資料：%d %s。\n"
 
-#: libcafeweather/weather-metar.c:548
+#: libcafeweather/weather-metar.c:557
 msgid "WeatherInfo missing location"
 msgstr "WeatherInfo 中沒有指定地點"
 

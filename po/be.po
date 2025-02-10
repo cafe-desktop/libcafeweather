@@ -9,9 +9,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: libcafeweather 1.23.0\n"
+"Project-Id-Version: libcafeweather 2.0.0\n"
 "Report-Msgid-Bugs-To: https://cafe-desktop.org\n"
-"POT-Creation-Date: 2022-09-03 17:08+0200\n"
+"POT-Creation-Date: 2025-02-10 13:07+0100\n"
 "PO-Revision-Date: 2020-02-14 13:12+0000\n"
 "Last-Translator: Mihail Varantsou <meequz@gmail.com>, 2020\n"
 "Language-Team: Belarusian (https://www.transifex.com/cafe/teams/13566/be/)\n"
@@ -277,11 +277,11 @@ msgstr "Найбліжэйшы горад"
 
 #: libcafeweather/org.cafe.weather.gschema.xml.in:117
 msgid ""
-"Nearby major zone, such as a capital city, as found from https://raw.github."
-"com/cafe-desktop/libcafeweather/master/data/Locations.xml.in"
+"Nearby major zone, such as a capital city, as found from https://"
+"raw.github.com/cafe-desktop/libcafeweather/master/data/Locations.xml.in"
 msgstr ""
-"Найбліжэйшы вялікі населены пункт, кшталту сталіцы, бярэцца з https://raw."
-"github.com/cafe-desktop/libcafeweather/master/data/Locations.xml.in"
+"Найбліжэйшы вялікі населены пункт, кшталту сталіцы, бярэцца з https://"
+"raw.github.com/cafe-desktop/libcafeweather/master/data/Locations.xml.in"
 
 #. TRANSLATORS: Change this to the zone of your default location
 #. that corresponds to the DEFAULT_LOCATION and DEFAULT_CODE you put
@@ -331,8 +331,8 @@ msgid ""
 "Locations.xml.in"
 msgstr ""
 "Трохлічбавы код для атрымання радарных картаў з weather.com, бярэцца з "
-"https://raw.github.com/cafe-desktop/libcafeweather/master/data/Locations.xml."
-"in"
+"https://raw.github.com/cafe-desktop/libcafeweather/master/data/"
+"Locations.xml.in"
 
 #: libcafeweather/org.cafe.weather.gschema.xml.in:148
 msgid "Weather for a city"
@@ -392,12 +392,12 @@ msgid "Unknown"
 msgstr "Невядомы"
 
 #. Translators: %d is an error code, and %s the error string
-#: libcafeweather/weather-metar.c:504
+#: libcafeweather/weather-metar.c:507
 #, c-format
 msgid "Failed to get METAR data: %d %s.\n"
 msgstr "Не выйшла атрымаць звесткі ад METAR: %d %s.\n"
 
-#: libcafeweather/weather-metar.c:548
+#: libcafeweather/weather-metar.c:557
 msgid "WeatherInfo missing location"
 msgstr "Звесткі пра надвор'е: невядомая мясцовасць"
 
