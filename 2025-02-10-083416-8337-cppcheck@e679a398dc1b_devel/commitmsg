@@ -1,0 +1,4 @@
+weather-iwin: avoid deprecated GTimeVal
+
+based in libmateweather commit:
+https://github.com/mate-desktop/libmateweather/commit/4422e8100aa235739e83e61ee3e57d426793e731
