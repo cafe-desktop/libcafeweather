@@ -155,7 +155,7 @@ msgstr "Interval de actualizare"
 
 #: libcafeweather/org.cafe.weather.gschema.xml.in:49
 msgid "The interval, in seconds, between automatic updates."
-msgstr "Intervalul, în secunde, dintre actualizările autocafe."
+msgstr "Intervalul, în secunde, dintre actualizările automate."
 
 #: libcafeweather/org.cafe.weather.gschema.xml.in:53
 msgid "Use metric units"
