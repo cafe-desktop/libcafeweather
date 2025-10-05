@@ -1,0 +1,3 @@
+weather-metar: Fix aviationweather url
+
+based in libmateweather PR 136
