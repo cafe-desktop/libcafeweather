@@ -516,6 +516,12 @@ metar_finish (GObject *object, GAsyncResult *result, gpointer data)
 
     msgdata = g_bytes_get_data (response_body, NULL);
 
+    if (msgdata == NULL) {
+        request_done (info, FALSE);
+        g_bytes_unref (response_body);
+        return;
+    }
+
     searchkey = g_strdup_printf ("<raw_text>METAR %s", loc->code);
     p = strstr (msgdata, searchkey);
     g_free (searchkey);
