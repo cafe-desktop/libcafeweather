@@ -3,37 +3,12 @@
 ##########################################################
 requires:
   debian:
-    # Useful URL: https://github.com/cafe-desktop/debian-packages
-    # cafe B-D: libctk-3-dev cafe-common
-    - aptitude
-    - autoconf
-    - autoconf-archive
-    - autopoint
-    - clang
-    - clang-tools
-    - cppcheck
-    - expect #required for unbuffer
-    - gcc
-    - intltool
-    - git
-    - gtk-doc-tools
-    - libglib2.0-dev
-    - libsoup-3.0-dev
-    - libtool
-    - libxml2-dev
-    - libxml2-utils
-    - make
-    - tzdata
 
 before_scripts:
-  - ./html-cppcheck
-  - ./debrepo-install 'libctk-3-dev gir1.2-ctk-3.0 libctk-3-common libctk-3-0'
-  - ./install-from-git https://github.com/cafe-desktop/cafe-common master
+  - ./debrepo-install
 
 build_scripts:
-  - ./before-build
-  - ./make-scanbuild '--enable-compile-warnings=maximum'
-  - ./after-build
+  - ./build-debs https://github.com/cafe-desktop/debian-packages devel libcafeweather
 
 after_scripts:
   - if [ -f "gen-index" ]; then ./gen-index -l 20; fi
