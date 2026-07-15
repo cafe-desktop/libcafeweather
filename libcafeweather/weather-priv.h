@@ -96,8 +96,8 @@ struct _WeatherInfo {
     GSList *forecast_list; /* list of WeatherInfo* for the forecast, NULL if not available */
     gchar *radar_buffer;
     gchar *radar_url;
-    GdkPixbufLoader *radar_loader;
-    GdkPixbufAnimation *radar;
+    CdkPixbufLoader *radar_loader;
+    CdkPixbufAnimation *radar;
     SoupSession *session;
     gint requests_pending;
 
