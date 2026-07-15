@@ -30,7 +30,7 @@ wx_finish (GObject *object, GAsyncResult *result, gpointer data)
     SoupSession *session = SOUP_SESSION (object);
     SoupMessage *msg = soup_session_get_async_result_message (session, result);
     WeatherInfo *info = (WeatherInfo *)data;
-    GdkPixbufAnimation *animation;
+    CdkPixbufAnimation *animation;
     GBytes *response_body = NULL;
 
     g_return_if_fail (info != NULL);
