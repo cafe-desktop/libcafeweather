@@ -1,8 +1,15 @@
+### libcafeweather 2.1.0
+
+  * weather-metar: avoid crashes in weather applet
+  * port from GdkPixbuf to CdkPixbuf
+  * update translations
+
+
 ### libcafeweather 2.0.1
 
   * ci: add debian stable build
   * weather-metar: Fix aviationweather url
-  
+
 
 ### libcafeweather 2.0.0
 

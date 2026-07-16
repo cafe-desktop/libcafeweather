@@ -1,4 +1,4 @@
-AC_INIT([libcafeweather], [2.0.1], [https://cafe-desktop.org])
+AC_INIT([libcafeweather], [2.1.0], [https://cafe-desktop.org])
 AC_PREREQ(2.59)
 
 AC_CONFIG_HEADERS([config.h])
