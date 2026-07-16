@@ -8,9 +8,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: libcafeweather 2.0.0\n"
+"Project-Id-Version: libcafeweather 2.1.0\n"
 "Report-Msgid-Bugs-To: https://cafe-desktop.org\n"
-"POT-Creation-Date: 2025-02-10 13:07+0100\n"
+"POT-Creation-Date: 2026-07-15 11:16+0200\n"
 "PO-Revision-Date: 2020-02-14 13:12+0000\n"
 "Last-Translator: Stefano Karapetsas <stefano@karapetsas.com>, 2020\n"
 "Language-Team: Malayalam (https://www.transifex.com/cafe/teams/13566/ml/)\n"
@@ -382,7 +382,7 @@ msgstr "അപരിചിതമായ"
 msgid "Failed to get METAR data: %d %s.\n"
 msgstr "METAR ഡേറ്റാ ലഭ്യമാകുന്നതില്‍ പരാജയം: %d %s .\n"
 
-#: libcafeweather/weather-metar.c:557
+#: libcafeweather/weather-metar.c:563
 msgid "WeatherInfo missing location"
 msgstr "കാലാവസ്ഥയുടെ വിവരങ്ങള്‍ ലഭ്യമല്ലാത്ത സ്ഥലം"
 

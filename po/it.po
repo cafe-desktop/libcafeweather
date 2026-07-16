@@ -15,9 +15,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: libcafeweather 2.0.0\n"
+"Project-Id-Version: libcafeweather 2.1.0\n"
 "Report-Msgid-Bugs-To: https://cafe-desktop.org\n"
-"POT-Creation-Date: 2025-02-10 13:07+0100\n"
+"POT-Creation-Date: 2026-07-15 11:16+0200\n"
 "PO-Revision-Date: 2020-02-14 13:12+0000\n"
 "Last-Translator: Alessandro Volturno <alelvb@inwind.it>, 2020\n"
 "Language-Team: Italian (https://www.transifex.com/cafe/teams/13566/it/)\n"
@@ -409,7 +409,7 @@ msgstr "Sconosciuto"
 msgid "Failed to get METAR data: %d %s.\n"
 msgstr "Recupero dei dati METAR non riuscito: %d %s.\n"
 
-#: libcafeweather/weather-metar.c:557
+#: libcafeweather/weather-metar.c:563
 msgid "WeatherInfo missing location"
 msgstr "Località con WeatherInfo mancante"
 

@@ -13,9 +13,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: libcafeweather 2.0.0\n"
+"Project-Id-Version: libcafeweather 2.1.0\n"
 "Report-Msgid-Bugs-To: https://cafe-desktop.org\n"
-"POT-Creation-Date: 2025-02-10 13:07+0100\n"
+"POT-Creation-Date: 2026-07-15 11:16+0200\n"
 "PO-Revision-Date: 2020-02-14 13:12+0000\n"
 "Last-Translator: وجدي أبو سلطان, 2020\n"
 "Language-Team: Arabic (https://www.transifex.com/cafe/teams/13566/ar/)\n"
@@ -397,7 +397,7 @@ msgstr "مجهول"
 msgid "Failed to get METAR data: %d %s.\n"
 msgstr "فشل الحصول على بيانات ‏METAR: ‏%Id ‏%s\n"
 
-#: libcafeweather/weather-metar.c:557
+#: libcafeweather/weather-metar.c:563
 msgid "WeatherInfo missing location"
 msgstr "معلومات الطقس تفتقد الموقع"
 

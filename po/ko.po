@@ -10,9 +10,9 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: libcafeweather 2.0.0\n"
+"Project-Id-Version: libcafeweather 2.1.0\n"
 "Report-Msgid-Bugs-To: https://cafe-desktop.org\n"
-"POT-Creation-Date: 2025-02-10 13:07+0100\n"
+"POT-Creation-Date: 2026-07-15 11:16+0200\n"
 "PO-Revision-Date: 2020-02-14 13:12+0000\n"
 "Last-Translator: 박정규(Jung-Kyu Park) <bagjunggyu@gmail.com>, 2020\n"
 "Language-Team: Korean (https://www.transifex.com/cafe/teams/13566/ko/)\n"
@@ -394,7 +394,7 @@ msgstr "알 수 없음"
 msgid "Failed to get METAR data: %d %s.\n"
 msgstr "METAR 데이터를 받는데 실패했습니다: %d %s.\n"
 
-#: libcafeweather/weather-metar.c:557
+#: libcafeweather/weather-metar.c:563
 msgid "WeatherInfo missing location"
 msgstr "WeatherInfo 위치가 없습니다"
 

@@ -5,9 +5,9 @@
 # Translators:
 msgid ""
 msgstr ""
-"Project-Id-Version: libcafeweather 2.0.0\n"
+"Project-Id-Version: libcafeweather 2.1.0\n"
 "Report-Msgid-Bugs-To: https://cafe-desktop.org\n"
-"POT-Creation-Date: 2025-02-10 13:07+0100\n"
+"POT-Creation-Date: 2026-07-15 11:16+0200\n"
 "PO-Revision-Date: 2017-09-22 02:12+0000\n"
 "Last-Translator: Vlad Orlov <monsta@inbox.ru>\n"
 "Language-Team: Javanese (http://www.transifex.com/cafe/CAFE/language/jv/)\n"
@@ -376,7 +376,7 @@ msgstr "dingerteni"
 msgid "Failed to get METAR data: %d %s.\n"
 msgstr ""
 
-#: libcafeweather/weather-metar.c:557
+#: libcafeweather/weather-metar.c:563
 msgid "WeatherInfo missing location"
 msgstr ""
 
