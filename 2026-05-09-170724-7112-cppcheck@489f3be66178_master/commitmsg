@@ -1,0 +1,5 @@
+weather-metar: avoid crashes in weather applet
+
+It fixes crashes if there is no location configured, or if it can't get weather info
+
+Fixes https://github.com/cafe-desktop/libcafeweather/issues/5
